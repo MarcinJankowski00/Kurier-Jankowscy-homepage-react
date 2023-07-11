@@ -1,8 +1,8 @@
 {
-  "name": "to-do-list-react",
+  "name": "Kurier-Jankowscy-homepage-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marcinjankowski00.github.io/To-do-list-react/",
+  "homepage": "https://marcinjankowski00.github.io/Kurier-Jankowscy-homepage-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

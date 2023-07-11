@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.968c889e.js",
+    "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
+    "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
+    "main.968c889e.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.968c889e.js.map",
+    "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.968c889e.js"
+  ]
+}

@@ -1,17 +1,28 @@
 import styled from "styled-components";
 
 export const Bottom = styled.footer`
-    color: black;
+    background-color: #2c3e50;
+    color: #eee;
+`;
+
+export const Wrapper = styled.div`
+    max-width: 1300px;
+    padding: 20px;
+    margin: 0 auto;
+`;
+
+export const Contact = styled.div`
+    display: flex;
 `;
 
 export const Fb = styled.p`
-    color: black;
+    
 `;
 
 export const Adres = styled.p`
-    color: black;
+    margin-right: 20px;
 `;
 
 export const Kontakt = styled.p`
-    color: black;
+    
 `;

@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Rubik', sans-serif;
         font-size: 23px;
+        color: #2c3e50;
         background-color: ${({ theme }) => theme.gallery};
 
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

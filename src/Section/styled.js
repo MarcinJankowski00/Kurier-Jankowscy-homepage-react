@@ -22,6 +22,7 @@ export const Header = styled.div`
 
 export const Title = styled.h2`
     margin: 0;
+    text-align: center;
 `;
 
 export const Content = styled.div`

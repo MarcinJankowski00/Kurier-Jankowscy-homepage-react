@@ -1,9 +1,22 @@
 import styled from "styled-components";
 
 export const List = styled.ul`
-    color: black;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 `;
 
 export const Link = styled.a`
-    color: black;
+    color: #2c3e50;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        filter: brightness(120%);
+        border-bottom: 1px solid #2c3e50;
+        outline: none;
+    }
 `;

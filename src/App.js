@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import Section from './Section';
 import Container from './Container';
+import Heading from './Heading';
 import Onas from './Content/Onas';
 import Aktualnosci from './Content/Aktualnosci';
 import Oferta from './Content/Oferta';
@@ -14,8 +15,10 @@ function App() {
 
   return (
     <main>
-    <Header />
-    <Navigation />
+    <Heading>
+      <Header />
+      <Navigation />
+    </Heading>
     <Container>
       <Section
         title="Aktualności"
@@ -25,17 +28,17 @@ function App() {
       <Section
         title="O firmie „KURIER” s.c. Jankowscy"
         content={<Onas />}
-        adres="Onas"
+        adress="Onas"
       />
       <Section
         title="OFERTA"
         content={<Oferta />}
-        adres="Oferta"
+        adress="Oferta"
       />
       <Section
         title="Rozkład jazdy"
         content={<Rozklad />}
-        adres="Rozklad"
+        adress="Rozklad"
       />
     </Container>
     <Footer />

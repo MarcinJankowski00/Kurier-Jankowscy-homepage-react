@@ -1,7 +1,7 @@
 import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact } from "./styled";
 
 const Footer = () => (
-    <Bottom>
+    <Bottom id="Kontakt">
         <Wrapper>
             <Fb><strong>Odwiedź nas na fb!</strong></Fb>
             <Contact>

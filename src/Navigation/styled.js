@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Nav = styled.div`
+    background-color: white;
+    padding: 1px
+`;
+
 export const List = styled.ul`
     display: flex;
     justify-content: space-around;

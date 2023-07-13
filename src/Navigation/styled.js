@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
     background-color: white;
-    padding: 1px
+    padding: 1px;
 `;
 
 export const List = styled.ul`

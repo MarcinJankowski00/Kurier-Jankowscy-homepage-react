@@ -9,6 +9,7 @@ import Onas from './Content/Onas';
 import Aktualnosci from './Content/Aktualnosci';
 import Oferta from './Content/Oferta';
 import Rozklad from './Content/Rozklad';
+import Flota from './Content/Flota';
 
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
         title="Rozkład jazdy"
         content={<Rozklad />}
         adress="Rozklad"
+      />
+      <Section
+        title="Flota"
+        content={<Flota />}
+        adress="Flota"
       />
     </Container>
     <Footer />

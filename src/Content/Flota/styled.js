@@ -8,9 +8,14 @@ export const Container = styled.div`
 export const List = styled.ul`
     list-style: none;
     padding: 0%;
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 `;
 
-export const Link = styled.a`
+export const Button = styled.button`
     
 `;
 

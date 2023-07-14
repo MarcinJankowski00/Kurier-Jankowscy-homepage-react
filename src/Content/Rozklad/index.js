@@ -1,4 +1,4 @@
-import { Content, TableContainer, Table, Cell, Text } from "./styled";
+import { Content, TableContainer, Table, Cell, Text, Row } from "./styled";
 
 const Rozklad = () => (
 
@@ -13,7 +13,7 @@ const Rozklad = () => (
         <TableContainer>
             <Table>
                 <thead>
-                    <tr>
+                    <Row>
                         <Cell scope="col" header={true}>
                             PRZYSTANKI
                         </Cell>
@@ -39,10 +39,10 @@ const Rozklad = () => (
                             z, K</Cell>
                         <Cell scope="col" header={true}>D, m,<br />
                             z, K</Cell>
-                    </tr>
+                    </Row>
                 </thead>
                 <tbody>
-                    <tr>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki – Dworcowa
                         </Cell>
@@ -60,8 +60,8 @@ const Rozklad = () => (
                         <Cell>17:00</Cell>
                         <Cell>18:05</Cell>
                         <Cell>19:20</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki – Al. Wojs.Pol
                         </Cell>
@@ -79,8 +79,8 @@ const Rozklad = () => (
                         <Cell>17:03</Cell>
                         <Cell>18:08</Cell>
                         <Cell>19:23</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki - Leśna
                         </Cell>
@@ -98,8 +98,8 @@ const Rozklad = () => (
                         <Cell>17:05</Cell>
                         <Cell>18:10</Cell>
                         <Cell>19:25</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dziękonie
                         </Cell>
@@ -139,8 +139,8 @@ const Rozklad = () => (
                             18:14
                         </Cell>
                         <Cell>19:29</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna PKP
                         </Cell>
@@ -184,8 +184,8 @@ const Rozklad = () => (
                         <Cell>
                             19:31
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna Skrz.
                         </Cell>
@@ -227,8 +227,8 @@ const Rozklad = () => (
                         <Cell>
                             19:33
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna
                         </Cell>
@@ -270,8 +270,8 @@ const Rozklad = () => (
                         <Cell>
                             19:34
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Knyszyn - Gon.
                         </Cell>
@@ -305,8 +305,8 @@ const Rozklad = () => (
                         <Cell>
                             19:38
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Knyszyn - Rynek
                         </Cell>
@@ -350,8 +350,8 @@ const Rozklad = () => (
                         <Cell>
                             19:39
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Chraboły
                         </Cell>
@@ -393,8 +393,8 @@ const Rozklad = () => (
                         <Cell>
                             19:45
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Myśliwiec
                         </Cell>
@@ -438,8 +438,8 @@ const Rozklad = () => (
                         <Cell>
                             19:47
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Kozińce
                         </Cell>
@@ -483,8 +483,8 @@ const Rozklad = () => (
                         <Cell>
                             19:49
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Obrubniki
                         </Cell>
@@ -526,8 +526,8 @@ const Rozklad = () => (
                         <Cell>
                             19:51
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Krynice
                         </Cell>
@@ -571,8 +571,8 @@ const Rozklad = () => (
                         <Cell>
                             19:53
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Gniła
                         </Cell>
@@ -616,8 +616,8 @@ const Rozklad = () => (
                         <Cell>
                             19:54
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dobrzyniewo
                         </Cell>
@@ -661,8 +661,8 @@ const Rozklad = () => (
                         <Cell>
                             19:56
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dzikie
                         </Cell>
@@ -704,8 +704,8 @@ const Rozklad = () => (
                             18:44
                         </Cell>
                         <Cell>19:59</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Fasty
                         </Cell>
@@ -747,8 +747,8 @@ const Rozklad = () => (
                         <Cell>
                             20:01
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Białystok – Cast.
                         </Cell>
@@ -792,8 +792,8 @@ const Rozklad = () => (
                         <Cell>
                             20:05
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Bacieczki
                         </Cell>
@@ -837,8 +837,8 @@ const Rozklad = () => (
                         <Cell>
                             20:07
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             B-stok Jana Pawła
                         </Cell>
@@ -878,8 +878,8 @@ const Rozklad = () => (
                         <Cell>
                             20:10
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             B-stok PKP
                         </Cell>
@@ -919,8 +919,8 @@ const Rozklad = () => (
                         <Cell>
                             20:13
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dworzec PKS
                         </Cell>
@@ -960,7 +960,7 @@ const Rozklad = () => (
                             19:01
                         </Cell>
                         <Cell>20:16</Cell>
-                    </tr>
+                    </Row>
                 </tbody>
             </Table>
         </TableContainer>
@@ -982,7 +982,7 @@ const Rozklad = () => (
         <TableContainer>
             <Table>
                 <thead>
-                    <tr>
+                    <Row>
                         <Cell scope="col" header={true}>
                             PRZYSTANKI
                         </Cell>
@@ -1008,10 +1008,10 @@ const Rozklad = () => (
                             z, K</Cell>
                         <Cell scope="col" header={true}>D, m,<br />
                             z, K</Cell>
-                    </tr>
+                    </Row>
                 </thead>
                 <tbody>
-                    <tr>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dworzec PKS
                         </Cell>
@@ -1057,8 +1057,8 @@ const Rozklad = () => (
                         <Cell>
                             20:20
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             B-stok Jana Pawła
                         </Cell>
@@ -1090,8 +1090,8 @@ const Rozklad = () => (
                         <Cell>18:17</Cell>
                         <Cell>19:12</Cell>
                         <Cell>20:27</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Bacieczki
                         </Cell>
@@ -1123,8 +1123,8 @@ const Rozklad = () => (
                         <Cell>18:20</Cell>
                         <Cell>19:15</Cell>
                         <Cell>20:30</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Fasty Kombinat
                         </Cell>
@@ -1156,8 +1156,8 @@ const Rozklad = () => (
                         <Cell>
                             20:33
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Fasty
                         </Cell>
@@ -1189,8 +1189,8 @@ const Rozklad = () => (
                         <Cell>
                             20:35
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dzikie
                         </Cell>
@@ -1220,8 +1220,8 @@ const Rozklad = () => (
                         <Cell>18:27</Cell>
                         <Cell>19:22</Cell>
                         <Cell>20:37</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dobrzyniewo D.
                         </Cell>
@@ -1253,8 +1253,8 @@ const Rozklad = () => (
                         <Cell>
                             20:40
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Gniła
                         </Cell>
@@ -1286,8 +1286,8 @@ const Rozklad = () => (
                         <Cell>
                             20:42
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Krynice
                         </Cell>
@@ -1319,8 +1319,8 @@ const Rozklad = () => (
                         <Cell>18:33</Cell>
                         <Cell>19:28</Cell>
                         <Cell>20:43</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Obrubniki
                         </Cell>
@@ -1350,8 +1350,8 @@ const Rozklad = () => (
                         <Cell>18:35</Cell>
                         <Cell>19:30</Cell>
                         <Cell>20:45</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Kozińce
                         </Cell>
@@ -1381,8 +1381,8 @@ const Rozklad = () => (
                         <Cell>18:37</Cell>
                         <Cell>19:32</Cell>
                         <Cell>20:47</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Myśliwiec
                         </Cell>
@@ -1412,8 +1412,8 @@ const Rozklad = () => (
                         <Cell>18:39</Cell>
                         <Cell>19:34</Cell>
                         <Cell>20:49</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Chraboły
                         </Cell>
@@ -1443,8 +1443,8 @@ const Rozklad = () => (
                         <Cell>18:41</Cell>
                         <Cell>19:36</Cell>
                         <Cell>20:51</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Knyszyn - Rynek
                         </Cell>
@@ -1474,8 +1474,8 @@ const Rozklad = () => (
                         <Cell>18:48</Cell>
                         <Cell>19:43</Cell>
                         <Cell>20:58</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Knyszyn - Gon.
                         </Cell>
@@ -1505,8 +1505,8 @@ const Rozklad = () => (
                         <Cell>18:49</Cell>
                         <Cell>19:44</Cell>
                         <Cell>20:59</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna
                         </Cell>
@@ -1538,8 +1538,8 @@ const Rozklad = () => (
                         <Cell>
                             21:03
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna Skrz.
                         </Cell>
@@ -1569,8 +1569,8 @@ const Rozklad = () => (
                         <Cell>18:54</Cell>
                         <Cell>19:49</Cell>
                         <Cell>21:04</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Czechowizna PKP
                         </Cell>
@@ -1598,8 +1598,8 @@ const Rozklad = () => (
                         <Cell>18:56</Cell>
                         <Cell>19:51</Cell>
                         <Cell>21:06</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Dziękonie
                         </Cell>
@@ -1629,8 +1629,8 @@ const Rozklad = () => (
                         <Cell>18:58</Cell>
                         <Cell>19:53</Cell>
                         <Cell>21:08</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki - Leśna
                         </Cell>
@@ -1648,8 +1648,8 @@ const Rozklad = () => (
                         <Cell>19:02</Cell>
                         <Cell>19:57</Cell>
                         <Cell>21:12</Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki - Al.Wojs.Pol
                         </Cell>
@@ -1677,8 +1677,8 @@ const Rozklad = () => (
                         <Cell>
                             21:15
                         </Cell>
-                    </tr>
-                    <tr>
+                    </Row>
+                    <Row>
                         <Cell scope="row" header={true}>
                             Mońki – Dworcowa
                         </Cell>
@@ -1702,7 +1702,7 @@ const Rozklad = () => (
                         <Cell>19:07</Cell>
                         <Cell>20:02</Cell>
                         <Cell>21:17</Cell>
-                    </tr>
+                    </Row>
                 </tbody>
             </Table>
         </TableContainer>

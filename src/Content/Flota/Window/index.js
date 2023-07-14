@@ -1,31 +1,33 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { Content, Photo, Info } from "./styled";
+import { information, images } from './data';
+import { Container, Photo, Info, Item, Content, Title } from "./styled";
 
-const Window = () => {
-    const images = [
-        {
-            original: 'https://picsum.photos/id/1018/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1018/250/150/',
-        },
-        {
-            original: 'https://picsum.photos/id/1015/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1015/250/150/',
-        },
-        {
-            original: 'https://picsum.photos/id/1019/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1019/250/150/',
-        },
-    ];
+const Window = (adress) => {
+    const id = adress;
+    const convertToNumber = +id.adress;
+
+
+    const info = information[convertToNumber];
+    const photos = images[convertToNumber];
 
     return (
-        <Content>
+        <Container>
             <Photo>
-                <ImageGallery items={images} />;
+                <ImageGallery items={photos} />;
+                <Title>{info[0].name}</Title>
             </Photo>
-            <Info></Info>
-        </Content>
+            <Info>
+                {info.map(inf => (
+                    <Item>
+                        <Content>
+                            {inf.content}
+                        </Content>
+                    </Item >
+                ))}
+            </Info>
+        </Container>
     );
 };
 

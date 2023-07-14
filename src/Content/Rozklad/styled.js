@@ -14,13 +14,13 @@ export const TableContainer = styled.div`
 
 export const Table = styled.table`
     border-collapse: collapse;
+    background-color: #f8f7f7;
     font-size: 20px;
     width: 100%;
 `;
 
 export const Cell = styled.td`
-    border: 1px solid #e6e6e6;
-    background-color: #f8f7f7;
+    border: 2px solid #d9d9d9;
     padding: 8px;
     text-align: center;
 
@@ -29,4 +29,9 @@ export const Cell = styled.td`
         font-weight: bold;
         text-align: start;
     `}
+`;
+export const Row = styled.tr`
+    &:hover {
+        background-color: #eeeeee;
+    }
 `;

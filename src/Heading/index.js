@@ -1,7 +1,7 @@
 import { Main } from "./styled";
 
 const Heading = ({ children }) => (
-    <Main>
+    <Main className="fixed-navigation">
         {children}
     </Main>
 );

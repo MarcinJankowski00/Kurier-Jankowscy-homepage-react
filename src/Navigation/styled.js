@@ -9,6 +9,7 @@ export const List = styled.ul`
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding-left: 0;
 `;
 
 export const Link = styled.a`

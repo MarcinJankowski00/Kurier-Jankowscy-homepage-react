@@ -21,20 +21,23 @@ export const Info = styled.ul`
     list-style: none;
     padding: 10px;
     padding-top: 0%;
-    font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0;
-    margin-bottom: 97px;
+    margin-bottom: 15.5%;
     text-align: center;
+    font-size: smaller;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            font-size: 6px;
+        }
 `;
 
 export const Item = styled.li`
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 4%;
+    margin-bottom: 4%;
     padding-bottom: 3px;
-    width: 200px;
+    width: 100%;
     border-bottom: 1px solid #2c3e50;
 `;
 

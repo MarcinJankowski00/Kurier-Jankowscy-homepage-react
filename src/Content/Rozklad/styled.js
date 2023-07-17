@@ -15,8 +15,10 @@ export const TableContainer = styled.div`
 export const Table = styled.table`
     border-collapse: collapse;
     background-color: #f8f7f7;
-    font-size: 20px;
     width: 100%;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            font-size: 9px;
+        }
 `;
 
 export const Cell = styled.td`
@@ -28,6 +30,7 @@ export const Cell = styled.td`
         background-color: #c0c0c0;
         font-weight: bold;
         text-align: start;
+        white-space: nowrap;
     `}
 `;
 export const Row = styled.tr`

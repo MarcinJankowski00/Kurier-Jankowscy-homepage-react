@@ -8,48 +8,48 @@ const Flota = () => {
     return (
         <Container>
             <List>
-                <li>
-                    <Button
-                        onClick={() => setAdress(0)}
-                    >
-                        Volkswagen Caravelle
-                    </Button>
-                </li>
-                <li>
-                    <Button
-                        onClick={() => setAdress(1)}
-                    >
-                        Opel Vivaro
-                    </Button>
-                </li>
-                <li>
-                    <Button
-                        onClick={() => setAdress(2)}
-                    >
-                        Mercedes Sprinter
-                    </Button>
-                </li>
-                <li>
-                    <Button
-                        onClick={() => setAdress(3)}
-                    >
-                        Mercedes Tourino
-                    </Button>
-                </li>
-                <li>
-                    <Button
-                        onClick={() => setAdress(4)}
-                    >
-                        Man Lions Coach
-                    </Button>
-                </li>
-                <li>
-                    <Button
-                        onClick={() => setAdress(5)}
-                    >
-                        Man
-                    </Button>
-                </li>
+
+                <Button
+                    onClick={() => setAdress(0)}
+                >
+                    Volkswagen Caravelle
+                </Button>
+
+
+                <Button
+                    onClick={() => setAdress(1)}
+                >
+                    Opel Vivaro
+                </Button>
+
+
+                <Button
+                    onClick={() => setAdress(2)}
+                >
+                    Mercedes Sprinter
+                </Button>
+
+
+                <Button
+                    onClick={() => setAdress(3)}
+                >
+                    Mercedes Tourino
+                </Button>
+
+
+                <Button
+                    onClick={() => setAdress(4)}
+                >
+                    Man Lions Coach
+                </Button>
+
+
+                <Button
+                    onClick={() => setAdress(5)}
+                >
+                    Man
+                </Button>
+
             </List>
             <Window adress={adress} />
         </Container>

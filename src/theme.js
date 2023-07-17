@@ -5,7 +5,7 @@ export const theme = {
         alto: "#ddd",
         gallery: "#eee",
         white: "#fff",
-        teal: "#008080",
+        teal: "#2C3E50",
         crimson: "#db143c",
         forestGreen: "#228c22",
     },

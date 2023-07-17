@@ -26,7 +26,7 @@ export const information= [
             content: "mikrofon",
         },
         {
-            content: "fotele pochynale i rozsuwane",
+            content: "regulowane fotele",
         },
         {
             content: "klimatyzacja",
@@ -50,6 +50,9 @@ export const information= [
             content: "mikrofon",
         },
         {
+            content: "regulowane fotele",
+        },
+        {
             content: "lodówka",
         },
         {
@@ -64,14 +67,14 @@ export const information= [
         {
             content: "indywidualne oświetlenie",
         },
-        {
-            content: "pochylane fotele",
-        },
     ],
     [
         {
             name: "Man Lions Coach",
-            content: "DVD/dwa monitory/mikrofon",
+            content: "DVD/dwa monitory",
+        },
+        {
+            content: "mikrofon",
         },
         {
             content: "WC",
@@ -83,7 +86,7 @@ export const information= [
             content: "lodówka",
         },
         {
-            content: "fotele lotnicze skórzane rozsuwane na boki, podłokietniki",
+            content: "regulowane skórzane fotele",
         },
         {
             content: "klimatyzacja",
@@ -104,7 +107,10 @@ export const information= [
     [
         {
             name: "Man",
-            content: "DVD/dwa monitory/mikrofon",
+            content: "DVD/dwa monitory",
+        },
+        {
+            content: "mikrofon",
         },
         {
             content: "WC",
@@ -116,7 +122,7 @@ export const information= [
             content: "lodówka",
         },
         {
-            content: "fotele lotnicze skórzane rozsuwane na boki, podłokietniki",
+            content: "regulowane skórzane fotele",
         },
         {
             content: "klimatyzacja",

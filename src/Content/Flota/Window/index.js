@@ -15,7 +15,7 @@ const Window = (adress) => {
     return (
         <Container>
             <Photo>
-                <ImageGallery items={photos} />;
+                <ImageGallery items={photos} />
                 <Title>{info[0].name}</Title>
             </Photo>
             <Info>

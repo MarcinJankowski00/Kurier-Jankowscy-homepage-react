@@ -42,7 +42,7 @@ function App() {
         adress="Rozklad"
       />
       <Section
-        title="Flota"
+        title="Nasza flota"
         content={<Flota />}
         adress="Flota"
       />

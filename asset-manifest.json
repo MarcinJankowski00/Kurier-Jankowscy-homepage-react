@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css",
-    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.139b6615.js",
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.ddfc0fd0.js",
     "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
     "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
     "main.5eb240bf.css.map": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css.map",
-    "main.139b6615.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.139b6615.js.map",
+    "main.ddfc0fd0.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.ddfc0fd0.js.map",
     "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.139b6615.js"
+    "static/js/main.ddfc0fd0.js"
   ]
 }

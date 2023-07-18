@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css",
-    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.081430c5.js",
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.667c303a.js",
     "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
+    "static/media/volkswagen1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen1.3cab004a8facd682d287.jpg",
+    "static/media/volkswagen3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
+    "static/media/volkswagen4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen4.0a4b5b010c5f11a9f23f.jpg",
+    "static/media/volkswagen2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen2.2807f30a39110de503d8.jpg",
+    "static/media/background.jpg": "/Kurier-Jankowscy-homepage-react/static/media/background.f59c0c95f2f358da816c.jpg",
     "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
     "main.5eb240bf.css.map": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css.map",
-    "main.081430c5.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.081430c5.js.map",
+    "main.667c303a.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.667c303a.js.map",
     "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.081430c5.js"
+    "static/js/main.667c303a.js"
   ]
 }

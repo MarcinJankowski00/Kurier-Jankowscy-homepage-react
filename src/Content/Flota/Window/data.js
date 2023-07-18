@@ -1,3 +1,7 @@
+import volkswagen1 from './photos/volkswagen1.jpg';
+import volkswagen2 from './photos/volkswagen2.jpg';
+import volkswagen3 from './photos/volkswagen3.jpg';
+import volkswagen4 from './photos/volkswagen4.jpg';
 export const information= [
     [
         {
@@ -145,19 +149,19 @@ export const information= [
 export const images = [
     [
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/Obraz018.jpg",
+            original: volkswagen1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/Obraz019.jpg",
+            original: volkswagen2,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/Obraz020.jpg",
+            original: volkswagen3,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/Obraz021.jpg",
+            original: volkswagen4,
 
         },
     ],

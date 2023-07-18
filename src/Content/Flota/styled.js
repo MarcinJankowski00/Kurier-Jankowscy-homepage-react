@@ -9,8 +9,8 @@ export const Container = styled.div`
 `;
 
 export const List = styled.div`
-    padding: 10px;
     padding-top: 0;
+    padding-right: 14px;
     font-size: smaller;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,7 @@ export const Button = styled.button`
     max-height: 40px;
     white-space: nowrap;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
 

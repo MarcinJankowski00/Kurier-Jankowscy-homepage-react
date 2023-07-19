@@ -23,9 +23,9 @@ function App() {
           adress="Aktualnosci"
         />
         <Section
-          title="O firmie „KURIER” s.c. Jankowscy"
-          content={<Onas />}
-          adress="Onas"
+          title="Rozkład jazdy"
+          content={<Rozklad />}
+          adress="Rozklad"
         />
         <Section
           title="OFERTA"
@@ -33,14 +33,14 @@ function App() {
           adress="Oferta"
         />
         <Section
-          title="Rozkład jazdy"
-          content={<Rozklad />}
-          adress="Rozklad"
-        />
-        <Section
           title="Nasza flota"
           content={<Flota />}
           adress="Flota"
+        />
+        <Section
+          title="O firmie „KURIER” s.c. Jankowscy"
+          content={<Onas />}
+          adress="Onas"
         />
       </Container>
       <Footer />

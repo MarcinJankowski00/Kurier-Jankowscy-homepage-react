@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-    background-color: #2c3e50;
+    background-color: white;
     padding: 1px;
     position: fixed ;
     width: 100%;
@@ -18,12 +18,14 @@ export const Wrapper = styled.div`
 export const Img = styled.img`
     display: block;
     visibility: visible;
-    width: 400px;
+    width: 300px;
     height: max-content;
 `;
 
 export const Logo = styled.a`
-
+    margin-top: 15px;
+    margin-right: 100px;
+    margin-left: 50px;
 `;
 
 export const List = styled.ul`
@@ -34,7 +36,7 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-    color: white;
+    color: #2c3e50;
     text-decoration: none;
 
     &:focus {
@@ -43,7 +45,8 @@ export const Link = styled.a`
 
     &:hover {
         filter: brightness(120%);
-        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #2c3e50;
         outline: none;
     }
 `;

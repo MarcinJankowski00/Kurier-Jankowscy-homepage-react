@@ -15,8 +15,5 @@ export const GlobalStyle = createGlobalStyle`
         color: #2c3e50;
         background-color: ${({ theme }) => theme.gallery};
 
-        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            font-size: 10px;
-        }
     }
 `;

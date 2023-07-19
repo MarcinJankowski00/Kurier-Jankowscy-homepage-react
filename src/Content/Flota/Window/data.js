@@ -2,6 +2,22 @@ import volkswagen1 from './photos/volkswagen1.jpg';
 import volkswagen2 from './photos/volkswagen2.jpg';
 import volkswagen3 from './photos/volkswagen3.jpg';
 import volkswagen4 from './photos/volkswagen4.jpg';
+import opel1 from './photos/opel1.jpg';
+import opel2 from './photos/opel2.jpg';
+import sprinter1 from './photos/sprinter1.jpg';
+import sprinter2 from './photos/sprinter2.jpg';
+import sprinter3 from './photos/sprinter3.jpg';
+import sprinter4 from './photos/sprinter4.jpg';
+import turino1 from './photos/turino1.jpg';
+import turino2 from './photos/turino2.jpg';
+import turino3 from './photos/turino3.jpg';
+import manLions1 from './photos/manLions1.jpg';
+import manLions2 from './photos/manLions2.jpg';
+import man1 from './photos/man1.jpg';
+import man2 from './photos/man2.jpg';
+import man3 from './photos/man3.jpg';
+import man4 from './photos/man4.jpg';
+import man5 from './photos/man5.jpg';
 export const information= [
     [
         {
@@ -185,75 +201,75 @@ export const images = [
     ],
     [
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-3264x1836-9.jpg",
+            original: opel1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/wntrze-3264x1836-20.jpg",
-
-        },
-    ],
-    [
-        {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-2592x1944-12.jpg",
-
-        },
-        {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/plecak-2592x1944-0.jpg",
-
-        },
-        {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/ty-lewy-profil-2592x1944-50.jpg",
-
-        },
-        {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/wntrze-2592x1944-64.jpg",
+            original: opel2,
 
         },
     ],
     [
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-przd-2560x1920-89.jpg",
+            original: sprinter1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-ty-2560x1920-41.jpg",
+            original: sprinter2,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/wntrze-przd-2560x1920-87.jpg",
-
-        },
-    ],
-    [
-        {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-2880x2160-6.jpg",
+            original: sprinter3,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/prawy-profil-2880x2160-16.jpg",
+            original: sprinter4,
 
         },
     ],
     [
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/prawa-strona-2560x1920-33.jpg",
+            original: turino1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/lewy-profil-3264x2448-38.jpg",
+            original: turino2,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/prawy-profil-2-2560x1920-96.jpg",
+            original: turino3,
+
+        },
+    ],
+    [
+        {
+            original: manLions1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/przd-2048x1536-12.jpg",
+            original: manLions2,
+
+        },
+    ],
+    [
+        {
+            original: man1,
 
         },
         {
-            original: "https://www.kurierjankowski.pl/data/themes/kurier-template2/assets/images/wntrze-przd-3264x2448-19.jpg",
+            original: man2,
+
+        },
+        {
+            original: man3,
+
+        },
+        {
+            original: man4,
+
+        },
+        {
+            original: man5,
 
         },
     ],   

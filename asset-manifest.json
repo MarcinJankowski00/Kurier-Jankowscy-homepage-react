@@ -1,20 +1,37 @@
 {
   "files": {
     "main.css": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css",
-    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.667c303a.js",
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.e03dc693.js",
     "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
     "static/media/volkswagen1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
     "static/media/volkswagen4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen4.0a4b5b010c5f11a9f23f.jpg",
     "static/media/volkswagen2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen2.2807f30a39110de503d8.jpg",
+    "static/media/turino2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/turino2.4197bc5c620c5a15dde9.jpg",
+    "static/media/man3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man3.bcfbaa34d58fdbdebb7b.jpg",
+    "static/media/turino1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/turino1.03c3fcf27adc13ac25d6.jpg",
+    "static/media/turino3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/turino3.f53ad84e1cf1a9d983e7.jpg",
+    "static/media/opel1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/opel1.0b79df0e802cd9220ccf.jpg",
+    "static/media/man5.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man5.11e4dbdc243768304870.jpg",
+    "static/media/sprinter2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter2.2dca0e7783023de10f82.jpg",
+    "static/media/sprinter1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter1.02ba74edb92003876b5d.jpg",
     "static/media/background.jpg": "/Kurier-Jankowscy-homepage-react/static/media/background.f59c0c95f2f358da816c.jpg",
+    "static/media/man1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man1.6cd09e3e343f7827f981.jpg",
+    "static/media/man4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man4.a156bd1a169ef72cdc61.jpg",
+    "static/media/sprinter3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter3.dd39306ffbe87689ed22.jpg",
+    "static/media/manLions1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/manLions1.91aaf3d45ae1b7bb090e.jpg",
+    "static/media/manLions2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/manLions2.6a15e9a99e6897048620.jpg",
+    "static/media/opel2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/opel2.cc4668ef66157c494b66.jpg",
+    "static/media/sprinter4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter4.9235346aee003d9e3f1c.jpg",
+    "static/media/man2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man2.97e1ed754e9678ebdbf3.jpg",
+    "static/media/kurierlogo.png": "/Kurier-Jankowscy-homepage-react/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
     "main.5eb240bf.css.map": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css.map",
-    "main.667c303a.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.667c303a.js.map",
+    "main.e03dc693.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.e03dc693.js.map",
     "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.667c303a.js"
+    "static/js/main.e03dc693.js"
   ]
 }

@@ -1,4 +1,6 @@
-import { List, Link, Nav, Header, Wrapper, Span } from "./styled";
+import { List, Link, Nav, Img, Wrapper, Logo } from "./styled";
+import logo from "./kurierlogo.png";
+
 const Navigation = () => {
 
     const handleLinkClick = (event, targetId) => {
@@ -15,9 +17,9 @@ const Navigation = () => {
     return (
         <Nav className="fixed-navigation">
             <Wrapper>
-                <Header>
-                    KURIER<br /><Span>JANKOWSCY</Span>
-                </Header>
+                <Logo href="#">
+                    <Img src={logo} alt="KURIER" />
+                </Logo>
                 <List>
                     <li>
                         <Link href="#Aktualnosci" onClick={(event) => handleLinkClick(event, 'Aktualnosci')}>Aktualności</Link>

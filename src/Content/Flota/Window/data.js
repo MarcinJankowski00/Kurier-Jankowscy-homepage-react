@@ -6,6 +6,9 @@ export const information= [
     [
         {
             name: "Volkswagen Caravelle",
+            content: "8+1 miejsca",
+        },
+        {
             content: "DVD",
         },
         {
@@ -15,6 +18,9 @@ export const information= [
     [
         {
             name: "Opel Vivaro",
+            content: "8+2 miejsca",
+        },
+        {
             content: "klimatyzacja",
         },
         {
@@ -24,6 +30,9 @@ export const information= [
     [
         {
             name: "Mercedes Sprinter",
+            content: "19+2 miejsca",
+        },
+        {
             content: "DVD",
         },
         {
@@ -48,6 +57,9 @@ export const information= [
     [
         {
             name: "Mercedes Tourino",
+            content: "38+2 miejsca",
+        },
+        {
             content: "DVD",
         },
         {
@@ -75,6 +87,9 @@ export const information= [
     [
         {
             name: "Man Lions Coach",
+            content: "57+2 miejsca",
+        },
+        {
             content: "DVD/dwa monitory",
         },
         {
@@ -111,6 +126,9 @@ export const information= [
     [
         {
             name: "Man",
+            content: "59+2 miejsca",
+        },
+        {
             content: "DVD/dwa monitory",
         },
         {

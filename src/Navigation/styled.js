@@ -15,20 +15,15 @@ export const Wrapper = styled.div`
     margin: 0 auto;
 `;
 
-export const Header = styled.div`
-    font-weight: bold;
-    color: #d02323;
-    font-size: 35px;
-    text-align: center;
-    padding-top: 10px;
-    margin: 5px;
-    line-height: 15px;
+export const Img = styled.img`
+    display: block;
+    visibility: visible;
+    width: 400px;
+    height: max-content;
 `;
 
-export const Span = styled.span`
-    font-size: 15px;
-    font-weight: normal;
-    color: white;
+export const Logo = styled.a`
+
 `;
 
 export const List = styled.ul`

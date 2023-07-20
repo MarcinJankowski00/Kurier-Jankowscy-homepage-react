@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import Section from './Section';
 import Container from './Container';
+import Map from './Map';
 import Photo from './Photo';
 import Onas from './Content/Onas';
 import Aktualnosci from './Content/Aktualnosci';
@@ -43,6 +44,7 @@ function App() {
           adress="Onas"
         />
       </Container>
+      <Map />
       <Footer />
     </main>
   );

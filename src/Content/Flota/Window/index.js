@@ -18,7 +18,7 @@ const Window = (adress) => {
             </Photo>
             <Info>
                 {info.map(inf => (
-                    <Item>
+                    <Item key={inf.id}>
                         <Content>
                             {inf.content}
                         </Content>

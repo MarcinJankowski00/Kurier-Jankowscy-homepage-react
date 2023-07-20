@@ -21,160 +21,207 @@ import man5 from './photos/man5.jpg';
 export const information= [
     [
         {
+            id: 1,
             name: "Volkswagen Caravelle",
             content: "8+1 miejsca",
         },
         {
+            id: 2,
             content: "DVD",
         },
         {
+            id: 3,
             content: "klimatyzacja",
         },
     ],
     [
         {
+            id: 1,
             name: "Opel Vivaro",
             content: "8+2 miejsca",
         },
         {
+            id: 2,
             content: "klimatyzacja",
         },
         {
+            id: 3,
             content: "nawigacja",
         },
     ],
     [
         {
+            id: 1,
             name: "Mercedes Sprinter",
             content: "19+2 miejsca",
         },
         {
+            id: 2,
             content: "DVD",
         },
         {
+            id: 3,
             content: "mikrofon",
         },
         {
+            id: 4,
             content: "regulowane fotele",
         },
         {
+            id: 5,
             content: "klimatyzacja",
         },
         {
+            id: 6,
             content: "ogrzewanie postojowe",
         },
         {
+            id: 7,
             content: "indywidualne nawiewy",
         },
         {
+            id: 8,
             content: "indywidualne oświetlenie",
         },
     ],
     [
         {
+            id: 1,
             name: "Mercedes Tourino",
             content: "38+2 miejsca",
         },
         {
+            id: 2,
             content: "DVD",
         },
         {
+            id: 3,
             content: "mikrofon",
         },
         {
+            id: 4,
             content: "regulowane fotele",
         },
         {
+            id: 5,
             content: "lodówka",
         },
         {
+            id: 6,
             content: "klimatyzacja",
         },
         {
+            id: 7,
             content: "ogrzewanie postojowe",
         },
         {
+            id: 8,
             content: "indywidualne nawiewy",
         },
         {
+            id: 9,
             content: "indywidualne oświetlenie",
         },
     ],
     [
         {
+            id: 1,
             name: "Man Lions Coach",
             content: "57+2 miejsca",
         },
         {
+            id: 2,
             content: "DVD/dwa monitory",
         },
         {
+            id: 3,
             content: "mikrofon",
         },
         {
+            id: 4,
             content: "WC",
         },
         {
+            id: 5,
             content: "coffe bar",
         },
         {
+            id: 6,
             content: "lodówka",
         },
         {
+            id: 7,
             content: "regulowane skórzane fotele",
         },
         {
+            id: 8,
             content: "klimatyzacja",
         },
         {
+            id: 9,
             content: "ogrzewanie postojowe",
         },
         {
+            id: 10,
             content: "indywidualne nawiewy",
         },
         {
+            id: 11,
             content: "indywidualne oświetlenie",
         },
         {
+            id: 12,
             content: "3 - osiowy",
         },
     ],
     [
         {
+            id: 1,
             name: "Man",
             content: "59+2 miejsca",
         },
         {
+            id: 2,
             content: "DVD/dwa monitory",
         },
         {
+            id: 3,
             content: "mikrofon",
         },
         {
+            id: 4,
             content: "WC",
         },
         {
+            id: 5,
             content: "coffe bar",
         },
         {
+            id: 6,
             content: "lodówka",
         },
         {
+            id: 7,
             content: "regulowane skórzane fotele",
         },
         {
+            id: 8,
             content: "klimatyzacja",
         },
         {
+            id: 9,
             content: "ogrzewanie postojowe",
         },
         {
+            id: 10,
             content: "indywidualne nawiewy",
         },
         {
+            id: 11,
             content: "indywidualne oświetlenie",
         },
         {
+            id: 12,
             content: "3 - osiowy",
         },
     ],

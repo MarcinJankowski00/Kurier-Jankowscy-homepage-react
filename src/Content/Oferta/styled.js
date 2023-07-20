@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Content = styled.p`
+export const Content = styled.div`
     text-align: justify;
 `;

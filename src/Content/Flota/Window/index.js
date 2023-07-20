@@ -7,8 +7,6 @@ import { Container, Photo, Info, Item, Content, Title } from "./styled";
 const Window = (adress) => {
     const id = adress;
     const convertToNumber = +id.adress;
-
-
     const info = information[convertToNumber];
     const photos = images[convertToNumber];
 

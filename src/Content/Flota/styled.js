@@ -9,13 +9,13 @@ export const Container = styled.div`
 `;
 
 export const List = styled.div`
+    margin-top: 30px;
     padding-top: 0;
     padding-right: 14px;
     font-size: smaller;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0;
     margin-bottom: 15.5%;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

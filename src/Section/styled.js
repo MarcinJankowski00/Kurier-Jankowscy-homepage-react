@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Segment = styled.section`
-    margin: 10px 0;
+    margin: 50px 0px;
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 0px 5px 4px ${({ theme }) => theme.color.alto};
+    border-radius: 8px;
 `;
 
 export const Header = styled.div`
@@ -23,6 +24,7 @@ export const Header = styled.div`
 export const Title = styled.h2`
     margin: 0;
     text-align: center;
+    font-size: 38px;
 `;
 
 export const Content = styled.div`

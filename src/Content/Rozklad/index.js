@@ -1,4 +1,6 @@
-import { Content, TableContainer, Table, Cell, Text, Row } from "./styled";
+import { Content, TableContainer, Table, Cell, Text, Row, } from "./styled";
+import FileDownloadButton from './FileDownloadButton';
+import exampleFile from 'C:/dev/kurier/src/example.pdf';
 
 const Rozklad = () => (
 
@@ -1715,6 +1717,10 @@ const Rozklad = () => (
             z - nie kursuje w piątek po dniu Bożego Ciała<br />
             K - nie kursuje w dniu 2. V<br />
         </Text>
+        <FileDownloadButton
+                filename="example.pdf"
+                src={exampleFile}
+        />
     </Content>
 
 );

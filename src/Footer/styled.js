@@ -26,3 +26,6 @@ export const Adres = styled.p`
 export const Kontakt = styled.p`
     
 `;
+export const Link = styled.a`
+    color: #12bacd;
+`;

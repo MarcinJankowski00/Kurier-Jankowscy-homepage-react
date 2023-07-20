@@ -1,4 +1,4 @@
-import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact } from "./styled";
+import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link } from "./styled";
 
 const Footer = () => (
     <Bottom id="Kontakt">
@@ -6,19 +6,19 @@ const Footer = () => (
             <Fb><strong>Odwiedź nas na fb!</strong></Fb>
             <Contact>
                 <Adres>
-                    ADRES<br></br>
-                    KURIER S.C JANKOWSCY<br></br>
-                    ul. Dworcowa 6<br></br>
-                    19-100 Mońki<br></br>
-                    NIP: 546-12-60-799<br></br>
+                    ADRES<br />
+                    KURIER S.C JANKOWSCY<br />
+                    ul. Dworcowa 6<br />
+                    19-100 Mońki<br />
+                    NIP: 546-12-60-799<br />
                 </Adres>
                 <Kontakt>
-                    KONTAKT<br></br>
-                    biuro@kurierjankowski.pl<br></br>
-                    transport@kurierjankowski.pl<br></br>
-                    Telefon: 85 716 21 91<br></br> 
-                    kom. 515 073 556<br></br>
-                    kom. 506 110 936<br></br>
+                    KONTAKT<br />
+                    <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link><br />
+                    <Link href="mailto:transport@kurierjankowski.pl">transport@kurierjankowski.pl</Link><br />
+                    Telefon: <Link href="tel:+48857162191">85 716 21 91</Link><br /> 
+                    kom. <Link href="tel:+48515073556">515 073 556</Link><br />
+                    kom. <Link href="tel:+48506110936">506 110 936</Link><br />
                 </Kontakt>
             </Contact>
         </Wrapper>

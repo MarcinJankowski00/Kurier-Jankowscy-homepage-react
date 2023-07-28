@@ -3,11 +3,12 @@ import background from "./background.jpg";
 
 export const Image = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 880px;
-    padding-left: 20%;
+    padding-left: 10%;
     justify-content: center;
+    align-items: center;
     background-image: url("${background}");
     background-size: cover;
     background-position: center;
@@ -17,7 +18,8 @@ export const Text = styled.div`
     color: white;
     font-weight: bold;
     font-size: 45px;
-    padding-top: 100px;
+    margin-top: 100px;
+    margin-right: 130px;
     
 `;
 

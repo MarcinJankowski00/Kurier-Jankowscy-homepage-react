@@ -1,7 +1,8 @@
 import { Image, Text, Button, Span } from "./styled";
+import Search from "./Search";
 import FileDownloadButton from './FileDownloadButton';
 import handleLinkClick from "../HandleLinkClick.js";
-import exampleFile from '../example.pdf';
+import rozkladJazdy from '../RozkładJazdy.pdf';
 
 const Photo = () => (
     <Image>
@@ -14,10 +15,11 @@ const Photo = () => (
                 Sprawdź rozkład jazdy
             </Button>
             <FileDownloadButton
-                filename="example.pdf"
-                src={exampleFile}
+                filename="Rozkład jazdy.pdf"
+                src={rozkladJazdy}
             />
         </Text>
+        <Search />
     </Image>
 );
 

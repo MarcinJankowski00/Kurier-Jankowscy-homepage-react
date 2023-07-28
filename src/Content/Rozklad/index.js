@@ -1,6 +1,6 @@
 import { Content, TableContainer, Table, Cell, Text, Row, } from "./styled";
 import FileDownloadButton from './FileDownloadButton';
-import exampleFile from 'C:/dev/kurier/src/example.pdf';
+import rozkladJazdy from 'C:/dev/kurier/src/RozkładJazdy.pdf';
 
 const Rozklad = () => (
 
@@ -1718,8 +1718,8 @@ const Rozklad = () => (
             K - nie kursuje w dniu 2. V<br />
         </Text>
         <FileDownloadButton
-                filename="example.pdf"
-                src={exampleFile}
+                filename="Rozkład Jazdy.pdf"
+                src={rozkladJazdy}
         />
     </Content>
 

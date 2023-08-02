@@ -19,6 +19,46 @@ const Search = () => {
 
     const dzisiaj = new Date().toISOString().slice(0, 10);
     const [departureDate, setDepartureDate] = useState(dzisiaj);
+    const calculateTimeDifference = (startHour, endHour) => {
+        const [startHourStr, startMinStr] = startHour.split(":");
+        const [endHourStr, endMinStr] = endHour.split(":");
+
+        const startHourNum = parseInt(startHourStr, 10);
+        const startMinNum = parseInt(startMinStr, 10);
+        const endHourNum = parseInt(endHourStr, 10);
+        const endMinNum = parseInt(endMinStr, 10);
+
+        const startTotalMinutes = startHourNum * 60 + startMinNum;
+        const endTotalMinutes = endHourNum * 60 + endMinNum;
+
+        const timeDifference = endTotalMinutes - startTotalMinutes;
+
+        return timeDifference;
+    };
+
+    const createResult = (startStop, endStop, departureDate) => {
+        const startStopObject = busStops.find((station) => station.name === startStop);
+        const endStopObject = busStops.find((station) => station.name === endStop);
+        let direction = "";
+        if (startStopObject.id > endStopObject.id) {
+            direction = "Mońki";
+        } else {
+            direction = "Białystok";
+        }
+        console.log(startStopObject.wariant1[direction][0])
+        const differenceInMinutes = calculateTimeDifference(startStopObject.wariant1[direction][0], endStopObject.wariant1[direction][0]);
+        return (
+            <ul>
+                {startStopObject.wariant1[direction].map((item) => (
+                    <li>
+                        {item}-
+                        {endStopObject.wariant1[direction][startStopObject.wariant1[direction].indexOf(item)]}{" "}
+                        ({differenceInMinutes}min)
+                    </li>
+                ))}
+            </ul>
+        );
+    };
     return (
         <Form>
             <Header>Wyszukiwarka połączeń</Header>
@@ -80,7 +120,8 @@ const Search = () => {
             </Element>
             <Button onClick={openModal}>Znajdź połączenie</Button>
             <Modal isOpen={isModalOpen} onClose={closeModal}>
-                <p>Treść Twojego okienka modalnego tutaj.</p>
+                <p>Godziny odjazdu z <b>{startStop}</b> i przyjazdu do <b>{endStop}</b>
+                    {createResult(startStop, endStop, departureDate)}</p>
             </Modal>
         </Form>
     );

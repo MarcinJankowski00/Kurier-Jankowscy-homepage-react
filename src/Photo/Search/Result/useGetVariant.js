@@ -81,7 +81,6 @@ const isEster = (myDate) => {
 
 const getVariant = (departureDateStr) => {
     const departureDate = new Date(departureDateStr);
-    console.log(departureDate)
     if (
         (departureDate.getMonth() === 11 && (departureDate.getDate() === 25 || departureDate.getDate() === 26)) ||
         (departureDate.getMonth() === 0 && departureDate.getDate() === 1) ||

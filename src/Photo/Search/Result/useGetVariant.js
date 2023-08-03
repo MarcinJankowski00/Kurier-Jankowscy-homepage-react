@@ -1,5 +1,3 @@
-import React from 'react';
-
 const isBozeCialo = (myDate) => {
     const bozeCialo = [
         '08-06-2023',

@@ -7,11 +7,17 @@ export const Image = styled.div`
     width: 100%;
     height: 880px;
     padding-left: 10%;
+    padding-right: 10%;
     justify-content: center;
     align-items: center;
     background-image: url("${background}");
     background-size: cover;
     background-position: center;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            flex-direction: column-reverse;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
 `;
 
 export const Text = styled.div`
@@ -20,7 +26,18 @@ export const Text = styled.div`
     font-size: 45px;
     margin-top: 100px;
     margin-right: 130px;
-    
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            display: none;
+        }
+`;
+export const Buttons = styled.div`
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    margin-right: 130px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            margin: 0;
+        }
 `;
 
 export const Span = styled.span`
@@ -32,6 +49,7 @@ export const Button = styled.button`
     border: 1px solid ${({ theme }) => theme.color.crimson};
     background-color: ${({ theme }) => theme.color.crimson};
     color: #fff;
+    margin-right: 10px;
     padding: 12px 24px;
     cursor: pointer;
     &:hover {
@@ -40,6 +58,9 @@ export const Button = styled.button`
         transition: 0.5s;
         color: ${({ theme }) => theme.color.white};;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            width: 100%;
+        }
 `;
 
 export const DownloadButton = styled.button`

@@ -1,6 +1,7 @@
 import React from 'react';
 import { busStops } from '../BusStops.js';
 import getVariant from './useGetVariant';
+import { List, Item, Container, Heading, Span } from "./styled";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -26,7 +27,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
     if (variant === 'brak') {
         return (
             <p>
-                W ten dzień nie kursujemy.
+                W tym dniu nie kursujemy.
             </p>
         );
     }
@@ -42,18 +43,18 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const differenceInMinutes = calculateTimeDifference(startStopObject[variant][direction][0], endStopObject[variant][direction][0]);
     return (
-        <div>
-            <p>Godziny odjazdu z <b>{startStop}</b> i przyjazdu do <b>{endStop}</b></p><br />
-            <ul>
+        <Container>
+            <Heading><b>{startStop} - {endStop}</b></Heading><br />
+            <List>
                 {startStopObject[variant][direction].map((item) => (
-                    <li>
-                        {item}-
+                    <Item>
+                        {item}{" "}-{" "}
                         {endStopObject[variant][direction][startStopObject[variant][direction].indexOf(item)]}{" "}
-                        ({differenceInMinutes}min)
-                    </li>
+                        <Span>({differenceInMinutes}min)</Span>
+                    </Item>
                 ))}
-            </ul>
-        </div>
+            </List>
+        </Container>
     );
 };
 

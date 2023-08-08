@@ -15,8 +15,8 @@ const Search = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
-    const [startStop, setStartStop] = useState('Mońki – Dworcowa');
-    const [endStop, setEndStop] = useState('Dworzec PKS');
+    const [startStop, setStartStop] = useState('Mońki–Dworcowa');
+    const [endStop, setEndStop] = useState('Białystok PKS');
 
     const dzisiaj = new Date().toISOString().slice(0, 10);
     const [departureDate, setDepartureDate] = useState(dzisiaj);

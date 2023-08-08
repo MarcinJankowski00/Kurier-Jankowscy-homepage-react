@@ -11,11 +11,16 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  color: ${({ theme }) => theme.color.teal};
   background-color: #fff;
-  margin: 15% auto;
+  margin: 140px auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  max-width: 700px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    width: 95%;
+    margin-top: 90px;
+  }
 `;
 
 export const CloseButton = styled.span`

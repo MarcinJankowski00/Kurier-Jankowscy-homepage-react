@@ -17,7 +17,7 @@ export const Table = styled.table`
     background-color: #f8f7f7;
     width: 100%;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            font-size: 9px;
+            font-size: 15px;
         }
 `;
 

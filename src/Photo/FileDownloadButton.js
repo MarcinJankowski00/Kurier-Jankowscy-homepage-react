@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const DownloadButton = styled.button`
-    margin-left: 10px;
+    
+    width: 257px;
     font-size: 20px;
     border: 1px solid ${({ theme }) => theme.color.white};;
     background-color: transparent;
@@ -13,6 +14,9 @@ const DownloadButton = styled.button`
         transition: 0.5s;
         color: ${({ theme }) => theme.color.teal};;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            width: 100%;
+        }
 `;
 
 const FileDownloadButton = ({ filename, src }) => {

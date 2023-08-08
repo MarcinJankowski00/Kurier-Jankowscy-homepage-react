@@ -26,6 +26,9 @@ export const Logo = styled.a`
     margin-top: 15px;
     margin-right: 100px;
     margin-left: 50px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-bottom: 15px;
+        }
 `;
 
 export const List = styled.ul`
@@ -33,6 +36,9 @@ export const List = styled.ul`
     justify-content: space-around;
     list-style: none;
     padding-left: 0;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            display: none;
+        }
 `;
 
 export const Link = styled.a`

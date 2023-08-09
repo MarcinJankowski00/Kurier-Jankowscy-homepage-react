@@ -8,6 +8,8 @@ export const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  overflow-y: auto;
 `;
 
 export const ModalContent = styled.div`
@@ -16,7 +18,7 @@ export const ModalContent = styled.div`
   margin: 140px auto;
   padding: 20px;
   border: 1px solid #888;
-  max-width: 700px;
+  max-width: 450px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 95%;
     margin-top: 90px;

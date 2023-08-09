@@ -3,9 +3,6 @@ import styled from "styled-components";
 export const Bottom = styled.footer`
     background-color: #2c3e50;
     color: #eee;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 16px;
-    }
 `;
 
 export const Wrapper = styled.div`
@@ -16,6 +13,9 @@ export const Wrapper = styled.div`
 
 export const Contact = styled.div`
     display: flex;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        flex-direction: column;
+    }
 `;
 
 export const Fb = styled.p`

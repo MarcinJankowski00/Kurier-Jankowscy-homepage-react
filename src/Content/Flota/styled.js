@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 4fr;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             grid-template-columns: 1fr;
         }
 `;
@@ -18,11 +18,11 @@ export const List = styled.div`
     align-items: center;
     margin-bottom: 15.5%;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            flex-direction: row;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             margin-bottom: 0;
+            margin-top: 0;
             justify-content: space-between;
-            font-size: 4px;
+            padding-right: 0;
         }
 `;
 
@@ -51,10 +51,9 @@ export const Button = styled.button`
         filter: brightness(120%);
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             flex-grow: unset;
             padding: 5px;
-            margin-bottom: 0;
             margin-right: 4px;
         }
 `;

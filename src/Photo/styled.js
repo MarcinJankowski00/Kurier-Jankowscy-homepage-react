@@ -5,7 +5,7 @@ export const Image = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 880px;
+    height: 770px;
     padding-left: 10%;
     padding-right: 10%;
     justify-content: center;

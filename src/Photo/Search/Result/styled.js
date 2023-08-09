@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.div`
-
+    font-size: 20px;
 `;
 
 export const List = styled.ul`

@@ -5,7 +5,7 @@ export const Nav = styled.div`
     padding: 1px;
     position: fixed ;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
 `;
 
 export const Wrapper = styled.div`

@@ -6,16 +6,25 @@ export const Container = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        display: flex;
+        flex-direction: column;
+    }
 
 `;
 
 export const Photo = styled.div`
     width: 100%;
     height: 100%;
+    z-index: 997;
 `;
 
 export const Title = styled.h2`
     text-align: center;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        margin-bottom: 0;
+        font-size: smaller;
+    }
 `;
 
 export const Info = styled.ul`
@@ -29,9 +38,6 @@ export const Info = styled.ul`
     margin-bottom: 15.5%;
     text-align: center;
     font-size: smaller;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            font-size: 6px;
-        }
 `;
 
 export const Item = styled.li`

@@ -26,9 +26,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const variant = getVariant(departureDate);
     if (variant === 'brak') {
         return (
-            <p>
+            <div>
                 W tym dniu nie kursujemy.
-            </p>
+            </div>
         );
     }
 
@@ -40,6 +40,25 @@ const Result = ({ startStop, endStop, departureDate }) => {
         direction = "Mońki";
     } else {
         direction = "Białystok";
+    }
+
+    if((startStopObject.id === 19 || endStopObject.id === 19) && direction === "Białystok"){
+        return (
+            <Heading>
+                <b>Nie ma takiego połączenia</b><br/>
+                <br />
+                Autobusy z przystanku "Fasty Kombinat" odjeżdżają tylko w kierunku Moniek.
+            </Heading>
+        );
+    }
+    if(((startStopObject.id === 20 || endStopObject.id === 20) || (startStopObject.id === 23 || endStopObject.id === 23)) && direction === "Mońki"){
+        return (
+            <Heading>
+                <b>Nie ma takiego połączenia</b><br/>
+                <br />
+                Autobusy z przystanku "Białystok – Cast." i "B-stok PKP" odjeżdżają tylko w kierunku Białegostoku.
+            </Heading>
+        );
     }
     const differenceInMinutes = calculateTimeDifference(startStopObject[variant][direction][0], endStopObject[variant][direction][0]);
     return (

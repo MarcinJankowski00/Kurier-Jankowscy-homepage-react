@@ -3,7 +3,7 @@ import { Container, List, Button, } from "./styled";
 import Window from './Window';
 
 const Flota = () => {
-    const [adress, setAdress] = useState(0);
+    const [adress, setAdress] = useState(1);
 
     return (
         <Container>

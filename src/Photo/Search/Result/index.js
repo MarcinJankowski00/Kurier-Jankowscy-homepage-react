@@ -1,7 +1,7 @@
 import React from 'react';
 import { busStops } from '../BusStops.js';
 import getVariant from './useGetVariant';
-import { List, Item, Container, Heading, Span } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer } from "./styled";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -42,19 +42,19 @@ const Result = ({ startStop, endStop, departureDate }) => {
         direction = "Białystok";
     }
 
-    if((startStopObject.id === 19 || endStopObject.id === 19) && direction === "Białystok"){
+    if ((startStopObject.id === 19 || endStopObject.id === 19) && direction === "Białystok") {
         return (
             <Heading>
-                <b>Nie ma takiego połączenia</b><br/>
+                <b>Nie ma takiego połączenia</b><br />
                 <br />
                 Autobusy z przystanku "Fasty Kombinat" odjeżdżają tylko w kierunku Moniek.
             </Heading>
         );
     }
-    if(((startStopObject.id === 20 || endStopObject.id === 20) || (startStopObject.id === 23 || endStopObject.id === 23)) && direction === "Mońki"){
+    if (((startStopObject.id === 20 || endStopObject.id === 20) || (startStopObject.id === 23 || endStopObject.id === 23)) && direction === "Mońki") {
         return (
             <Heading>
-                <b>Nie ma takiego połączenia</b><br/>
+                <b>Nie ma takiego połączenia</b><br />
                 <br />
                 Autobusy z przystanku "Białystok – Cast." i "B-stok PKP" odjeżdżają tylko w kierunku Białegostoku.
             </Heading>
@@ -64,15 +64,17 @@ const Result = ({ startStop, endStop, departureDate }) => {
     return (
         <Container>
             <Heading><b>{startStop} - {endStop}</b></Heading><br />
-            <List>
-                {startStopObject[variant][direction].map((item) => (
-                    <Item>
-                        {item}{" "}-{" "}
-                        {endStopObject[variant][direction][startStopObject[variant][direction].indexOf(item)]}{" "}
-                        <Span>({differenceInMinutes}min)</Span>
-                    </Item>
-                ))}
-            </List>
+            <ListContainer>
+                <List>
+                    {startStopObject[variant][direction].map((item) => (
+                        <Item>
+                            {item}{" "}-{" "}
+                            {endStopObject[variant][direction][startStopObject[variant][direction].indexOf(item)]}{" "}
+                            <Span>({differenceInMinutes}min)</Span>
+                        </Item>
+                    ))}
+                </List>
+            </ListContainer>
         </Container>
     );
 };

@@ -6,6 +6,14 @@ export const Container = styled.div`
 
 export const Heading = styled.div`
     font-size: 20px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 17px;
+    }
+`;
+
+export const ListContainer = styled.div`
+    padding: 0;
+    margin: 0;
 `;
 
 export const List = styled.ul`
@@ -13,6 +21,7 @@ export const List = styled.ul`
     padding-inline-start: 0;
     padding-left: 15px;
     padding-right: 15px;
+    
 `;
 
 export const Item = styled.li`

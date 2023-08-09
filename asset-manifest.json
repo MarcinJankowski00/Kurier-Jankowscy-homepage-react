@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css",
-    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.ce9cbf87.js",
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.2fa8e4a0.js",
     "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
     "static/media/volkswagen1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
@@ -15,7 +15,6 @@
     "static/media/man5.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man5.11e4dbdc243768304870.jpg",
     "static/media/sprinter2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter2.2dca0e7783023de10f82.jpg",
     "static/media/sprinter1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter1.02ba74edb92003876b5d.jpg",
-    "static/media/background.jpg": "/Kurier-Jankowscy-homepage-react/static/media/background.f59c0c95f2f358da816c.jpg",
     "static/media/man1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man1.6cd09e3e343f7827f981.jpg",
     "static/media/man4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man4.a156bd1a169ef72cdc61.jpg",
     "static/media/sprinter3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter3.dd39306ffbe87689ed22.jpg",
@@ -25,14 +24,15 @@
     "static/media/sprinter4.jpg": "/Kurier-Jankowscy-homepage-react/static/media/sprinter4.9235346aee003d9e3f1c.jpg",
     "static/media/man2.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man2.97e1ed754e9678ebdbf3.jpg",
     "static/media/RozkładJazdy.pdf": "/Kurier-Jankowscy-homepage-react/static/media/RozkładJazdy.acd7ee889fe42702cd21.pdf",
+    "static/media/background.jpg": "/Kurier-Jankowscy-homepage-react/static/media/background.75508c35546014309ca3.jpg",
     "static/media/kurierlogo.png": "/Kurier-Jankowscy-homepage-react/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
     "main.5eb240bf.css.map": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css.map",
-    "main.ce9cbf87.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.ce9cbf87.js.map",
+    "main.2fa8e4a0.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.2fa8e4a0.js.map",
     "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.ce9cbf87.js"
+    "static/js/main.2fa8e4a0.js"
   ]
 }

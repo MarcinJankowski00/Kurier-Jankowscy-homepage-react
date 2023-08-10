@@ -6,7 +6,7 @@ export const Image = styled.div`
     flex-direction: row;
     width: 100%;
     height: 770px;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-left: 10%;
     padding-right: 10%;
     justify-content: center;
@@ -18,6 +18,7 @@ export const Image = styled.div`
             flex-direction: column-reverse;
             padding-left: 5%;
             padding-right: 5%;
+            padding-top: 0px;
         }
 `;
 

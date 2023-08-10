@@ -5,7 +5,6 @@ export const Form = styled.div`
     color: ${({ theme }) => theme.color.teal};
     width: 440px;
     padding: 20px;
-    margin-top: 100px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.color.grey};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

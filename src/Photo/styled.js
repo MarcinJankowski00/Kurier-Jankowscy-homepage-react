@@ -6,6 +6,7 @@ export const Image = styled.div`
     flex-direction: row;
     width: 100%;
     height: 770px;
+    padding-top: 50px;
     padding-left: 10%;
     padding-right: 10%;
     justify-content: center;
@@ -24,7 +25,6 @@ export const Text = styled.div`
     color: white;
     font-weight: bold;
     font-size: 45px;
-    margin-top: 100px;
     margin-right: 130px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             display: none;

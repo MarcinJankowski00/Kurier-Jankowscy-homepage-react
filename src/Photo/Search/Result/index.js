@@ -51,12 +51,12 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </Heading>
         );
     }
-    if (((startStopObject.id === 20 || endStopObject.id === 20) || (startStopObject.id === 23 || endStopObject.id === 23)) && direction === "Mońki") {
+    if ((startStopObject.id === 23 || endStopObject.id === 23) && direction === "Mońki") {
         return (
             <Heading>
                 <b>Nie ma takiego połączenia</b><br />
                 <br />
-                Autobusy z przystanku "Białystok – Cast." i "B-stok PKP" odjeżdżają tylko w kierunku Białegostoku.
+                Autobusy z przystanku "B-stok PKP" odjeżdżają tylko w kierunku Białegostoku.
             </Heading>
         );
     }

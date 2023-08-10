@@ -1128,6 +1128,51 @@ const Rozklad = () => (
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">
+                            Białystok – Cast.
+                        </Cell>
+                        <Cell>
+                            5:31
+                        </Cell>
+                        <Cell>
+                            6:26
+                        </Cell>
+                        <Cell>
+                            7:46
+                        </Cell>
+                        <Cell>
+                            8:46
+                        </Cell>
+                        <Cell>
+                            10:21
+                        </Cell>
+                        <Cell>
+                            11:21
+                        </Cell>
+                        <Cell>
+                            12:36
+                        </Cell>
+                        <Cell>
+                            13:36
+                        </Cell>
+                        <Cell>
+                            14:46
+                        </Cell>
+                        <Cell>
+                            15:51
+                        </Cell>
+                        <Cell>
+                            17:01
+                        </Cell>
+                        <Cell>18:21</Cell>
+                        <Cell>
+                            19:16
+                        </Cell>
+                        <Cell>
+                            20:31
+                        </Cell>
+                    </Row>
+                    <Row>
+                        <Cell scope="row" header="true">
                             Fasty Kombinat
                         </Cell>
                         <Cell>
@@ -1718,8 +1763,8 @@ const Rozklad = () => (
             K - nie kursuje w dniu 2. V<br />
         </Text>
         <FileDownloadButton
-                filename="Rozkład Jazdy.pdf"
-                src={rozkladJazdy}
+            filename="Rozkład Jazdy.pdf"
+            src={rozkladJazdy}
         />
     </Content>
 

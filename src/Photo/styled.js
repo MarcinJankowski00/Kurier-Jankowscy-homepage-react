@@ -74,6 +74,6 @@ export const DownloadButton = styled.button`
         background-color: ${({ theme }) => theme.color.white};
         border: 1px solid ${({ theme }) => theme.color.white};
         transition: 0.5s;
-        color: ${({ theme }) => theme.color.teal};;
+        color: ${({ theme }) => theme.color.teal};
     }
 `;

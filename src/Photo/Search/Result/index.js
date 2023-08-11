@@ -1,7 +1,8 @@
 import React from 'react';
 import { busStops } from '../BusStops.js';
 import getVariant from './useGetVariant';
-import { List, Item, Container, Heading, Span, ListContainer } from "./styled";
+import FileDownloadButton from './FileDownloadButton';
+import { List, Item, Container, Heading, Span, ListContainer, Div } from "./styled";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -75,6 +76,12 @@ const Result = ({ startStop, endStop, departureDate }) => {
                     ))}
                 </List>
             </ListContainer>
+            <Div>
+                <FileDownloadButton
+                    filename="Rozkład przystanku.pdf"
+                    src={startStopObject.download}
+                />
+            </Div>
         </Container>
     );
 };

@@ -21,7 +21,8 @@ export const List = styled.ul`
     padding-inline-start: 0;
     padding-left: 15px;
     padding-right: 15px;
-    
+    padding-bottom: 0;
+    margin-bottom: 0;
 `;
 
 export const Item = styled.li`
@@ -35,4 +36,10 @@ export const Item = styled.li`
 
 export const Span = styled.span`
     color: gray;
+`;
+
+export const Div = styled.div`
+    text-align: center;
+    margin: 0;
+    padding: 0;
 `;

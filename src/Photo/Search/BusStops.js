@@ -1,3 +1,29 @@
+import bacieczki from './Result/StopsDownload/bacieczki.pdf';
+import castorama from './Result/StopsDownload/castorama.pdf';
+import chraboly from './Result/StopsDownload/chraboly.pdf';
+import czechowizna from './Result/StopsDownload/czechowizna.pdf';
+import czechPKP from './Result/StopsDownload/czechPKP.pdf';
+import dobrzyniewo from './Result/StopsDownload/dobrzyniewo.pdf';
+import dworcowa from './Result/StopsDownload/dworcowa.pdf';
+import dworzecpkp from './Result/StopsDownload/dworzecpkp.pdf';
+import dworzecpks from './Result/StopsDownload/dworzecpks.pdf';
+import dziekonie from './Result/StopsDownload/dziekonie.pdf';
+import dzikie from './Result/StopsDownload/dzikie.pdf';
+import fasty from './Result/StopsDownload/fasty.pdf';
+import gnila from './Result/StopsDownload/gnila.pdf';
+import goniadzka from './Result/StopsDownload/goniadzka.pdf';
+import jp2 from './Result/StopsDownload/jp2.pdf';
+import kolonia from './Result/StopsDownload/kolonia.pdf';
+import kombinat from './Result/StopsDownload/kombinat.pdf';
+import kozince from './Result/StopsDownload/kozince.pdf';
+import krynice from './Result/StopsDownload/krynice.pdf';
+import lesna from './Result/StopsDownload/lesna.pdf';
+import mysliwiec from './Result/StopsDownload/mysliwiec.pdf';
+import obrubniki from './Result/StopsDownload/obrubniki.pdf';
+import rynek from './Result/StopsDownload/rynek.pdf';
+import skrzyzowanie from './Result/StopsDownload/skrzyzowanie.pdf';
+import wojpolskiego from './Result/StopsDownload/wojpolskiego.pdf';
+
 export const busStops = [
     {
         id: 1,
@@ -22,6 +48,7 @@ export const busStops = [
             Białystok: ['7:25', '10:00', '12:15', '14:30'],
             Mońki: ['9:32', '12:07', '14:22', '16:37'],
         },
+        download: dworcowa,
     },
     {
         id: 2,
@@ -46,6 +73,7 @@ export const busStops = [
             Białystok: ['7:28', '10:03', '12:18', '14:33'],
             Mońki: ['9:30', '12:05', '14:20', '16:35'],
         },
+        download: wojpolskiego,
     },
     {
         id: 3,
@@ -70,6 +98,7 @@ export const busStops = [
             Białystok: ['7:30', '10:05', '12:20', '14:35'],
             Mońki: ['9:27', '12:02', '14:17', '16:32'],
         },
+        download: lesna,
     },
     {
         id: 4,
@@ -94,6 +123,7 @@ export const busStops = [
             Białystok: ['7:34', '10:09', '12:24', '14:39'],
             Mońki: ['9:23', '11:58', '14:13', '16:28'],
         },
+        download: dziekonie,
     },
     {
         id: 5,
@@ -118,6 +148,7 @@ export const busStops = [
             Białystok: ['7:36', '10:11', '12:26', '14:41'],
             Mońki: ['9:21', '11:56', '14:11', '16:26'],
         },
+        download: czechPKP,
     },
     {
         id: 6,
@@ -142,6 +173,7 @@ export const busStops = [
             Białystok: ['7:38', '10:13', '12:28', '14:43'],
             Mońki: ['9:19', '11:54', '14:09', '16:24'],
         },
+        download: skrzyzowanie,
     },
     {
         id: 7,
@@ -166,6 +198,7 @@ export const busStops = [
             Białystok: ['7:39', '10:14', '12:29', '14:44'],
             Mońki: ['9:18', '11:53', '14:08', '16:23'],
         },
+        download: czechowizna,
     },
     {
         id: 8,
@@ -190,6 +223,7 @@ export const busStops = [
             Białystok: ['7:43', '10:18', '12:33', '14:48'],
             Mońki: ['9:14', '11:49', '14:04', '16:19'],
         },
+        download: goniadzka,
     },
     {
         id: 9,
@@ -214,6 +248,7 @@ export const busStops = [
             Białystok: ['7:44', '10:19', '12:34', '14:49'],
             Mońki: ['9:13', '11:48', '14:03', '16:18'],
         },
+        download: rynek,
     },
     {
         id: 10,
@@ -238,6 +273,7 @@ export const busStops = [
             Białystok: ['7:50', '10:25', '12:40', '14:55'],
             Mońki: ['9:06', '11:41', '13:56', '16:11'],
         },
+        download: chraboly,
     },
     {
         id: 11,
@@ -262,6 +298,7 @@ export const busStops = [
             Białystok: ['7:52', '10:27', '12:42', '14:57'],
             Mońki: ['9:04', '11:39', '13:54', '16:09'],
         },
+        download: mysliwiec,
     },
     {
         id: 12,
@@ -286,6 +323,7 @@ export const busStops = [
             Białystok: ['7:54', '10:29', '12:44', '14:59'],
             Mońki: ['9:02', '11:37', '13:52', '16:07'],
         },
+        download: kozince,
     },
     {
         id: 13,
@@ -310,6 +348,7 @@ export const busStops = [
             Białystok: ['7:56', '10:31', '12:46', '15:01'],
             Mońki: ['9:00', '11:35', '13:50', '16:05'],
         },
+        download: obrubniki,
     },
     {
         id: 14,
@@ -334,6 +373,7 @@ export const busStops = [
             Białystok: ['7:58', '10:33', '12:48', '15:03'],
             Mońki: ['8:58', '11:33', '13:48', '16:03'],
         },
+        download: krynice,
     },
     {
         id: 15,
@@ -358,6 +398,7 @@ export const busStops = [
             Białystok: ['7:59', '10:34', '12:49', '15:04'],
             Mońki: ['8:57', '11:32', '13:47', '16:02'],
         },
+        download: gnila,
     },
     {
         id: 16,
@@ -382,6 +423,7 @@ export const busStops = [
             Białystok: ['8:01', '10:36', '12:51', '15:06'],
             Mońki: ['8:55', '11:30', '13:45', '16:00'],
         },
+        download: dobrzyniewo,
     },
     {
         id: 17,
@@ -406,6 +448,7 @@ export const busStops = [
             Białystok: ['8:04', '10:39', '12:54', '15:09'],
             Mońki: ['8:52', '11:27', '13:42', '15:57'],
         },
+        download: dzikie,
     },
     {
         id: 18,
@@ -430,6 +473,7 @@ export const busStops = [
             Białystok: ['8:06', '10:41', '12:56', '15:11'],
             Mońki: ['8:50', '11:25', '13:40', '15:55'],
         },
+        download: fasty,
     },
     {
         id: 19,
@@ -449,6 +493,7 @@ export const busStops = [
         wariant5: {
             Mońki: ['8:48', '11:23', '13:38', '15:53'],
         },
+        download: kombinat,
     },
     {
         id: 20,
@@ -473,6 +518,7 @@ export const busStops = [
             Białystok: ['8:10', '10:45', '13:00', '15:15'],
             Mońki: ['8:46', '11:21', '13:36', '15:51'],
         },
+        download: castorama,
     },
     {
         id: 21,
@@ -497,6 +543,7 @@ export const busStops = [
             Białystok: ['8:12', '10:47', '13:02', '15:17'],
             Mońki: ['8:45', '11:20', '13:35', '15:50'],
         },
+        download: bacieczki,
     },
     {
         id: 22,
@@ -521,6 +568,7 @@ export const busStops = [
             Białystok: ['8:15', '10:50', '13:05', '15:20'],
             Mońki: ['8:42', '11:17', '13:32', '15:47'],
         },
+        download: jp2,
     },
     {
         id: 23,
@@ -540,6 +588,7 @@ export const busStops = [
         wariant5: {
             Białystok: ['8:18', '10:53', '13:08', '15:23'],
         },
+        download: dworzecpkp,
     },
     {
         id: 24,
@@ -564,5 +613,6 @@ export const busStops = [
             Białystok: ['8:21', '10:56', '13:11', '15:26'],
             Mońki: ['8:35', '11:10', '13:25', '15:40'],
         },
+        download: dworzecpks,
     }
 ];

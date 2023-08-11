@@ -23,9 +23,6 @@ export const ModalContent = styled.div`
   max-width: 460px;
   max-height: 90%;
   overflow-y: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    
-  }
 `;
 
 export const CloseButton = styled.span`

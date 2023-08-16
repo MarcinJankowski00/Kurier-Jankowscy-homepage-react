@@ -27,7 +27,7 @@ export const List = styled.div`
 `;
 
 export const Button = styled.button`
-    font-size: smaller;
+    font-size: 15px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
     padding: 0;
@@ -55,6 +55,7 @@ export const Button = styled.button`
             flex-grow: unset;
             padding: 9px;
             margin-right: 4px;
+            font-size: 13px;
         }
 `;
 

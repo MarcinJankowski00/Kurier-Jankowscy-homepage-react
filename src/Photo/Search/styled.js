@@ -1,17 +1,21 @@
 import styled from "styled-components";
 
 export const Form = styled.div`
-    background-color: #ffffffe6;
+    background-color: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.teal};
-    width: 440px;
+    width: 480px;
     padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.color.grey};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             width: 100%;
-            max-width: 530px;
+            max-width: 480px;
             margin-bottom: 20px;
             margin-top: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 `;
 
@@ -23,7 +27,6 @@ export const Header = styled.h1`
 `;
 
 export const Element = styled.div`
-    text-align: left;
     padding-left: 15px;
     padding-right: 15px;
 `;

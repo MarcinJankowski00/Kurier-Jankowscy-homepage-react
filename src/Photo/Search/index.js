@@ -31,7 +31,6 @@ const Search = () => {
             <Element>
                 <Wrapper>
                     <Div>
-
                         <label htmlFor="startStationSelect">
                             <Text>
                                 Z:

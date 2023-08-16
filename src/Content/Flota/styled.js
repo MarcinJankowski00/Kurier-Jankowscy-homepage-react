@@ -53,7 +53,7 @@ export const Button = styled.button`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             flex-grow: unset;
-            padding: 5px;
+            padding: 9px;
             margin-right: 4px;
         }
 `;

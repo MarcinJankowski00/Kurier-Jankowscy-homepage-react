@@ -13,6 +13,9 @@ export const Wrapper = styled.div`
     grid-template-columns: 2fr 5fr;
     max-width: 1300px;
     margin: 0 auto;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            display: flex;
+        }
 `;
 
 export const Img = styled.img`
@@ -27,7 +30,9 @@ export const Logo = styled.a`
     margin-right: 100px;
     margin-left: 50px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        margin-bottom: 15px;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 `;
 

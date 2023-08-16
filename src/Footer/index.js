@@ -1,9 +1,10 @@
-import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link } from "./styled";
+import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link, Img } from "./styled";
+import fbLogo from "./fbLogo.png";
 
 const Footer = () => (
     <Bottom id="Kontakt">
         <Wrapper>
-            <Fb><strong>Odwiedź nas na fb!</strong></Fb>
+            <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Facebook"/></a></Fb>
             <Contact>
                 <Adres>
                     ADRES<br />

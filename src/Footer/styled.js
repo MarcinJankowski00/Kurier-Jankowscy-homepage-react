@@ -19,7 +19,13 @@ export const Contact = styled.div`
 `;
 
 export const Fb = styled.p`
-    
+    margin: 0;
+    width: 40px;
+`;
+
+export const Img = styled.img`
+    display: block;
+    width: 40px;
 `;
 
 export const Adres = styled.p`
@@ -27,8 +33,10 @@ export const Adres = styled.p`
 `;
 
 export const Kontakt = styled.p`
-    
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+    }   
 `;
 export const Link = styled.a`
-    color: #12bacd;
+    color: #4c90f4;
 `;

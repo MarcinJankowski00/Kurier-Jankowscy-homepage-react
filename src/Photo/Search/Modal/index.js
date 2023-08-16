@@ -1,9 +1,9 @@
 import React from 'react';
 import { ModalContainer, ModalContent, CloseButton } from "./styled";
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isopen, onClose, children }) => {
     return (
-      <ModalContainer isOpen={isOpen}>
+      <ModalContainer isopen={isopen}>
         <ModalContent>
           <CloseButton onClick={onClose}>&times;</CloseButton>
           {children}

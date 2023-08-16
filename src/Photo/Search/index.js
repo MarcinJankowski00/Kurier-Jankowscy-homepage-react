@@ -5,12 +5,12 @@ import Result from "./Result";
 import { busStops } from './BusStops.js';
 
 const Search = () => {
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setModalOpen] = useState("false");
     const openModal = () => {
-        setModalOpen(true);
+        setModalOpen("true");
     };
     const closeModal = () => {
-        setModalOpen(false);
+        setModalOpen("false");
     };
 
     const [startStop, setStartStop] = useState('Mońki–Dworcowa');
@@ -89,7 +89,7 @@ const Search = () => {
                 </p>
             </Element>
             <Button onClick={openModal}>Znajdź połączenie 🔎</Button>
-            <Modal isOpen={isModalOpen} onClose={closeModal}>
+            <Modal isopen={isModalOpen} onClose={closeModal}>
                 <Result
                     startStop={startStop}
                     endStop={endStop}

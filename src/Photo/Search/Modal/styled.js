@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ isopen }) => (isopen==="true" ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   left: 0;

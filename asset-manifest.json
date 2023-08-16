@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css",
-    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.bbd4f68a.js",
+    "main.js": "/Kurier-Jankowscy-homepage-react/static/js/main.2fbf1997.js",
     "static/js/787.6969a1fe.chunk.js": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js",
     "static/media/volkswagen1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
@@ -32,8 +32,8 @@
     "static/media/kombinat.pdf": "/Kurier-Jankowscy-homepage-react/static/media/kombinat.085ab2a90143a0babfdf.pdf",
     "static/media/dworcowa.pdf": "/Kurier-Jankowscy-homepage-react/static/media/dworcowa.93e7aec7f72501b107c9.pdf",
     "static/media/man3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man3.bcfbaa34d58fdbdebb7b.jpg",
-    "static/media/RozkładJazdy.pdf": "/Kurier-Jankowscy-homepage-react/static/media/RozkładJazdy.4662292f21628539527e.pdf",
     "static/media/turino1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/turino1.03c3fcf27adc13ac25d6.jpg",
+    "static/media/RozkładJazdy.pdf": "/Kurier-Jankowscy-homepage-react/static/media/RozkładJazdy.eed5473ddf2cc9620ee6.pdf",
     "static/media/turino3.jpg": "/Kurier-Jankowscy-homepage-react/static/media/turino3.f53ad84e1cf1a9d983e7.jpg",
     "static/media/opel1.jpg": "/Kurier-Jankowscy-homepage-react/static/media/opel1.0b79df0e802cd9220ccf.jpg",
     "static/media/man5.jpg": "/Kurier-Jankowscy-homepage-react/static/media/man5.11e4dbdc243768304870.jpg",
@@ -53,11 +53,11 @@
     "static/media/kurierlogo.png": "/Kurier-Jankowscy-homepage-react/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "index.html": "/Kurier-Jankowscy-homepage-react/index.html",
     "main.5eb240bf.css.map": "/Kurier-Jankowscy-homepage-react/static/css/main.5eb240bf.css.map",
-    "main.bbd4f68a.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.bbd4f68a.js.map",
+    "main.2fbf1997.js.map": "/Kurier-Jankowscy-homepage-react/static/js/main.2fbf1997.js.map",
     "787.6969a1fe.chunk.js.map": "/Kurier-Jankowscy-homepage-react/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.bbd4f68a.js"
+    "static/js/main.2fbf1997.js"
   ]
 }

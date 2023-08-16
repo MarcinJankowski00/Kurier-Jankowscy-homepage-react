@@ -43,7 +43,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
         direction = "Białystok";
     }
 
-    if ((startStopObject.id === 19 || endStopObject.id === 19) && direction === "Białystok") {
+    if ((startStopObject.id === 20 || endStopObject.id === 20) && direction === "Białystok") {
         return (
             <Heading>
                 <b>Nie ma takiego połączenia</b><br />
@@ -52,7 +52,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </Heading>
         );
     }
-    if ((startStopObject.id === 23 || endStopObject.id === 23) && direction === "Mońki") {
+    if ((startStopObject.id === 24 || endStopObject.id === 24) && direction === "Mońki") {
         return (
             <Heading>
                 <b>Nie ma takiego połączenia</b><br />

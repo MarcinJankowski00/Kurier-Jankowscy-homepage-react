@@ -355,6 +355,25 @@ const Rozklad = () => (
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">
+                            Knyszyn Kolonia
+                        </Cell>
+                        <Cell>4:43</Cell>
+                        <Cell>5:28</Cell>
+                        <Cell>6:53</Cell>
+                        <Cell>7:48</Cell>
+                        <Cell>9:23</Cell>
+                        <Cell>10:23</Cell>
+                        <Cell>11:43</Cell>
+                        <Cell>12:38</Cell>
+                        <Cell>13:58</Cell>
+                        <Cell>14:53</Cell>
+                        <Cell>16:08</Cell>
+                        <Cell>17:23</Cell>
+                        <Cell>18:28</Cell>
+                        <Cell>19:43</Cell>
+                    </Row>
+                    <Row>
+                        <Cell scope="row" header="true">
                             Chraboły
                         </Cell>
                         <Cell>
@@ -1490,6 +1509,25 @@ const Rozklad = () => (
                         <Cell>18:41</Cell>
                         <Cell>19:36</Cell>
                         <Cell>20:51</Cell>
+                    </Row>
+                    <Row>
+                        <Cell scope="row" header="true">
+                            Knyszyn Kolonia
+                        </Cell>
+                        <Cell>5:54</Cell>
+                        <Cell>6:49</Cell>
+                        <Cell>8:09</Cell>
+                        <Cell>9:09</Cell>
+                        <Cell>10:44</Cell>
+                        <Cell>11:44</Cell>
+                        <Cell>13:59</Cell>
+                        <Cell>14:59</Cell>
+                        <Cell>15:09</Cell>
+                        <Cell>16:14</Cell>
+                        <Cell>17:24</Cell>
+                        <Cell>18:44</Cell>
+                        <Cell>19:39</Cell>
+                        <Cell>20:54</Cell>
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">

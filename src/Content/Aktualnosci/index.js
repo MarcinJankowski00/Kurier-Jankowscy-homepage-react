@@ -1,13 +1,15 @@
-import { Content } from "./styled";
+import { Content, Image, Container, Span } from "./styled";
+import info from "./info.jpg"
 
 const Aktualnosci = () => (
     <Content>
-        <strong>DRODZY PASAŻEROWIE</strong><br></br>
-        INFORMUJEMY, IŻ OD 01.07.2023 ROKU<br></br>
-        ZMIENIA SIĘ ROZKŁAD JAZDY NA LINII<br></br>
-        MOŃKI – BIAŁYSTOK.<br></br>
-        NOWE ROZKŁADY DOSTĘPNE U KIEROWCÓW,<br></br>
-        W BIURZE MIESZCZĄCYM SIĘ W MOŃKACH PRZY UL. DWORCOWEJ 6<br></br>
+        <Container>
+        <Span>DRODZY PASAŻEROWIE</Span><br />
+        Informujemy, że w dniu 18.08.2023 r. (piątek) została zmieniona lokalizacja przystanku znajdującego
+        się przy Dworzecu PKS w związku z trwającą budową. Miejsce postojowe zostanie przeniesione w miejsce
+        oznaczone na załączonym planie sytuacyjnym.
+        </Container>
+        <Image src={info} />
     </Content>
 );
 

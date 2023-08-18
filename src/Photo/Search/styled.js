@@ -31,9 +31,14 @@ export const Element = styled.div`
     padding-right: 15px;
 `;
 
-export const Text = styled.span`
+export const Span = styled.span`
     display: inline-block;
     width: 20%;
+`;
+
+export const Text = styled.p`
+    padding: 0;
+    margin: 0;
 `;
 
 export const Wrapper = styled.div`
@@ -48,6 +53,14 @@ export const Div = styled.div`
     margin: 0;
 `;
 
+export const Magnifiericon = styled.img`
+    width: 30px;
+`;
+
+export const Switchicon = styled.img`
+    width: 15px;
+`;
+
 export const Select = styled.select`
     border: 1px solid;
     padding: 10px;
@@ -59,7 +72,8 @@ export const Select = styled.select`
 
 export const Switch = styled.button`
     margin-left: 5px;
-    height: 70px;
+    border: 1px solid;
+    height: 50px;
     margin-top: 8px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
@@ -74,6 +88,9 @@ export const Switch = styled.button`
 `;
 
 export const Button = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     border-radius: 5px;
     font-size: 20px;

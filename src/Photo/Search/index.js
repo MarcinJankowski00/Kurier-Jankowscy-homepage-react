@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div } from "./styled";
+import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Magnifiericon, Span, Switchicon } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
 import { busStops } from './BusStops.js';
+import magnifiericon from "./magnifiericon.png";
+import switchicon from "./switchicon.png";
 
 const Search = () => {
     const [isModalOpen, setModalOpen] = useState("false");
@@ -32,9 +34,9 @@ const Search = () => {
                 <Wrapper>
                     <Div>
                         <label htmlFor="startStationSelect">
-                            <Text>
+                            <Span>
                                 Z:
-                            </Text>
+                            </Span>
                             <Select
                                 id="startStationSelect"
                                 value={startStop}
@@ -51,9 +53,9 @@ const Search = () => {
                             </Select>
                         </label>
                         <label htmlFor="endStationSelect">
-                            <Text>
+                            <Span>
                                 Do:
-                            </Text>
+                            </Span>
                             <Select
                                 id="endStationSelect"
                                 value={endStop}
@@ -70,13 +72,13 @@ const Search = () => {
                             </Select>
                         </label>
                     </Div>
-                    <Switch onClick={switchStops}>↕</Switch>
+                    <Switch onClick={switchStops}><Switchicon src={switchicon}/></Switch>
                 </Wrapper>
                 <p>
                     <label>
-                        <Text>
+                        <Span>
                             Data:
-                        </Text>
+                        </Span>
                         <input
                             type="Date"
                             value={departureDate}
@@ -87,7 +89,7 @@ const Search = () => {
                     </label>
                 </p>
             </Element>
-            <Button onClick={openModal}>Znajdź połączenie 🔎</Button>
+            <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
             <Modal isopen={isModalOpen} onClose={closeModal}>
                 <Result
                     startStop={startStop}

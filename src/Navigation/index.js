@@ -13,7 +13,7 @@ const Navigation = () => {
     return (
         <Nav className="fixed-navigation">
             <Wrapper>
-                <Logo href="#Photo" onClick={scrollToTop}>
+                <Logo href="#Start" onClick={scrollToTop}>
                     <Img src={logo} alt="KURIER" />
                 </Logo>
                 <List>

@@ -2,7 +2,7 @@
   "name": "kurier-jankowscy-homepage-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marcinjankowski00.github.io/Kurier-Jankowscy-homepage-react/",
+  "homepage": "https://kurierjankowski.pl",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

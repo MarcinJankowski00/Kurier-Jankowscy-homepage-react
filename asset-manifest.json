@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.eec1bf80.js",
+    "main.js": "/static/js/main.5a0581b3.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
@@ -35,6 +35,7 @@
     "static/media/turino1.jpg": "/static/media/turino1.03c3fcf27adc13ac25d6.jpg",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.eed5473ddf2cc9620ee6.pdf",
     "static/media/turino3.jpg": "/static/media/turino3.f53ad84e1cf1a9d983e7.jpg",
+    "static/media/info.jpg": "/static/media/info.d79b7485ce1b1b86b5d8.jpg",
     "static/media/opel1.jpg": "/static/media/opel1.0b79df0e802cd9220ccf.jpg",
     "static/media/man5.jpg": "/static/media/man5.11e4dbdc243768304870.jpg",
     "static/media/dworzecpkp.pdf": "/static/media/dworzecpkp.4e87128d641530f1c8f0.pdf",
@@ -52,13 +53,14 @@
     "static/media/background.jpg": "/static/media/background.75508c35546014309ca3.jpg",
     "static/media/fbLogo.png": "/static/media/fbLogo.4370ac0b2a7136b8ddab.png",
     "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
+    "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.eec1bf80.js.map": "/static/js/main.eec1bf80.js.map",
+    "main.5a0581b3.js.map": "/static/js/main.5a0581b3.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.eec1bf80.js"
+    "static/js/main.5a0581b3.js"
   ]
 }

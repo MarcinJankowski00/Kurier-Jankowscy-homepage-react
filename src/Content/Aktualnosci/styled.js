@@ -6,7 +6,7 @@ export const Content = styled.div`
     align-items: center;
 `;
 
-export const Span = styled.div`
+export const Div = styled.div`
     font-weight: bold;
     text-align: center;
     margin: 0;

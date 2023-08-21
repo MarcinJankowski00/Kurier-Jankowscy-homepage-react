@@ -64,7 +64,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const differenceInMinutes = calculateTimeDifference(startStopObject[variant][direction][0], endStopObject[variant][direction][0]);
     return (
         <Container>
-            <Heading><b>{startStop} - {endStop}</b></Heading><br />
+            <Heading><b>{startStop} - {endStop}</b></Heading>
             <ListContainer>
                 <List>
                     {startStopObject[variant][direction].map((item) => (

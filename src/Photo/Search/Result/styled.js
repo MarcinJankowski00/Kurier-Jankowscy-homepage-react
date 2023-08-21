@@ -5,9 +5,11 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.div`
+    text-align: center;
     font-size: 20px;
+    margin-top: 10px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 17px;
+        font-size: 16px;
     }
 `;
 
@@ -23,15 +25,16 @@ export const List = styled.ul`
     padding-right: 15px;
     padding-bottom: 0;
     margin-bottom: 0;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 17px;
+    }
+    
 `;
 
 export const Item = styled.li`
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
     border-bottom: 2px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
+    text-align: center;
 `;
 
 export const Span = styled.span`

@@ -52,6 +52,7 @@ export const Button = styled.button`
     color: #fff;
     margin-right: 10px;
     padding: 12px 24px;
+    width: 257px;
     cursor: pointer;
     &:hover {
         background-color: ${({ theme }) => theme.color.black};

@@ -15,6 +15,9 @@ const DownloadButton = styled.button`
         transition: 0.5s;
         color: ${({ theme }) => theme.color.white};;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 17px;
+    }
 `;
 
 const FileDownloadButton = ({ filename, src }) => {

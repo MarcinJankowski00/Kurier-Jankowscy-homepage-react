@@ -27,9 +27,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const variant = getVariant(departureDate);
     if (variant === 'brak') {
         return (
-            <div>
-                W tym dniu nie kursujemy.
-            </div>
+            <Heading empty>
+                Tego dnia nie kursujemy.
+            </Heading>
         );
     }
 

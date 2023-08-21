@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
     font-size: 20px;
@@ -8,6 +8,9 @@ export const Heading = styled.div`
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
+    ${({ empty }) => empty && css`
+        margin-top: 6px;
+    `}
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         font-size: 16px;
     }

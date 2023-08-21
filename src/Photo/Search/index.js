@@ -29,7 +29,7 @@ const Search = () => {
 
     return (
         <Form>
-            <Header>Wyszukiwarka połączeń</Header>
+            <Header>Wyszukaj połączenie</Header>
             <Element>
                 <Wrapper>
                     <Div>

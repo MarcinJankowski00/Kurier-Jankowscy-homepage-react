@@ -105,130 +105,58 @@ const Rozklad = () => (
                         <Cell scope="row" header="true">
                             Dziękonie
                         </Cell>
-                        <Cell>
-                            4:29
-                        </Cell>
-                        <Cell>
-                            5:14
-                        </Cell>
-                        <Cell>
-                            6:39
-                        </Cell>
-                        <Cell>
-                            7:34
-                        </Cell>
-                        <Cell>
-                            9:09
-                        </Cell>
-                        <Cell>
-                            10:09
-                        </Cell>
-                        <Cell>
-                            11:29
-                        </Cell>
-                        <Cell>
-                            12:24
-                        </Cell>
-                        <Cell>
-                            13:44
-                        </Cell>
-                        <Cell>
-                            14:39
-                        </Cell>
+                        <Cell>4:29</Cell>
+                        <Cell>5:14</Cell>
+                        <Cell>6:39</Cell>
+                        <Cell>7:34</Cell>
+                        <Cell>9:09</Cell>
+                        <Cell>10:09</Cell>
+                        <Cell>11:29</Cell>
+                        <Cell>12:24</Cell>
+                        <Cell>13:44</Cell>
+                        <Cell>14:39</Cell>
                         <Cell>15:54</Cell>
                         <Cell>17:09</Cell>
-                        <Cell>
-                            18:14
-                        </Cell>
+                        <Cell>18:14</Cell>
                         <Cell>19:29</Cell>
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">
                             Czechowizna PKP
                         </Cell>
-                        <Cell>
-                            4:31
-                        </Cell>
-                        <Cell>
-                            5:16
-                        </Cell>
-                        <Cell>
-                            6:41
-                        </Cell>
-                        <Cell>
-                            7:36
-                        </Cell>
-                        <Cell>
-                            9:11
-                        </Cell>
-                        <Cell>
-                            10:11
-                        </Cell>
-                        <Cell>
-                            11:31
-                        </Cell>
-                        <Cell>
-                            12:26
-                        </Cell>
-                        <Cell>
-                            13:46
-                        </Cell>
-                        <Cell>
-                            14:41
-                        </Cell>
-                        <Cell>
-                            15:56
-                        </Cell>
+                        <Cell>4:31</Cell>
+                        <Cell>5:16</Cell>
+                        <Cell>6:41</Cell>
+                        <Cell>7:36</Cell>
+                        <Cell>9:11</Cell>
+                        <Cell>10:11</Cell>
+                        <Cell>11:31</Cell>
+                        <Cell>12:26</Cell>
+                        <Cell>13:46</Cell>
+                        <Cell>14:41</Cell>
+                        <Cell>15:56</Cell>
                         <Cell>17:11</Cell>
-                        <Cell>
-                            18:16
-                        </Cell>
-                        <Cell>
-                            19:31
-                        </Cell>
+                        <Cell>18:16</Cell>
+                        <Cell>19:31</Cell>
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">
                             Czechowizna Skrz.
                         </Cell>
-                        <Cell>
-                            4:33
-                        </Cell>
-                        <Cell>
-                            5:18
-                        </Cell>
-                        <Cell>
-                            6:43
-                        </Cell>
-                        <Cell>
-                            7:38
-                        </Cell>
-                        <Cell>
-                            9:13
-                        </Cell>
-                        <Cell>
-                            10:13
-                        </Cell>
-                        <Cell>
-                            11:33
-                        </Cell>
-                        <Cell>
-                            12:28
-                        </Cell>
-                        <Cell>
-                            13:48
-                        </Cell>
-                        <Cell>
-                            14:43
-                        </Cell>
+                        <Cell>4:33</Cell>
+                        <Cell>5:18</Cell>
+                        <Cell>6:43</Cell>
+                        <Cell>7:38</Cell>
+                        <Cell>9:13</Cell>
+                        <Cell>10:13</Cell>
+                        <Cell>11:33</Cell>
+                        <Cell>12:28</Cell>
+                        <Cell>13:48</Cell>
+                        <Cell>14:43</Cell>
                         <Cell>15:58</Cell>
                         <Cell>17:13</Cell>
-                        <Cell>
-                            18:18
-                        </Cell>
-                        <Cell>
-                            19:33
-                        </Cell>
+                        <Cell>18:18</Cell>
+                        <Cell>19:33</Cell>
                     </Row>
                     <Row>
                         <Cell scope="row" header="true">

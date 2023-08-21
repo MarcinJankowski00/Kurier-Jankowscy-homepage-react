@@ -78,6 +78,7 @@ export const Switch = styled.button`
     cursor: pointer;
     &:hover {
         filter: brightness(110%);
+        transition: 0.5s;
     }
     &:active {
         filter: brightness(110%);
@@ -97,9 +98,10 @@ export const Button = styled.button`
     padding: 9px 24px;
     cursor: pointer;
     &:hover {
-        filter: brightness(110%);
+        filter: brightness(120%);
+        transition: 0.5s;
     }
     &:active {
-        filter: brightness(110%);
+        filter: brightness(120%);
     }
     `;

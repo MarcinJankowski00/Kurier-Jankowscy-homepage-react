@@ -61,10 +61,15 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </Heading>
         );
     }
+    const departureDateStr = new Date(departureDate);
+    const formattedDate = departureDateStr.toLocaleDateString();
     const differenceInMinutes = calculateTimeDifference(startStopObject[variant][direction][0], endStopObject[variant][direction][0]);
     return (
         <Container>
-            <Heading><b>{startStop} - {endStop}</b></Heading>
+            <Heading>
+                <b>{startStop} - {endStop}</b><br />
+                <Span>{formattedDate}</Span>
+            </Heading>
             <ListContainer>
                 <List>
                     {startStopObject[variant][direction].map((item) => (

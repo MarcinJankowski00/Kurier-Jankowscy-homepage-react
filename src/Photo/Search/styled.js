@@ -49,6 +49,10 @@ export const Div = styled.p`
     margin: 0;
 `;
 
+export const DateDiv = styled.p`
+    max-width: 90%;
+`;
+
 export const Magnifiericon = styled.img`
     width: 30px;
     `;
@@ -63,6 +67,16 @@ export const Select = styled.select`
     width: 80%;
     border-radius: 5px;
     margin-top: 4px;
+    background-color: white;
+`;
+
+export const Input = styled.input`
+    border: 1px solid;
+    padding: 4px;
+    max-width: 140px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
 `;
 
 export const Switch = styled.button`

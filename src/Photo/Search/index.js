@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Magnifiericon, Span, Switchicon } from "./styled";
+import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
 import { busStops } from './BusStops.js';
@@ -74,12 +74,12 @@ const Search = () => {
                     </Div>
                     <Switch onClick={switchStops}><Switchicon src={switchicon}/></Switch>
                 </Wrapper>
-                <p>
+                <DateDiv>
                     <label>
                         <Span>
                             Data:
                         </Span>
-                        <input
+                        <Input
                             type="Date"
                             value={departureDate}
                             onChange={(e) => {
@@ -87,7 +87,7 @@ const Search = () => {
                             }}
                         />
                     </label>
-                </p>
+                </DateDiv>
             </Element>
             <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
             <Modal isopen={isModalOpen} onClose={closeModal}>

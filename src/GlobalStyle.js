@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
         font-size: 18px;
-        color: #2c3e50;
+        color: ${({ theme }) => theme.color.teal};
         background-color: ${({ theme }) => theme.gallery};
 
     }

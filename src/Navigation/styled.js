@@ -47,13 +47,12 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-    color: #2c3e50;
+    color: ${({ theme }) => theme.color.teal};
     text-decoration: none;
 
     &:focus {
         outline: none;
     }
-
     &:hover {
         filter: brightness(120%);
         padding-bottom: 5px;

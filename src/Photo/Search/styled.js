@@ -3,17 +3,15 @@ import styled from "styled-components";
 export const Form = styled.div`
     background-color: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.teal};
-    width: 480px;
-    padding: 20px 40px;
+    max-width: 460px;
+    padding: 20px 30px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.color.grey};
+    box-shadow: 0px 0px 13px 0px ${({ theme }) => theme.color.silver};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             margin-bottom: 20px;
             margin-top: 0px;
-            padding-left: 20px;
-            padding-right: 20px;
         }
 `;
 
@@ -64,7 +62,7 @@ export const Select = styled.select`
     padding: 10px;
     width: 80%;
     border-radius: 5px;
-    margin-top: 16px;
+    margin-top: 4px;
 `;
 
 export const Switch = styled.button`

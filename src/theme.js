@@ -6,6 +6,7 @@ export const theme = {
         gallery: "#eee",
         white: "#fff",
         teal: "#1d4368",
+        darkerTeal: "#183a5a",
         crimson: "#a91818",
         forestGreen: "#228c22",
     },

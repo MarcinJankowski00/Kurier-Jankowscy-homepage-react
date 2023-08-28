@@ -62,7 +62,7 @@ export const Switchicon = styled.img`
     `;
 
 export const Select = styled.select`
-    border: 1px solid;
+    border: 1px solid gray;
     padding: 10px;
     width: 80%;
     border-radius: 5px;
@@ -71,7 +71,7 @@ export const Select = styled.select`
 `;
 
 export const Input = styled.input`
-    border: 1px solid;
+    border: 1px solid gray;
     padding: 4px;
     max-width: 140px;
     border-radius: 5px;

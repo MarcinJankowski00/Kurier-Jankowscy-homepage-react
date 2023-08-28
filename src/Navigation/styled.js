@@ -23,6 +23,9 @@ export const Img = styled.img`
     visibility: visible;
     width: 300px;
     height: max-content;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            width: 280px;
+        }
 `;
 
 export const Logo = styled.a`

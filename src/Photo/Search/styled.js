@@ -76,6 +76,9 @@ export const Input = styled.input`
     border-radius: 5px;
     background-color: white;
     font-size: 17px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            font-size: 13px;
+        }
 `;
 
 export const Switch = styled.button`

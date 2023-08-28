@@ -17,6 +17,9 @@ const DownloadButton = styled.button`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             width: 100%;
         }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            font-size: 15px;
+        }
 `;
 
 const FileDownloadButton = ({ filename, src }) => {

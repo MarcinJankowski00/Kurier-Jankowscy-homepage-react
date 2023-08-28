@@ -19,6 +19,9 @@ export const Table = styled.table`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             font-size: 15px;
         }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            font-size: 13px;
+        }
 `;
 
 export const Cell = styled.td`

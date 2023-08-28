@@ -14,5 +14,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 18px;
         color: ${({ theme }) => theme.color.teal};
         background-color: ${({ theme }) => theme.color.white};
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            font-size: 15px;
+        }
     }
 `;

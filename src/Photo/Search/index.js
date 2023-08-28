@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
@@ -15,8 +15,28 @@ const Search = () => {
         setModalOpen("false");
     };
 
-    const [startStop, setStartStop] = useState('Mońki–Dworcowa');
-    const [endStop, setEndStop] = useState('Białystok PKS');
+    const getInitialStartStop = () => {
+        const localStorageStartStop = localStorage.getItem("startStop");
+        if (localStorageStartStop === null) {
+            return 'Mońki–Dworcowa';
+        }
+        return JSON.parse(localStorage.getItem("startStop"));
+    };
+    const getInitialEndStop = () => {
+        const localStorageEndStop = localStorage.getItem("endStop");
+        if (localStorageEndStop === null) {
+            return 'Białystok PKS';
+        }
+        return JSON.parse(localStorage.getItem("endStop"));
+    };
+
+    const [startStop, setStartStop] = useState(getInitialStartStop);
+    const [endStop, setEndStop] = useState(getInitialEndStop);
+
+    useEffect(() => {
+        localStorage.setItem("startStop", JSON.stringify(startStop));
+        localStorage.setItem("endStop", JSON.stringify(endStop));
+    });
 
     const dzisiaj = new Date().toISOString().slice(0, 10);
     const [departureDate, setDepartureDate] = useState(dzisiaj);

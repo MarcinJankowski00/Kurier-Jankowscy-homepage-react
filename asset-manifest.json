@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.767e9807.js",
+    "main.js": "/static/js/main.810b080e.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
@@ -56,11 +56,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.767e9807.js.map": "/static/js/main.767e9807.js.map",
+    "main.810b080e.js.map": "/static/js/main.810b080e.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.767e9807.js"
+    "static/js/main.810b080e.js"
   ]
 }

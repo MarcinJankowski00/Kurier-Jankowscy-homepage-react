@@ -20,6 +20,10 @@ export const Image = styled.div`
             padding-right: 5%;
             padding-top: 0px;
         }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+            height: 650px;
+            padding-top: 40px;
+        }
 `;
 
 export const Text = styled.div`

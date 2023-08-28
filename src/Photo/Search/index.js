@@ -55,7 +55,7 @@ const Search = () => {
                     <Div>
                         <label htmlFor="startStationSelect">
                             <Span>
-                                Z:
+                                Z
                             </Span>
                             <Select
                                 id="startStationSelect"
@@ -74,7 +74,7 @@ const Search = () => {
                         </label>
                         <label htmlFor="endStationSelect">
                             <Span>
-                                Do:
+                                Do
                             </Span>
                             <Select
                                 id="endStationSelect"
@@ -97,7 +97,7 @@ const Search = () => {
                 <DateDiv>
                     <label>
                         <Span>
-                            Data:
+                            
                         </Span>
                         <Input
                             type="Date"

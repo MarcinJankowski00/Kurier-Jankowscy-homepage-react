@@ -3,13 +3,11 @@ import styled from "styled-components";
 export const Form = styled.div`
     background-color: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.teal};
-    max-width: 460px;
-    padding: 20px 30px;
+    max-width: 420px;
+    padding: 20px 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 13px 0px ${({ theme }) => theme.color.silver};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            width: 100%;
-            max-width: 460px;
             margin-bottom: 20px;
             margin-top: 0px;
         }
@@ -22,13 +20,14 @@ export const Header = styled.h2`
 `;
 
 export const Element = styled.div`
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 15px;
 `;
 
 export const Span = styled.span`
     display: inline-block;
     width: 20%;
+    text-align: center;
 `;
 
 export const Text = styled.p`
@@ -63,7 +62,7 @@ export const Switchicon = styled.img`
 
 export const Select = styled.select`
     border: 1px solid gray;
-    padding: 10px;
+    padding: 9px;
     width: 80%;
     border-radius: 5px;
     margin-top: 4px;
@@ -82,8 +81,8 @@ export const Input = styled.input`
 export const Switch = styled.button`
     margin-left: 3px;
     border: 1px solid;
-    height: 50px;
-    margin-top: 8px;
+    height: 91px;
+    margin-top: 4px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
     border-radius: 5px;
@@ -101,13 +100,13 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     border-radius: 5px;
-    font-size: 20px;
     border: 1px solid ${({ theme }) => theme.color.teal};
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
-    padding: 9px 24px;
+    padding: 6px 24px;
     cursor: pointer;
     &:hover {
         filter: brightness(120%);

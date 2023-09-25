@@ -63,7 +63,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
-    const differenceInMinutes = calculateTimeDifference(startStopObject[variant][direction][0], endStopObject[variant][direction][0]);
+    const differenceInMinutes = calculateTimeDifference(startStopObject[direction][0], endStopObject[direction][0]);
     return (
         <Container>
             <Heading>
@@ -72,13 +72,105 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </Heading>
             <ListContainer>
                 <List>
-                    {startStopObject[variant][direction].map((item) => (
-                        <Item>
-                            {item}{" "}-{" "}
-                            {endStopObject[variant][direction][startStopObject[variant][direction].indexOf(item)]}{" "}
-                            <Span>({differenceInMinutes}min)</Span>
-                        </Item>
-                    ))}
+                    {startStopObject[direction].map((item) => {
+                        if (variant === 'wariant1') {
+                            return (
+                                <Item>
+                                    {item}{" "}-{" "}
+                                    {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                    <Span>({differenceInMinutes}min)</Span>
+                                </Item>
+                            )
+                        } else {
+                            if (variant === 'wariant2') {
+                                if (startStopObject[direction].indexOf(item) === 0 ||
+                                    startStopObject[direction].indexOf(item) === 2 ||
+                                    startStopObject[direction].indexOf(item) === 4 ||
+                                    startStopObject[direction].indexOf(item) === 6 ||
+                                    startStopObject[direction].indexOf(item) === 8 ||
+                                    startStopObject[direction].indexOf(item) === 10 ||
+                                    startStopObject[direction].indexOf(item) === 12 ||
+                                    startStopObject[direction].indexOf(item) === 13) {
+                                    return undefined;
+                                } else {
+                                    return (
+                                        <Item>
+                                            {item}{" "}-{" "}
+                                            {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                            <Span>({differenceInMinutes}min)</Span>
+                                        </Item>
+                                    )
+                                }
+                            } else {
+                                if (variant === 'wariant3') {
+                                    if (startStopObject[direction].indexOf(item) === 0 ||
+                                        startStopObject[direction].indexOf(item) === 1 ||
+                                        startStopObject[direction].indexOf(item) === 2 ||
+                                        startStopObject[direction].indexOf(item) === 4 ||
+                                        startStopObject[direction].indexOf(item) === 6 ||
+                                        startStopObject[direction].indexOf(item) === 8 ||
+                                        startStopObject[direction].indexOf(item) === 10 ||
+                                        startStopObject[direction].indexOf(item) === 12 ||
+                                        startStopObject[direction].indexOf(item) === 13) {
+                                        return undefined;
+                                    } else {
+                                        return (
+                                            <Item>
+                                                {item}{" "}-{" "}
+                                                {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                                <Span>({differenceInMinutes}min)</Span>
+                                            </Item>
+                                        )
+                                    }
+                                } else {
+                                    if (variant === 'wariant4') {
+                                        if (startStopObject[direction].indexOf(item) === 0 ||
+                                            startStopObject[direction].indexOf(item) === 2 ||
+                                            startStopObject[direction].indexOf(item) === 4 ||
+                                            startStopObject[direction].indexOf(item) === 6 ||
+                                            startStopObject[direction].indexOf(item) === 8 ||
+                                            startStopObject[direction].indexOf(item) === 10 ||
+                                            startStopObject[direction].indexOf(item) === 11 ||
+                                            startStopObject[direction].indexOf(item) === 12 ||
+                                            startStopObject[direction].indexOf(item) === 13) {
+                                            return undefined;
+                                        } else {
+                                            return (
+                                                <Item>
+                                                    {item}{" "}-{" "}
+                                                    {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                                    <Span>({differenceInMinutes}min)</Span>
+                                                </Item>
+                                            )
+                                        }
+                                    } else {
+                                        if (variant === 'wariant5') {
+                                            if (startStopObject[direction].indexOf(item) === 0 ||
+                                                startStopObject[direction].indexOf(item) === 1 ||
+                                                startStopObject[direction].indexOf(item) === 2 ||
+                                                startStopObject[direction].indexOf(item) === 4 ||
+                                                startStopObject[direction].indexOf(item) === 6 ||
+                                                startStopObject[direction].indexOf(item) === 8 ||
+                                                startStopObject[direction].indexOf(item) === 10 ||
+                                                startStopObject[direction].indexOf(item) === 11 ||
+                                                startStopObject[direction].indexOf(item) === 12 ||
+                                                startStopObject[direction].indexOf(item) === 13) {
+                                                return undefined;
+                                            } else {
+                                                return (
+                                                    <Item>
+                                                        {item}{" "}-{" "}
+                                                        {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                                        <Span>({differenceInMinutes}min)</Span>
+                                                    </Item>
+                                                )
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    })}
                 </List>
             </ListContainer>
             <Div>

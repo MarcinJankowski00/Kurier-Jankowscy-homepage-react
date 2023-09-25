@@ -56,20 +56,20 @@ const Rozklad = () => {
                             <Cell scope="row" header="true">
                                 {item.name}
                             </Cell>
-                            <Cell>{item.wariant1.Białystok[0]}</Cell>
-                            <Cell>{item.wariant1.Białystok[1]}</Cell>
-                            <Cell>{item.wariant1.Białystok[2]}</Cell>
-                            <Cell>{item.wariant1.Białystok[3]}</Cell>
-                            <Cell>{item.wariant1.Białystok[4]}</Cell>
-                            <Cell>{item.wariant1.Białystok[5]}</Cell>
-                            <Cell>{item.wariant1.Białystok[6]}</Cell>
-                            <Cell>{item.wariant1.Białystok[7]}</Cell>
-                            <Cell>{item.wariant1.Białystok[8]}</Cell>
-                            <Cell>{item.wariant1.Białystok[9]}</Cell>
-                            <Cell>{item.wariant1.Białystok[10]}</Cell>
-                            <Cell>{item.wariant1.Białystok[11]}</Cell>
-                            <Cell>{item.wariant1.Białystok[12]}</Cell>
-                            <Cell>{item.wariant1.Białystok[13]}</Cell>
+                            <Cell>{item.Białystok[0]}</Cell>
+                            <Cell>{item.Białystok[1]}</Cell>
+                            <Cell>{item.Białystok[2]}</Cell>
+                            <Cell>{item.Białystok[3]}</Cell>
+                            <Cell>{item.Białystok[4]}</Cell>
+                            <Cell>{item.Białystok[5]}</Cell>
+                            <Cell>{item.Białystok[6]}</Cell>
+                            <Cell>{item.Białystok[7]}</Cell>
+                            <Cell>{item.Białystok[8]}</Cell>
+                            <Cell>{item.Białystok[9]}</Cell>
+                            <Cell>{item.Białystok[10]}</Cell>
+                            <Cell>{item.Białystok[11]}</Cell>
+                            <Cell>{item.Białystok[12]}</Cell>
+                            <Cell>{item.Białystok[13]}</Cell>
                         </Row>
                             )
                         }
@@ -133,20 +133,20 @@ const Rozklad = () => {
                             <Cell scope="row" header="true">
                                 {item.name}
                             </Cell>
-                            <Cell>{item.wariant1.Mońki[0]}</Cell>
-                            <Cell>{item.wariant1.Mońki[1]}</Cell>
-                            <Cell>{item.wariant1.Mońki[2]}</Cell>
-                            <Cell>{item.wariant1.Mońki[3]}</Cell>
-                            <Cell>{item.wariant1.Mońki[4]}</Cell>
-                            <Cell>{item.wariant1.Mońki[5]}</Cell>
-                            <Cell>{item.wariant1.Mońki[6]}</Cell>
-                            <Cell>{item.wariant1.Mońki[7]}</Cell>
-                            <Cell>{item.wariant1.Mońki[8]}</Cell>
-                            <Cell>{item.wariant1.Mońki[9]}</Cell>
-                            <Cell>{item.wariant1.Mońki[10]}</Cell>
-                            <Cell>{item.wariant1.Mońki[11]}</Cell>
-                            <Cell>{item.wariant1.Mońki[12]}</Cell>
-                            <Cell>{item.wariant1.Mońki[13]}</Cell>
+                            <Cell>{item.Mońki[0]}</Cell>
+                            <Cell>{item.Mońki[1]}</Cell>
+                            <Cell>{item.Mońki[2]}</Cell>
+                            <Cell>{item.Mońki[3]}</Cell>
+                            <Cell>{item.Mońki[4]}</Cell>
+                            <Cell>{item.Mońki[5]}</Cell>
+                            <Cell>{item.Mońki[6]}</Cell>
+                            <Cell>{item.Mońki[7]}</Cell>
+                            <Cell>{item.Mońki[8]}</Cell>
+                            <Cell>{item.Mońki[9]}</Cell>
+                            <Cell>{item.Mońki[10]}</Cell>
+                            <Cell>{item.Mońki[11]}</Cell>
+                            <Cell>{item.Mońki[12]}</Cell>
+                            <Cell>{item.Mońki[13]}</Cell>
                         </Row>
                             )
                         }

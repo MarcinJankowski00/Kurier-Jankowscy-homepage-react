@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
-import { busStops } from './BusStops.js';
+import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import magnifiericon from "./magnifiericon.png";
 import switchicon from "./switchicon.png";
 

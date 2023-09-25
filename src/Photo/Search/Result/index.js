@@ -1,5 +1,5 @@
 import React from 'react';
-import { busStops } from '../BusStops.js';
+import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import getVariant from './useGetVariant';
 import FileDownloadButton from './FileDownloadButton';
 import { List, Item, Container, Heading, Span, ListContainer, Div } from "./styled";

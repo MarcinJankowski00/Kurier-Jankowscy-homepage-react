@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
+import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
@@ -49,67 +49,69 @@ const Search = () => {
 
     return (
         <Form>
-            <Header>Wyszukaj połączenie</Header>
-            <Element>
-                <Wrapper>
-                    <Div>
-                        <label htmlFor="startStationSelect">
+            <Container>
+                <Header>Wyszukaj połączenie</Header>
+                <Element>
+                    <Wrapper>
+                        <Div>
+                            <label htmlFor="startStationSelect">
+                                <Span>
+                                    Z
+                                </Span>
+                                <Select
+                                    id="startStationSelect"
+                                    value={startStop}
+                                    onChange={({ target }) => setStartStop(target.value)}
+                                >
+                                    {busStops.map((station) => (
+                                        <option
+                                            key={station.id}
+                                            value={station.name}
+                                        >
+                                            {station.name}
+                                        </option>
+                                    ))}
+                                </Select>
+                            </label>
+                            <label htmlFor="endStationSelect">
+                                <Span>
+                                    Do
+                                </Span>
+                                <Select
+                                    id="endStationSelect"
+                                    value={endStop}
+                                    onChange={({ target }) => setEndStop(target.value)}
+                                >
+                                    {busStops.map((station) => (
+                                        <option
+                                            key={station.id}
+                                            value={station.name}
+                                        >
+                                            {station.name}
+                                        </option>
+                                    ))}
+                                </Select>
+                            </label>
+                        </Div>
+                        <Switch onClick={switchStops}><Switchicon src={switchicon} /></Switch>
+                    </Wrapper>
+                    <DateDiv>
+                        <label>
                             <Span>
-                                Z
+
                             </Span>
-                            <Select
-                                id="startStationSelect"
-                                value={startStop}
-                                onChange={({ target }) => setStartStop(target.value)}
-                            >
-                                {busStops.map((station) => (
-                                    <option
-                                        key={station.id}
-                                        value={station.name}
-                                    >
-                                        {station.name}
-                                    </option>
-                                ))}
-                            </Select>
+                            <Input
+                                type="Date"
+                                value={departureDate}
+                                onChange={(e) => {
+                                    setDepartureDate(e.target.value)
+                                }}
+                            />
                         </label>
-                        <label htmlFor="endStationSelect">
-                            <Span>
-                                Do
-                            </Span>
-                            <Select
-                                id="endStationSelect"
-                                value={endStop}
-                                onChange={({ target }) => setEndStop(target.value)}
-                            >
-                                {busStops.map((station) => (
-                                    <option
-                                        key={station.id}
-                                        value={station.name}
-                                    >
-                                        {station.name}
-                                    </option>
-                                ))}
-                            </Select>
-                        </label>
-                    </Div>
-                    <Switch onClick={switchStops}><Switchicon src={switchicon}/></Switch>
-                </Wrapper>
-                <DateDiv>
-                    <label>
-                        <Span>
-                            
-                        </Span>
-                        <Input
-                            type="Date"
-                            value={departureDate}
-                            onChange={(e) => {
-                                setDepartureDate(e.target.value)
-                            }}
-                        />
-                    </label>
-                </DateDiv>
-            </Element>
-            <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
+                    </DateDiv>
+                </Element>
+                <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
+            </Container>
             <Modal isopen={isModalOpen} onClose={closeModal}>
                 <Result
                     startStop={startStop}

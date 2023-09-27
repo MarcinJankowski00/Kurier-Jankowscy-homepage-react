@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Form = styled.div`
-    background-color: rgb(255 255 255 / 73%);
-    backdrop-filter: blur(10px);
+    background-color: rgb(255 255 255 / 92%);
     color: ${({ theme }) => theme.color.teal};
     max-width: 420px;
     padding: 20px 20px;

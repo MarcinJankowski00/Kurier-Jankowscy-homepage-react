@@ -2,7 +2,7 @@ import React from 'react';
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import getVariant from './useGetVariant';
 import FileDownloadButton from './FileDownloadButton';
-import { List, Item, Container, Heading, Span, ListContainer, Div } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime } from "./styled";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -21,6 +21,49 @@ const calculateTimeDifference = (startHour, endHour) => {
 
     return timeDifference;
 };
+
+const getActualHour = () =>{
+    const actualDate = new Date();
+    var hour = actualDate.getHours();
+    var minutes = actualDate.getMinutes();
+    if (hour < 10) {
+        hour = "0" + hour;
+    }
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    const actualHour = hour + ":" + minutes;
+    return actualHour;
+}
+
+const isDateNotActual = (formattedDate) => {
+    const actualDate = new Date();
+    const formattedActualDate = actualDate.toLocaleDateString();
+    if(formattedDate === formattedActualDate) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+const formatToHHMM = (myHour) =>{
+    const parts = myHour.split(":");
+    const hourWithoutZero = parseInt(parts[0], 10);
+    const myHourHHMM = (hourWithoutZero < 10 ? "0" : "") + hourWithoutZero + ":" + parts[1];
+    return myHourHHMM
+}
+
+const howManyMinutesToDeparture = (object) => {
+    const actualHour = getActualHour();
+    var result = -1;
+    for (var i = 0; i < 14; i++) {
+        if(formatToHHMM(object[i]) >= actualHour){
+            result = calculateTimeDifference(actualHour , object[i]);
+            i = 14;
+        }
+    };
+    return result;
+}
 
 const Result = ({ startStop, endStop, departureDate }) => {
 
@@ -63,22 +106,54 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
+    if ((howManyMinutesToDeparture(startStopObject[direction])===-1) && !(isDateNotActual(formattedDate))) {
+        return (
+            <Heading>
+                <b>{startStop} - {endStop}</b><br />
+                <Span>{formattedDate}</Span>
+                <br />
+                <DepartureTime>
+                    <br />Brak kursów
+                </DepartureTime>
+            </Heading>
+        );
+    }
     const differenceInMinutes = calculateTimeDifference(startStopObject[direction][0], endStopObject[direction][0]);
+
+    const isPast = (myHour, formattedDate) => {
+        const actualDate = new Date();
+        const formattedActualDate = actualDate.toLocaleDateString();
+        if(formattedDate != formattedActualDate) {
+            return false;
+        }
+        if(formatToHHMM(myHour) < getActualHour()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+
     return (
         <Container>
             <Heading>
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
+                <br />
+                <DepartureTime isdateactual={isDateNotActual(formattedDate)}>
+                    <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction])}min</b>
+                </DepartureTime>
+                <Span><br />Czas przejazdu: {differenceInMinutes}min</Span>
             </Heading>
             <ListContainer>
                 <List>
                     {startStopObject[direction].map((item) => {
                         if (variant === 'wariant1') {
                             return (
-                                <Item>
+                                <Item past={isPast(item, formattedDate)}>
                                     {item}{" "}-{" "}
                                     {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                    <Span>({differenceInMinutes}min)</Span>
                                 </Item>
                             )
                         } else {
@@ -94,10 +169,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                     return undefined;
                                 } else {
                                     return (
-                                        <Item>
+                                        <Item past={isPast(item, formattedDate)}>
                                             {item}{" "}-{" "}
                                             {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                            <Span>({differenceInMinutes}min)</Span>
                                         </Item>
                                     )
                                 }
@@ -115,10 +189,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                         return undefined;
                                     } else {
                                         return (
-                                            <Item>
+                                            <Item past={isPast(item, formattedDate)}>
                                                 {item}{" "}-{" "}
                                                 {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                                <Span>({differenceInMinutes}min)</Span>
                                             </Item>
                                         )
                                     }
@@ -136,10 +209,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                             return undefined;
                                         } else {
                                             return (
-                                                <Item>
+                                                <Item past={isPast(item, formattedDate)}>
                                                     {item}{" "}-{" "}
                                                     {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                                    <Span>({differenceInMinutes}min)</Span>
                                                 </Item>
                                             )
                                         }
@@ -158,10 +230,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                                 return undefined;
                                             } else {
                                                 return (
-                                                    <Item>
+                                                    <Item past={isPast(item, formattedDate)}>
                                                         {item}{" "}-{" "}
                                                         {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                                        <Span>({differenceInMinutes}min)</Span>
                                                     </Item>
                                                 )
                                             }

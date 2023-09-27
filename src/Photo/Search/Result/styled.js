@@ -38,10 +38,20 @@ export const Item = styled.li`
     border-bottom: 2px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
     text-align: center;
+    ${({ past }) => past && css`
+        display: none;
+    `}
 `;
 
 export const Span = styled.span`
     color: gray;
+`;
+
+export const DepartureTime = styled.span`
+    filter: brightness(130%);
+    ${({ isdateactual }) => isdateactual && css`
+        display: none;
+    `}
 `;
 
 export const Div = styled.div`

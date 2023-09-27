@@ -30,7 +30,7 @@ export const Text = styled.div`
     color: white;
     font-weight: bold;
     font-size: 45px;
-    margin-right: 130px;
+    margin-right: 280px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             display: none;
         }

@@ -66,7 +66,7 @@ const howManyMinutesToDeparture = (object, variant) => {
         return result;
     } else {
         if (variant === 'wariant2') {
-            for (var i = 0; i < 14; i++) {
+            for ( i = 0; i < 14; i++) {
                 if (formatToHHMM(object[i]) >= actualHour && (
                     i !== 0 &&
                     i !== 2 &&
@@ -83,7 +83,7 @@ const howManyMinutesToDeparture = (object, variant) => {
             return result;
         } else {
             if (variant === 'wariant3') {
-                for (var i = 0; i < 14; i++) {
+                for ( i = 0; i < 14; i++) {
                     if (formatToHHMM(object[i]) >= actualHour && (
                         i !== 0 &&
                         i !== 1 &&
@@ -101,7 +101,7 @@ const howManyMinutesToDeparture = (object, variant) => {
                 return result;
             } else {
                 if (variant === 'wariant4') {
-                    for (var i = 0; i < 14; i++) {
+                    for ( i = 0; i < 14; i++) {
                         if (formatToHHMM(object[i]) >= actualHour && (
                             i !== 0 &&
                             i !== 2 &&
@@ -119,7 +119,7 @@ const howManyMinutesToDeparture = (object, variant) => {
                     return result;
                 } else {
                     if (variant === 'wariant5') {
-                        for (var i = 0; i < 14; i++) {
+                        for ( i = 0; i < 14; i++) {
                             if (formatToHHMM(object[i]) >= actualHour && (
                                 i !== 0 &&
                                 i !== 1 &&
@@ -184,7 +184,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
-    if ((howManyMinutesToDeparture(startStopObject[direction]) === -1) && !(isDateNotActual(formattedDate))) {
+    if ((howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))) {
         return (
             <Heading>
                 <b>{startStop} - {endStop}</b><br />
@@ -201,7 +201,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const isPast = (myHour, formattedDate) => {
         const actualDate = new Date();
         const formattedActualDate = actualDate.toLocaleDateString();
-        if (formattedDate != formattedActualDate) {
+        if (formattedDate !== formattedActualDate) {
             return false;
         }
         if (formatToHHMM(myHour) < getActualHour()) {

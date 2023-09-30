@@ -22,7 +22,7 @@ const calculateTimeDifference = (startHour, endHour) => {
     return timeDifference;
 };
 
-const getActualHour = () =>{
+const getActualHour = () => {
     const actualDate = new Date();
     var hour = actualDate.getHours();
     var minutes = actualDate.getMinutes();
@@ -39,30 +39,108 @@ const getActualHour = () =>{
 const isDateNotActual = (formattedDate) => {
     const actualDate = new Date();
     const formattedActualDate = actualDate.toLocaleDateString();
-    if(formattedDate === formattedActualDate) {
+    if (formattedDate === formattedActualDate) {
         return false;
     } else {
         return true;
     }
 }
 
-const formatToHHMM = (myHour) =>{
+const formatToHHMM = (myHour) => {
     const parts = myHour.split(":");
     const hourWithoutZero = parseInt(parts[0], 10);
     const myHourHHMM = (hourWithoutZero < 10 ? "0" : "") + hourWithoutZero + ":" + parts[1];
     return myHourHHMM
 }
 
-const howManyMinutesToDeparture = (object) => {
+const howManyMinutesToDeparture = (object, variant) => {
     const actualHour = getActualHour();
     var result = -1;
-    for (var i = 0; i < 14; i++) {
-        if(formatToHHMM(object[i]) >= actualHour){
-            result = calculateTimeDifference(actualHour , object[i]);
-            i = 14;
+    if (variant === 'wariant1') {
+        for (var i = 0; i < 14; i++) {
+            if (formatToHHMM(object[i]) >= actualHour) {
+                result = calculateTimeDifference(actualHour, object[i]);
+                i = 14;
+            }
+        };
+        return result;
+    } else {
+        if (variant === 'wariant2') {
+            for (var i = 0; i < 14; i++) {
+                if (formatToHHMM(object[i]) >= actualHour && (
+                    i !== 0 &&
+                    i !== 2 &&
+                    i !== 4 &&
+                    i !== 6 &&
+                    i !== 8 &&
+                    i !== 10 &&
+                    i !== 12 &&
+                    i !== 13)) {
+                    result = calculateTimeDifference(actualHour, object[i]);
+                    i = 14;
+                }
+            };
+            return result;
+        } else {
+            if (variant === 'wariant3') {
+                for (var i = 0; i < 14; i++) {
+                    if (formatToHHMM(object[i]) >= actualHour && (
+                        i !== 0 &&
+                        i !== 1 &&
+                        i !== 2 &&
+                        i !== 4 &&
+                        i !== 6 &&
+                        i !== 8 &&
+                        i !== 10 &&
+                        i !== 12 &&
+                        i !== 13)) {
+                        result = calculateTimeDifference(actualHour, object[i]);
+                        i = 14;
+                    }
+                };
+                return result;
+            } else {
+                if (variant === 'wariant4') {
+                    for (var i = 0; i < 14; i++) {
+                        if (formatToHHMM(object[i]) >= actualHour && (
+                            i !== 0 &&
+                            i !== 2 &&
+                            i !== 4 &&
+                            i !== 6 &&
+                            i !== 8 &&
+                            i !== 10 &&
+                            i !== 11 &&
+                            i !== 12 &&
+                            i !== 13)) {
+                            result = calculateTimeDifference(actualHour, object[i]);
+                            i = 14;
+                        }
+                    };
+                    return result;
+                } else {
+                    if (variant === 'wariant5') {
+                        for (var i = 0; i < 14; i++) {
+                            if (formatToHHMM(object[i]) >= actualHour && (
+                                i !== 0 &&
+                                i !== 1 &&
+                                i !== 2 &&
+                                i !== 4 &&
+                                i !== 6 &&
+                                i !== 8 &&
+                                i !== 10 &&
+                                i !== 11 &&
+                                i !== 12 &&
+                                i !== 13)) {
+                                result = calculateTimeDifference(actualHour, object[i]);
+                                i = 14;
+                            }
+                        };
+                        return result;
+                    }
+                }
+            }
         }
-    };
-    return result;
+    }
 }
 
 const Result = ({ startStop, endStop, departureDate }) => {
@@ -106,14 +184,14 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
-    if ((howManyMinutesToDeparture(startStopObject[direction])===-1) && !(isDateNotActual(formattedDate))) {
+    if ((howManyMinutesToDeparture(startStopObject[direction]) === -1) && !(isDateNotActual(formattedDate))) {
         return (
             <Heading>
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
                 <br />
                 <DepartureTime>
-                    <br />Brak kursów
+                    <br />Disiaj już nie kursujemy.
                 </DepartureTime>
             </Heading>
         );
@@ -123,17 +201,17 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const isPast = (myHour, formattedDate) => {
         const actualDate = new Date();
         const formattedActualDate = actualDate.toLocaleDateString();
-        if(formattedDate != formattedActualDate) {
+        if (formattedDate != formattedActualDate) {
             return false;
         }
-        if(formatToHHMM(myHour) < getActualHour()) {
+        if (formatToHHMM(myHour) < getActualHour()) {
             return true;
         } else {
             return false;
         }
     }
 
-    
+
 
     return (
         <Container>
@@ -142,7 +220,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                 <Span>{formattedDate}</Span>
                 <br />
                 <DepartureTime isdateactual={isDateNotActual(formattedDate)}>
-                    <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction])}min</b>
+                    <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction], variant)}min</b>
                 </DepartureTime>
                 <Span><br />Czas przejazdu: {differenceInMinutes}min</Span>
             </Heading>

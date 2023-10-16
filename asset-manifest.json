@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.95c0a6f6.js",
+    "main.js": "/static/js/main.584d8db3.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/background.jpg": "/static/media/background.ab86e8a4654f9a26c965.jpg",
-    "static/media/info.png": "/static/media/info.6a162a569145e7eb961d.png",
+    "static/media/info.png": "/static/media/info.2e82075c316eb37a15bd.png",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.3cab004a8facd682d287.jpg",
     "static/media/volkswagen3.jpg": "/static/media/volkswagen3.af814e2f3d82beb3968c.jpg",
     "static/media/volkswagen4.jpg": "/static/media/volkswagen4.0a4b5b010c5f11a9f23f.jpg",
@@ -56,11 +56,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.95c0a6f6.js.map": "/static/js/main.95c0a6f6.js.map",
+    "main.584d8db3.js.map": "/static/js/main.584d8db3.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.95c0a6f6.js"
+    "static/js/main.584d8db3.js"
   ]
 }

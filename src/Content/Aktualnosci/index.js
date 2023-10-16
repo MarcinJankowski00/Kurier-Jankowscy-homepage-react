@@ -1,13 +1,17 @@
-import { Content, Image, Container, Div } from "./styled";
-import info from "./info.jpg"
+import { Content, Image, Container, Div, Red } from "./styled";
+import info from "./info.png"
 
 const Aktualnosci = () => (
     <Content>
         <Container>
-        <Div>DRODZY PASAŻEROWIE</Div><br />
-        Informujemy, że w dniu 18.08.2023 r. (piątek) została zmieniona lokalizacja przystanku znajdującego
-        się przy Dworzecu PKS w związku z trwającą budową. Miejsce postojowe zostało przeniesione w miejsce
-        oznaczone na załączonym planie sytuacyjnym.
+            <Div>
+                <Red>UWAGA NOWA LOKALIZACJA PRZYSTANKU!</Red><br />
+                <br />
+                DRODZY PASAŻEROWIE
+            </Div><br />
+            Informujemy, że w dniu 16.10.2023 r. (pponiedziałek) została zmieniona lokalizacja przystanku znajdującego
+            się przy Dworzecu PKS. Miejsce postojowe zostało przeniesione na stałe w miejsce
+            oznaczone na załączonym planie sytuacyjnym.
         </Container>
         <Image src={info} />
     </Content>

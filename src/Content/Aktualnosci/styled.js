@@ -23,3 +23,6 @@ export const Image = styled.img`
     width: 100%;
     max-width: 780px;
 `;
+export const Red = styled.span`
+    color: red;
+`;

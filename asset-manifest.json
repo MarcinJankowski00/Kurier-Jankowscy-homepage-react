@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.2a7ce8ba.js",
+    "main.js": "/static/js/main.12419ea2.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
-    "static/media/renault1.jpg": "/static/media/renault1.74dcc28ec30a4c74429b.jpg",
-    "static/media/setra1.jpg": "/static/media/setra1.72651a8cb12ccfd15ecd.jpg",
-    "static/media/opel2.jpg": "/static/media/opel2.8927c64f84971df111de.jpg",
-    "static/media/volkswagen1.jpg": "/static/media/volkswagen1.3c88bb9951747584fd8a.jpg",
     "static/media/background.jpg": "/static/media/background.ab86e8a4654f9a26c965.jpg",
-    "static/media/newMan1.jpg": "/static/media/newMan1.6af603aa9f7c63356a4b.jpg",
-    "static/media/setra2.jpg": "/static/media/setra2.1dd1e5f11190f9a14ee5.jpg",
-    "static/media/volkswagen2.jpg": "/static/media/volkswagen2.fba27e86fd07c68a96d2.jpg",
-    "static/media/volkswagen3.jpg": "/static/media/volkswagen3.a2d512eed6f47144c435.jpg",
-    "static/media/renault2.jpg": "/static/media/renault2.79cb82193d45b1aee76b.jpg",
-    "static/media/newMan2.jpg": "/static/media/newMan2.e85f342812e176656290.jpg",
-    "static/media/opel3.jpg": "/static/media/opel3.f8c0aa74437b854d27e8.jpg",
-    "static/media/renault3.jpg": "/static/media/renault3.9bfe67aecccc632ef5d5.jpg",
-    "static/media/opel4.jpg": "/static/media/opel4.11c582ea54ca590099ce.jpg",
+    "static/media/renault1.jpg": "/static/media/renault1.e861ea47b42f4ba18746.jpg",
+    "static/media/setra1.jpg": "/static/media/setra1.a917312cf31bb15ab1b3.jpg",
+    "static/media/volkswagen1.jpg": "/static/media/volkswagen1.ca323a917cf7de81175d.jpg",
+    "static/media/opel2.jpg": "/static/media/opel2.cebe16e7bef8ba4cd256.jpg",
+    "static/media/newMan1.jpg": "/static/media/newMan1.91a69b8735ab8ba44892.jpg",
     "static/media/info.png": "/static/media/info.ccc176d7e262e29887d8.png",
+    "static/media/setra2.jpg": "/static/media/setra2.da0c7ce290771e5d63db.jpg",
+    "static/media/volkswagen2.jpg": "/static/media/volkswagen2.ce6efddf73230bdfb02c.jpg",
+    "static/media/volkswagen3.jpg": "/static/media/volkswagen3.a0b410d51810c1c1c582.jpg",
+    "static/media/renault2.jpg": "/static/media/renault2.51e6aac883c95cb252d9.jpg",
+    "static/media/newMan2.jpg": "/static/media/newMan2.e0761dd46eb7ec9077f6.jpg",
+    "static/media/opel3.jpg": "/static/media/opel3.b3f0819f49c14559bc75.jpg",
+    "static/media/opel4.jpg": "/static/media/opel4.05b45f6bf17da65f0ded.jpg",
     "static/media/skrzyzowanie.pdf": "/static/media/skrzyzowanie.055e1c3e518f4284aae0.pdf",
     "static/media/czechPKP.pdf": "/static/media/czechPKP.a5b049e31cecb5c83761.pdf",
     "static/media/dobrzyniewo.pdf": "/static/media/dobrzyniewo.75e6302450f7efa3398b.pdf",
@@ -42,6 +41,7 @@
     "static/media/kombinat.pdf": "/static/media/kombinat.085ab2a90143a0babfdf.pdf",
     "static/media/dworcowa.pdf": "/static/media/dworcowa.93e7aec7f72501b107c9.pdf",
     "static/media/turino1.jpg": "/static/media/turino1.03c3fcf27adc13ac25d6.jpg",
+    "static/media/renault3.jpg": "/static/media/renault3.b3982e42e34ed67d2254.jpg",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.eed5473ddf2cc9620ee6.pdf",
     "static/media/turino3.jpg": "/static/media/turino3.f53ad84e1cf1a9d983e7.jpg",
     "static/media/man5.jpg": "/static/media/man5.11e4dbdc243768304870.jpg",
@@ -59,11 +59,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.2a7ce8ba.js.map": "/static/js/main.2a7ce8ba.js.map",
+    "main.12419ea2.js.map": "/static/js/main.12419ea2.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.2a7ce8ba.js"
+    "static/js/main.12419ea2.js"
   ]
 }

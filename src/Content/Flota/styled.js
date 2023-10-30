@@ -8,7 +8,7 @@ export const Container = styled.div`
         }
 `;
 
-export const List = styled.div`
+export const Div = styled.div`
     margin-top: 30px;
     padding-top: 0;
     padding-right: 14px;

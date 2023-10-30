@@ -1,26 +1,23 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { information, images } from './data';
+import { data } from '../data';
 import { Container, Photo, Info, Item, Content, Title } from "./styled";
 
 const Window = (adress) => {
-    const id = adress;
-    const convertToNumber = +id.adress;
-    const info = information[convertToNumber];
-    const photos = images[convertToNumber];
+    const vehicleObject = data.find((vehicle) => vehicle.name === adress.info);
 
     return (
         <Container>
             <Photo>
-                <ImageGallery items={photos} />
-                <Title>{info[0].name}</Title>
+                <ImageGallery items={vehicleObject.images} />
+                <Title>{vehicleObject.name}</Title>
             </Photo>
             <Info>
-                {info.map(inf => (
-                    <Item key={inf.id}>
+                {vehicleObject.content.map(item => (
+                    <Item>
                         <Content>
-                            {inf.content}
+                            {item}
                         </Content>
                     </Item >
                 ))}

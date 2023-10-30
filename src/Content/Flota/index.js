@@ -1,59 +1,26 @@
 import { useState } from "react";
-import { Container, List, Button, } from "./styled";
+import { Container, Div, Button, } from "./styled";
+import { data } from './data';
 import Window from './Window';
 
 const Flota = () => {
-    const [adress, setAdress] = useState(1);
+    const [adress, setAdress] = useState('Opel Vivaro');
 
     return (
         <Container>
-            <List>
-
-                <Button
-                    onClick={() => setAdress(0)}
-                >
-                    Volkswagen Caravelle
-                </Button>
-
-
-                <Button
-                    onClick={() => setAdress(1)}
-                >
-                    Opel Vivaro
-                </Button>
-
-
-                <Button
-                    onClick={() => setAdress(2)}
-                >
-                    Mercedes Sprinter
-                </Button>
-
-
-                <Button
-                    onClick={() => setAdress(3)}
-                >
-                    Mercedes Tourino
-                </Button>
-
-
-                <Button
-                    onClick={() => setAdress(4)}
-                >
-                    Man Lions Coach
-                </Button>
-
-
-                <Button
-                    onClick={() => setAdress(5)}
-                >
-                    Man
-                </Button>
-
-            </List>
-            <Window adress={adress} />
+            <Div>
+                {data.map((vehicle) => (
+                    <Button
+                        key={vehicle.id}
+                        value={vehicle.name}
+                        onClick={({ target }) => setAdress(target.value)}
+                    >
+                        {vehicle.name}
+                    </Button>
+                ))}
+            </Div>
+            <Window info={adress} />
         </Container>
-
     );
 }
 

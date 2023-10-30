@@ -4,7 +4,7 @@ import { data } from './data';
 import Window from './Window';
 
 const Flota = () => {
-    const [adress, setAdress] = useState('Opel Vivaro');
+    const [adress, setAdress] = useState(5);
 
     return (
         <Container>
@@ -13,7 +13,7 @@ const Flota = () => {
                     <Button
                         key={vehicle.id}
                         value={vehicle.name}
-                        onClick={({ target }) => setAdress(target.value)}
+                        onClick={() => setAdress(vehicle.id)}
                     >
                         {vehicle.name}
                     </Button>

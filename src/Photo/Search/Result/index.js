@@ -324,7 +324,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </ListContainer>
             <Div>
                 <FileDownloadButton
-                    filename="Rozkład przystanku.pdf"
+                    filename={startStopObject.name+ " - Rozkład przystanku.pdf"}
                     src={startStopObject.download}
                 />
             </Div>

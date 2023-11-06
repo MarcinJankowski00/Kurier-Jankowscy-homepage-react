@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Container, Div, Button, } from "./styled";
+import { Container, Div, Button } from "./styled";
 import { data } from './data';
 import Window from './Window';
 
 const Flota = () => {
-    const [adress, setAdress] = useState(5);
+    const [adress, setAdress] = useState(8);
 
     return (
         <Container>

@@ -2,7 +2,8 @@ import React from 'react';
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import getVariant from './useGetVariant';
 import FileDownloadButton from './FileDownloadButton';
-import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton } from "./styled";
+import { useState } from 'react';
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -66,7 +67,7 @@ const howManyMinutesToDeparture = (object, variant) => {
         return result;
     } else {
         if (variant === 'wariant2') {
-            for ( i = 0; i < 14; i++) {
+            for (i = 0; i < 14; i++) {
                 if (formatToHHMM(object[i]) >= actualHour && (
                     i !== 0 &&
                     i !== 2 &&
@@ -83,7 +84,7 @@ const howManyMinutesToDeparture = (object, variant) => {
             return result;
         } else {
             if (variant === 'wariant3') {
-                for ( i = 0; i < 14; i++) {
+                for (i = 0; i < 14; i++) {
                     if (formatToHHMM(object[i]) >= actualHour && (
                         i !== 0 &&
                         i !== 1 &&
@@ -101,7 +102,7 @@ const howManyMinutesToDeparture = (object, variant) => {
                 return result;
             } else {
                 if (variant === 'wariant4') {
-                    for ( i = 0; i < 14; i++) {
+                    for (i = 0; i < 14; i++) {
                         if (formatToHHMM(object[i]) >= actualHour && (
                             i !== 0 &&
                             i !== 2 &&
@@ -119,7 +120,7 @@ const howManyMinutesToDeparture = (object, variant) => {
                     return result;
                 } else {
                     if (variant === 'wariant5') {
-                        for ( i = 0; i < 14; i++) {
+                        for (i = 0; i < 14; i++) {
                             if (formatToHHMM(object[i]) >= actualHour && (
                                 i !== 0 &&
                                 i !== 1 &&
@@ -144,6 +145,7 @@ const howManyMinutesToDeparture = (object, variant) => {
 }
 
 const Result = ({ startStop, endStop, departureDate }) => {
+    const [isShowed, setIsShowed] = useState(false);
 
     const variant = getVariant(departureDate);
     if (variant === 'brak') {
@@ -222,14 +224,19 @@ const Result = ({ startStop, endStop, departureDate }) => {
                 <DepartureTime isdateactual={isDateNotActual(formattedDate)}>
                     <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction], variant)}min</b>
                 </DepartureTime>
-                <Span><br />Czas przejazdu: {differenceInMinutes}min</Span>
+                <Span><br />Czas przejazdu: {differenceInMinutes}min</Span><br />
+                <ShowButton
+                    isdateactual={isDateNotActual(formattedDate)}
+                    onClick={() => (isShowed ? setIsShowed(false) : setIsShowed(true))}>
+                    {(isShowed ? "Ukryj poprzednie" : "Pokaż poprzednie")}
+                </ShowButton>
             </Heading>
             <ListContainer>
                 <List>
                     {startStopObject[direction].map((item) => {
                         if (variant === 'wariant1') {
                             return (
-                                <Item past={isPast(item, formattedDate)}>
+                                <Item past={isPast(item, formattedDate)} show={isShowed}>
                                     {item}{" "}-{" "}
                                     {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
                                 </Item>
@@ -247,7 +254,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                     return undefined;
                                 } else {
                                     return (
-                                        <Item past={isPast(item, formattedDate)}>
+                                        <Item past={isPast(item, formattedDate)} show={isShowed}>
                                             {item}{" "}-{" "}
                                             {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
                                         </Item>
@@ -267,7 +274,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                         return undefined;
                                     } else {
                                         return (
-                                            <Item past={isPast(item, formattedDate)}>
+                                            <Item past={isPast(item, formattedDate)} show={isShowed}>
                                                 {item}{" "}-{" "}
                                                 {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
                                             </Item>
@@ -287,7 +294,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                             return undefined;
                                         } else {
                                             return (
-                                                <Item past={isPast(item, formattedDate)}>
+                                                <Item past={isPast(item, formattedDate)} show={isShowed}>
                                                     {item}{" "}-{" "}
                                                     {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
                                                 </Item>
@@ -308,7 +315,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                                                 return undefined;
                                             } else {
                                                 return (
-                                                    <Item past={isPast(item, formattedDate)}>
+                                                    <Item past={isPast(item, formattedDate)} show={isShowed}>
                                                         {item}{" "}-{" "}
                                                         {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
                                                     </Item>
@@ -324,7 +331,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
             </ListContainer>
             <Div>
                 <FileDownloadButton
-                    filename={startStopObject.name+ " - Rozkład przystanku.pdf"}
+                    filename={startStopObject.name + " - Rozkład przystanku.pdf"}
                     src={startStopObject.download}
                 />
             </Div>

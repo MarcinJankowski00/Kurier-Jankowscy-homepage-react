@@ -6,7 +6,6 @@ export const Container = styled.div`
 
 export const Heading = styled.div`
     text-align: center;
-    font-size: 20px;
     margin-top: 10px;
     ${({ empty }) => empty && css`
         margin-top: 6px;
@@ -40,6 +39,10 @@ export const Item = styled.li`
     text-align: center;
     ${({ past }) => past && css`
         display: none;
+        color: grey;
+    `}
+    ${({ show }) => show && css`
+        display: list-item;
     `}
 `;
 
@@ -58,4 +61,19 @@ export const Div = styled.div`
     text-align: center;
     margin: 0;
     padding: 0;
+`;
+
+export const ShowButton = styled.button`
+    cursor: pointer;
+    border: none;
+    color: gray;
+    margin-top: 5px;
+    border-radius: 5px;
+    &:hover{
+        filter: brightness(120%);
+        transition: 0.5s;
+    }
+    ${({ isdateactual }) => isdateactual && css`
+        display: none;
+    `}
 `;

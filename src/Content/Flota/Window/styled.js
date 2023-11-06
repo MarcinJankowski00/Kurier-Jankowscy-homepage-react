@@ -41,7 +41,7 @@ export const Info = styled.ul`
 `;
 
 export const Item = styled.li`
-    margin-top: 4%;
+    margin-top: 3.5%;
     margin-bottom: 4%;
     padding-bottom: 3px;
     width: 100%;

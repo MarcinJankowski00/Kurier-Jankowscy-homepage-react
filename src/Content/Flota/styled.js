@@ -34,7 +34,7 @@ export const Button = styled.button`
     margin-bottom: 4px;
     flex-grow: 1;
     width: 100%;
-    max-height: 40px;
+    max-height: 42px;
     white-space: nowrap;
     border: none;
     border-radius: 5px;

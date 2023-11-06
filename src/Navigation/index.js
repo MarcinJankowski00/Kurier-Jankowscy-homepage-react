@@ -1,6 +1,6 @@
 import { List, Link, Nav, Img, Wrapper, Logo } from "./styled";
 import handleLinkClick from "../HandleLinkClick.js";
-import logo from "./kurierlogo.png";
+import logo from "../kurierlogo.png";
 
 const Navigation = () => {
     const scrollToTop = () => {

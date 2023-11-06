@@ -10,11 +10,13 @@ import Aktualnosci from './Content/Aktualnosci';
 import Oferta from './Content/Oferta';
 import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
+import Loader from './Loader';
 
 function App() {
 
   return (
     <main>
+      <Loader />
       <Navigation />
       <Photo />
       <Container>

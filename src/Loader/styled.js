@@ -2,7 +2,7 @@ import styled, { keyframes, css } from "styled-components";
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(-60px);
   }
   to {
     opacity: 1;
@@ -17,7 +17,7 @@ const fadeOut = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(60px);
   }
 `;
 
@@ -34,13 +34,13 @@ export const Div = styled.div`
   z-index: 999;
   
   ${({ hidden }) => hidden && css`
-        animation: ${fadeOut} 1.5s ease-in-out;
+        animation: ${fadeOut} 1.25s ease-in-out;
     `}
 
 `;
 
 export const Img = styled.img`
-    animation: ${fadeIn} 1.5s ease-in-out;
+    animation: ${fadeIn} 1.25s ease-in-out;
     width: 600px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             width: 270px;

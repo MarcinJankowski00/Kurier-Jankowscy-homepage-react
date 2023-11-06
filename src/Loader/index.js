@@ -9,11 +9,11 @@ const Loader = () => {
     useEffect(() => {
         const timer1 = setTimeout(() => {
             setIsHidden(false);
-        }, 2500);
+        }, 1250);
 
         const timer2 = setTimeout(() => {
             setIsLoading(false);
-        }, 4000);
+        }, 2500);
     
         return () => {
           clearTimeout(timer1);

@@ -15,7 +15,7 @@ export const Container = styled.div`
     width: 100%;
     display: ${({ isopen }) => (isopen==="true" ? 'grid' : 'none')};
     grid-template-columns: 3fr 1fr;
-    animation: ${fadeIn} 2s ease-in-out;
+    animation: ${fadeIn} 1.5s ease-in-out;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         display: flex;
         flex-direction: column;

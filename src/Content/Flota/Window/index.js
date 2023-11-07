@@ -13,7 +13,6 @@ const Window = ({ info, isopen }) => {
     }, [info]);
 
     if (!vehicleObject) {
-        // Jeśli obiekt pojazdu nie został jeszcze załadowany, możesz wyświetlić odpowiednią treść lub loader
         return <div>Loading...</div>;
     }
 

@@ -6,6 +6,9 @@ export const Image = styled.div`
     height: 770px;
     position: relative;
     overflow: hidden;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+            height: 100vh;
+        }
 `;
 
 export const Background = styled.div`
@@ -23,7 +26,6 @@ export const Background = styled.div`
 
 export const Content = styled.div`
     display: flex;
-    z-index: 2;
     position: relative;
     flex-direction: row;
     width: 100%;
@@ -39,9 +41,8 @@ export const Content = styled.div`
             padding-right: 5%;
             padding-top: 0px;
         }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 80vh;
-            padding-top: 40px;
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+            height: 105vh;
         }
 `;
 

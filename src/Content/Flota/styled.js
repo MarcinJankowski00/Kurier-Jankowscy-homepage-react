@@ -16,7 +16,7 @@ export const Div = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15.5%;
+    margin-bottom: 74px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             margin-bottom: 0;
@@ -32,8 +32,8 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.color.white};
     padding: 0;
     margin-bottom: 4px;
-    flex-grow: 1;
     width: 100%;
+    height: 42px;
     max-height: 42px;
     white-space: nowrap;
     border: none;
@@ -56,6 +56,7 @@ export const Button = styled.button`
             padding: 9px;
             margin-right: 4px;
             font-size: 13px;
+            height: 100%
         }
 `;
 

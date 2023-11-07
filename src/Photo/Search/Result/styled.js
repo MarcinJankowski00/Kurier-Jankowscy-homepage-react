@@ -1,4 +1,13 @@
-import styled, { css } from "styled-components";
+import styled, { keyframes, css } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
     font-size: 20px;
@@ -40,6 +49,11 @@ export const Item = styled.li`
     ${({ past }) => past && css`
         display: none;
         color: grey;
+        font-size: 18px;
+        animation: ${fadeIn} 0.5s ease-in-out;
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            font-size: 16px;
+        }
     `}
     ${({ show }) => show && css`
         display: list-item;

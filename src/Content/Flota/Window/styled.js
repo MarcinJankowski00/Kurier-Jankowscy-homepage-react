@@ -1,11 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
     margin-top: 30px;
     height: 100%;
     width: 100%;
-    display: grid;
+    display: ${({ isopen }) => (isopen==="true" ? 'grid' : 'none')};
     grid-template-columns: 3fr 1fr;
+    animation: ${fadeIn} 2s ease-in-out;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         display: flex;
         flex-direction: column;

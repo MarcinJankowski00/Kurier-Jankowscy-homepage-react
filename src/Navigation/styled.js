@@ -32,6 +32,7 @@ export const Logo = styled.a`
     margin-top: 15px;
     margin-right: 100px;
     margin-left: 50px;
+    cursor: pointer;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             margin: auto;
             margin-top: 15px;

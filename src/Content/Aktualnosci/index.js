@@ -1,12 +1,10 @@
-import { Content, Image, Container, Div, Red } from "./styled";
+import { Content, Image, Container, Div } from "./styled";
 import info from "./info.png"
 
 const Aktualnosci = () => (
     <Content>
         <Container>
             <Div>
-                <Red>UWAGA NOWA LOKALIZACJA PRZYSTANKU!</Red><br />
-                <br />
                 DRODZY PASAŻEROWIE
             </Div><br />
             Informujemy, że w dniu 16.10.2023 r. (poniedziałek) została zmieniona lokalizacja przystanku znajdującego

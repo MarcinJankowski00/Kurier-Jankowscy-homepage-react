@@ -1,8 +1,30 @@
 import styled from "styled-components";
 import background from "./background.jpg";
 
+
 export const Image = styled.div`
+    height: 770px;
+    position: relative;
+    overflow: hidden;
+`;
+
+export const Background = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("${background}");
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, ${props => props.offset}px, 0);
+  z-index: -1;
+`;
+
+export const Content = styled.div`
     display: flex;
+    z-index: 2;
+    position: relative;
     flex-direction: row;
     width: 100%;
     height: 770px;
@@ -11,9 +33,6 @@ export const Image = styled.div`
     padding-right: 10%;
     justify-content: center;
     align-items: center;
-    background-image: url("${background}");
-    background-size: cover;
-    background-position: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             flex-direction: column-reverse;
             padding-left: 5%;
@@ -21,7 +40,7 @@ export const Image = styled.div`
             padding-top: 0px;
         }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 650px;
+            height: 80vh;
             padding-top: 40px;
         }
 `;

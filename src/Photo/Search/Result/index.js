@@ -2,7 +2,7 @@ import React from 'react';
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import getVariant from './useGetVariant';
 import FileDownloadButton from './FileDownloadButton';
-import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton, Empty } from "./styled";
 import { useState } from 'react';
 
 
@@ -186,18 +186,6 @@ const Result = ({ startStop, endStop, departureDate }) => {
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
-    if ((howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))) {
-        return (
-            <Heading>
-                <b>{startStop} - {endStop}</b><br />
-                <Span>{formattedDate}</Span>
-                <br />
-                <DepartureTime>
-                    <br />Disiaj już nie kursujemy.
-                </DepartureTime>
-            </Heading>
-        );
-    }
     const differenceInMinutes = calculateTimeDifference(startStopObject[direction][0], endStopObject[direction][0]);
 
     const isPast = (myHour, formattedDate) => {
@@ -221,7 +209,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
                 <br />
-                <DepartureTime isdateactual={isDateNotActual(formattedDate)}>
+                <DepartureTime isdateactual={(howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
                     <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction], variant)}min</b>
                 </DepartureTime>
                 <Span><br />Czas przejazdu: {differenceInMinutes}min</Span><br />
@@ -328,6 +316,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                         }
                     })}
                 </List>
+                <Empty show={(!isShowed)&&(howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
+                    ...Brak kursów
+                </Empty>
             </ListContainer>
             <Div>
                 <FileDownloadButton

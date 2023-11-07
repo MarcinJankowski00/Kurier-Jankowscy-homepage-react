@@ -69,6 +69,17 @@ export const DepartureTime = styled.span`
     ${({ isdateactual }) => isdateactual && css`
         display: none;
     `}
+    ${({ show }) => show && css`
+        display: none;
+    `}
+`;
+export const Empty = styled.div`
+    display: none;
+    text-align: center;
+    margin-bottom: 10px;
+    ${({ show }) => show && css`
+        display: block;
+    `}
 `;
 
 export const Div = styled.div`

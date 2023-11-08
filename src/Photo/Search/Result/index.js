@@ -201,15 +201,13 @@ const Result = ({ startStop, endStop, departureDate }) => {
         }
     }
 
-
-
     return (
         <Container>
             <Heading>
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
                 <br />
-                <DepartureTime isdateactual={(howManyMinutesToDeparture(startStopObject[direction], variant) === -1) || !(isDateNotActual(formattedDate))}>
+                <DepartureTime show={(howManyMinutesToDeparture(startStopObject[direction], variant) !== -1) && !(isDateNotActual(formattedDate))}>
                     <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction], variant)}min</b>
                 </DepartureTime>
                 <Span><br />Czas przejazdu: {differenceInMinutes}min</Span><br />

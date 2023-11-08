@@ -65,12 +65,10 @@ export const Span = styled.span`
 `;
 
 export const DepartureTime = styled.span`
+    display: none;
     filter: brightness(130%);
-    ${({ isdateactual }) => isdateactual && css`
-        display: none;
-    `}
     ${({ show }) => show && css`
-        display: none;
+        display: inline;
     `}
 `;
 export const Empty = styled.div`

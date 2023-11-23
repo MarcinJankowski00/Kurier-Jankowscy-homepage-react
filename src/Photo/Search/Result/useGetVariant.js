@@ -77,6 +77,40 @@ const isEster = (myDate) => {
     return dates.some(data => data.getTime() === myDate.getTime());
 };
 
+const isSaturdayBeforeEster = (myDate) => {
+    const saturdayBeforeEster = [
+        '08-04-2023',
+        '30-03-2024',
+        '19-04-2025',
+        '04-04-2026',
+        '27-03-2027',
+        '15-04-2028',
+        '31-03-2029',
+        '20-04-2030',
+        '12-04-2031',
+        '27-03-2032',
+        '16-04-2033',
+        '09-04-2023',
+        '31-03-2024',
+        '20-04-2025',
+        '05-04-2026',
+        '28-03-2027',
+        '16-04-2028',
+        '01-04-2029',
+        '21-04-2030',
+        '13-04-2031',
+        '28-03-2032',
+        '17-04-2033'
+    ];
+    const dates = saturdayBeforeEster.map(item => {
+        const [day, month] = item.split('-');
+        const year = myDate.getFullYear();
+        return new Date(`${year}-${month}-${day}`);
+    });
+
+    return dates.some(data => data.getTime() === myDate.getTime());
+};
+
 const getVariant = (departureDateStr) => {
     const departureDate = new Date(departureDateStr);
     if (
@@ -87,7 +121,8 @@ const getVariant = (departureDateStr) => {
         return 'brak'
     }
     else {
-        if (departureDate.getMonth() === 11 && (departureDate.getDate() === 24 || departureDate.getDate() === 31)) {
+        if ((departureDate.getMonth() === 11 && (departureDate.getDate() === 24 || departureDate.getDate() === 31)) ||
+            (isSaturdayBeforeEster(departureDate))) {
             if (departureDate.getDay() === 0) {
                 return 'wariant5';
             }
@@ -108,8 +143,7 @@ const getVariant = (departureDateStr) => {
             else {
                 if (
                     departureDate.getDay() === 6 ||
-                    isFridayAfterBozeCialo(departureDate) ||
-                    (departureDate.getMonth() === 4 && departureDate.getDate() === 2)) {
+                    isFridayAfterBozeCialo(departureDate)) {
                     return 'wariant2';
                 }
                 else {

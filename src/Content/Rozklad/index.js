@@ -11,7 +11,7 @@ const Rozklad = () => {
         <div>
             <p>
                 Godziny odjazdu do <strong>BIAŁEGOSTOKU</strong><br />
-                Rozkład jazdy ważny od <strong>01.07.2023</strong>
+                Rozkład jazdy ważny od <strong>01.07.2023</strong> do <strong>30.11.2023</strong>
             </p>
         </div>
         <TableContainer>
@@ -88,7 +88,7 @@ const Rozklad = () => {
         <br />
         <br />
         Godziny odjazdu do <b>MONIEK</b><br />
-        Rozkład jazdy ważny od <strong>01.07.2023</strong><br />
+        Rozkład jazdy ważny od <strong>01.07.2023</strong> do <strong>30.11.2023</strong><br />
         <br />
         <TableContainer>
             <Table>

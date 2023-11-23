@@ -159,12 +159,22 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const startStopObject = busStops.find((station) => station.name === startStop);
     const endStopObject = busStops.find((station) => station.name === endStop);
     let direction = "";
-
-    if (startStopObject.id > endStopObject.id) {
-        direction = "Mońki";
-    } else {
-        direction = "Białystok";
+    const newPlanDate = new Date('2023-11-30');
+    const chosenDate = new Date(departureDate);
+    if(chosenDate > newPlanDate){
+        if (startStopObject.id > endStopObject.id) {
+            direction = "NowyMońki";
+        } else {
+            direction = "NowyBiałystok";
+        }
+    }else{
+        if (startStopObject.id > endStopObject.id) {
+            direction = "Mońki";
+        } else {
+            direction = "Białystok";
+        }
     }
+    
 
     if ((startStopObject.id === 20 || endStopObject.id === 20) && direction === "Białystok") {
         return (

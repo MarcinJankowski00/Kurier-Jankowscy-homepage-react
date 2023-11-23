@@ -1,5 +1,6 @@
-import { Content, Image, Container, Div } from "./styled";
-import info from "./info.png"
+import { Content, Container, Div } from "./styled";
+import FileDownloadButton from './FileDownloadButton';
+import rozkladJazdy from './Nowy_Rozkład_Jazdy.pdf';
 
 const Aktualnosci = () => (
     <Content>
@@ -7,11 +8,17 @@ const Aktualnosci = () => (
             <Div>
                 DRODZY PASAŻEROWIE
             </Div><br />
-            Informujemy, że w dniu 16.10.2023 r. (poniedziałek) została zmieniona lokalizacja przystanku znajdującego
-            się przy Dworcu PKS. Miejsce postojowe zostało przeniesione na stałe, w miejsce
-            oznaczone na załączonym planie sytuacyjnym.
+            Informujemy, iż od <b>01.12.2023</b><br />
+            zmienia się rozkład jazdy na linii<br />
+            <b>Mońki – Białystok</b>.<br />
+            Nowe rozkłady dostępne u kierowców,<br />
+            w biurze mieszczącym się w Mońkach przy ul. Dworcowej 6 <br />
+            oraz na naszym Facebooku i stronie internetowej.
         </Container>
-        <Image src={info} />
+        <FileDownloadButton
+            filename="Nowy_Rozkład_Jazdy.pdf"
+            src={rozkladJazdy}
+        />
     </Content>
 );
 

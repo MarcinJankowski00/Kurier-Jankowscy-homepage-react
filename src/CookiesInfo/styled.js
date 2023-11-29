@@ -31,3 +31,7 @@ export const CloseButton = styled.button`
         filter: brightness(140%);
     }
 `;
+
+export const Link = styled.a`
+    color: #4c90f4;
+`;

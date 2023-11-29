@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CookieInfoContainer, CloseButton  } from "./styled";
+import { CookieInfoContainer, CloseButton, Link  } from "./styled";
 
 const CookiesInfo = () => {
     const [showCookieInfo, setShowCookieInfo] = useState(true);
@@ -19,7 +19,7 @@ const CookiesInfo = () => {
             <p>
             Ta strona używa plików cookies. W każdym momencie można dokonać zmiany ustawień Państwa przeglądarki.<br />
             Więcej informacji w{' '}
-                <a href="/PolitykaCookies.pdf">Polityce dotyczącej Plików Cookies</a>.
+                <Link href="/PolitykaCookies.pdf">Polityce dotyczącej Plików Cookies</Link>.
             </p>
             <CloseButton onClick={handleClose}>Akceptuj</CloseButton>
         </CookieInfoContainer>

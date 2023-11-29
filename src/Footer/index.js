@@ -1,4 +1,4 @@
-import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link, Img } from "./styled";
+import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link, Img, Cookies } from "./styled";
 import fbLogo from "./fbLogo.png";
 
 const Footer = () => (
@@ -21,6 +21,10 @@ const Footer = () => (
                     kom. <Link href="tel:+48515073556">515 073 556</Link><br />
                     kom. <Link href="tel:+48506110936">506 110 936</Link><br />
                 </Kontakt>
+                <Cookies>
+                    INFORMACJE:<br />
+                    <Link href="/PolitykaCookies.pdf">Politka dotycząca Plików Cookies</Link>.
+                </Cookies>
             </Contact>
         </Wrapper>
     </Bottom>

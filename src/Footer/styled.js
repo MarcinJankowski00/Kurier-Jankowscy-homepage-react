@@ -33,10 +33,18 @@ export const Adres = styled.p`
 `;
 
 export const Kontakt = styled.p`
+    margin-right: 20px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         margin: 0;
     }   
 `;
+
+export const Cookies = styled.p`
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-top: 18px;
+    }   
+`;
+
 export const Link = styled.a`
     color: #4c90f4;
 `;

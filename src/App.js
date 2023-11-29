@@ -11,11 +11,13 @@ import Oferta from './Content/Oferta';
 import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
 import Loader from './Loader';
+import CookiesInfo from './CookiesInfo';
 
 function App() {
 
   return (
     <main>
+      <CookiesInfo />
       <Loader />
       <Navigation />
       <Photo />

@@ -33,5 +33,5 @@ export const CloseButton = styled.button`
 `;
 
 export const Link = styled.a`
-    color: #4c90f4;
+    color: ${({ theme }) => theme.color.teal};
 `;

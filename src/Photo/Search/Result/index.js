@@ -328,12 +328,12 @@ const Result = ({ startStop, endStop, departureDate }) => {
                     ...Brak kursów
                 </Empty>
             </ListContainer>
-            <Div>
+            {/* <Div>
                 <FileDownloadButton
                     filename={startStopObject.name + " - Rozkład przystanku.pdf"}
                     src={startStopObject.download}
                 />
-            </Div>
+            </Div> */}
         </Container>
     );
 };

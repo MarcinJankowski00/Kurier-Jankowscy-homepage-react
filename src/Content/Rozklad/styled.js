@@ -32,8 +32,10 @@ export const Cell = styled.td`
     ${({ header }) => header && css`
         background-color: #c0c0c0;
         font-weight: bold;
-        text-align: start;
         white-space: nowrap;
+    `}
+    ${({ name }) => name && css`
+        text-align: start;
     `}
 `;
 export const Row = styled.tr`

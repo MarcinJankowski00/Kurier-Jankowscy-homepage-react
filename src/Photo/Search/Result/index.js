@@ -161,20 +161,12 @@ const Result = ({ startStop, endStop, departureDate }) => {
     let direction = "";
     const newPlanDate = new Date('2023-11-30');
     const chosenDate = new Date(departureDate);
-    if(chosenDate > newPlanDate){
-        if (startStopObject.id > endStopObject.id) {
-            direction = "NowyMońki";
-        } else {
-            direction = "NowyBiałystok";
-        }
-    }else{
-        if (startStopObject.id > endStopObject.id) {
-            direction = "Mońki";
-        } else {
-            direction = "Białystok";
-        }
+
+    if (startStopObject.id > endStopObject.id) {
+        direction = "Mońki";
+    } else {
+        direction = "Białystok";
     }
-    
 
     if ((startStopObject.id === 20 || endStopObject.id === 20) && direction === "Białystok") {
         return (
@@ -324,7 +316,7 @@ const Result = ({ startStop, endStop, departureDate }) => {
                         }
                     })}
                 </List>
-                <Empty show={(!isShowed)&&(howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
+                <Empty show={(!isShowed) && (howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
                     ...Brak kursów
                 </Empty>
             </ListContainer>

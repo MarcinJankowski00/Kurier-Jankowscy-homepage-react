@@ -8,8 +8,8 @@ const Aktualnosci = () => (
             <Div>
                 DRODZY PASAŻEROWIE
             </Div><br />
-            Informujemy, iż od <b>01.12.2023</b><br />
-            zmienia się rozkład jazdy na linii<br />
+            Informujemy, iż dnia <b>01.12.2023</b><br />
+            zmienił się rozkład jazdy na linii<br />
             <b>Mońki – Białystok</b>.<br />
             Nowe rozkłady dostępne u kierowców,<br />
             w biurze mieszczącym się w Mońkach przy ul. Dworcowej 6 <br />

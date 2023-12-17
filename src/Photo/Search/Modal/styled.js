@@ -26,10 +26,10 @@ export const ModalContainer = styled.div`
 
 export const ModalContent = styled.div`
   color: ${({ theme }) => theme.color.teal};
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color.section};
   margin: 10px;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid ${({ theme }) => theme.color.sectionShadow};
   width: 100%;
   max-width: 460px;
   max-height: 90%;

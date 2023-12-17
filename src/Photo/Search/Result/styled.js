@@ -43,12 +43,12 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-    border-bottom: 2px solid ${({ theme }) => theme.color.alto};
+    border-bottom: 2px solid ${({ theme }) => theme.color.hoursBorder};
     padding: 10px;
     text-align: center;
     ${({ past }) => past && css`
         display: none;
-        color: grey;
+        color: ${({ theme }) => theme.color.lessImportant};
         font-size: 18px;
         animation: ${fadeIn} 0.5s ease-in-out;
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -61,7 +61,7 @@ export const Item = styled.li`
 `;
 
 export const Span = styled.span`
-    color: gray;
+    color: ${({ theme }) => theme.color.lessImportant};
 `;
 
 export const DepartureTime = styled.span`
@@ -89,7 +89,8 @@ export const Div = styled.div`
 export const ShowButton = styled.button`
     cursor: pointer;
     border: none;
-    color: gray;
+    background-color: ${({ theme }) => theme.color.brigtherLessImportant};
+    color: ${({ theme }) => theme.color.lessImportant};
     margin-top: 5px;
     border-radius: 5px;
     &:hover{

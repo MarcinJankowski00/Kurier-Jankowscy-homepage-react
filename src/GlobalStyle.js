@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
         font-size: 18px;
-        color: ${({ theme }) => theme.color.teal};
-        background-color: ${({ theme }) => theme.color.white};
+        color: ${({ theme }) => theme.color.font};
+        background-color: ${({ theme }) => theme.color.background};
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
             font-size: 15px;
         }

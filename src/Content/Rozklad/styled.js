@@ -14,7 +14,7 @@ export const TableContainer = styled.div`
 
 export const Table = styled.table`
     border-collapse: collapse;
-    background-color: #f8f7f7;
+    background-color: ${({ theme }) => theme.color.tableBackgroud};
     width: 100%;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             font-size: 15px;
@@ -25,12 +25,12 @@ export const Table = styled.table`
 `;
 
 export const Cell = styled.td`
-    border: 2px solid #d9d9d9;
+    border: 2px solid ${({ theme }) => theme.color.tableBorder};
     padding: 8px;
     text-align: center;
 
     ${({ header }) => header && css`
-        background-color: #c0c0c0;
+        background-color: ${({ theme }) => theme.color.tableHeader};
         font-weight: bold;
         white-space: nowrap;
     `}
@@ -40,6 +40,6 @@ export const Cell = styled.td`
 `;
 export const Row = styled.tr`
     &:hover {
-        background-color: #eeeeee;
+        background-color: ${({ theme }) => theme.color.tableHover};
     }
 `;

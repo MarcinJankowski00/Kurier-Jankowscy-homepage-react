@@ -5,7 +5,7 @@ export const Form = styled.div`
 `;
 
 export const Container = styled.div`
-    background-color: rgb(255 255 255 / 78%);
+    background-color: ${({ theme }) => theme.color.search};
     backdrop-filter: blur(10px);
     color: ${({ theme }) => theme.color.teal};
     max-width: 420px;
@@ -92,7 +92,7 @@ export const Switch = styled.button`
     height: 91px;
     margin-top: 4px;
     background-color: ${({ theme }) => theme.color.teal};
-    color: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.teal};
     border-radius: 5px;
     cursor: pointer;
     &:hover {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-    background-color: white;
+    background-color: ${({ theme }) => theme.color.navigation};
     padding: 1px;
     position: fixed ;
     width: 100%;
@@ -29,7 +29,7 @@ export const Img = styled.img`
 `;
 
 export const Logo = styled.a`
-    margin-top: 15px;
+    margin-top: 3px;
     margin-right: 100px;
     margin-left: 50px;
     cursor: pointer;
@@ -51,7 +51,7 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-    color: ${({ theme }) => theme.color.teal};
+    color: ${({ theme }) => theme.color.font};
     text-decoration: none;
 
     &:focus {
@@ -60,7 +60,7 @@ export const Link = styled.a`
     &:hover {
         filter: brightness(120%);
         padding-bottom: 5px;
-        border-bottom: 1px solid #2c3e50;
+        border-bottom: 1px solid ${({ theme }) => theme.color.font};
         outline: none;
     }
 `;

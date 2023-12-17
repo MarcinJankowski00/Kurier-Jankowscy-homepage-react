@@ -55,7 +55,7 @@ export const Item = styled.li`
     margin-bottom: 4%;
     padding-bottom: 3px;
     width: 100%;
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid ${({ theme }) => theme.color.teal};
 `;
 
 export const Content = styled.span`

@@ -29,7 +29,7 @@ export const Img = styled.img`
 `;
 
 export const Logo = styled.a`
-    margin-top: 3px;
+    margin-top: 15px;
     margin-right: 100px;
     margin-left: 50px;
     cursor: pointer;

@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.6fced11a.js",
+    "main.js": "/static/js/main.b86b0227.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
-    "static/media/background.jpg": "/static/media/background.d311f3832c8fb8c0ba78.jpg",
+    "static/media/background.jpg": "/static/media/background.0e0d4bec7e3b339e7b91.jpg",
     "static/media/skrzyzowanie.pdf": "/static/media/skrzyzowanie.055e1c3e518f4284aae0.pdf",
     "static/media/czechPKP.pdf": "/static/media/czechPKP.a5b049e31cecb5c83761.pdf",
     "static/media/dobrzyniewo.pdf": "/static/media/dobrzyniewo.75e6302450f7efa3398b.pdf",
@@ -53,17 +53,17 @@
     "static/media/sprinter2.jpg": "/static/media/sprinter2.f2a484a70dc325a2d485.jpg",
     "static/media/sprinter4.jpg": "/static/media/sprinter4.710fae6df60d461c0c51.jpg",
     "static/media/sprinter3.jpg": "/static/media/sprinter3.1644cbfb04e34a5d7a88.jpg",
-    "static/media/kurierlogo.png": "/static/media/kurierlogo.376082ea5bc139d64c5a.png",
+    "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "static/media/manLions2.jpg": "/static/media/manLions2.db58b33ca85ee0dcb813.jpg",
     "static/media/manLions1.jpg": "/static/media/manLions1.988569c4f35adc8237e7.jpg",
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.6fced11a.js.map": "/static/js/main.6fced11a.js.map",
+    "main.b86b0227.js.map": "/static/js/main.b86b0227.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.6fced11a.js"
+    "static/js/main.b86b0227.js"
   ]
 }

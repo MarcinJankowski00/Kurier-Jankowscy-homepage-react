@@ -16,7 +16,12 @@ export const Div = styled.div`
 export const Container = styled.div`
     max-width: 780px;
     padding: 20px 0;
-    text-align: center;
+`;
+
+export const Img = styled.img`
+    width:  100%;
+    max-width: 750px;
+    border-radius: 20px;
 `;
 
 export const Image = styled.img`

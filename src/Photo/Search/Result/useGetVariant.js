@@ -13,8 +13,7 @@ const isBozeCialo = (myDate) => {
         '16-06-2033'
     ];
     const dates = bozeCialo.map(item => {
-        const [day, month] = item.split('-');
-        const year = myDate.getFullYear();
+        const [day, month, year] = item.split('-');
         return new Date(`${year}-${month}-${day}`);
     });
 
@@ -36,8 +35,7 @@ const isFridayAfterBozeCialo = (myDate) => {
         '17-06-2033'
     ];
     const dates = fridays.map(item => {
-        const [day, month] = item.split('-');
-        const year = myDate.getFullYear();
+        const [day, month, year] = item.split('-');
         return new Date(`${year}-${month}-${day}`);
     });
 
@@ -69,8 +67,7 @@ const isEster = (myDate) => {
         '18-04-2033'
     ];
     const dates = ester.map(item => {
-        const [day, month] = item.split('-');
-        const year = myDate.getFullYear();
+        const [day, month, year] = item.split('-');
         return new Date(`${year}-${month}-${day}`);
     });
 
@@ -103,8 +100,7 @@ const isSaturdayBeforeEster = (myDate) => {
         '17-04-2033'
     ];
     const dates = saturdayBeforeEster.map(item => {
-        const [day, month] = item.split('-');
-        const year = myDate.getFullYear();
+        const [day, month, year] = item.split('-');
         return new Date(`${year}-${month}-${day}`);
     });
 

@@ -14,17 +14,7 @@ export const Div = styled.div`
 `;
 
 export const Container = styled.div`
-    max-width: 780px;
+    max-width: 760px;
+    text-align: center;
     padding: 20px 0;
-`;
-
-export const Img = styled.img`
-    width:  100%;
-    max-width: 750px;
-    border-radius: 20px;
-`;
-
-export const Image = styled.img`
-    width: 100%;
-    max-width: 780px;
 `;

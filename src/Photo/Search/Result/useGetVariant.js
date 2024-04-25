@@ -23,6 +23,7 @@ const isBozeCialo = (myDate) => {
 const isFridayAfterBozeCialo = (myDate) => {
     const fridays = [
         '09-06-2023',
+        '02-05-2024',
         '31-05-2024',
         '20-06-2025',
         '05-06-2026',

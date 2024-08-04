@@ -27,6 +27,7 @@ export const Heading = styled.div`
 export const ListContainer = styled.div`
     padding: 0;
     margin: 0;
+    text-align: center;
 `;
 
 export const List = styled.ul`
@@ -101,3 +102,20 @@ export const ShowButton = styled.button`
         display: none;
     `}
 `;
+
+export const NextDayButton = styled.button`
+    cursor: pointer;
+    border: none;
+    background-color: ${({ theme }) => theme.color.brigtherLessImportant};
+    color: ${({ theme }) => theme.color.lessImportant};
+    margin-top: 5px;
+    border-radius: 5px;
+    &:hover{
+        filter: brightness(120%);
+        transition: 0.5s;
+    }
+    ${({ isdateactual }) => isdateactual && css`
+        display: none;
+    `}
+`;
+

@@ -38,14 +38,25 @@ const Search = () => {
         localStorage.setItem("endStop", JSON.stringify(endStop));
     });
 
-    const dzisiaj = new Date().toISOString().slice(0, 10);
-    const [departureDate, setDepartureDate] = useState(dzisiaj);
+    const today = new Date().toISOString().slice(0, 10);
+    const [departureDate, setDepartureDate] = useState(today);
 
     const switchStops = () => {
         let holder = endStop;
         setEndStop(startStop);
         setStartStop(holder);
     };
+
+    const getNextDay = (date) => {
+        const newDate = new Date(date);
+        newDate.setDate(newDate.getDate() + 1);
+        return newDate;
+    };
+
+    const handleDepartureDateChange = () => {
+        setDepartureDate(getNextDay(departureDate));
+    };
+
 
     return (
         <Form>
@@ -117,6 +128,7 @@ const Search = () => {
                     startStop={startStop}
                     endStop={endStop}
                     departureDate={departureDate}
+                    onNextDayButtonClick={handleDepartureDateChange}
                 />
             </Modal>
         </Form>

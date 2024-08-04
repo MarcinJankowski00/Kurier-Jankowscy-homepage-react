@@ -2,7 +2,7 @@ import React from 'react';
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import getVariant from './useGetVariant';
 import FileDownloadButton from './FileDownloadButton';
-import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton, Empty } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton, Empty, NextDayButton } from "./styled";
 import { useState } from 'react';
 
 
@@ -144,7 +144,20 @@ const howManyMinutesToDeparture = (object, variant) => {
     }
 }
 
-const Result = ({ startStop, endStop, departureDate }) => {
+const isPast = (myHour, formattedDate) => {
+    const actualDate = new Date();
+    const formattedActualDate = actualDate.toLocaleDateString();
+    if (formattedDate !== formattedActualDate) {
+        return false;
+    }
+    if (formatToHHMM(myHour) < getActualHour()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => {
     const [isShowed, setIsShowed] = useState(false);
 
     const variant = getVariant(departureDate);
@@ -159,8 +172,6 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const startStopObject = busStops.find((station) => station.name === startStop);
     const endStopObject = busStops.find((station) => station.name === endStop);
     let direction = "";
-    const newPlanDate = new Date('2023-11-30');
-    const chosenDate = new Date(departureDate);
 
     if (startStopObject.id > endStopObject.id) {
         direction = "Mońki";
@@ -189,19 +200,6 @@ const Result = ({ startStop, endStop, departureDate }) => {
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
     const differenceInMinutes = calculateTimeDifference(startStopObject[direction][0], endStopObject[direction][0]);
-
-    const isPast = (myHour, formattedDate) => {
-        const actualDate = new Date();
-        const formattedActualDate = actualDate.toLocaleDateString();
-        if (formattedDate !== formattedActualDate) {
-            return false;
-        }
-        if (formatToHHMM(myHour) < getActualHour()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     return (
         <Container>
@@ -319,6 +317,9 @@ const Result = ({ startStop, endStop, departureDate }) => {
                 <Empty show={(!isShowed) && (howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
                     ...Brak kursów
                 </Empty>
+                <NextDayButton onClick={onNextDayButtonClick}>
+                    Następny dzień
+                </NextDayButton>
             </ListContainer>
             {/* <Div>
                 <FileDownloadButton

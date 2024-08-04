@@ -108,9 +108,7 @@ const Search = () => {
                     </Wrapper>
                     <DateDiv>
                         <label>
-                            <Span>
-
-                            </Span>
+                            <Span />
                             <Input
                                 type="Date"
                                 value={departureDate}

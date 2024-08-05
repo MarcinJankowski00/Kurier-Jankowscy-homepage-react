@@ -38,13 +38,24 @@ const Search = () => {
         localStorage.setItem("endStop", JSON.stringify(endStop));
     });
 
-    const today = new Date().toISOString().slice(0, 10);
-    const [departureDate, setDepartureDate] = useState(today);
+    const [departureDate, setDepartureDate] = useState(new Date());
 
     const switchStops = () => {
         let holder = endStop;
         setEndStop(startStop);
         setStartStop(holder);
+    };
+    const formatDate = (date) => {
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        if (day < 10) {
+            day = `0${day}`;
+        }
+        if (month < 10) {
+            month = `0${month}`;
+        }
+        return `${year}-${month}-${day}`;
     };
 
     const getNextDay = (date) => {
@@ -55,6 +66,7 @@ const Search = () => {
 
     const handleDepartureDateChange = () => {
         setDepartureDate(getNextDay(departureDate));
+        console.log(departureDate);
     };
 
 
@@ -111,10 +123,10 @@ const Search = () => {
                             <Span />
                             <Input
                                 type="Date"
-                                value={departureDate}
-                                onChange={(e) => {
-                                    setDepartureDate(e.target.value)
-                                }}
+                                value={formatDate(departureDate)}
+                                onChange={(e) => 
+                                    setDepartureDate(new Date(e.target.value))
+                                }
                             />
                         </label>
                     </DateDiv>

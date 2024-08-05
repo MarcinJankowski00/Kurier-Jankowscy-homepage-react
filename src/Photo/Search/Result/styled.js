@@ -108,7 +108,7 @@ export const NextDayButton = styled.button`
     border: none;
     background-color: ${({ theme }) => theme.color.brigtherLessImportant};
     color: ${({ theme }) => theme.color.lessImportant};
-    margin-top: 5px;
+    margin-top: 18px;
     border-radius: 5px;
     &:hover{
         filter: brightness(120%);

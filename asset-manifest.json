@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.8a1f62bb.js",
+    "main.js": "/static/js/main.a9a0bed3.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/background.jpg": "/static/media/background.0e0d4bec7e3b339e7b91.jpg",
     "static/media/skrzyzowanie.pdf": "/static/media/skrzyzowanie.055e1c3e518f4284aae0.pdf",
@@ -58,11 +58,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.8a1f62bb.js.map": "/static/js/main.8a1f62bb.js.map",
+    "main.a9a0bed3.js.map": "/static/js/main.a9a0bed3.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.8a1f62bb.js"
+    "static/js/main.a9a0bed3.js"
   ]
 }

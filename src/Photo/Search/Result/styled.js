@@ -106,10 +106,11 @@ export const ShowButton = styled.button`
 export const NextDayButton = styled.button`
     cursor: pointer;
     border: none;
-    background-color: ${({ theme }) => theme.color.brigtherLessImportant};
-    color: ${({ theme }) => theme.color.lessImportant};
-    margin-top: 18px;
+    background-color: ${({ theme }) => theme.color.teal};
+    color: ${({ theme }) => theme.color.fontOnButton};
+    margin-top: 10px;
     border-radius: 5px;
+    padding: 5px 16px;
     &:hover{
         filter: brightness(120%);
         transition: 0.5s;
@@ -117,5 +118,8 @@ export const NextDayButton = styled.button`
     ${({ isdateactual }) => isdateactual && css`
         display: none;
     `}
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 16px;
+    }
 `;
 

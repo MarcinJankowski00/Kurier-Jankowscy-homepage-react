@@ -66,7 +66,6 @@ const Search = () => {
 
     const handleDepartureDateChange = () => {
         setDepartureDate(getNextDay(departureDate));
-        console.log(departureDate);
     };
 
 

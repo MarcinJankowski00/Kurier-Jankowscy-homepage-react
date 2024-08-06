@@ -13,9 +13,9 @@ export const Container = styled.div`
     margin-top: 30px;
     height: 100%;
     width: 100%;
-    display: ${({ isopen }) => (isopen==="true" ? 'grid' : 'none')};
+    display: ${({ isopen }) => ({isopen} ? 'grid' : 'none')};
     grid-template-columns: 3fr 1fr;
-    animation: ${fadeIn} 1.5s ease-in-out;
+    animation: ${fadeIn} 0.7s ease-in-out;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         display: flex;
         flex-direction: column;
@@ -60,4 +60,11 @@ export const Item = styled.li`
 
 export const Content = styled.span`
 
+`;
+
+export const LoaderWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
 `;

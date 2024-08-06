@@ -5,24 +5,17 @@ import Window from './Window';
 
 const Flota = () => {
     const [adress, setAdress] = useState(8);
-    const [isWindowOpen, setWindowOpen] = useState("true");
-    const openWindow = () => {
-        setWindowOpen("true");
-    };
+    const [isWindowOpen, setWindowOpen] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    
     const closeWindow = () => {
-        setWindowOpen("false");
+        setWindowOpen(false);
     };
 
     const toggleWindow = (vehicle) => {
         closeWindow();
+        setIsLoading(true);
         setAdress(vehicle.id); 
-        const timer2 = setTimeout(() => {
-            openWindow();
-        }, 1);
-    
-        return () => {
-          clearTimeout(timer2);
-        };
     } 
 
     return (
@@ -32,13 +25,13 @@ const Flota = () => {
                     <Button
                         key={vehicle.id}
                         value={vehicle.name}
-                        onClick={() => toggleWindow(vehicle)}
+                        onClick={vehicle.id!==adress ? () => toggleWindow(vehicle) : null}
                     >
                         {vehicle.name}
                     </Button>
                 ))}
             </Div>
-            <Window info={adress} isopen={{isWindowOpen}}/>
+            <Window info={adress} isopen={isWindowOpen} isLoading={isLoading} setIsLoading={setIsLoading}/>
         </Container>
     );
 }

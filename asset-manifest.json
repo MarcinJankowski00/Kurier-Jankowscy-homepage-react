@@ -1,35 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.f6cfb884.js",
+    "main.js": "/static/js/main.b66beeb2.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/background.jpg": "/static/media/background.0e0d4bec7e3b339e7b91.jpg",
-    "static/media/skrzyzowanie.pdf": "/static/media/skrzyzowanie.055e1c3e518f4284aae0.pdf",
-    "static/media/czechPKP.pdf": "/static/media/czechPKP.a5b049e31cecb5c83761.pdf",
-    "static/media/dobrzyniewo.pdf": "/static/media/dobrzyniewo.75e6302450f7efa3398b.pdf",
-    "static/media/wojpolskiego.pdf": "/static/media/wojpolskiego.3468ebeff045e844f4b9.pdf",
-    "static/media/mysliwiec.pdf": "/static/media/mysliwiec.6337d55517ee8bd8970a.pdf",
-    "static/media/czechowizna.pdf": "/static/media/czechowizna.1b15d66fcff1e7cedd0a.pdf",
-    "static/media/goniadzka.pdf": "/static/media/goniadzka.b3881e37212eedaf3b29.pdf",
-    "static/media/chraboly.pdf": "/static/media/chraboly.30370a8c9d106bfd1b9a.pdf",
-    "static/media/dziekonie.pdf": "/static/media/dziekonie.323c8718d93bc52d1fc2.pdf",
-    "static/media/lesna.pdf": "/static/media/lesna.851ab2a6efe4f41d93c1.pdf",
-    "static/media/fasty.pdf": "/static/media/fasty.f3373b34edf6c625a610.pdf",
-    "static/media/obrubniki.pdf": "/static/media/obrubniki.b0e8cd5f61b8b13f72c6.pdf",
-    "static/media/castorama.pdf": "/static/media/castorama.cb5071977eae87c7f5ef.pdf",
-    "static/media/bacieczki.pdf": "/static/media/bacieczki.f68470f42be753a8a0f0.pdf",
-    "static/media/kozince.pdf": "/static/media/kozince.4d4c3efcc7cb79fd1343.pdf",
-    "static/media/kolonia.pdf": "/static/media/kolonia.96311eec06dd90966ddb.pdf",
-    "static/media/rynek.pdf": "/static/media/rynek.ca63e168523866755b3e.pdf",
-    "static/media/dzikie.pdf": "/static/media/dzikie.a8297f1432db2ae730f5.pdf",
-    "static/media/gnila.pdf": "/static/media/gnila.dbb2cf8e222de93e40ac.pdf",
-    "static/media/krynice.pdf": "/static/media/krynice.4caa689f594e312c96b2.pdf",
-    "static/media/jp2.pdf": "/static/media/jp2.b05ef7180f9d00745254.pdf",
-    "static/media/kombinat.pdf": "/static/media/kombinat.085ab2a90143a0babfdf.pdf",
-    "static/media/dworcowa.pdf": "/static/media/dworcowa.93e7aec7f72501b107c9.pdf",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
-    "static/media/dworzecpkp.pdf": "/static/media/dworzecpkp.4e87128d641530f1c8f0.pdf",
-    "static/media/dworzecpks.pdf": "/static/media/dworzecpks.4e87128d641530f1c8f0.pdf",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.4803ff4bb43fcfc3e0b6.jpg",
     "static/media/newMan1.jpg": "/static/media/newMan1.65ed62ab6ab6bf6d05f0.jpg",
@@ -58,11 +33,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.f6cfb884.js.map": "/static/js/main.f6cfb884.js.map",
+    "main.b66beeb2.js.map": "/static/js/main.b66beeb2.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.f6cfb884.js"
+    "static/js/main.b66beeb2.js"
   ]
 }

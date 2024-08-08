@@ -5,40 +5,27 @@ import Result from "./Result";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import magnifiericon from "./magnifiericon.png";
 import switchicon from "./switchicon.png";
+import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
+
+
 
 const Search = () => {
     const [isModalOpen, setModalOpen] = useState("false");
-    const openModal = () => {
-        setModalOpen("true");
-    };
-    const closeModal = () => {
-        setModalOpen("false");
-    };
-
-    const getInitialStartStop = () => {
-        const localStorageStartStop = localStorage.getItem("startStop");
-        if (localStorageStartStop === null) {
-            return 'Mońki–Dworcowa';
-        }
-        return JSON.parse(localStorage.getItem("startStop"));
-    };
-    const getInitialEndStop = () => {
-        const localStorageEndStop = localStorage.getItem("endStop");
-        if (localStorageEndStop === null) {
-            return 'Białystok PKS';
-        }
-        return JSON.parse(localStorage.getItem("endStop"));
-    };
-
     const [startStop, setStartStop] = useState(getInitialStartStop);
     const [endStop, setEndStop] = useState(getInitialEndStop);
+    const [departureDate, setDepartureDate] = useState(new Date());
 
     useEffect(() => {
         localStorage.setItem("startStop", JSON.stringify(startStop));
         localStorage.setItem("endStop", JSON.stringify(endStop));
     });
 
-    const [departureDate, setDepartureDate] = useState(new Date());
+    const openModal = () => {
+        setModalOpen("true");
+    };
+    const closeModal = () => {
+        setModalOpen("false");
+    };
 
     const switchStops = () => {
         let holder = endStop;

@@ -1,6 +1,6 @@
+import FileDownloadButton from "../../FileDownloadButton";
 import { Content, TableContainer, Table, Cell, Text, Row, } from "./styled";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
-import FileDownloadButton from './FileDownloadButton';
 import rozkladJazdy from 'C:/dev/kurier/src/RozkładJazdy.pdf';
 
 const Rozklad = () => {
@@ -146,6 +146,8 @@ const Rozklad = () => {
             <FileDownloadButton
                 filename="Rozkład Jazdy.pdf"
                 src={rozkladJazdy}
+                variant="schedule"
+                label="Pobierz rozkład jazdy"
             />
         </Content>
 

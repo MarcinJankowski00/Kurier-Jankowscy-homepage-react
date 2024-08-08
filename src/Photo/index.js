@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Image, Text, Button, Span, Buttons, Content, Background } from "./styled";
 import Search from "./Search";
-import FileDownloadButton from './FileDownloadButton';
+import FileDownloadButton from '../FileDownloadButton';
 import handleLinkClick from "../HandleLinkClick.js";
 import rozkladJazdy from '../RozkładJazdy.pdf';
 
@@ -38,6 +38,8 @@ const Photo = () => {
                         <FileDownloadButton
                             filename="Rozkład jazdy.pdf"
                             src={rozkladJazdy}
+                            variant="photo"
+                            label="Pobierz rozkład jazdy"
                         />
                     </Buttons>
                 </div>

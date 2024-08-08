@@ -1,9 +1,7 @@
 import React from 'react';
-import { busStops } from 'C:/dev/kurier/src/BusStops.js';
-import getVariant from './useGetVariant';
-import FileDownloadButton from './FileDownloadButton';
-import { List, Item, Container, Heading, Span, ListContainer, Div, DepartureTime, ShowButton, Empty, NextDayButton } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, DepartureTime, ShowButton, Empty, NextDayButton } from "./styled";
 import { useState } from 'react';
+import getResult from './useGetResult';
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -54,95 +52,17 @@ const formatToHHMM = (myHour) => {
     return myHourHHMM
 }
 
-const howManyMinutesToDeparture = (object, variant) => {
+const howManyMinutesToDeparture = (object) => {
     const actualHour = getActualHour();
     var result = -1;
-    if (variant === 'wariant1') {
-        for (var i = 0; i < 14; i++) {
-            if (formatToHHMM(object[i]) >= actualHour) {
-                result = calculateTimeDifference(actualHour, object[i]);
-                i = 14;
-            }
-        };
-        return result;
-    } else {
-        if (variant === 'wariant2') {
-            for (i = 0; i < 14; i++) {
-                if (formatToHHMM(object[i]) >= actualHour && (
-                    i !== 0 &&
-                    i !== 2 &&
-                    i !== 4 &&
-                    i !== 6 &&
-                    i !== 8 &&
-                    i !== 10 &&
-                    i !== 12 &&
-                    i !== 13)) {
-                    result = calculateTimeDifference(actualHour, object[i]);
-                    i = 14;
-                }
-            };
-            return result;
-        } else {
-            if (variant === 'wariant3') {
-                for (i = 0; i < 14; i++) {
-                    if (formatToHHMM(object[i]) >= actualHour && (
-                        i !== 0 &&
-                        i !== 1 &&
-                        i !== 2 &&
-                        i !== 4 &&
-                        i !== 6 &&
-                        i !== 8 &&
-                        i !== 10 &&
-                        i !== 12 &&
-                        i !== 13)) {
-                        result = calculateTimeDifference(actualHour, object[i]);
-                        i = 14;
-                    }
-                };
-                return result;
-            } else {
-                if (variant === 'wariant4') {
-                    for (i = 0; i < 14; i++) {
-                        if (formatToHHMM(object[i]) >= actualHour && (
-                            i !== 0 &&
-                            i !== 2 &&
-                            i !== 4 &&
-                            i !== 6 &&
-                            i !== 8 &&
-                            i !== 10 &&
-                            i !== 11 &&
-                            i !== 12 &&
-                            i !== 13)) {
-                            result = calculateTimeDifference(actualHour, object[i]);
-                            i = 14;
-                        }
-                    };
-                    return result;
-                } else {
-                    if (variant === 'wariant5') {
-                        for (i = 0; i < 14; i++) {
-                            if (formatToHHMM(object[i]) >= actualHour && (
-                                i !== 0 &&
-                                i !== 1 &&
-                                i !== 2 &&
-                                i !== 4 &&
-                                i !== 6 &&
-                                i !== 8 &&
-                                i !== 10 &&
-                                i !== 11 &&
-                                i !== 12 &&
-                                i !== 13)) {
-                                result = calculateTimeDifference(actualHour, object[i]);
-                                i = 14;
-                            }
-                        };
-                        return result;
-                    }
-                }
-            }
+    for (var i = 0; i < object.length; i++) {
+        if (formatToHHMM(object[i]) >= actualHour) {
+            result = calculateTimeDifference(actualHour, object[i]);
+            i = 14;
         }
-    }
-}
+    };
+    return result;
+};
 
 const isPast = (myHour, formattedDate) => {
     const actualDate = new Date();
@@ -155,13 +75,15 @@ const isPast = (myHour, formattedDate) => {
     } else {
         return false;
     }
-}
+};
 
 const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => {
     const [isShowed, setIsShowed] = useState(false);
-
-    const variant = getVariant(departureDate);
-    if (variant === 'brak') {
+    const result = getResult(departureDate, startStop, endStop);
+    const startStopObject = result.startStopTab;
+    const endStopObject = result.endStopTab;
+    
+    if (result === 'brak') {
         return (
             <Heading empty>
                 Tego dnia nie kursujemy.
@@ -169,17 +91,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
         );
     }
 
-    const startStopObject = busStops.find((station) => station.name === startStop);
-    const endStopObject = busStops.find((station) => station.name === endStop);
-    let direction = "";
-
-    if (startStopObject.id > endStopObject.id) {
-        direction = "Mońki";
-    } else {
-        direction = "Białystok";
-    }
-
-    if ((startStopObject.id === 20 || endStopObject.id === 20) && direction === "Białystok") {
+    if (result === 'errorFasty') {
         return (
             <Heading>
                 <b>Nie ma takiego połączenia</b><br />
@@ -188,7 +100,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
             </Heading>
         );
     }
-    if ((startStopObject.id === 24 || endStopObject.id === 24) && direction === "Mońki") {
+    if (result === 'errorB-stokPKP') {
         return (
             <Heading>
                 <b>Nie ma takiego połączenia</b><br />
@@ -199,16 +111,16 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
     }
     const departureDateStr = new Date(departureDate);
     const formattedDate = departureDateStr.toLocaleDateString();
-    const differenceInMinutes = calculateTimeDifference(startStopObject[direction][0], endStopObject[direction][0]);
-
+    const differenceInMinutes = calculateTimeDifference(startStopObject[0], endStopObject[0]);
+    const minutesToDeparture = howManyMinutesToDeparture(startStopObject);
     return (
         <Container>
             <Heading>
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
                 <br />
-                <DepartureTime show={(howManyMinutesToDeparture(startStopObject[direction], variant) !== -1) && !(isDateNotActual(formattedDate))}>
-                    <br />Najbliższy odjazd za <b>{howManyMinutesToDeparture(startStopObject[direction], variant)}min</b>
+                <DepartureTime show={(minutesToDeparture !== -1) && !(isDateNotActual(formattedDate))}>
+                    <br />Najbliższy odjazd za <b>{minutesToDeparture}min</b>
                 </DepartureTime>
                 <Span><br />Czas przejazdu: {differenceInMinutes}min</Span><br />
                 <ShowButton
@@ -219,114 +131,23 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
             </Heading>
             <ListContainer>
                 <List>
-                    {startStopObject[direction].map((item) => {
-                        if (variant === 'wariant1') {
+                    {startStopObject.map((item) => {
                             return (
                                 <Item past={isPast(item, formattedDate)} show={isShowed}>
                                     {item}{" "}-{" "}
-                                    {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
+                                    {endStopObject[startStopObject.indexOf(item)]}{" "}
                                 </Item>
                             )
-                        } else {
-                            if (variant === 'wariant2') {
-                                if (startStopObject[direction].indexOf(item) === 0 ||
-                                    startStopObject[direction].indexOf(item) === 2 ||
-                                    startStopObject[direction].indexOf(item) === 4 ||
-                                    startStopObject[direction].indexOf(item) === 6 ||
-                                    startStopObject[direction].indexOf(item) === 8 ||
-                                    startStopObject[direction].indexOf(item) === 10 ||
-                                    startStopObject[direction].indexOf(item) === 12 ||
-                                    startStopObject[direction].indexOf(item) === 13) {
-                                    return undefined;
-                                } else {
-                                    return (
-                                        <Item past={isPast(item, formattedDate)} show={isShowed}>
-                                            {item}{" "}-{" "}
-                                            {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                        </Item>
-                                    )
-                                }
-                            } else {
-                                if (variant === 'wariant3') {
-                                    if (startStopObject[direction].indexOf(item) === 0 ||
-                                        startStopObject[direction].indexOf(item) === 1 ||
-                                        startStopObject[direction].indexOf(item) === 2 ||
-                                        startStopObject[direction].indexOf(item) === 4 ||
-                                        startStopObject[direction].indexOf(item) === 6 ||
-                                        startStopObject[direction].indexOf(item) === 8 ||
-                                        startStopObject[direction].indexOf(item) === 10 ||
-                                        startStopObject[direction].indexOf(item) === 12 ||
-                                        startStopObject[direction].indexOf(item) === 13) {
-                                        return undefined;
-                                    } else {
-                                        return (
-                                            <Item past={isPast(item, formattedDate)} show={isShowed}>
-                                                {item}{" "}-{" "}
-                                                {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                            </Item>
-                                        )
-                                    }
-                                } else {
-                                    if (variant === 'wariant4') {
-                                        if (startStopObject[direction].indexOf(item) === 0 ||
-                                            startStopObject[direction].indexOf(item) === 2 ||
-                                            startStopObject[direction].indexOf(item) === 4 ||
-                                            startStopObject[direction].indexOf(item) === 6 ||
-                                            startStopObject[direction].indexOf(item) === 8 ||
-                                            startStopObject[direction].indexOf(item) === 10 ||
-                                            startStopObject[direction].indexOf(item) === 11 ||
-                                            startStopObject[direction].indexOf(item) === 12 ||
-                                            startStopObject[direction].indexOf(item) === 13) {
-                                            return undefined;
-                                        } else {
-                                            return (
-                                                <Item past={isPast(item, formattedDate)} show={isShowed}>
-                                                    {item}{" "}-{" "}
-                                                    {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                                </Item>
-                                            )
-                                        }
-                                    } else {
-                                        if (variant === 'wariant5') {
-                                            if (startStopObject[direction].indexOf(item) === 0 ||
-                                                startStopObject[direction].indexOf(item) === 1 ||
-                                                startStopObject[direction].indexOf(item) === 2 ||
-                                                startStopObject[direction].indexOf(item) === 4 ||
-                                                startStopObject[direction].indexOf(item) === 6 ||
-                                                startStopObject[direction].indexOf(item) === 8 ||
-                                                startStopObject[direction].indexOf(item) === 10 ||
-                                                startStopObject[direction].indexOf(item) === 11 ||
-                                                startStopObject[direction].indexOf(item) === 12 ||
-                                                startStopObject[direction].indexOf(item) === 13) {
-                                                return undefined;
-                                            } else {
-                                                return (
-                                                    <Item past={isPast(item, formattedDate)} show={isShowed}>
-                                                        {item}{" "}-{" "}
-                                                        {endStopObject[direction][startStopObject[direction].indexOf(item)]}{" "}
-                                                    </Item>
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    })}
+                        })
+                    }
                 </List>
-                <Empty show={(!isShowed) && (howManyMinutesToDeparture(startStopObject[direction], variant) === -1) && !(isDateNotActual(formattedDate))}>
+                <Empty show={(!isShowed) && (minutesToDeparture === -1) && !(isDateNotActual(formattedDate))}>
                     ...Brak kursów
                 </Empty>
                 <NextDayButton onClick={onNextDayButtonClick}>
                     Następny dzień
                 </NextDayButton>
             </ListContainer>
-            {/* <Div>
-                <FileDownloadButton
-                    filename={startStopObject.name + " - Rozkład przystanku.pdf"}
-                    src={startStopObject.download}
-                />
-            </Div> */}
         </Container>
     );
 };

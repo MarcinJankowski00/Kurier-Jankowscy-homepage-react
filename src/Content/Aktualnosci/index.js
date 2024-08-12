@@ -3,10 +3,9 @@ import { Content, Container, Div } from "./styled";
 const Aktualnosci = () => (
     <Content>
         <Container>
-            <Div>DRODZY PASAŻEROWIE</Div><br />
-            Informujemy, że <b>dnia 02.05.2024 (czwartek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg. <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
+            <Div>❗ DRODZY PASAŻEROWIE ❗</Div><br />
+            Informujemy, że <b>dnia 16.08.2024 (piątek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
             <br />
-            Pozdrawiamy i życzymy udanej majówki🌼
         </Container>
     </Content>
 );

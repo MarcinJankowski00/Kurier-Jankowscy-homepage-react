@@ -1,4 +1,30 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+    display: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+    display: none;
+  }
+`;
 
 export const Nav = styled.div`
     background-color: ${({ theme }) => theme.color.navigation};
@@ -24,8 +50,8 @@ export const LogoWrapper = styled.div`
     display: flex;
     justify-content: start;
     align-items: center;
-    margin: 0 10px;
-    padding: 0;
+    margin: 0;
+    padding: 0 6px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             margin: 10px 5px;
@@ -63,6 +89,8 @@ export const List = styled.ul`
         background-color: ${({ theme }) => theme.color.gallery};
         padding: 10px 8px;
         margin: 0;
+        box-shadow: 1px 17px 40px -12px rgba(66, 68, 90, 1);
+        animation: ${({ isMenuOpen }) => (isMenuOpen ? fadeIn : fadeOut)} 0.5s ease-in-out;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
         top: 42px;
@@ -71,9 +99,13 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        padding: 10px;
+        padding: 10px 30px;
         text-align: center;
         border-bottom: 1px solid ${({ theme }) => theme.color.font};
+        ${({ last }) => last && css`
+            border-bottom: none;
+            padding-bottom: 5px;
+        `}
     }
 `;
 

@@ -50,7 +50,7 @@ const Navigation = () => {
                     <Item>
                         <Link href="#Onas" onClick={(event) => closeMenuOnLinkClick(event, 'Onas')}>O nas</Link>
                     </Item>
-                    <Item>
+                    <Item last={true}>
                         <Link href="#Kontakt" onClick={(event) => closeMenuOnLinkClick(event, 'Kontakt')}>Kontakt</Link>
                     </Item>
                 </List>

@@ -10,7 +10,7 @@ import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
 
 
 const Search = () => {
-    const [isModalOpen, setModalOpen] = useState("false");
+    const [isModalOpen, setModalOpen] = useState(false);
     const [startStop, setStartStop] = useState(getInitialStartStop);
     const [endStop, setEndStop] = useState(getInitialEndStop);
     const [departureDate, setDepartureDate] = useState(new Date());
@@ -21,10 +21,10 @@ const Search = () => {
     });
 
     const openModal = () => {
-        setModalOpen("true");
+        setModalOpen(true);
     };
     const closeModal = () => {
-        setModalOpen("false");
+        setModalOpen(false);
     };
 
     const switchStops = () => {
@@ -119,7 +119,7 @@ const Search = () => {
                 </Element>
                 <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
             </Container>
-            <Modal isopen={isModalOpen} onClose={closeModal}>
+            <Modal isModalOpen={isModalOpen} onClose={closeModal}>
                 <Result
                     startStop={startStop}
                     endStop={endStop}

@@ -2,17 +2,36 @@ import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
   from {
-    opacity: 0;
     transform: translateY(-20px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 `;
 
+const show = keyframes`
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: flex;
+  }
+`;
+
+const hide = keyframes`
+  from {
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+`;
+
 export const ModalContainer = styled.div`
-  display: ${({ isopen }) => (isopen==="true" ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -22,6 +41,8 @@ export const ModalContainer = styled.div`
   z-index: 999;
   justify-content: center;
   align-items: center;
+  animation: ${({ isModalOpen }) => (isModalOpen ? show : hide)} 0.3s ease-in-out;
+  display: ${({ isModalOpen }) => (isModalOpen ? 'flex' : 'none')};
 `;
 
 export const ModalContent = styled.div`

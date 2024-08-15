@@ -51,10 +51,11 @@ export const Span = styled.span`
 export const Select = styled.select`
     border: 1px solid gray;
     color: black;
-    padding: 9px;
+    padding: 0 9px;
+    height: 42px;
     width: 80%;
     border-radius: 5px;
-    margin-top: 4px;
+    margin: 2px 0;
     background-color: white;
 `;
 
@@ -62,7 +63,7 @@ export const Switch = styled.div`
     padding: 36px 4px;
     margin-left: 3px;
     border: 1px solid;
-    margin-top: 4px;
+    margin: 2px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.teal};
     border-radius: 5px;
@@ -82,14 +83,17 @@ export const Switchicon = styled.img`
 `;
 
 
-export const DateDiv = styled.p`
+export const DateDiv = styled.div`
     max-width: 90%;
+    margin: 13px 0;
 `;
 
 export const Input = styled.input`
+    color: black;
     border: 1px solid gray;
     padding: 4px;
     max-width: 140px;
+    height: 30px;
     border-radius: 5px;
     background-color: white;
     font-size: 17px;

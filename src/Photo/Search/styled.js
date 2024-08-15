@@ -29,17 +29,6 @@ export const Element = styled.div`
     padding-right: 15px;
 `;
 
-export const Span = styled.span`
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-`;
-
-export const Text = styled.p`
-    padding: 0;
-    margin: 0;
-`;
-
 export const Wrapper = styled.div`
     display: flex;
     padding: 0;
@@ -53,20 +42,15 @@ export const Div = styled.p`
     margin: 0;
 `;
 
-export const DateDiv = styled.p`
-    max-width: 90%;
+export const Span = styled.span`
+    display: inline-block;
+    width: 20%;
+    text-align: center;
 `;
-
-export const Magnifiericon = styled.img`
-    width: 30px;
-    `;
-
-export const Switchicon = styled.img`
-    width: 15px;
-    `;
 
 export const Select = styled.select`
     border: 1px solid gray;
+    color: black;
     padding: 9px;
     width: 80%;
     border-radius: 5px;
@@ -74,22 +58,10 @@ export const Select = styled.select`
     background-color: white;
 `;
 
-export const Input = styled.input`
-    border: 1px solid gray;
-    padding: 4px;
-    max-width: 140px;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 17px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
-            font-size: 13px;
-        }
-`;
-
-export const Switch = styled.button`
+export const Switch = styled.div`
+    padding: 36px 4px;
     margin-left: 3px;
     border: 1px solid;
-    height: 91px;
     margin-top: 4px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.teal};
@@ -102,6 +74,28 @@ export const Switch = styled.button`
     &:active {
         filter: brightness(110%);
     }
+`;
+
+export const Switchicon = styled.img`
+    display: block;
+    width: 15px;
+`;
+
+
+export const DateDiv = styled.p`
+    max-width: 90%;
+`;
+
+export const Input = styled.input`
+    border: 1px solid gray;
+    padding: 4px;
+    max-width: 140px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 17px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            font-size: 13px;
+        }
 `;
 
 export const Button = styled.button`
@@ -123,4 +117,13 @@ export const Button = styled.button`
     &:active {
         filter: brightness(120%);
     }
-    `;
+`;
+
+export const Text = styled.p`
+    padding: 0;
+    margin: 0;
+`;
+
+export const Magnifiericon = styled.img`
+    width: 30px;
+`;

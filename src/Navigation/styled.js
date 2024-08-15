@@ -10,33 +10,42 @@ export const Nav = styled.div`
 
 export const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 2fr 5fr;
-    max-width: 1300px;
+    grid-template-columns: 3fr 5fr;
+    max-width: 1250px;
     margin: 0 auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+`;
+
+export const LogoWrapper = styled.div`
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 10px;
+    padding: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            margin: 10px 5px;
+        }
+`;
+
+export const Logo = styled.a`
+    display: block;
+    cursor: pointer;
 `;
 
 export const Img = styled.img`
     display: block;
     visibility: visible;
-    width: 300px;
-    height: max-content;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
-            width: 280px;
-        }
-`;
-
-export const Logo = styled.a`
-    margin-top: 15px;
-    margin-right: 100px;
-    margin-left: 50px;
-    cursor: pointer;
+    width: 280px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            margin: auto;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            width: 250px;
+        }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+            width: 210px;
         }
 `;
 
@@ -45,9 +54,27 @@ export const List = styled.ul`
     justify-content: space-around;
     list-style: none;
     padding-left: 0;
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            display: none;
-        }
+        display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
+        position: absolute;
+        top: 46px;
+        right: 0;
+        background-color: ${({ theme }) => theme.color.gallery};
+        padding: 10px 8px;
+        margin: 0;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        top: 42px;
+    }
+`;
+
+export const Item = styled.li`
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid ${({ theme }) => theme.color.font};
+    }
 `;
 
 export const Link = styled.a`
@@ -62,5 +89,22 @@ export const Link = styled.a`
         padding-bottom: 5px;
         border-bottom: 1px solid ${({ theme }) => theme.color.font};
         outline: none;
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            border-bottom: none;
+        }
+    }
+`;
+
+export const HamburgerIcon = styled.div`
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        display: block;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        font-size: 24px;
     }
 `;

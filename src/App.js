@@ -13,7 +13,8 @@ import Flota from './Content/Flota';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
 import { HashRouter, Redirect, Route } from 'react-router-dom/cjs/react-router-dom.min';
-import { toAboutUs, toFleat, toOffer, toSchedule, toStart } from './routes';
+import { toAboutUs, toFleat, toMessage, toOffer, toSchedule, toStart } from './routes';
+import MessagePage from './Content/Aktualnosci/MessagePage';
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
         <Navigation />
         <Photo />
         <Container>
+          <Route path={toMessage()}>
+            <MessagePage />
+          </Route>
           <Route path={toStart()}>
             <Section
               title="Aktualności"

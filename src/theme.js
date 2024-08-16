@@ -5,7 +5,7 @@ export const theme = {
         alto: "#eaeaea",
         gallery: "#eee",
         navigation: "#fff",
-        background: "#fff",
+        background: "#f6f6f6",
         search: "#ffffffc7",
         sectionShadow: "#eaeaea",
         section: "#fff",
@@ -23,10 +23,13 @@ export const theme = {
         brigtherLessImportant: "#f3f3f3",
         crimson: "#a91818",
         forestGreen: "#228c22",
+        loader: "#fff",
     },
     breakpoint: {
         mobileMax: 1050,
         mobileMax2: 820,
+        mobileMax21: 583,
+        mobileMax22: 370,
         mobileMax3: 317,
     },
 };

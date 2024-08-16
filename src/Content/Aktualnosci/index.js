@@ -1,12 +1,32 @@
-import { Content, Container, Div } from "./styled";
+import { toMessage } from "../../routes";
+import { news } from "./News";
+import { Container, Content, Photo, Info, Title, FirstSentence, Bottom, More, Date } from "./styled";
 
 const Aktualnosci = () => (
     <Container>
-        <Container>
-            <Div>❗ DRODZY PASAŻEROWIE ❗</Div><br />
-            Informujemy, że <b>dnia 16.08.2024 (piątek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
-            <br />
-        </Container>
+        {news.map((item)=> {
+            return (
+                <Content to={toMessage({ id: item.id })}>
+                    <Photo src={item.photo} />
+                    <Info>
+                        <Title>
+                            {item.title}
+                        </Title>
+                        <FirstSentence>
+                            {item.firstSentence}
+                        </FirstSentence>
+                        <Bottom>
+                            <More>
+                                więcej
+                            </More>
+                            <Date>
+                                {item.date}
+                            </Date>
+                        </Bottom>
+                    </Info>
+                </Content>
+            );
+        })}
     </Container>
 );
 

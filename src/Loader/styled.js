@@ -24,7 +24,7 @@ export const Div = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.color.background};
+  background-color: ${({ theme }) => theme.color.loader};
   display: flex;
   justify-content: center;
   align-items: center;

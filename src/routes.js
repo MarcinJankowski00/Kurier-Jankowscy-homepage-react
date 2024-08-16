@@ -5,4 +5,4 @@ export const toFleat = () => "/flota";
 export const toAboutUs = () => "/o-nas";
 export const toContact = () => "/kontakt";
 
-export const toTask = ({ id } = { id: ":id" }) => `/zadania/${id}`;
+export const toMessage = ({ id } = { id: ":id" }) => `/${id}`;

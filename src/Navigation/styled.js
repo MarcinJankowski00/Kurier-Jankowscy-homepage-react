@@ -2,27 +2,19 @@ import styled, { keyframes, css } from 'styled-components';
 
 const fadeIn = keyframes`
   from {
-    opacity: 0;
-    transform: translateX(250px);
-    display: none;
+    transform: translateX(100%);
   }
   to {
-    opacity: 1;
     transform: translateX(0);
-    display: block;
   }
 `;
 
 const fadeOut = keyframes`
   from {
-    opacity: 1;
     transform: translateX(0);
-    display: block;
   }
   to {
-    opacity: 0;
-    transform: translateX(200px);
-    display: none;
+    transform: translateX(100%);
   }
 `;
 
@@ -82,7 +74,7 @@ export const List = styled.ul`
     padding-left: 0;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
+        display: block;
         position: absolute;
         top: 46px;
         right: 0;
@@ -90,7 +82,7 @@ export const List = styled.ul`
         padding: 10px 8px;
         margin: 0;
         box-shadow: 1px 17px 40px -12px rgba(66, 68, 90, 1);
-        animation: ${({ isMenuOpen }) => (isMenuOpen ? fadeIn : fadeOut)} 0.5s ease-in-out;
+        animation: ${({ isMenuOpen }) => isMenuOpen ? fadeIn : fadeOut} 0.3s forwards;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
         top: 42px;

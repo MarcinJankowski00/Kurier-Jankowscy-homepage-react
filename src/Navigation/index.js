@@ -2,6 +2,7 @@ import { useState } from "react";
 import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper } from "./styled";
 import handleLinkClick from "../HandleLinkClick.js";
 import logo from "../kurierlogo.png";
+import { toAboutUs, toContact, toFleat, toOffer, toSchedule, toStart } from "../routes.js";
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +18,7 @@ const Navigation = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const closeMenuOnLinkClick = (event, section) => {
-        handleLinkClick(event, section);
+    const closeMenuOnLinkClick = () => {
         setIsMenuOpen(false);
     };
 
@@ -35,23 +35,22 @@ const Navigation = () => {
                 </HamburgerIcon>
                 <List isMenuOpen={isMenuOpen}>
                     <Item>
-                        <Link href="#Aktualnosci" onClick={(event) => closeMenuOnLinkClick(event, 'Aktualnosci')}>Aktualności</Link>
+                        <Link to={toStart()} onClick={(event) => closeMenuOnLinkClick()}>Aktualności</Link>
                     </Item>
                     <Item>
-                        <Link href="#Rozklad" onClick={(event) => closeMenuOnLinkClick(event, 'Rozklad')}>Rozkład jazdy</Link>
+                        <Link to={toSchedule()} onClick={(event) => closeMenuOnLinkClick()}>Rozkład jazdy</Link>
                     </Item>
                     <Item>
-                        <Link href="#Oferta" onClick={(event) => closeMenuOnLinkClick(event, 'Oferta')}>Oferta</Link>
-                    </Item>
-
-                    <Item>
-                        <Link href="#Flota" onClick={(event) => closeMenuOnLinkClick(event, 'Flota')}>Flota</Link>
+                        <Link to={toOffer()} onClick={(event) => closeMenuOnLinkClick()}>Oferta</Link>
                     </Item>
                     <Item>
-                        <Link href="#Onas" onClick={(event) => closeMenuOnLinkClick(event, 'Onas')}>O nas</Link>
+                        <Link to={toFleat()} onClick={(event) => closeMenuOnLinkClick()}>Flota</Link>
+                    </Item>
+                    <Item>
+                        <Link to={toAboutUs()} onClick={(event) => closeMenuOnLinkClick()}>O nas</Link>
                     </Item>
                     <Item last={true}>
-                        <Link href="#Kontakt" onClick={(event) => closeMenuOnLinkClick(event, 'Kontakt')}>Kontakt</Link>
+                        <Link to={toContact()} onClick={(event) => closeMenuOnLinkClick()}>Kontakt</Link>
                     </Item>
                 </List>
             </Wrapper >

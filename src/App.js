@@ -12,45 +12,62 @@ import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
+import { HashRouter, Redirect, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { toAboutUs, toFleat, toOffer, toSchedule, toStart } from './routes';
 
 function App() {
 
   return (
-    <main>
-      <CookiesInfo />
-      <Loader />
-      <Navigation />
-      <Photo />
-      <Container>
-        <Section
-          title="Aktualności"
-          content={<Aktualnosci />}
-          adress="Aktualnosci"
-        />
-        <Section
-          title="Rozkład jazdy"
-          content={<Rozklad />}
-          adress="Rozklad"
-        />
-        <Section
-          title="OFERTA"
-          content={<Oferta />}
-          adress="Oferta"
-        />
-        <Section
-          title="Nasza flota"
-          content={<Flota />}
-          adress="Flota"
-        />
-        <Section
-          title="O firmie „KURIER” s.c. Jankowscy"
-          content={<Onas />}
-          adress="Onas"
-        />
-      </Container>
-      <Map />
-      <Footer />
-    </main>
+    <HashRouter>
+      <main>
+        <CookiesInfo />
+        <Loader />
+        <Navigation />
+        <Photo />
+        <Container>
+          <Route path={toStart()}>
+            <Section
+              title="Aktualności"
+              content={<Aktualnosci />}
+              adress="Aktualnosci"
+            />
+          </Route>
+          <Route path={toSchedule()}>
+            <Section
+              title="Rozkład jazdy"
+              content={<Rozklad />}
+              adress="Rozklad"
+            />
+          </Route>
+          <Route path={toOffer()}>
+            <Section
+              title="OFERTA"
+              content={<Oferta />}
+              adress="Oferta"
+            />
+          </Route>
+          <Route path={toFleat()}>
+            <Section
+              title="Nasza flota"
+              content={<Flota />}
+              adress="Flota"
+            />
+          </Route>
+          <Route path={toAboutUs()}>
+            <Section
+              title="O firmie „KURIER” s.c. Jankowscy"
+              content={<Onas />}
+              adress="Onas"
+            />
+          </Route>
+          <Route path="/">
+            <Redirect to={toStart()} />
+          </Route>
+        </Container>
+        <Map />
+        <Footer />
+      </main>
+    </HashRouter>
   );
 }
 

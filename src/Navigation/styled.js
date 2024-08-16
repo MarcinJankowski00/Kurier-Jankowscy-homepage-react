@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { keyframes, css } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -101,7 +102,7 @@ export const Item = styled.li`
     }
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
     color: ${({ theme }) => theme.color.font};
     text-decoration: none;
 

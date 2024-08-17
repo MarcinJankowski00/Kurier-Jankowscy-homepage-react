@@ -1,14 +1,19 @@
 import styled from "styled-components";
 import background from "./background.jpg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 export const Image = styled.div`
-    height: 770px;
+    height: 70vh;
     position: relative;
     overflow: hidden;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 100vh;
-        }
+        height: 100vh;
+    }
+`;
+
+export const Wrapper = styled.div`
+    
 `;
 
 export const Background = styled.div`
@@ -29,7 +34,7 @@ export const Content = styled.div`
     position: relative;
     flex-direction: row;
     width: 100%;
-    height: 770px;
+    height: 70vh;
     padding-top: 60px;
     padding-left: 10%;
     padding-right: 10%;
@@ -57,7 +62,6 @@ export const Text = styled.div`
 `;
 export const Buttons = styled.div`
     color: white;
-    font-weight: bold;
     font-size: 45px;
     margin-right: 130px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -69,8 +73,11 @@ export const Span = styled.span`
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
+    display: inline-block;
+    text-align: center;
     font-size: 20px;
+    text-decoration: none;
     border: 1px solid ${({ theme }) => theme.color.crimson};
     background-color: ${({ theme }) => theme.color.crimson};
     color: #fff;

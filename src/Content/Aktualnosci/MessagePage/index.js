@@ -1,4 +1,5 @@
 import Section from "../../../Section";
+import { toStart } from '../../../routes';
 import { news } from "../News";
 import { Content, Container, Div, Date, Photo, ReturnButton } from "./styled";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
@@ -10,7 +11,6 @@ const MessagePage = () => {
     if (id == 1)
         return (
             <>
-                <ReturnButton />
                 <Section
                     title={informationObject.title}
                     content={
@@ -32,7 +32,6 @@ const MessagePage = () => {
     if (id == 2)
         return (
             <>
-                <ReturnButton />
                 <Section
                     title={informationObject.title}
                     content={
@@ -56,7 +55,6 @@ const MessagePage = () => {
     if (id == 3)
         return (
             <>
-                <ReturnButton />
                 <Section
                     title={informationObject.title}
                     content={
@@ -102,7 +100,6 @@ const MessagePage = () => {
     if (id == 4)
         return (
             <>
-                <ReturnButton />
                 <Section
                     title={informationObject.title}
                     content={

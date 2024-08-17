@@ -51,7 +51,7 @@ export const LogoWrapper = styled.div`
         }
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(NavLink)`
     display: block;
     cursor: pointer;
 `;

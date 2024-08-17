@@ -2,11 +2,17 @@ import { toMessage } from "../../routes";
 import { news } from "./News";
 import { Container, Content, Photo, Info, Title, FirstSentence, Bottom, More, Date } from "./styled";
 
-const Aktualnosci = () => (
+const Aktualnosci = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+        });
+    };
+    return (
     <Container>
         {news.map((item)=> {
             return (
-                <Content to={toMessage({ id: item.id })}>
+                <Content to={toMessage({ id: item.id })} onClick={scrollToTop}>
                     <Photo src={item.photo} />
                     <Info>
                         <Title>
@@ -28,6 +34,7 @@ const Aktualnosci = () => (
             );
         })}
     </Container>
-);
+    );
+};
 
 export default Aktualnosci;

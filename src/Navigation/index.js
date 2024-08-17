@@ -10,7 +10,6 @@ const Navigation = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
         });
     };
 
@@ -20,13 +19,14 @@ const Navigation = () => {
 
     const closeMenuOnLinkClick = () => {
         setIsMenuOpen(false);
+        scrollToTop();
     };
 
     return (
         <Nav className="fixed-navigation">
             <Wrapper>
                 <LogoWrapper>
-                    <Logo onClick={scrollToTop}>
+                    <Logo to={toStart()} onClick={() => scrollToTop()}>
                         <Img src={logo} alt="KURIER" />
                     </Logo>
                 </LogoWrapper>
@@ -35,22 +35,22 @@ const Navigation = () => {
                 </HamburgerIcon>
                 <List isMenuOpen={isMenuOpen}>
                     <Item>
-                        <Link to={toStart()} onClick={(event) => closeMenuOnLinkClick()}>Aktualności</Link>
+                        <Link to={toStart()} onClick={closeMenuOnLinkClick}>Strona główna</Link>
                     </Item>
                     <Item>
-                        <Link to={toSchedule()} onClick={(event) => closeMenuOnLinkClick()}>Rozkład jazdy</Link>
+                        <Link to={toSchedule()} onClick={closeMenuOnLinkClick}>Rozkład jazdy</Link>
                     </Item>
                     <Item>
-                        <Link to={toOffer()} onClick={(event) => closeMenuOnLinkClick()}>Oferta</Link>
+                        <Link to={toOffer()} onClick={closeMenuOnLinkClick}>Oferta</Link>
                     </Item>
                     <Item>
-                        <Link to={toFleat()} onClick={(event) => closeMenuOnLinkClick()}>Flota</Link>
+                        <Link to={toFleat()} onClick={closeMenuOnLinkClick}>Flota</Link>
                     </Item>
                     <Item>
-                        <Link to={toAboutUs()} onClick={(event) => closeMenuOnLinkClick()}>O nas</Link>
+                        <Link to={toAboutUs()} onClick={closeMenuOnLinkClick}>O nas</Link>
                     </Item>
                     <Item last={true}>
-                        <Link to={toContact()} onClick={(event) => closeMenuOnLinkClick()}>Kontakt</Link>
+                        <Link to={toContact()} onClick={closeMenuOnLinkClick}>Kontakt</Link>
                     </Item>
                 </List>
             </Wrapper >

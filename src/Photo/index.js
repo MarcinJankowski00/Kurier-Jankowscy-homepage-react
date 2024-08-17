@@ -4,6 +4,7 @@ import Search from "./Search";
 import FileDownloadButton from '../FileDownloadButton';
 import handleLinkClick from "../HandleLinkClick.js";
 import rozkladJazdy from '../RozkładJazdy.pdf';
+import { toSchedule } from '../routes.js';
 
 const Photo = () => {
     const [offset, setOffset] = useState(0);
@@ -19,6 +20,12 @@ const Photo = () => {
         };
     }, []);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+        });
+    };
+
 
     return (
         <Image>
@@ -32,7 +39,7 @@ const Photo = () => {
                         </Span>
                     </Text>
                     <Buttons>
-                        <Button onClick={(event) => handleLinkClick(event, 'Rozklad')}>
+                        <Button to={toSchedule} onClick={scrollToTop}>
                             Sprawdź rozkład jazdy
                         </Button>
                         <FileDownloadButton

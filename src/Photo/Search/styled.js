@@ -6,7 +6,6 @@ export const Form = styled.div`
 
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.color.search};
-    backdrop-filter: blur(10px);
     color: ${({ theme }) => theme.color.teal};
     max-width: 420px;
     padding: 20px 20px;

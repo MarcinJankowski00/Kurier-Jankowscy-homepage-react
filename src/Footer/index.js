@@ -23,7 +23,7 @@ const Footer = () => (
                 </Kontakt>
                 <Cookies>
                     INFORMACJE:<br />
-                    <Link href="/PolitykaCookies.pdf">Politka dotycząca Plików Cookies</Link>
+                    <Link href="/PolitykaCookies.pdf">Politka Cookies</Link>
                 </Cookies>
             </Contact>
         </Wrapper>

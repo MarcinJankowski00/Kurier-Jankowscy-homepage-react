@@ -16,6 +16,7 @@ export const Table = styled.table`
     border-collapse: collapse;
     background-color: ${({ theme }) => theme.color.tableBackgroud};
     width: 100%;
+    font-size: 19px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             font-size: 15px;
         }

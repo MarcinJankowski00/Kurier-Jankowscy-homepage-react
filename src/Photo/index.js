@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Text, Button, Span, Buttons, Content, Background } from "./styled";
+import { Image, Text, Button, Span, Buttons, Content, Background, Wrapper } from "./styled";
 import Search from "./Search";
+import Container from "../Container";
 import FileDownloadButton from '../FileDownloadButton';
 import handleLinkClick from "../HandleLinkClick.js";
 import rozkladJazdy from '../RozkładJazdy.pdf';
@@ -30,8 +31,9 @@ const Photo = () => {
     return (
         <Image>
             <Background offset={offset} />
+            <Container>
             <Content>
-                <div>
+                <Wrapper>
                     <Text>
                         <Span>
                             Zawsze na czas,<br />
@@ -49,9 +51,10 @@ const Photo = () => {
                             label="Pobierz rozkład jazdy"
                         />
                     </Buttons>
-                </div>
+                </Wrapper>
                 <Search />
             </Content>
+            </Container>
         </Image>
     )
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
+import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Label, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
@@ -63,44 +63,48 @@ const Search = () => {
                 <Element>
                     <Wrapper>
                         <Div>
-                            <label htmlFor="startStationSelect">
-                                <Span>
-                                    Z
-                                </Span>
-                                <Select
-                                    id="startStationSelect"
-                                    value={startStop}
-                                    onChange={({ target }) => setStartStop(target.value)}
-                                >
-                                    {busStops.map((station) => (
-                                        <option
-                                            key={station.id}
-                                            value={station.name}
-                                        >
-                                            {station.name}
-                                        </option>
-                                    ))}
-                                </Select>
-                            </label>
-                            <label htmlFor="endStationSelect">
-                                <Span>
-                                    Do
-                                </Span>
-                                <Select
-                                    id="endStationSelect"
-                                    value={endStop}
-                                    onChange={({ target }) => setEndStop(target.value)}
-                                >
-                                    {busStops.map((station) => (
-                                        <option
-                                            key={station.id}
-                                            value={station.name}
-                                        >
-                                            {station.name}
-                                        </option>
-                                    ))}
-                                </Select>
-                            </label>
+                            <Label >
+                                <label htmlFor="startStationSelect">
+                                    <Span>
+                                        Z
+                                    </Span>
+                                    <Select
+                                        id="startStationSelect"
+                                        value={startStop}
+                                        onChange={({ target }) => setStartStop(target.value)}
+                                    >
+                                        {busStops.map((station) => (
+                                            <option
+                                                key={station.id}
+                                                value={station.name}
+                                            >
+                                                {station.name}
+                                            </option>
+                                        ))}
+                                    </Select>
+                                </label>
+                            </Label>
+                            <Label >
+                                <label htmlFor="startStationSelect">
+                                    <Span>
+                                        Do
+                                    </Span>
+                                    <Select
+                                        id="endStationSelect"
+                                        value={endStop}
+                                        onChange={({ target }) => setEndStop(target.value)}
+                                    >
+                                        {busStops.map((station) => (
+                                            <option
+                                                key={station.id}
+                                                value={station.name}
+                                            >
+                                                {station.name}
+                                            </option>
+                                        ))}
+                                    </Select>
+                                </label>
+                            </Label>
                         </Div>
                         <Switch onClick={switchStops}><Switchicon src={switchicon} /></Switch>
                     </Wrapper>
@@ -110,7 +114,7 @@ const Search = () => {
                             <Input
                                 type="Date"
                                 value={formatDate(departureDate)}
-                                onChange={(e) => 
+                                onChange={(e) =>
                                     setDepartureDate(new Date(e.target.value))
                                 }
                             />

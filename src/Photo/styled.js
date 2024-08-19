@@ -8,7 +8,7 @@ export const Image = styled.div`
     position: relative;
     overflow: hidden;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        height: 100vh;
+        height: 90vh;
     }
 `;
 
@@ -30,24 +30,23 @@ export const Background = styled.div`
 `;
 
 export const Content = styled.div`
-    display: flex;
-    position: relative;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
     width: 100%;
     height: 70vh;
+    padding: 20px;
     padding-top: 60px;
-    padding-left: 10%;
-    padding-right: 10%;
     justify-content: center;
     align-items: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            display: flex;
             flex-direction: column-reverse;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 0px;
+            align-items: normal;
+            padding-top: 20px;
+
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 105vh;
+            height: 90vh;
         }
 `;
 
@@ -55,7 +54,6 @@ export const Text = styled.div`
     color: white;
     font-weight: bold;
     font-size: 45px;
-    margin-right: 280px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             display: none;
         }

@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 export const Form = styled.div`
-
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
 `;
 
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.color.search};
     color: ${({ theme }) => theme.color.teal};
-    max-width: 420px;
-    padding: 20px 20px;
+    font-size: px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 0px 13px 0px ${({ theme }) => theme.color.silver};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -24,21 +29,23 @@ export const Header = styled.h2`
 `;
 
 export const Element = styled.div`
-    padding-left: 10px;
-    padding-right: 15px;
+
 `;
 
 export const Wrapper = styled.div`
     display: flex;
     padding: 0;
-    align-items: center;
     margin: 0;
-    max-width: 360px;
 `;
 
-export const Div = styled.p`
+export const Div = styled.div`
     padding: 0;
-    margin: 0;
+    margin-right: 13px;
+    width: 100%;
+`;
+
+export const Label = styled.div`
+    margin-bottom: 18px;
 `;
 
 export const Span = styled.span`
@@ -51,18 +58,18 @@ export const Select = styled.select`
     border: 1px solid gray;
     color: black;
     padding: 0 9px;
-    height: 42px;
+    height: 50px;
     width: 80%;
     border-radius: 5px;
-    margin: 2px 0;
     background-color: white;
 `;
 
 export const Switch = styled.div`
-    padding: 36px 4px;
-    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    padding: 36px 2%;
+    margin-bottom: 18px;
     border: 1px solid;
-    margin: 2px;
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.teal};
     border-radius: 5px;
@@ -78,13 +85,16 @@ export const Switch = styled.div`
 
 export const Switchicon = styled.img`
     display: block;
-    width: 15px;
+    width: 18px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        width: 15px;
+    }
 `;
 
 
 export const DateDiv = styled.div`
     max-width: 90%;
-    margin: 13px 0;
+    margin-bottom: 18px;
 `;
 
 export const Input = styled.input`
@@ -96,7 +106,7 @@ export const Input = styled.input`
     border-radius: 5px;
     background-color: white;
     font-size: 17px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             font-size: 13px;
         }
 `;
@@ -105,13 +115,12 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95%;
-    margin: auto;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.color.teal};
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
-    padding: 6px 24px;
+    padding: 8px 24px;
     cursor: pointer;
     &:hover {
         filter: brightness(120%);

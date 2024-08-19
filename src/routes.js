@@ -6,3 +6,4 @@ export const toAboutUs = () => "/o-nas";
 export const toContact = () => "/kontakt";
 
 export const toMessage = ({ id } = { id: ":id" }) => `/${id}`;
+export const toVechicle = ({ id } = { id: ":id" }) => `/${id}`;

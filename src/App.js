@@ -13,8 +13,9 @@ import Flota from './Content/Flota';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
 import { HashRouter, Redirect, Route } from 'react-router-dom/cjs/react-router-dom.min';
-import { toAboutUs, toContact, toFleat, toMessage, toOffer, toSchedule, toStart } from './routes';
+import { toAboutUs, toContact, toFleat, toMessage, toOffer, toSchedule, toStart, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
+import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
 
 function App() {
@@ -25,51 +26,48 @@ function App() {
         <CookiesInfo />
         <Loader />
         <Navigation />
-        <Route path={toMessage()}>
-            <MessagePage />
-        </Route>
         <Route path={toStart()}>
           <Photo />
           <Section
             title="Aktualności"
             content={<Aktualnosci />}
-            adress="Aktualnosci"
           />
         </Route>
         <Route path={toSchedule()}>
           <Section
             title="Rozkład jazdy"
             content={<Rozklad />}
-            adress="Rozklad"
           />
         </Route>
         <Route path={toOffer()}>
           <Section
-            title="OFERTA"
+            title="Oferta"
             content={<Oferta />}
-            adress="Oferta"
           />
         </Route>
         <Route path={toFleat()}>
           <Section
             title="Nasza flota"
             content={<Flota />}
-            adress="Flota"
           />
         </Route>
         <Route path={toAboutUs()}>
           <Section
             title="O firmie „KURIER” s.c. Jankowscy"
             content={<Onas />}
-            adress="Onas"
           />
         </Route>
         <Route path={toContact()}>
           <Section
             title="Kontakt"
             content={<Kontakt />}
-            adress="Kontakt"
           />
+        </Route>
+        <Route path={toMessage()}>
+            <MessagePage />
+        </Route>
+        <Route path={toVechicle()}>
+            <VechiclePage />
         </Route>
         <Route path="/">
           <Redirect to={toStart()} />

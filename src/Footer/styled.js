@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Bottom = styled.footer`
     background-color: ${({ theme }) => theme.color.footerBackground};
-    color: ${({ theme }) => theme.color.font};
+    color: ${({ theme }) => theme.color.white};
 `;
 
 export const Contact = styled.div`
@@ -86,7 +86,7 @@ export const Link = styled.a`
     display: contents;
     text-decoration: none;
     transition: 0.2s;
-    color: ${({ theme }) => theme.color.font};
+    color: ${({ theme }) => theme.color.white};
     &:hover {
         color: #4c90f4;
     }  

@@ -68,6 +68,7 @@ export const FirstSentence = styled.div`
 export const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    font-size: 15px;
     align-items: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
         font-size: 12px;
@@ -75,10 +76,13 @@ export const Bottom = styled.div`
 `;
 
 export const More = styled.div`
-    padding: 4px;
+    padding: 6px;
     border-radius: 10%;
-    color: ${({ theme }) => theme.color.white};
-    background-color: ${({ theme }) => theme.color.teal};
+    color: ${({ theme }) => theme.color.lessImportant};
+    background-color: ${({ theme }) => theme.color.gallery};
+    &:hover {
+        filter: brightness(103%);
+    }
 `;
 
 export const Date = styled.div`

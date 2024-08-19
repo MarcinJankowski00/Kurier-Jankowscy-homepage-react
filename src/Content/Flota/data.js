@@ -23,7 +23,7 @@ import newMan1 from './photos/newMan1.jpg';
 import newMan2 from './photos/newMan2.jpg';
 export const data = [
     {
-        id: 1,
+        id: "renault-trafic",
         name: "Renault Trafic",
         content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
@@ -39,7 +39,7 @@ export const data = [
         ]
     },
     {
-        id: 2,
+        id: "opel-vivaro",
         name: "Opel Vivaro",
         content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
@@ -55,7 +55,7 @@ export const data = [
         ]
     },
     {
-        id: 3,
+        id: "volkswagen-caravelle",
         name: "Volkswagen Caravelle",
         content: ["8+1 miejsca", "DVD", "klimatyzacja"],
         images: [
@@ -71,7 +71,7 @@ export const data = [
         ] 
     },
     {
-        id: 4,
+        id: "mercedes-sprinter",
         name: "Mercedes Sprinter",
         content: ["19+2 miejsca", "DVD", "mikrofon", "regulowane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
@@ -90,7 +90,7 @@ export const data = [
         ]
     },
     {
-        id: 5,
+        id: "setra",
         name: "Setra",
         content: ["49+1 miejsca", "regulowane fotele", "klimatyzacja", "ogrzewanie postojowe"],
         images: [
@@ -103,7 +103,7 @@ export const data = [
         ]
     },
     {
-        id: 6,
+        id: "mercedes-tourino",
         name: "Mercedes Tourino",
         content: ["38+2 miejsca", "DVD", "mikrofon", "regulowane fotele", "lodówka", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
@@ -116,7 +116,7 @@ export const data = [
         ]
     },
     {
-        id: 7,
+        id: "man-lions-coach-57",
         name: "Man Lions Coach (57)",
         content: ["57+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
@@ -129,7 +129,7 @@ export const data = [
         ]
     },
     {
-        id: 8,
+        id: "man-lions-coach-59",
         name: "Man Lions Coach (59)",
         content: ["59+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
@@ -142,7 +142,7 @@ export const data = [
         ]
     },
     {
-        id: 9,
+        id: "man-lions-coach-591",
         name: "Man Lions Coach (59)",
         content: ["59+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [

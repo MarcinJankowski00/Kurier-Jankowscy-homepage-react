@@ -1,37 +1,33 @@
-import { useState } from "react";
-import { Container, Div, Button } from "./styled";
+import { Container, Content, Photo, Info, Title, Bottom, More, } from "./styled";
 import { data } from './data';
-import Window from './Window';
+import { toVechicle } from "../../routes";
 
 const Flota = () => {
-    const [adress, setAdress] = useState(8);
-    const [isWindowOpen, setWindowOpen] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
-    
-    const closeWindow = () => {
-        setWindowOpen(false);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+        });
     };
-
-    const toggleWindow = (vehicle) => {
-        closeWindow();
-        setIsLoading(true);
-        setAdress(vehicle.id); 
-    } 
 
     return (
         <Container>
-            <Div>
-                {data.map((vehicle) => (
-                    <Button
-                        key={vehicle.id}
-                        value={vehicle.name}
-                        onClick={vehicle.id!==adress ? () => toggleWindow(vehicle) : null}
-                    >
-                        {vehicle.name}
-                    </Button>
-                ))}
-            </Div>
-            <Window info={adress} isopen={isWindowOpen} isLoading={isLoading} setIsLoading={setIsLoading}/>
+            {data.map((item) => {
+                return (
+                    <Content to={toVechicle({ id: item.id })} onClick={scrollToTop}>
+                        <Photo src={item.images[0].original} />
+                        <Info>
+                            <Title>
+                                {item.name}
+                            </Title>
+                            <Bottom>
+                                <More>
+                                    więcej informacji
+                                </More>
+                            </Bottom>
+                        </Info>
+                    </Content>
+                );
+            })}
         </Container>
     );
 }

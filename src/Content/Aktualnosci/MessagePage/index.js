@@ -1,7 +1,6 @@
 import Section from "../../../Section";
-import { toStart } from '../../../routes';
 import { news } from "../News";
-import { Content, Container, Div, Date, Photo, ReturnButton } from "./styled";
+import { Content, Container, Div, Date, Photo } from "./styled";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 const MessagePage = () => {

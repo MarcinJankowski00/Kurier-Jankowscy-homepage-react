@@ -9,32 +9,23 @@ const fadeIn = keyframes`
   }
 `;
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
     margin-top: 30px;
     height: 100%;
     width: 100%;
-    display: ${({ isopen }) => ({isopen} ? 'grid' : 'none')};
+    display: grid;
     grid-template-columns: 3fr 1fr;
     animation: ${fadeIn} 0.7s ease-in-out;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         display: flex;
         flex-direction: column;
     }
-
 `;
 
 export const Photo = styled.div`
     width: 100%;
     height: 100%;
     z-index: 997;
-`;
-
-export const Title = styled.h2`
-    text-align: center;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        margin-bottom: 0;
-        font-size: smaller;
-    }
 `;
 
 export const Info = styled.ul`
@@ -53,18 +44,11 @@ export const Info = styled.ul`
 export const Item = styled.li`
     margin-top: 3.5%;
     margin-bottom: 4%;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     width: 100%;
     border-bottom: 1px solid ${({ theme }) => theme.color.teal};
 `;
 
 export const Content = styled.span`
 
-`;
-
-export const LoaderWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
 `;

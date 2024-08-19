@@ -13,7 +13,7 @@ export const theme = {
         fontOnButton: "#fff",
         white: "#fff",
         teal: "#1d4368",
-        footerBackground: "#acacac",
+        footerBackground: "#173552",
         tableBackgroud: "#f8f7f7",
         tableHeader: "#c0c0c0",
         tableBorder: "#d9d9d9",

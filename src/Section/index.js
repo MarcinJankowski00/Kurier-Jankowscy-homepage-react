@@ -1,9 +1,9 @@
 
 import { Segment, Header, Title, Content, Container } from "./styled";
 
-const Section = ({ title, content, adress }) => (
+const Section = ({ title, content }) => (
     <Container>
-        <Segment id={adress}>
+        <Segment>
             <Header>
                 <Title>
                     {title}

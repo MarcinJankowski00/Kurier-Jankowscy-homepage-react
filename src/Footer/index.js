@@ -1,32 +1,47 @@
-import { Bottom, Adres, Kontakt, Fb, Wrapper, Contact, Link, Img, Cookies } from "./styled";
-import fbLogo from "./fbLogo.png";
+import { Bottom, HeaderContainer, Fb, Wrapper, Header, Link, Img, Icon, List, Item, Segment, Contact, Cookies } from "./styled";
+import fbLogo from "./images/fbLogo.png";
+import phoneIcon from "./images/phone.png";
+import mailIcon from "./images/mail.png";
+import Container from "../Container";
+
 
 const Footer = () => (
     <Bottom id="Kontakt">
-        <Wrapper>
-            <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Facebook"/></a></Fb>
+        <Container>
+            <Wrapper>
+                <Segment>
+                    <HeaderContainer>
+                        <Icon src={mailIcon} />
+                        <Header>
+                            E-MAIL
+                        </Header>
+                    </HeaderContainer>
+                    <List>
+                        <Item><Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></Item>
+                        <Item><Link href="mailto:transport@kurierjankowski.pl">transport@kurierjankowski.pl</Link></Item>
+                    </List>
+                </Segment>
+                <Segment>
+                    <HeaderContainer>
+                        <Icon src={phoneIcon} />
+                        <Header>
+                            TELEFON
+                        </Header>
+                    </HeaderContainer>
+                    <List>
+                        <Item><Link href="tel:+48857162191">+48 857 162 191</Link></Item>
+                        <Item><Link href="tel:+48515073556">+48 515 073 556</Link></Item>
+                        <Item><Link href="tel:+48506110936">+48 506 110 936</Link></Item>
+                    </List>
+                </Segment>
+                <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Facebook" /></a></Fb>
+            </Wrapper>
             <Contact>
-                <Adres>
-                    ADRES<br />
-                    KURIER S.C JANKOWSCY<br />
-                    ul. Dworcowa 6<br />
-                    19-100 Mońki<br />
-                    NIP: 546-12-60-799<br />
-                </Adres>
-                <Kontakt>
-                    KONTAKT<br />
-                    <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link><br />
-                    <Link href="mailto:transport@kurierjankowski.pl">transport@kurierjankowski.pl</Link><br />
-                    Telefon: <Link href="tel:+48857162191">85 716 21 91</Link><br /> 
-                    kom. <Link href="tel:+48515073556">515 073 556</Link><br />
-                    kom. <Link href="tel:+48506110936">506 110 936</Link><br />
-                </Kontakt>
                 <Cookies>
-                    INFORMACJE:<br />
                     <Link href="/PolitykaCookies.pdf">Politka Cookies</Link>
                 </Cookies>
             </Contact>
-        </Wrapper>
+        </Container>
     </Bottom>
 )
 

@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
-export const Bottom = styled.footer`
-
-`;
-
 export const Wrapper = styled.div`
-    max-width: 1300px;
-    padding: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 2.5fr;
-    grid-template-rows: 1.6fr 1fr;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        grid-template-columns: 1fr;
+    }   
 `;
 export const Segment = styled.div`
     max-width: 240px;
+    margin-bottom: 35px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        max-width: 193px;
+        margin-bottom: 20px;
+    }   
 `;
 
 export const Container = styled.div`

@@ -32,28 +32,28 @@ const Photo = () => {
         <Image>
             <Background offset={offset} />
             <Container>
-            <Content>
-                <Wrapper>
-                    <Text>
-                        <Span>
-                            Zawsze na czas,<br />
-                            wygodnie i bezpiecznie!<br />
-                        </Span>
-                    </Text>
-                    <Buttons>
-                        <Button to={toSchedule} onClick={scrollToTop}>
-                            Sprawdź rozkład jazdy
-                        </Button>
-                        <FileDownloadButton
-                            filename="Rozkład jazdy.pdf"
-                            src={rozkladJazdy}
-                            variant="photo"
-                            label="Pobierz rozkład jazdy"
-                        />
-                    </Buttons>
-                </Wrapper>
-                <Search />
-            </Content>
+                <Content>
+                    <Wrapper>
+                        <Text>
+                            <Span>
+                                Zawsze na czas,<br />
+                                wygodnie i bezpiecznie!<br />
+                            </Span>
+                        </Text>
+                        <Buttons>
+                            <Button to={toSchedule} onClick={scrollToTop}>
+                                Sprawdź rozkład jazdy
+                            </Button>
+                            <FileDownloadButton
+                                filename="Rozkład jazdy.pdf"
+                                src={rozkladJazdy}
+                                variant="photo"
+                                label="Pobierz rozkład jazdy"
+                            />
+                        </Buttons>
+                    </Wrapper>
+                    <Search />
+                </Content>
             </Container>
         </Image>
     )

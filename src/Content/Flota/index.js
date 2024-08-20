@@ -13,7 +13,11 @@ const Flota = () => {
         <Container>
             {data.map((item) => {
                 return (
-                    <Content to={toVechicle({ id: item.id })} onClick={scrollToTop}>
+                    <Content 
+                    key={item.id}
+                    to={toVechicle({ id: item.id })} 
+                    onClick={scrollToTop}
+                    >
                         <Photo src={item.images[0].original} />
                         <Info>
                             <Title>

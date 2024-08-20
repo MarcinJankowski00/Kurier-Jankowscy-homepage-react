@@ -8,7 +8,7 @@ export const Image = styled.div`
     position: relative;
     overflow: hidden;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        height: 90vh;
+        height: 95vh;
     }
 `;
 
@@ -34,19 +34,15 @@ export const Content = styled.div`
     grid-template-columns: 1.7fr 1fr;
     width: 100%;
     height: 70vh;
-    padding: 20px;
-    padding-top: 60px;
     justify-content: center;
     align-items: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             display: flex;
             flex-direction: column-reverse;
-            align-items: normal;
-            padding-top: 20px;
-
+            align-items: normal;      
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 90vh;
+            height: 95vh;
         }
 `;
 

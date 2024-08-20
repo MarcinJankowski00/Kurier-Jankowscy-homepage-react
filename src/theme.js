@@ -24,6 +24,7 @@ export const theme = {
         crimson: "#a91818",
         forestGreen: "#228c22",
         loader: "#fff",
+        headerUnderline: "#808080",
     },
     breakpoint: {
         mobileMax: 1050,

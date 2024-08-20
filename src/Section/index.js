@@ -1,5 +1,6 @@
 
-import { Segment, Header, Title, Content, Container } from "./styled";
+import Container from "../Container";
+import { Segment, Header, Title, Content } from "./styled";
 
 const Section = ({ title, content }) => (
     <Container>

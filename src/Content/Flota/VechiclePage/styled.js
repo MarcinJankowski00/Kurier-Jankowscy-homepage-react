@@ -10,7 +10,7 @@ const fadeIn = keyframes`
 `;
 
 export const Wrapper = styled.div`
-    margin-top: 30px;
+    
     height: 100%;
     width: 100%;
     display: grid;
@@ -31,7 +31,7 @@ export const Photo = styled.div`
 export const Info = styled.ul`
     list-style: none;
     padding: 10px;
-    padding-top: 0%;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;

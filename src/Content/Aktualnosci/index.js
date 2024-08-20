@@ -12,7 +12,11 @@ const Aktualnosci = () => {
     <Container>
         {news.map((item)=> {
             return (
-                <Content to={toMessage({ id: item.id })} onClick={scrollToTop}>
+                <Content 
+                    key={item.id}
+                    to={toMessage({ id: item.id })} 
+                    onClick={scrollToTop}
+                >
                     <Photo src={item.photo} />
                     <Info>
                         <Title>

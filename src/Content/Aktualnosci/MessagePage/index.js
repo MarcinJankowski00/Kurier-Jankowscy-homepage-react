@@ -5,9 +5,9 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 const MessagePage = () => {
     const { id } = useParams();
-    const informationObject = news.find((information) => information.id == id);
+    const informationObject = news.find((information) => information.id === id);
 
-    if (id == 1)
+    if (id === 'zmiana-rozkładu-w-dniu-16-08-2024')
         return (
             <>
                 <Section
@@ -28,7 +28,7 @@ const MessagePage = () => {
                 />
             </>
         );
-    if (id == 2)
+    if (id === 'zmiana-rozkładu-w-dniu-02-05-2024')
         return (
             <>
                 <Section
@@ -51,7 +51,7 @@ const MessagePage = () => {
                 />
             </>
         );
-    if (id == 3)
+    if (id === 'wyjazd-do-wilna-na-jarmark-kaziukowy')
         return (
             <>
                 <Section
@@ -96,7 +96,7 @@ const MessagePage = () => {
                 />
             </>
         );
-    if (id == 4)
+    if (id === 'zmiana-rozkładu-w-dniu-01-12-2023')
         return (
             <>
                 <Section

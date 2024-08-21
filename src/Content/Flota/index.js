@@ -1,6 +1,7 @@
-import { Container, Content, Photo, Info, Title, Bottom, More, } from "./styled";
+import { Container, Content, Photo, Info, Title, Bottom, More, Icon } from "./styled";
 import { data } from './data';
 import { toVechicle } from "../../routes";
+import personIcon from "./personIcon.png";
 
 const Flota = () => {
     const scrollToTop = () => {
@@ -24,6 +25,10 @@ const Flota = () => {
                                 {item.name}
                             </Title>
                             <Bottom>
+                                <div>
+                                    <Icon src={personIcon} />
+                                    Miejsca: {item.seats}
+                                </div>
                                 <More>
                                     więcej informacji
                                 </More>

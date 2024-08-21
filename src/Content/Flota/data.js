@@ -25,6 +25,7 @@ export const data = [
     {
         id: "renault-trafic",
         name: "Renault Trafic",
+        seats: "8+1",
         content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
             {
@@ -41,6 +42,7 @@ export const data = [
     {
         id: "opel-vivaro",
         name: "Opel Vivaro",
+        seats: "8+1",
         content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
             {
@@ -57,7 +59,8 @@ export const data = [
     {
         id: "volkswagen-caravelle",
         name: "Volkswagen Caravelle",
-        content: ["8+1 miejsca", "DVD", "klimatyzacja"],
+        seats: "8+1",
+        content: ["8+1 miejsca", "klimatyzacja", "DVD"],
         images: [
             {
                 original: volkswagen1,
@@ -73,7 +76,8 @@ export const data = [
     {
         id: "mercedes-sprinter",
         name: "Mercedes Sprinter",
-        content: ["19+2 miejsca", "DVD", "mikrofon", "regulowane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        seats: "19+2",
+        content: ["19+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
                 original: sprinter1,
@@ -92,7 +96,8 @@ export const data = [
     {
         id: "setra",
         name: "Setra",
-        content: ["49+1 miejsca", "regulowane fotele", "klimatyzacja", "ogrzewanie postojowe"],
+        seats: "49+1",
+        content: ["49+1 miejsca", "klimatyzacja", "regulowane fotele", "ogrzewanie postojowe"],
         images: [
             {
                 original: setra1,
@@ -105,7 +110,8 @@ export const data = [
     {
         id: "mercedes-tourino",
         name: "Mercedes Tourino",
-        content: ["38+2 miejsca", "DVD", "mikrofon", "regulowane fotele", "lodówka", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        seats: "38+2",
+        content: ["38+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "lodówka", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
                 original: turino1,
@@ -117,8 +123,9 @@ export const data = [
     },
     {
         id: "man-lions-coach-57",
-        name: "Man Lions Coach (57)",
-        content: ["57+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        name: "Man Lions Coach",
+        seats: "57+2",
+        content: ["57+2 miejsca", "klimatyzacja",  "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
                 original: manLions1,
@@ -130,8 +137,9 @@ export const data = [
     },
     {
         id: "man-lions-coach-59",
-        name: "Man Lions Coach (59)",
-        content: ["59+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        name: "Man Lions Coach",
+        seats: "59+2",
+        content: ["59+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
                 original: man4,
@@ -143,8 +151,9 @@ export const data = [
     },
     {
         id: "man-lions-coach-591",
-        name: "Man Lions Coach (59)",
-        content: ["59+2 miejsca", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "klimatyzacja", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        name: "Man Lions Coach",
+        seats: "59+2",
+        content: ["59+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
                 original: newMan1,

@@ -42,9 +42,7 @@ export const Info = styled.ul`
 `;
 
 export const Item = styled.li`
-    margin-top: 3.5%;
-    margin-bottom: 4%;
-    padding-bottom: 4px;
+    padding: 11px;
     width: 100%;
     border-bottom: 1px solid ${({ theme }) => theme.color.teal};
 `;

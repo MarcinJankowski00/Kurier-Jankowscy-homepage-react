@@ -11,25 +11,17 @@ import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
-import { BrowserRouter, Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter, HashRouter, Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { toAboutUs, toContact, toFleat, toMessage, toOffer, toSchedule, toStart, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
 
 function App() {
-  const location = useLocation();
-  const history = useHistory();
 
-  useEffect(() => {
-    const originalPathname = window.location.search.replace("?", "");
-    if (originalPathname && originalPathname !== location.pathname) {
-      history.push(originalPathname);
-    }
-  }, [location, history]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <main>
         <CookiesInfo />
         <Loader />
@@ -85,7 +77,7 @@ function App() {
         <Map />
         <Footer />
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

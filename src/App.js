@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Section from './Section';
@@ -18,6 +18,15 @@ import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
 
 function App() {
+  const location = useLocation();
+  const history = useHistory();
+
+  useEffect(() => {
+    const originalPathname = window.location.search.replace("?", "");
+    if (originalPathname && originalPathname !== location.pathname) {
+      history.push(originalPathname);
+    }
+  }, [location, history]);
 
   return (
     <BrowserRouter>

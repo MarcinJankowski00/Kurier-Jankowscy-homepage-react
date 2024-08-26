@@ -1,7 +1,16 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <script type="text/javascript">
+      // Przekierowanie użytkownika na URL, na którym wystąpił błąd 404
+      var pathname = window.location.pathname;
+      var redirectUrl = "/index.html";
+
+      if (pathname !== redirectUrl) {
+        window.location.replace(redirectUrl + "?" + pathname);
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Loading...</h1>
+  </body>
 </html>

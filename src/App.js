@@ -11,7 +11,7 @@ import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter, Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { toAboutUs, toContact, toFleat, toMessage, toOffer, toSchedule, toStart, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';

@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Section from './Section';
-import Container from './Container';
 import Map from './Map';
 import Photo from './Photo';
 import Onas from './Content/Onas';

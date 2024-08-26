@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
 
+export const LoaderWrapper = styled.div`
+    width: 100%;
+    padding-top: 23.12%;
+    padding-bottom: 23.12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        grid-template-columns: 1fr;
     }
 `;
 
@@ -18,9 +28,8 @@ export const Content = styled(Link)`
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-content: center;
     max-width: 500px;
-    margin: 30px 10px;
+    margin: 0 10px 30px 10px;
     transition: 0.5s;
     background-color: ${({ theme }) => theme.color.white};
     border-radius: 3%;
@@ -34,15 +43,11 @@ export const Content = styled(Link)`
 
 export const Photo = styled.img`
     width: 100%;
-    margin-right: 20px;
 `;
 
 export const Info = styled.div`
     width: 100%;
     padding: 12px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
-        width: 65%;
-    }
 `;
 
 export const Title = styled.div`

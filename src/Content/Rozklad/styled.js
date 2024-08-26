@@ -3,9 +3,13 @@ import styled, { css } from "styled-components";
 export const Content = styled.div`
     text-align: center;
 `;
+export const Wrapper = styled.div`
+    margin-bottom: 20px;
+`;
 
 export const Text = styled.div`
     text-align: start;
+    margin: 20px 0;
 `;
 
 export const TableContainer = styled.div`

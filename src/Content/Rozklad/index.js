@@ -1,5 +1,5 @@
 import FileDownloadButton from "../../FileDownloadButton";
-import { Content, TableContainer, Table, Cell, Text, Row, } from "./styled";
+import { Content, Wrapper, TableContainer, Table, Cell, Text, Row, } from "./styled";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
 import rozkladJazdy from 'C:/dev/kurier/src/RozkładJazdy.pdf';
 
@@ -8,12 +8,10 @@ const Rozklad = () => {
     reverseBusStops.reverse()
     return (
         <Content>
-            <div>
-                <p>
-                    Godziny odjazdu do <strong>BIAŁEGOSTOKU</strong><br />
-                    Rozkład jazdy ważny od <strong>01.12.2023</strong>
-                </p>
-            </div>
+            <Wrapper>
+                Godziny odjazdu do <strong>BIAŁEGOSTOKU</strong><br />
+                Rozkład jazdy ważny od <strong>01.12.2023</strong>
+            </Wrapper>
             <TableContainer>
                 <Table>
                     <thead>
@@ -68,7 +66,6 @@ const Rozklad = () => {
                     </tbody>
                 </Table>
             </TableContainer>
-            <br />
             <Text>
                 d-  nie kursuje w dniu 1. I, w pierwszy i drugi dzień Świąt Wielkanocnych oraz w dniach 25. i 26. XII <br />
                 D - kursuje od poniedziałku do piątku oprócz świąt<br />
@@ -76,11 +73,10 @@ const Rozklad = () => {
                 n - nie kursuje w Wielką Sobotę oraz w dniach 24 i 31.XII <br />
                 z - nie kursuje w piątek po dniu Bożego Ciała<br />
             </Text>
-            <br />
-            <br />
-            Godziny odjazdu do <b>MONIEK</b><br />
-            Rozkład jazdy ważny od <strong>01.12.2023</strong>
-            <br />
+            <Wrapper>
+                Godziny odjazdu do <b>MONIEK</b><br />
+                Rozkład jazdy ważny od <strong>01.12.2023</strong>
+            </Wrapper>
             <TableContainer>
                 <Table>
                     <thead>
@@ -135,7 +131,6 @@ const Rozklad = () => {
                     </tbody>
                 </Table>
             </TableContainer>
-            <br />
             <Text>
                 d-  nie kursuje w dniu 1. I, w pierwszy i drugi dzień Świąt Wielkanocnych oraz w dniach 25. i 26. XII<br />
                 D - kursuje od poniedziałku do piątku oprócz świąt<br />

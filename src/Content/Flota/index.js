@@ -1,7 +1,6 @@
-import { Container, Content, Photo, Info, Title, Bottom, More, Icon } from "./styled";
+import { Container } from "./styled";
 import { data } from './data';
-import { toVechicle } from "../../routes";
-import personIcon from "./personIcon.png";
+import ContentItem from './ContentItem';
 
 const Flota = () => {
     const scrollToTop = () => {
@@ -12,31 +11,13 @@ const Flota = () => {
 
     return (
         <Container>
-            {data.map((item) => {
-                return (
-                    <Content 
-                    key={item.id}
-                    to={toVechicle({ id: item.id })} 
-                    onClick={scrollToTop}
-                    >
-                        <Photo src={item.images[0].original} />
-                        <Info>
-                            <Title>
-                                {item.name}
-                            </Title>
-                            <Bottom>
-                                <div>
-                                    <Icon src={personIcon} />
-                                    Miejsca: {item.seats}
-                                </div>
-                                <More>
-                                    więcej informacji
-                                </More>
-                            </Bottom>
-                        </Info>
-                    </Content>
-                );
-            })}
+            {data.map((item) => (
+                <ContentItem 
+                    key={item.id} 
+                    item={item} 
+                    scrollToTop={scrollToTop} 
+                />
+            ))}
         </Container>
     );
 }

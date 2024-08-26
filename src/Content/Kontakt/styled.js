@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    margin: 20px auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 2.5fr;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {

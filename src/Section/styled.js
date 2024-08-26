@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Segment = styled.section`
-    margin: 60px 0px;
+    margin: 80px 0 180px 0;
     padding-top: 30px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         padding-top: 20px;
+        margin-top: 40px;
     }
 `;
 
@@ -27,4 +28,5 @@ export const Title = styled.h2`
 
 export const Content = styled.div`
     padding-top: 20px;
+    margin-top: 20px;
 `;

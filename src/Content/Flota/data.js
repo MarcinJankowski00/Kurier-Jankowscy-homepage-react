@@ -9,18 +9,19 @@ import volkswagen2 from './photos/volkswagen2.jpg';
 import volkswagen3 from './photos/volkswagen3.jpg';
 import sprinter1 from './photos/sprinter1.jpg';
 import sprinter2 from './photos/sprinter2.jpg';
-import sprinter3 from './photos/sprinter3.jpg';
-import sprinter4 from './photos/sprinter4.jpg';
 import setra1 from './photos/setra1.jpg';
 import setra2 from './photos/setra2.jpg';
 import turino1 from './photos/turino1.jpg';
-import turino3 from './photos/turino3.jpg';
+import turino2 from './photos/turino2.jpg';
+import solaris1 from './photos/solaris1.jpg';
+import solaris2 from './photos/solaris2.jpg';
 import manLions1 from './photos/manLions1.jpg';
 import manLions2 from './photos/manLions2.jpg';
 import man4 from './photos/man4.jpg';
 import man5 from './photos/man5.jpg';
 import newMan1 from './photos/newMan1.jpg';
 import newMan2 from './photos/newMan2.jpg';
+
 export const data = [
     {
         id: "renault-trafic",
@@ -85,12 +86,6 @@ export const data = [
             {
                 original: sprinter2,
             },
-            {
-                original: sprinter3,
-            },
-            {
-                original: sprinter4,
-            },
         ]
     },
     {
@@ -117,7 +112,21 @@ export const data = [
                 original: turino1,
             },
             {
-                original: turino3,
+                original: turino2,
+            },
+        ]
+    },
+    {
+        id: "solaris-vacanza",
+        name: "Solaris Vacanza",
+        seats: "50+2",
+        content: ["50+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "lodówka", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        images: [
+            {
+                original: solaris1,
+            },
+            {
+                original: solaris2,
             },
         ]
     },

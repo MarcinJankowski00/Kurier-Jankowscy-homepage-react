@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.7de6281c.js",
+    "main.js": "/static/js/main.b8b54bc6.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
-    "static/media/manLions1.jpg": "/static/media/manLions1.4921c1623240e72050a2.jpg",
-    "static/media/solaris1.jpg": "/static/media/solaris1.d8bd888d7d3e59a0b2b4.jpg",
-    "static/media/sprinter1.jpg": "/static/media/sprinter1.592e8edf82499633caab.jpg",
-    "static/media/sprinter2.jpg": "/static/media/sprinter2.e9afe730746aec59d7ca.jpg",
     "static/media/background.jpg": "/static/media/background.227865b1a7f8cb5c0f00.jpg",
-    "static/media/solaris2.jpg": "/static/media/solaris2.0f4f2607b60dc30fc29f.jpg",
-    "static/media/manLions2.jpg": "/static/media/manLions2.db41df8ea600531cffb5.jpg",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
+    "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
+    "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.4803ff4bb43fcfc3e0b6.jpg",
+    "static/media/solaris2.jpg": "/static/media/solaris2.6655c3455ff8e459347b.jpg",
+    "static/media/manLions1.jpg": "/static/media/manLions1.2a61256cacaf6ba2d744.jpg",
+    "static/media/solaris1.jpg": "/static/media/solaris1.270a9e1186ea2da33dfa.jpg",
+    "static/media/sprinter1.jpg": "/static/media/sprinter1.183be931c85507537f5f.jpg",
     "static/media/newMan1.jpg": "/static/media/newMan1.65ed62ab6ab6bf6d05f0.jpg",
     "static/media/man4.jpg": "/static/media/man4.47b1bcbebd71215c8029.jpg",
     "static/media/renault1.jpg": "/static/media/renault1.55b334993bf5ead030e2.jpg",
@@ -35,11 +35,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.7de6281c.js.map": "/static/js/main.7de6281c.js.map",
+    "main.b8b54bc6.js.map": "/static/js/main.b8b54bc6.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.7de6281c.js"
+    "static/js/main.b8b54bc6.js"
   ]
 }

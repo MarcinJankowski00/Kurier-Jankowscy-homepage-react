@@ -1,9 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.93cac39a.js",
+    "main.js": "/static/js/main.7de6281c.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
+    "static/media/manLions1.jpg": "/static/media/manLions1.4921c1623240e72050a2.jpg",
+    "static/media/solaris1.jpg": "/static/media/solaris1.d8bd888d7d3e59a0b2b4.jpg",
+    "static/media/sprinter1.jpg": "/static/media/sprinter1.592e8edf82499633caab.jpg",
+    "static/media/sprinter2.jpg": "/static/media/sprinter2.e9afe730746aec59d7ca.jpg",
     "static/media/background.jpg": "/static/media/background.227865b1a7f8cb5c0f00.jpg",
+    "static/media/solaris2.jpg": "/static/media/solaris2.0f4f2607b60dc30fc29f.jpg",
+    "static/media/manLions2.jpg": "/static/media/manLions2.db41df8ea600531cffb5.jpg",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/volkswagen1.jpg": "/static/media/volkswagen1.4803ff4bb43fcfc3e0b6.jpg",
@@ -15,31 +21,25 @@
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
     "static/media/volkswagen2.jpg": "/static/media/volkswagen2.da9d1a66f2ef7ef3ed2b.jpg",
-    "static/media/turino3.jpg": "/static/media/turino3.9444822ce483e8d23614.jpg",
+    "static/media/turino2.jpg": "/static/media/turino2.9444822ce483e8d23614.jpg",
     "static/media/newMan2.jpg": "/static/media/newMan2.5fdfe779a2477eb2d23a.jpg",
     "static/media/volkswagen3.jpg": "/static/media/volkswagen3.b6acde9d0897a77a88b3.jpg",
     "static/media/opel3.jpg": "/static/media/opel3.d38c60e5c6c7cbb4d4f3.jpg",
     "static/media/turino1.jpg": "/static/media/turino1.fcae13a2df7a84f8e2a6.jpg",
     "static/media/opel4.jpg": "/static/media/opel4.4b4a127f8ea71ae9edad.jpg",
-    "static/media/sprinter1.jpg": "/static/media/sprinter1.e94db2fc2f74fad8f3ba.jpg",
     "static/media/fbLogo.png": "/static/media/fbLogo.4370ac0b2a7136b8ddab.png",
     "static/media/man5.jpg": "/static/media/man5.ecc170f8e4b68a187996.jpg",
     "static/media/renault3.jpg": "/static/media/renault3.efd0d649b0a38de12ef9.jpg",
-    "static/media/sprinter2.jpg": "/static/media/sprinter2.f2a484a70dc325a2d485.jpg",
-    "static/media/sprinter4.jpg": "/static/media/sprinter4.710fae6df60d461c0c51.jpg",
-    "static/media/sprinter3.jpg": "/static/media/sprinter3.1644cbfb04e34a5d7a88.jpg",
     "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
-    "static/media/manLions2.jpg": "/static/media/manLions2.db58b33ca85ee0dcb813.jpg",
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
-    "static/media/manLions1.jpg": "/static/media/manLions1.988569c4f35adc8237e7.jpg",
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.93cac39a.js.map": "/static/js/main.93cac39a.js.map",
+    "main.7de6281c.js.map": "/static/js/main.7de6281c.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.93cac39a.js"
+    "static/js/main.7de6281c.js"
   ]
 }

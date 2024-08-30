@@ -1,7 +1,15 @@
 import logo from "./images/logo.png";
 import wilno from "./images/wilno.jpg";
+import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'przypomnienie-nowy-rok-szkolny',
+        title: 'Zbliża się nowy rok szkolny – czas na zakup biletów miesięcznych!',
+        firstSentence: 'Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok...',
+        date: '30-08-2024',
+        photo: backToSchool,
+    },
     {
         id: 'zmiana-rozkładu-w-dniu-16-08-2024',
         title: 'Zmiana rozkładu w dniu 16.08.2024',
@@ -23,11 +31,4 @@ export const news = [
         date: '23-02-2024',
         photo: wilno,
     },
-    {
-        id: 'zmiana-rozkładu-w-dniu-01-12-2023',
-        title: 'Zmiana rozkładu w dniu 01.12.2023',
-        firstSentence: 'Informujemy, iż dnia 01.12.2023 zmienił się rozkład jazdy na linii...',
-        date: '30-11-2023',
-        photo: logo,
-    }
 ];

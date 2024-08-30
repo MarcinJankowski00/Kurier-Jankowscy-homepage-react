@@ -7,6 +7,30 @@ const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
 
+    if (id === 'przypomnienie-nowy-rok-szkolny')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} />
+                                <Container>
+                                    🏫 Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok szkolny rozpoczyna się już 2 września! To idealny moment, aby zadbać o zakup biletów miesięcznych!<br/>
+                                    <br/>
+                                    🚍 Serdecznie zapraszamy do naszego biura przy ulicy Dworcowej 6 w Mońkach od poniedziałku do piątku w godzinach 8:00-16:00.<br/>
+                                    <br/>
+                                    📖 Życzymy Wam radosnego powrotu do szkoły oraz wielu inspirujących doświadczeń w nowym roku szkolnym!
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
+
     if (id === 'zmiana-rozkładu-w-dniu-16-08-2024')
         return (
             <>
@@ -89,29 +113,6 @@ const MessagePage = () => {
                                     Orientacyjna cena za obiad w Trokach 10 € (2 kibiny i rosół).<br />
                                     <br />
                                     <Div>Zapisy pod numerem telefonu 515 073 556 oraz w Biurze przy ul. Dworcowej 6 w Mońkach do dnia 29.02.2024 r.</Div>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'zmiana-rozkładu-w-dniu-01-12-2023')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} />
-                                <Container>
-                                    <Div>
-                                        DRODZY PASAŻEROWIE
-                                    </Div><br />
-                                    Informujemy, iż dnia <b>01.12.2023</b> zmienił się rozkład jazdy na linii <b>Mońki – Białystok</b>.
-                                    Nowe rozkłady dostępne u kierowców, w biurze mieszczącym się w Mońkach przy ul. Dworcowej 6.<br />
                                 </Container>
                             </Content>
                         </>

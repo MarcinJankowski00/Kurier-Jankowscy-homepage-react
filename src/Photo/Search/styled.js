@@ -10,8 +10,7 @@ export const Form = styled.div`
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.color.search};
     color: ${({ theme }) => theme.color.teal};
-    font-size: px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     width: 100%;
     padding: 25px;
     border-radius: 5px;

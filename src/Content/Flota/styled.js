@@ -13,36 +13,34 @@ export const LoaderWrapper = styled.div`
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
         grid-template-columns: 1fr;
     }
 `;
 
 export const Content = styled(Link)`
     color: ${({ theme }) => theme.color.font};
-    box-shadow: 0px 0px 15px -2px rgba(223, 223, 223, 1);
+    box-shadow: 0px 4px 12px 0px rgba(186, 199, 213, 0.5);
     text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: start;
     max-width: 500px;
-    margin: 0 10px 30px 10px;
     transition: 0.5s;
     background-color: ${({ theme }) => theme.color.white};
-    border-radius: 3%;
+    border-radius: 5px;
     &:hover {
-        transform: scale(103%);
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
-        margin: 15px 0;
+        transform: scale(102%);
     }
 `;
 
 export const Photo = styled.img`
     width: 100%;
+    border-radius: 5px 5px 0 0;
 `;
 
 export const Info = styled.div`

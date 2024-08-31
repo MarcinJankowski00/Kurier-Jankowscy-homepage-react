@@ -18,7 +18,7 @@ export const Content = styled(Link)`
     justify-self: start;
     align-items: center;
     transition: 0.5s;
-    border-radius: 4px;
+    border-radius: 5px;
     &:hover {
         background-color: ${({ theme }) => theme.color.white};
         box-shadow: 0px 4px 12px 0px rgba(186, 199, 213, 0.5);
@@ -32,6 +32,7 @@ export const Content = styled(Link)`
 export const Photo = styled.img`
     width: 50%;
     margin: 16px;
+    border-radius: 5px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         width: 35%;
     }

@@ -28,6 +28,7 @@ export const Content = styled.div`
 
 export const Photo = styled.img`
     width: 25%;
+    border-radius: 5px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
         width: 80%;
     }

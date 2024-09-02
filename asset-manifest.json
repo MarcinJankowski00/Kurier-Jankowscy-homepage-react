@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.5eb240bf.css",
-    "main.js": "/static/js/main.7596767f.js",
+    "main.js": "/static/js/main.99011589.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
+    "static/media/litwa.png": "/static/media/litwa.c713c619358db76bb68f.png",
     "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
@@ -36,11 +37,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
-    "main.7596767f.js.map": "/static/js/main.7596767f.js.map",
+    "main.99011589.js.map": "/static/js/main.99011589.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5eb240bf.css",
-    "static/js/main.7596767f.js"
+    "static/js/main.99011589.js"
   ]
 }

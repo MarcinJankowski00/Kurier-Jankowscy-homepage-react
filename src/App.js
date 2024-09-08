@@ -63,6 +63,7 @@ function App() {
               title="Kontakt"
               content={<Kontakt />}
             />
+            <Map />
           </Route>
           <Route path={toVechicle()}>
             <VechiclePage />
@@ -74,7 +75,6 @@ function App() {
             <Redirect to={toStart()} />
           </Route>
         </Switch>
-        <Map />
         <Footer />
       </main>
     </HashRouter>

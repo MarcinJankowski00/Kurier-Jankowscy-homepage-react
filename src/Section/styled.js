@@ -9,7 +9,7 @@ export const Segment = styled.section`
     }
 `;
 
-export const Header = styled.h2`
+export const Header = styled.div`
     font-size: 32px;
     align-items: center;
     padding-bottom: 5px;

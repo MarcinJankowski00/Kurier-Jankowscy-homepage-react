@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 
 export const Background = styled.div`
   position: absolute;
+  filter: brightness(75%);
   top: 0;
   left: 0;
   width: 100%;
@@ -31,6 +32,7 @@ export const Background = styled.div`
 
 export const Content = styled.div`
     display: grid;
+    
     grid-template-columns: 1.7fr 1fr;
     width: 100%;
     height: 70vh;

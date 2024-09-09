@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.5eb240bf.css",
+    "main.css": "/static/css/main.95768011.css",
     "main.js": "/static/js/main.be4282f4.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
@@ -36,12 +36,12 @@
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
-    "main.5eb240bf.css.map": "/static/css/main.5eb240bf.css.map",
+    "main.95768011.css.map": "/static/css/main.95768011.css.map",
     "main.be4282f4.js.map": "/static/js/main.be4282f4.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5eb240bf.css",
+    "static/css/main.95768011.css",
     "static/js/main.be4282f4.js"
   ]
 }

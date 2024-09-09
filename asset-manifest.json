@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.be4282f4.js",
+    "main.js": "/static/js/main.5d93ad39.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -10,7 +10,7 @@
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/turino1.jpg": "/static/media/turino1.553a3dfec255c34363e2.jpg",
-    "static/media/volkswagen1.jpg": "/static/media/volkswagen1.4803ff4bb43fcfc3e0b6.jpg",
+    "static/media/volkswagen1.jpg": "/static/media/volkswagen1.a243747f2f22cd9cc449.jpg",
     "static/media/solaris2.jpg": "/static/media/solaris2.6655c3455ff8e459347b.jpg",
     "static/media/backToSchool.png": "/static/media/backToSchool.a03c6749bed0c5848117.png",
     "static/media/manLions1.jpg": "/static/media/manLions1.2a61256cacaf6ba2d744.jpg",
@@ -37,11 +37,11 @@
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
     "index.html": "/index.html",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.be4282f4.js.map": "/static/js/main.be4282f4.js.map",
+    "main.5d93ad39.js.map": "/static/js/main.5d93ad39.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.be4282f4.js"
+    "static/js/main.5d93ad39.js"
   ]
 }

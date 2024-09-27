@@ -5,6 +5,13 @@ import backToSchool from "./images/backToSchool.png"
 
 export const news = [
     {
+        id: 'przypomnienie-bilety',
+        title: 'Biuro czynne w sobotę – legitymacje i bilety',
+        firstSentence: 'Przypominamy, że legitymacje szkolne tracą ważność 30 września...',
+        date: '27-09-2024',
+        photo: logo,
+    },
+    {
         id: 'wyjazd-na-litwe',
         title: 'Zapraszamy na wycieczkę na Litwę',
         firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szydłowo – Szawle – Wilno...',
@@ -39,11 +46,4 @@ export const news = [
         date: '23-02-2024',
         photo: wilno,
     },
-    {
-        id: 'zmiana-rozkładu-w-dniu-01-12-2023',
-        title: 'Zmiana rozkładu w dniu 01.12.2023',
-        firstSentence: 'Informujemy, iż dnia 01.12.2023 zmienił się rozkład jazdy na linii...',
-        date: '30-11-2023',
-        photo: logo,
-    }
 ];

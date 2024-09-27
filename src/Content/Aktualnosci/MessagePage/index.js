@@ -7,6 +7,29 @@ const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
 
+    if (id === 'przypomnienie-bilety')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} />
+                                <Container>
+                                    📚Przypominamy, że legitymacje szkolne tracą ważność 30 września. Zachęcamy do przedłużenia ważności dokumentów.<br />
+                                    <br />
+                                    🍂Zapraszamy również do zakupu biletów na trasie Białystok - Mońki na miesiąc październik.<br />
+                                    <br />
+                                    🗓 Specjalnie dla Was otwieramy Biuro Turystyczne w Mońkach, ul. Dworcowa 6, w dniu 28 września (sobota). Biuro będzie czynne w godzinach 8:00 - 12:00.
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'wyjazd-na-litwe')
         return (
             <>
@@ -189,29 +212,6 @@ const MessagePage = () => {
                 />
             </>
         );
-        if (id === 'zmiana-rozkładu-w-dniu-01-12-2023')
-            return (
-                <>
-                    <Section
-                        title={informationObject.title}
-                        content={
-                            <>
-                                <Date>{informationObject.date}</Date>
-                                <Content>
-                                    <Photo src={informationObject.photo} />
-                                    <Container>
-                                        <Div>
-                                            DRODZY PASAŻEROWIE
-                                        </Div><br />
-                                        Informujemy, iż dnia <b>01.12.2023</b> zmienił się rozkład jazdy na linii <b>Mońki – Białystok</b>.
-                                        Nowe rozkłady dostępne u kierowców, w biurze mieszczącym się w Mońkach przy ul. Dworcowej 6.<br />
-                                    </Container>
-                                </Content>
-                            </>
-                        }
-                    />
-                </>
-            );
 };
 
 export default MessagePage;

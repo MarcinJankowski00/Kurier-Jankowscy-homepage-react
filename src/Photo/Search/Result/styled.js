@@ -88,9 +88,9 @@ export const ShowButton = styled.button`
     color: ${({ theme }) => theme.color.lessImportant};
     margin-top: 5px;
     border-radius: 5px;
+    transition: 0.5s;
     &:hover{
         filter: brightness(120%);
-        transition: 0.5s;
     }
     ${({ isdateactual }) => isdateactual && css`
         display: none;
@@ -105,9 +105,9 @@ export const NextDayButton = styled.button`
     margin-top: 10px;
     border-radius: 5px;
     padding: 5px 16px;
+    transition: 0.5s;
     &:hover{
         filter: brightness(120%);
-        transition: 0.5s;
     }
     ${({ isdateactual }) => isdateactual && css`
         display: none;

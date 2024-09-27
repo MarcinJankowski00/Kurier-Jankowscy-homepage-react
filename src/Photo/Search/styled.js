@@ -61,6 +61,7 @@ export const Select = styled.select`
     width: 80%;
     border-radius: 5px;
     background-color: white;
+    cursor: pointer;
 `;
 
 export const Switch = styled.div`
@@ -72,13 +73,13 @@ export const Switch = styled.div`
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.teal};
     border-radius: 5px;
+    transition: 0.5s;
     cursor: pointer;
     &:hover {
-        filter: brightness(110%);
-        transition: 0.5s;
+        filter: brightness(125%);
     }
     &:active {
-        filter: brightness(110%);
+        filter: brightness(135%);
     }
 `;
 
@@ -89,7 +90,6 @@ export const Switchicon = styled.img`
         width: 15px;
     }
 `;
-
 
 export const DateDiv = styled.div`
     max-width: 90%;
@@ -105,6 +105,7 @@ export const Input = styled.input`
     border-radius: 5px;
     background-color: white;
     font-size: 17px;
+    cursor: pointer;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             font-size: 13px;
         }
@@ -120,13 +121,13 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
     padding: 8px 24px;
+    transition: 0.5s;
     cursor: pointer;
     &:hover {
-        filter: brightness(120%);
-        transition: 0.5s;
+        filter: brightness(125%);
     }
     &:active {
-        filter: brightness(120%);
+        filter: brightness(135%);
     }
 `;
 

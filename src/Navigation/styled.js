@@ -29,7 +29,7 @@ export const Nav = styled.div`
 
 export const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 1fr auto;
     max-width: 1200px;
     margin: 0 auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -45,7 +45,6 @@ export const LogoWrapper = styled.div`
     align-items: center;
     margin: 0;
     padding: 0 6px;
-
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             margin: 10px 5px;
         }
@@ -69,11 +68,12 @@ export const Img = styled.img`
 `;
 
 export const List = styled.ul`
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: auto auto auto auto auto;
     list-style: none;
     padding-left: 0;
-
+    margin-right: 20px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: block;
         position: absolute;
@@ -103,19 +103,50 @@ export const Item = styled.li`
 `;
 
 export const Link = styled(NavLink)`
+    position: relative;
     color: ${({ theme }) => theme.color.font};
     text-decoration: none;
-
+    padding-bottom: 5px;
+    transition: color 0.3s;
+    
     &:focus {
         outline: none;
     }
+
     &:hover {
         filter: brightness(120%);
-        padding-bottom: 5px;
-        border-bottom: 1px solid ${({ theme }) => theme.color.font};
-        outline: none;
-        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            border-bottom: none;
+        color: ${({ theme }) => theme.color.font};
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: ${({ theme }) => theme.color.font};
+        width: 0;
+        transition: 0.3s ease;
+    }
+
+    &:hover::after {
+        filter: brightness(120%);
+        width: 100%;
+    }
+
+    &.active {
+        color: ${({ theme }) => theme.color.font};
+        &::after {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        &.active {
+            font-weight: bolder;
+            &::after {
+                width: 0;
+            }
         }
     }
 `;

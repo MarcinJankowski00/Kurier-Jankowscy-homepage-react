@@ -34,9 +34,6 @@ const Navigation = () => {
                 </HamburgerIcon>
                 <List isMenuOpen={isMenuOpen}>
                     <Item>
-                        <Link to={toStart()} onClick={closeMenuOnLinkClick}>Strona główna</Link>
-                    </Item>
-                    <Item>
                         <Link to={toSchedule()} onClick={closeMenuOnLinkClick}>Rozkład jazdy</Link>
                     </Item>
                     <Item>

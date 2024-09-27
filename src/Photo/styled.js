@@ -80,11 +80,11 @@ export const Button = styled(Link)`
     margin-right: 10px;
     padding: 12px 24px;
     width: 257px;
+    transition: 0.5s;
     cursor: pointer;
     &:hover {
         background-color: ${({ theme }) => theme.color.black};
         border: 1px solid ${({ theme }) => theme.color.black};
-        transition: 0.5s;
         color: ${({ theme }) => theme.color.white};;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

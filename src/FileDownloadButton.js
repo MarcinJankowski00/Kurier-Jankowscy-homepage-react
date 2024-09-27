@@ -8,14 +8,13 @@ const DownloadButton = styled.button`
     cursor: pointer;
     color: ${({ theme }) => theme.color.teal};
     border: 2px solid ${({ theme }) => theme.color.teal};
-
+    transition: 0.5s;
     ${({ variant }) => variant === 'schedule' && css`
         margin-top: 30px;
         margin-bottom: 30px;
         &:hover {
             background-color: ${({ theme }) => theme.color.teal};
             border: 2px solid ${({ theme }) => theme.color.teal};
-            transition: 0.5s;
             color: ${({ theme }) => theme.color.white};;
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
@@ -29,7 +28,6 @@ const DownloadButton = styled.button`
         color: #fff;
         &:hover {
             background-color: ${({ theme }) => theme.color.white};
-            transition: 0.5s;
             color: ${({ theme }) => theme.color.teal};;
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

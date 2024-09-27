@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const LoaderWrapper = styled.div`
     width: 100%;
-    padding-top: 23.12%;
-    padding-bottom: 23.12%;
+    padding-top: 21.28%;
+    padding-bottom: 21.28%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -16,7 +16,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo} alt="Logo" />
                                 <Container>
                                     📚Przypominamy, że legitymacje szkolne tracą ważność 30 września. Zachęcamy do przedłużenia ważności dokumentów.<br />
                                     <br />
@@ -39,7 +39,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo}  alt="Plakat ogłoszeniowy"/>
                                 <Container>
                                     <b>Zapraszamy na wycieczkę Kowno – Kiedany – Szydłowo – Szawle – Wilno</b>
 
@@ -108,7 +108,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo} alt="Grafika back to school" />
                                 <Container>
                                     🏫 Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok szkolny rozpoczyna się już 2 września! To idealny moment, aby zadbać o zakup biletów miesięcznych!<br />
                                     <br />
@@ -132,7 +132,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo} alt="Logo" />
                                 <Container>
                                     <Div>DRODZY PASAŻEROWIE</Div><br />
                                     Informujemy, że <b>dnia 16.08.2024 (piątek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
@@ -153,7 +153,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo}  alt="Logo" />
                                 <Container>
                                     <Div>DRODZY PASAŻEROWIE</Div><br />
                                     Informujemy, że <b>dnia 02.05.2024 (czwartek)</b>, autobusy na linii <b>Mońki – Białystok</b>
@@ -176,7 +176,7 @@ const MessagePage = () => {
                         <>
                             <Date>{informationObject.date}</Date>
                             <Content>
-                                <Photo src={informationObject.photo} />
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
                                 <Container>
                                     W programie:
                                     <ul>

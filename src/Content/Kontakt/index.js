@@ -1,4 +1,4 @@
-import { Container, Fb, Wrapper, Header, Link, Img, Icon, List, Item, Segment } from "./styled";
+import { Container, Wrapper, Header, Link, Icon, List, Item, Segment } from "./styled";
 import localizationIcon from "./images/localization.png";
 import phoneIcon from "./images/phone.png";
 import mailIcon from "./images/mail.png";
@@ -9,7 +9,7 @@ const Kontakt = () => (
     <Wrapper>
         <Segment>
             <Container>
-                <Icon src={localizationIcon} />
+                <Icon src={localizationIcon} alt="ikona lokalizacji"/>
                 <Header>
                     ADRES
                 </Header>
@@ -21,7 +21,7 @@ const Kontakt = () => (
         </Segment>
         <Segment>
             <Container>
-                <Icon src={clockIcon} />
+                <Icon src={clockIcon} alt="ikona zagara" />
                 <Header>
                     GODZINY PRACY
                 </Header>
@@ -36,7 +36,7 @@ const Kontakt = () => (
         </Segment>
         <Segment>
             <Container>
-                <Icon src={mailIcon} />
+                <Icon src={mailIcon} alt="ikona maila" />
                 <Header>
                     E-MAIL
                 </Header>
@@ -48,7 +48,7 @@ const Kontakt = () => (
         </Segment>
         <Segment>
             <Container>
-                <Icon src={phoneIcon} />
+                <Icon src={phoneIcon} alt="ikona telefonu" />
                 <Header>
                     TELEFON
                 </Header>

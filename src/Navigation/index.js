@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper } from "./styled";
-import handleLinkClick from "../HandleLinkClick.js";
 import logo from "../kurierlogo.png";
 import { toAboutUs, toContact, toFleat, toOffer, toSchedule, toStart } from "../routes.js";
 
@@ -27,7 +26,7 @@ const Navigation = () => {
             <Wrapper>
                 <LogoWrapper>
                     <Logo to={toStart()} onClick={() => scrollToTop()}>
-                        <Img src={logo} alt="KURIER" />
+                        <Img src={logo} alt="Logo Kurier" />
                     </Logo>
                 </LogoWrapper>
                 <HamburgerIcon onClick={toggleMenu}>

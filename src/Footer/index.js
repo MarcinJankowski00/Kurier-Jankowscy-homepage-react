@@ -11,7 +11,7 @@ const Footer = () => (
             <Wrapper>
                 <Segment>
                     <HeaderContainer>
-                        <Icon src={mailIcon} />
+                        <Icon src={mailIcon} alt="ikona maila" />
                         <Header>
                             E-MAIL
                         </Header>
@@ -23,7 +23,7 @@ const Footer = () => (
                 </Segment>
                 <Segment>
                     <HeaderContainer>
-                        <Icon src={phoneIcon} />
+                        <Icon src={phoneIcon} alt="ikona telefonu" />
                         <Header>
                             TELEFON
                         </Header>
@@ -34,7 +34,7 @@ const Footer = () => (
                         <Item><Link href="tel:+48506110936">+48 506 110 936</Link></Item>
                     </List>
                 </Segment>
-                <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Facebook" /></a></Fb>
+                <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Logo Facebook" /></a></Fb>
             </Wrapper>
             <Contact>
                 <Cookies>

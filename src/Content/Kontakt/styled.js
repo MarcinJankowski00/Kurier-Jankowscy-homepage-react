@@ -23,15 +23,6 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Fb = styled.p`
-    margin: 0;
-    width: 40px;
-`;
-
-export const Img = styled.img`
-    display: block;
-    width: 30px;
-`;
 export const Icon = styled.img`
     width: 30px;
     margin-right: 1px;

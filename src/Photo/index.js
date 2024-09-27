@@ -3,7 +3,6 @@ import { Image, Text, Button, Span, Buttons, Content, Background, Wrapper } from
 import Search from "./Search";
 import Container from "../Container";
 import FileDownloadButton from '../FileDownloadButton';
-import handleLinkClick from "../HandleLinkClick.js";
 import rozkladJazdy from '../RozkładJazdy.pdf';
 import { toSchedule } from '../routes.js';
 

@@ -23,7 +23,7 @@ const VechiclePage = () => {
                 </Photo>
                 <Info>
                     {vehicleObject.content.map(item => (
-                        <Item>
+                        <Item key={item}>
                             <Content>
                                 {item}
                             </Content>

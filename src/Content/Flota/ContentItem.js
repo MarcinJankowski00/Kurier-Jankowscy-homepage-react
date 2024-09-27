@@ -21,6 +21,7 @@ const ContentItem = ({ item, scrollToTop }) => {
             )}
             <Photo 
                 src={item.images[0].original} 
+                key={item.id}
                 style={{ display: isImageLoaded ? 'block' : 'none' }}
                 onLoad={handleImageLoad}
                 alt={item.name}

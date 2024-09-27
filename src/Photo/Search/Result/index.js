@@ -133,7 +133,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                 <List>
                     {startStopObject.map((item) => {
                             return (
-                                <Item past={isPast(item, formattedDate)} show={isShowed}>
+                                <Item key={item} past={isPast(item, formattedDate)} show={isShowed}>
                                     {item}{" "}-{" "}
                                     {endStopObject[startStopObject.indexOf(item)]}{" "}
                                 </Item>

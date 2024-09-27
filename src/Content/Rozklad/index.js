@@ -41,7 +41,7 @@ const Rozklad = () => {
                                 return undefined;
                             } else {
                                 return (
-                                    <Row>
+                                    <Row key={item.id}>
                                         <Cell scope="row" header="true" name="true">
                                             {item.name}
                                         </Cell>
@@ -80,7 +80,7 @@ const Rozklad = () => {
             <TableContainer>
                 <Table>
                     <thead>
-                        <Row>
+                        <Row >
                             <Cell scope="col" header="true">
                                 PRZYSTANKI
                             </Cell>
@@ -106,7 +106,7 @@ const Rozklad = () => {
                                 return undefined;
                             } else {
                                 return (
-                                    <Row>
+                                    <Row key={item.id}>
                                         <Cell scope="row" header="true" name="true">
                                             {item.name}
                                         </Cell>

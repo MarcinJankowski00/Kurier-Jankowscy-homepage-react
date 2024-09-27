@@ -9,5 +9,9 @@ export const Content = styled.iframe`
 
 `;
 export const Wrapper = styled.div`
+    margin-top: -80px;
     background-color: ${({ theme }) => theme.color.footerBackground};
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        margin-top: -40px;
+    }
 `;

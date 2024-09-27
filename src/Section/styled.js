@@ -5,7 +5,7 @@ export const Segment = styled.section`
     padding-top: 30px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         padding-top: 20px;
-        margin-top: 40px;
+        margin: 40px 0 90px 0;
     }
 `;
 

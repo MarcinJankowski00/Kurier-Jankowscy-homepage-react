@@ -30,7 +30,7 @@ const DownloadButton = styled.button`
             background-color: ${({ theme }) => theme.color.white};
             color: ${({ theme }) => theme.color.teal};;
         }
-        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             width: 100%;
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {

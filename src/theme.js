@@ -27,10 +27,11 @@ export const theme = {
         headerUnderline: "#808080",
     },
     breakpoint: {
-        mobileMax: 1050,
+        mobileMax: 1000,
+        mobileMax1: 950,
         mobileMax2: 820,
         mobileMax21: 583,
         mobileMax22: 370,
-        mobileMax3: 317,
+        mobileMax3: 320,
     },
 };

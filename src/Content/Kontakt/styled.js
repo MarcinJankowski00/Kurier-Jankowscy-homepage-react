@@ -4,16 +4,17 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 60px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         grid-template-columns: 1fr;
+        font-size: 18px;
     }   
 `;
 export const Segment = styled.div`
     max-width: 240px;
     margin-bottom: 35px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        max-width: 193px;
         margin-bottom: 20px;
     }   
 `;

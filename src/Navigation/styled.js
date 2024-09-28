@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr auto;
     max-width: 1200px;
     margin: 0 auto;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,7 +45,7 @@ export const LogoWrapper = styled.div`
     align-items: center;
     margin: 0;
     padding: 0 6px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
             margin: 10px 5px;
         }
 `;
@@ -59,7 +59,7 @@ export const Img = styled.img`
     display: block;
     visibility: visible;
     width: 280px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
             width: 250px;
         }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
@@ -74,9 +74,10 @@ export const List = styled.ul`
     list-style: none;
     padding-left: 0;
     margin-right: 20px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
         display: block;
         position: absolute;
+        font-size: 20px;
         top: 46px;
         right: 0;
         background-color: ${({ theme }) => theme.color.gallery};
@@ -91,13 +92,13 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        padding: 10px 30px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
+        padding: 16px 30px;
         text-align: center;
         border-bottom: 1px solid ${({ theme }) => theme.color.font};
         ${({ last }) => last && css`
             border-bottom: none;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
         `}
     }
 `;
@@ -141,7 +142,7 @@ export const Link = styled(NavLink)`
         }
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
         &.active {
             font-weight: bolder;
             &::after {
@@ -157,7 +158,7 @@ export const HamburgerIcon = styled.div`
     font-size: 2rem;
     margin-right: 20px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
         display: block;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {

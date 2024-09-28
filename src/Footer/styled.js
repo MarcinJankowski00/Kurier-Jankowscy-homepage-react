@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Bottom = styled.footer`
     background-color: ${({ theme }) => theme.color.footerBackground};
     color: ${({ theme }) => theme.color.white};
+    font-size: 22px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 20px;
+    }   
 `;
 
 export const Contact = styled.div`
@@ -10,17 +14,6 @@ export const Contact = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         flex-direction: column;
     }
-`;
-
-export const Adres = styled.p`
-    margin-right: 20px;
-`;
-
-export const Kontakt = styled.p`
-    margin-right: 20px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        margin: 0;
-    }   
 `;
 
 export const Cookies = styled.p`
@@ -31,17 +24,16 @@ export const Cookies = styled.p`
 
 export const Wrapper = styled.div`
     display: grid;
-    padding: 30px 0;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-column-gap:  80px;
+    margin: 40px 0;
+    grid-template-columns: auto auto 1fr;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         grid-template-columns: 1fr;
-
+        margin: 30px 0;
     }   
 `;
 export const Segment = styled.div`
-    max-width: 240px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        max-width: 193px;
         margin-bottom: 20px;
     }   
 `;
@@ -68,6 +60,9 @@ export const Icon = styled.img`
 export const Header = styled.h3`
     padding: 0;
     margin: 10px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 20px;
+    }  
 `;
 
 export const List = styled.ul`

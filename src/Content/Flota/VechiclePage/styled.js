@@ -38,7 +38,6 @@ export const Info = styled.ul`
     margin-top: 0;
     margin-bottom: 15.5%;
     text-align: center;
-    font-size: smaller;
 `;
 
 export const Item = styled.li`

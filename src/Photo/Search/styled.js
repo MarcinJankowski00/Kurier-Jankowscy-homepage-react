@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Form = styled.div`
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    justify-self: end;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         grid-column-start: 1;
         grid-row-start: 1;
     }
@@ -11,20 +12,26 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.color.search};
     color: ${({ theme }) => theme.color.teal};
     backdrop-filter: blur(15px);
-    width: 100%;
+    min-width: 430px;
     padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 0px 13px 0px ${({ theme }) => theme.color.silver};
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            margin-bottom: 20px;
-            margin-top: 0px;
-        }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        margin-bottom: 20px;
+        margin-top: 0px;
+        max-width: 1000px;
+        min-width: 0;
+    }
 `;
 
 export const Header = styled.h2`
     margin: 0;
     margin-bottom: 20px;
+    font-size: 26px;
     text-align: center;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        font-size: 22px;
+    }
 `;
 
 export const Element = styled.div`
@@ -62,6 +69,9 @@ export const Select = styled.select`
     border-radius: 5px;
     background-color: white;
     cursor: pointer;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        font-size: 16px;
+    }
 `;
 
 export const Switch = styled.div`
@@ -107,7 +117,7 @@ export const Input = styled.input`
     font-size: 17px;
     cursor: pointer;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            font-size: 13px;
+            font-size: 15px;
         }
 `;
 

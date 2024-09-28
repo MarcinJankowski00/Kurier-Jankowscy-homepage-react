@@ -4,11 +4,11 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 export const Image = styled.div`
-    height: 70vh;
+    min-height: 70vh;
     position: relative;
     overflow: hidden;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        height: 95vh;
+        min-height: auto;
     }
 `;
 
@@ -17,35 +17,39 @@ export const Wrapper = styled.div`
 `;
 
 export const Background = styled.div`
-  position: absolute;
-  filter: brightness(75%);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("${background}");
-  background-size: cover;
-  background-position: center;
-  transform: translate3d(0, ${props => props.offset}px, 0);
-  z-index: -1;
+    position: absolute;
+    filter: brightness(75%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("${background}");
+    background-size: cover;
+    background-position: center;
+    transform: translate3d(0, ${props => props.offset}px, 0);
+    z-index: -1;
 `;
 
 export const Content = styled.div`
     display: grid;
-    
-    grid-template-columns: 1.7fr 1fr;
+    grid-template-columns: auto auto;
     width: 100%;
-    height: 70vh;
-    justify-content: center;
+    min-height: 70vh;
     align-items: center;
+    margin-top: 62px;
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: normal;      
-        }
-        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            height: 95vh;
-        }
+        margin-top: 72px;
+        margin-bottom: 30px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: normal;
+        justify-content: center;
+        min-height: auto;
+    }
+
 `;
 
 export const Text = styled.div`
@@ -53,16 +57,19 @@ export const Text = styled.div`
     font-weight: bold;
     font-size: 45px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            display: none;
-        }
+        font-size: 35px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        display: none;
+    }
 `;
+
 export const Buttons = styled.div`
     color: white;
     font-size: 45px;
-    margin-right: 130px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-            margin: 0;
-        }
+         margin: 0;
+    }
 `;
 
 export const Span = styled.span`
@@ -87,7 +94,7 @@ export const Button = styled(Link)`
         border: 1px solid ${({ theme }) => theme.color.black};
         color: ${({ theme }) => theme.color.white};;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             width: 100%;
         }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {

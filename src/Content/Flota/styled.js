@@ -53,7 +53,7 @@ export const Title = styled.div`
     font-weight: bold;
     margin-bottom: 10px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
-        font-size: 16px;
+        font-size: 20px;
     }
 `;
 
@@ -63,7 +63,7 @@ export const Bottom = styled.div`
     justify-content: space-between;
     align-items: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
-        font-size: 12px;
+        font-size: 14px;
     }
 `;
 

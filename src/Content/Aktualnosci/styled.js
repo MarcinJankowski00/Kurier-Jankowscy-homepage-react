@@ -52,7 +52,7 @@ export const Title = styled.div`
     font-weight: bold;
     margin-bottom: 10px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
-        font-size: 16px;
+        font-size: 20px;
     }
 `;
 
@@ -60,7 +60,7 @@ export const FirstSentence = styled.div`
     margin-bottom: 10px;
     color: ${({ theme }) => theme.color.lessImportant};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
-        font-size: 12px;
+        font-size: 16px;
     }
 `;
 

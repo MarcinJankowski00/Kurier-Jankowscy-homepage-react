@@ -54,7 +54,7 @@ function App() {
           </Route>
           <Route path={toAboutUs()}>
             <Section
-              title="O firmie „KURIER” s.c. Jankowscy"
+              title="O firmie „Kurier” s.c. Jankowscy"
               content={<Onas />}
             />
           </Route>

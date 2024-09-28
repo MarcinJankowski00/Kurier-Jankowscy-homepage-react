@@ -149,6 +149,10 @@ export const Link = styled(NavLink)`
                 width: 0;
             }
         }
+
+        &:hover::after {
+            width: 0;
+        }
     }
 `;
 

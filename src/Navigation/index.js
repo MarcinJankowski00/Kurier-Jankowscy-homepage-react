@@ -25,7 +25,7 @@ const Navigation = () => {
         <Nav className="fixed-navigation">
             <Wrapper>
                 <LogoWrapper>
-                    <Logo to={toStart()} onClick={() => scrollToTop()}>
+                    <Logo to={toStart()} onClick={closeMenuOnLinkClick}>
                         <Img src={logo} alt="Logo Kurier" />
                     </Logo>
                 </LogoWrapper>

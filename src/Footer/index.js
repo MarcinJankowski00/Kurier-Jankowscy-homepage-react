@@ -1,5 +1,5 @@
-import { Bottom, HeaderContainer, Fb, Wrapper, Header, Link, Img, Icon, List, Item, Segment, Contact, Cookies } from "./styled";
-import fbLogo from "./images/fbLogo.png";
+import { Bottom, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, FbLink, Cookies } from "./styled";
+import { ReactComponent as FbIcon } from "./images/fbIcon.svg"
 import phoneIcon from "./images/phone.png";
 import mailIcon from "./images/mail.png";
 import Container from "../Container";
@@ -34,7 +34,11 @@ const Footer = () => (
                         <Item><Link href="tel:+48506110936">+48 506 110 936</Link></Item>
                     </List>
                 </Segment>
-                <Fb><a href="https://www.facebook.com/kurierjankowscy"><Img src={fbLogo} alt="Logo Facebook" /></a></Fb>
+                <div>
+                    <FbLink href="https://www.facebook.com/kurierjankowscy" target="_blank" rel="noopener noreferrer">
+                        <FbIcon />
+                    </FbLink>
+                </div>
             </Wrapper>
             <Contact>
                 <Cookies>

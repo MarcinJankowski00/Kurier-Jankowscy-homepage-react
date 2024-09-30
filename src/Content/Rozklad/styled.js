@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Text = styled.div`
     text-align: start;
-    margin: 20px 0;
+    margin: 20px 0 50px 0;
 `;
 
 export const TableContainer = styled.div`

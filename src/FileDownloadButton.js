@@ -10,7 +10,6 @@ const DownloadButton = styled.button`
     border: 2px solid ${({ theme }) => theme.color.teal};
     transition: 0.5s;
     ${({ variant }) => variant === 'schedule' && css`
-        margin-top: 30px;
         margin-bottom: 30px;
         &:hover {
             background-color: ${({ theme }) => theme.color.teal};

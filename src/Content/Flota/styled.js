@@ -1,19 +1,32 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const LoaderWrapper = styled.div`
-    width: 100%;
-    padding-top: 21.28%;
-    padding-bottom: 21.28%;
     display: flex;
+    width: 100%;
+    margin: 100px 0 600px 0;
     justify-content: center;
     align-items: center;
+    animation: ${fadeIn} 0.7s ease-in-out;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
+        margin: 50px 0 300px 0;
+    }
 `;
 
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
+    animation: ${fadeIn} 0.7s ease-in-out;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr 1fr;
     }

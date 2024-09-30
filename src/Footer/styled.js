@@ -59,7 +59,7 @@ export const Icon = styled.img`
 
 export const Header = styled.h3`
     padding: 0;
-    margin: 10px;
+    margin: 0 0 0 10px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         font-size: 20px;
     }  
@@ -68,6 +68,7 @@ export const Header = styled.h3`
 export const List = styled.ul`
     list-style: none;
     margin: 0;
+    margin-top: 10px ;
     padding: 0;
 `;
 
@@ -80,9 +81,27 @@ export const Item = styled.li`
 export const Link = styled.a`
     display: contents;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.3s;
     color: ${({ theme }) => theme.color.white};
     &:hover {
-        color: #4c90f4;
+        color: ${({ theme }) => theme.color.blue}
     }  
+`;
+
+export const FbLink = styled.a`
+    display: inline-block;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    svg {
+        fill: ${({ theme }) => theme.color.white};
+        transition: fill 0.3s ease;
+
+        &:hover {
+            fill: ${({ theme }) => theme.color.blue};
+        }
+    }
 `;

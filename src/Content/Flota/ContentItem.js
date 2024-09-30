@@ -1,29 +1,12 @@
-import { useState } from 'react';
-import { LoaderWrapper, Content, Photo, Info, Title, Bottom, More, Icon } from "./styled";
+import { Content, Photo, Info, Title, Bottom, More, Icon } from "./styled";
 import { toVechicle } from "../../routes";
-import { ClipLoader } from 'react-spinners';
 import personIcon from "./personIcon.png";
 
-const ContentItem = ({ item, scrollToTop }) => {
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-    const handleImageLoad = () => {
-        setIsImageLoaded(true);
-    };
-
+const ContentItem = ({ item }) => {
     return (
-        <Content 
-            to={toVechicle({ id: item.id })} 
-            onClick={scrollToTop}
-        >
-            {!isImageLoaded && (
-                <LoaderWrapper><ClipLoader size={50} color='#1d4368' /></LoaderWrapper>
-            )}
+        <Content to={toVechicle({ id: item.id })}>
             <Photo 
                 src={item.images[0].original} 
-                key={item.id}
-                style={{ display: isImageLoaded ? 'block' : 'none' }}
-                onLoad={handleImageLoad}
                 alt={item.name}
             />
             <Info>

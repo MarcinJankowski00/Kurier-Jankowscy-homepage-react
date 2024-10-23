@@ -30,8 +30,9 @@ export const Container = styled.div`
     max-width: 760px;
 `;
 
-export const Div = styled.div`
+export const Bigger = styled.h2`
     font-weight: bold;
+    font-size: larger;
     margin: 0;
     padding: 0;
 `;

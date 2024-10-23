@@ -1,9 +1,16 @@
 import logo from "./images/logo.png";
-import wilno from "./images/wilno.jpg";
+import autobus from "./images/autobus.jpg";
 import litwa from "./images/litwa.png";
 import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'nowy-autobus',
+        title: 'Nowy autobus na trasie Mońki - Białystok!',
+        firstSentence: 'Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie...',
+        date: '23-10-2024',
+        photo: autobus,
+    },
     {
         id: 'przypomnienie-bilety',
         title: 'Biuro czynne w sobotę – legitymacje i bilety',
@@ -38,12 +45,5 @@ export const news = [
         firstSentence: 'Informujemy, że dnia 02.05.2024 (czwartek), autobusy na linii...',
         date: '25-04-2024',
         photo: logo,
-    },
-    {
-        id: 'wyjazd-do-wilna-na-jarmark-kaziukowy',
-        title: 'Wyjazd do Wilna na Jarmark Kaziukowy',
-        firstSentence: 'W programie: Wyjazd o godz. 5:00, przejazd do Wilna Zwiedzanie: Ostra Brama...',
-        date: '23-02-2024',
-        photo: wilno,
     },
 ];

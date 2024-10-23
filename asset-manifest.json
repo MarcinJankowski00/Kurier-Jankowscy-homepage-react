@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.bf81bd05.js",
+    "main.js": "/static/js/main.69d8243b.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -19,7 +19,7 @@
     "static/media/newMan1.jpg": "/static/media/newMan1.65ed62ab6ab6bf6d05f0.jpg",
     "static/media/man4.jpg": "/static/media/man4.47b1bcbebd71215c8029.jpg",
     "static/media/renault1.jpg": "/static/media/renault1.55b334993bf5ead030e2.jpg",
-    "static/media/wilno.jpg": "/static/media/wilno.fa188fd5bea8f0c112d8.jpg",
+    "static/media/autobus.jpg": "/static/media/autobus.c3231d40d2c817cdc99b.jpg",
     "static/media/opel2.jpg": "/static/media/opel2.a327fcf4ed2ec492b660.jpg",
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
@@ -38,11 +38,11 @@
     "static/media/fbIcon.svg": "/static/media/fbIcon.da23756ff708a7cb21eac264b1faa0a7.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.bf81bd05.js.map": "/static/js/main.bf81bd05.js.map",
+    "main.69d8243b.js.map": "/static/js/main.69d8243b.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.bf81bd05.js"
+    "static/js/main.69d8243b.js"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.659f8ff3.js",
+    "main.js": "/static/js/main.b529ae91.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -31,6 +31,8 @@
     "static/media/opel4.jpg": "/static/media/opel4.4b4a127f8ea71ae9edad.jpg",
     "static/media/man5.jpg": "/static/media/man5.ecc170f8e4b68a187996.jpg",
     "static/media/renault3.jpg": "/static/media/renault3.efd0d649b0a38de12ef9.jpg",
+    "static/media/bus.jpg": "/static/media/bus.f26f95c9afe1ba95d4d9.jpg",
+    "static/media/vehicles.jpg": "/static/media/vehicles.b51f0d741be4557f8083.jpg",
     "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
     "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
@@ -38,11 +40,11 @@
     "static/media/fbIcon.svg": "/static/media/fbIcon.da23756ff708a7cb21eac264b1faa0a7.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.659f8ff3.js.map": "/static/js/main.659f8ff3.js.map",
+    "main.b529ae91.js.map": "/static/js/main.b529ae91.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.659f8ff3.js"
+    "static/js/main.b529ae91.js"
   ]
 }

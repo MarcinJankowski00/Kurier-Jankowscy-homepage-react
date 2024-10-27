@@ -1,5 +1,7 @@
-import { Bottom, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, FbLink, Cookies } from "./styled";
+import { Bottom, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, SocialLink, Cookies } from "./styled";
 import { ReactComponent as FbIcon } from "./images/fbIcon.svg"
+import { ReactComponent as IgIcon } from "./images/igIcon.svg"
+import { ReactComponent as TtIcon } from "./images/ttIcon.svg"
 import phoneIcon from "./images/phone.png";
 import mailIcon from "./images/mail.png";
 import Container from "../Container";
@@ -35,9 +37,15 @@ const Footer = () => (
                     </List>
                 </Segment>
                 <div>
-                    <FbLink href="https://www.facebook.com/kurierjankowscy" target="_blank" rel="noopener noreferrer">
+                    <SocialLink href="https://www.facebook.com/kurierjankowscy" target="_blank" rel="noopener noreferrer">
                         <FbIcon />
-                    </FbLink>
+                    </SocialLink>
+                    <SocialLink href="https://www.instagram.com/kurierjankowski/" target="_blank" rel="noopener noreferrer">
+                        <IgIcon />
+                    </SocialLink>
+                    <SocialLink href="https://www.tiktok.com/@kurierjankowski?_t=8qtlIIcgY34&_r=1&fbclid=IwZXh0bgNhZW0CMTAAAR1v_Mso5uC5pMxpnZS4ss58WQtCDfhHHRvw8dck0ZkqAdtnLR8C6B-PjjU_aem_3mnnYHD6syRbuR6JoE0I6A" target="_blank" rel="noopener noreferrer">
+                        <TtIcon />
+                    </SocialLink>
                 </div>
             </Wrapper>
             <Contact>

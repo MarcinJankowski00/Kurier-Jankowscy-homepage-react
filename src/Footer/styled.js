@@ -88,9 +88,11 @@ export const Link = styled.a`
     }  
 `;
 
-export const FbLink = styled.a`
+export const SocialLink = styled.a`
     display: inline-block;
     transition: transform 0.3s;
+    width: 50px;
+    margin: 0 5px;
 
     &:hover {
         transform: scale(1.1);

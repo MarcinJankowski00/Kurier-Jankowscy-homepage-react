@@ -34,10 +34,10 @@ const Oferta = () => (
                 <Wrapper>
                     <h2>Inne usługi turystyczne:</h2>
                     <ul>
-                        <li>Bilety lotnicze: LOT, KLM, Swiss, British Airways, Lufthansa, Air France, SAS, American Airlines itd.</li>
-                        <li>Tanie linie lotnicze: Wizzair, Norwegian, Aer Lingus, Iceland Expres, Ryanair, Easy Jet</li>
-                        <li>Bilety autokarowe: Eurolines Polska, Sindbad, Agat,  Żak Express Ecolines, PlusBus</li>
-                        <li>Bilety promowe: Polferries, Stena Lines, Unity Line itd.</li>
+                        <li>Bilety lotnicze: LOT, KLM, Swiss itd.</li>
+                        <li>Tanie linie lotnicze: Wizzair, Norwegian itd.</li>
+                        <li>Bilety autokarowe: Eurolines Polska, Sindbad itd.</li>
+                        <li>Bilety promowe: Polferries, Stena Lines itd.</li>
                         <li>Wczasy, wycieczki, kolonie i obozy dla dzieci i młodzieży</li>
                         <li>Przygotowanie i obsługę wycieczek oraz imprez integracyjnych</li>
                         <li>Pośrednictwo wizowe</li>

@@ -24,7 +24,7 @@ const MessagePage = () => {
                                     <Bigger>Co nowego?</Bigger>
                                     <ul>
                                         <li>System ADAS – Zaawansowany system, który analizuje sytuację na drodze i dba o bezpieczeństwo. Funkcje, takie jak awaryjne hamowanie, monitorowanie martwego pola i rozpoznawanie znaków, wspierają kierowcę w czasie rzeczywistym. </li>
-                                        <li>Gniazdka USB - dzięki czemu możesz naładować swój telefon ub inne urządzenia mobilne w trakcie podróży.</li>
+                                        <li>Gniazdka USB - dzięki czemu możesz naładować swój telefon lub inne urządzenia mobilne w trakcie podróży.</li>
                                         <li>Większy komfort podróży – nowoczesne, ergonomiczne siedzenia i wydajna klimatyzacja.</li>
                                         <li>Ciche i płynne działanie – zapewniające jeszcze bardziej przyjemną podróż.</li>
                                     </ul>

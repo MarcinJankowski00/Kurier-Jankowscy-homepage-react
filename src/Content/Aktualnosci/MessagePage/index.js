@@ -19,10 +19,12 @@ const MessagePage = () => {
                                 <Photo src={informationObject.photo} alt="Autobus" />
                                 <Container>
                                     <Bigger>Drodzy Pasażerowie,</Bigger>
-                                    <p>Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie kursował nasz nowy, nowoczesny autobus <strong>Iveco Crossway</strong>! Nowy pojazd to ulepszona wersja obecnie używanych autobusów, oferująca większy komfort i udogodnienia dla naszych pasażerów.</p>
+                                    <p>Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie kursował nasz nowy, nowoczesny autobus Iveco Crossway!</p>
+                                    <p>Nowy pojazd to ulepszona wersja obecnie używanych autobusów, oferująca większy komfort i udogodnienia dla naszych pasażerów.</p>
                                     <Bigger>Co nowego?</Bigger>
                                     <ul>
-                                        <li>Każdy fotel został wyposażony w gniazdko USB, dzięki czemu możesz naładować swój telefon lub inne urządzenia mobilne w trakcie podróży.</li>
+                                        <li>System ADAS – Zaawansowany system, który analizuje sytuację na drodze i dba o bezpieczeństwo. Funkcje, takie jak awaryjne hamowanie, monitorowanie martwego pola i rozpoznawanie znaków, wspierają kierowcę w czasie rzeczywistym. </li>
+                                        <li>Gniazdka USB - dzięki czemu możesz naładować swój telefon ub inne urządzenia mobilne w trakcie podróży.</li>
                                         <li>Większy komfort podróży – nowoczesne, ergonomiczne siedzenia i wydajna klimatyzacja.</li>
                                         <li>Ciche i płynne działanie – zapewniające jeszcze bardziej przyjemną podróż.</li>
                                     </ul>

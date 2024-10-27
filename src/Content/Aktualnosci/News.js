@@ -8,7 +8,7 @@ export const news = [
         id: 'nowy-autobus',
         title: 'Nowy autobus na trasie Mońki - Białystok!',
         firstSentence: 'Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie...',
-        date: '23-10-2024',
+        date: '27-10-2024',
         photo: autobus,
     },
     {

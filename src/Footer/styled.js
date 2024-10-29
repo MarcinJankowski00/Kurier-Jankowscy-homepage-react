@@ -9,6 +9,20 @@ export const Bottom = styled.footer`
     }   
 `;
 
+export const CallToAction = styled.div`
+    margin: 20px 0 40px;
+    max-width: 800px;
+    font-weight: bold;
+    font-size: 44px;
+    border-bottom: 1px solid ${({ theme }) => theme.color.white};
+    padding-bottom: 20px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        font-size: 32px;
+        padding-bottom: 15px;
+        margin: 10px 0 20px;
+    }  
+`;
+
 export const Contact = styled.div`
     display: flex;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

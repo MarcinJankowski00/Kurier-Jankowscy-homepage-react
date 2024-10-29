@@ -1,4 +1,4 @@
-import { Bottom, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, SocialLink, Cookies } from "./styled";
+import { Bottom, CallToAction, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, SocialLink, Cookies } from "./styled";
 import { ReactComponent as FbIcon } from "./images/fbIcon.svg"
 import { ReactComponent as IgIcon } from "./images/igIcon.svg"
 import { ReactComponent as TtIcon } from "./images/ttIcon.svg"
@@ -9,13 +9,17 @@ import Container from "../Container";
 
 const Footer = () => (
     <Bottom id="Kontakt">
+
         <Container>
+        <CallToAction>
+                Zadzwoń lub wyślij zapytanie
+        </CallToAction>
             <Wrapper>
                 <Segment>
                     <HeaderContainer>
                         <Icon src={mailIcon} alt="ikona maila" />
                         <Header>
-                            E-MAIL
+                            E-mail
                         </Header>
                     </HeaderContainer>
                     <List>
@@ -27,7 +31,7 @@ const Footer = () => (
                     <HeaderContainer>
                         <Icon src={phoneIcon} alt="ikona telefonu" />
                         <Header>
-                            TELEFON
+                            Telefon
                         </Header>
                     </HeaderContainer>
                     <List>

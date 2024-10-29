@@ -1,6 +1,9 @@
-import { Content, Container, Segment, Wrapper, Image } from "./styled";
+import { Content, Container, Segment, Wrapper, ImageWrapper, Image, Button } from "./styled";
+import { DecorativeShape } from "../../decorativeShape";
 import vehicles from "./images/vehicles.jpg"
 import bus from "./images/bus.jpg"
+import { toFleat } from "../../routes";
+import scrollToTop from "../../scrollToTop";
 
 const Oferta = () => (
     <Container>
@@ -27,10 +30,18 @@ const Oferta = () => (
                         <li>Oferta obejmuje przewozy krajowe oraz zagraniczne</li>
                     </ul>
                 </Wrapper>
-                <Image src={vehicles} alt="autobusy"/>
+                <ImageWrapper>
+                    <Image src={vehicles} alt="autobusy"/>
+                    <DecorativeShape  />
+                    <DecorativeShape left="true" />
+                </ImageWrapper>
             </Segment>
             <Segment>
-                <Image src={bus} alt="autobus"/>
+                <ImageWrapper>
+                    <Image src={bus} alt="autobus"/>
+                    <DecorativeShape />
+                    <DecorativeShape />
+                </ImageWrapper>
                 <Wrapper>
                     <h2>Inne usługi turystyczne:</h2>
                     <ul>
@@ -45,6 +56,9 @@ const Oferta = () => (
                     </ul>
                 </Wrapper>
             </Segment>
+            <Button to={toFleat} onClick={scrollToTop}>
+                 Sprawdź naszą flotę
+            </Button>
         </Content>
     </Container>
 );

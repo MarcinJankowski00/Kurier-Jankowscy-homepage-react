@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.f60ca3f4.js",
+    "main.js": "/static/js/main.cd9747ce.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -23,6 +23,7 @@
     "static/media/opel2.jpg": "/static/media/opel2.a327fcf4ed2ec492b660.jpg",
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
+    "static/media/office.jpg": "/static/media/office.ef1a202e07e7b13eb21e.jpg",
     "static/media/volkswagen2.jpg": "/static/media/volkswagen2.da9d1a66f2ef7ef3ed2b.jpg",
     "static/media/turino2.jpg": "/static/media/turino2.9444822ce483e8d23614.jpg",
     "static/media/newMan2.jpg": "/static/media/newMan2.5fdfe779a2477eb2d23a.jpg",
@@ -42,11 +43,11 @@
     "static/media/fbIcon.svg": "/static/media/fbIcon.da23756ff708a7cb21eac264b1faa0a7.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.f60ca3f4.js.map": "/static/js/main.f60ca3f4.js.map",
+    "main.cd9747ce.js.map": "/static/js/main.cd9747ce.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.f60ca3f4.js"
+    "static/js/main.cd9747ce.js"
   ]
 }

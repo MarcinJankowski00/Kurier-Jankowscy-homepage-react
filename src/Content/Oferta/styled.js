@@ -66,7 +66,7 @@ export const Button = styled(Link)`
         border: 2px solid ${({ theme }) => theme.color.teal};
         color: ${({ theme }) => theme.color.white};;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
         font-size: 15px;
     }
 `;

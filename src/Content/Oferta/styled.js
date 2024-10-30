@@ -51,6 +51,7 @@ export const Image = styled.img`
 `;
 
 export const Button = styled(Link)`
+    text-align: center;
     align-self: center;
     background-color: transparent;
     text-decoration: none;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { keyframes } from 'styled-components';
+import { ReactComponent as PersonIcon } from "./person.svg"
 
 const fadeIn = keyframes`
   from {
@@ -72,7 +73,7 @@ export const Title = styled.div`
 
 export const Bottom = styled.div`
     display: flex;
-    font-size: 15px;
+    font-size: 16px;
     justify-content: space-between;
     align-items: center;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
@@ -90,8 +91,9 @@ export const More = styled.div`
     }
 `;
 
-export const Icon = styled.img`
-    width: 15px;
-    margin-right: 4px;
+export const StyledPersonIcon = styled(PersonIcon)`
+    width: 14px;
+    margin-right: 5px;
+    fill: ${({ theme }) => theme.color.font};
 `;
 

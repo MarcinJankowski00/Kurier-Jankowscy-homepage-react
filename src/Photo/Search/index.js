@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Label, DateDiv, Magnifiericon, Span, Switchicon, Input } from "./styled";
+import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Label, DateDiv, StyledMagnifierIcon, Span, StyledLoopIcon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
 import { busStops } from 'C:/dev/kurier/src/BusStops.js';
-import magnifiericon from "./magnifiericon.png";
-import switchicon from "./switchicon.png";
 import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
 
 
@@ -106,7 +104,7 @@ const Search = () => {
                                 </label>
                             </Label>
                         </Div>
-                        <Switch onClick={switchStops}><Switchicon src={switchicon} /></Switch>
+                        <Switch onClick={switchStops}><StyledLoopIcon /></Switch>
                     </Wrapper>
                     <DateDiv>
                         <label>
@@ -121,7 +119,7 @@ const Search = () => {
                         </label>
                     </DateDiv>
                 </Element>
-                <Button onClick={openModal}><Text>Znajdź połączenie</Text> <Magnifiericon src={magnifiericon} /></Button>
+                <Button onClick={openModal}><StyledMagnifierIcon /><Text>Znajdź połączenie</Text></Button>
             </Container>
             <Modal isModalOpen={isModalOpen} onClose={closeModal}>
                 <Result

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ReactComponent as PhoneIcon } from "../icons/phone.svg"
+import { ReactComponent as MailIcon } from "../icons/email.svg"
 
 export const Bottom = styled.footer`
     background-color: ${({ theme }) => theme.color.footerBackground};
@@ -66,9 +68,15 @@ export const Img = styled.img`
     display: block;
     width: 100%;
 `;
-export const Icon = styled.img`
+
+export const StyledMailIcon = styled(MailIcon)`
     width: 30px;
-    margin-right: 1px;
+    fill: ${({ theme }) => theme.color.white};
+`;
+
+export const StyledPhoneIcon = styled(PhoneIcon)`
+    width: 25px;
+    fill: ${({ theme }) => theme.color.white};
 `;
 
 export const Header = styled.h3`

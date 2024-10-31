@@ -1,9 +1,7 @@
-import { Bottom, CallToAction, HeaderContainer, Wrapper, Header, Link, Icon, List, Item, Segment, Contact, SocialLink, Cookies } from "./styled";
-import { ReactComponent as FbIcon } from "./images/fbIcon.svg"
-import { ReactComponent as IgIcon } from "./images/igIcon.svg"
-import { ReactComponent as TtIcon } from "./images/ttIcon.svg"
-import phoneIcon from "./images/phone.png";
-import mailIcon from "./images/mail.png";
+import { Bottom, CallToAction, HeaderContainer, Wrapper, Header, Link, StyledMailIcon, StyledPhoneIcon, List, Item, Segment, Contact, SocialLink, Cookies } from "./styled";
+import { ReactComponent as FbIcon } from "./icons/fbIcon.svg"
+import { ReactComponent as IgIcon } from "./icons/igIcon.svg"
+import { ReactComponent as TtIcon } from "./icons/ttIcon.svg"
 import Container from "../Container";
 
 
@@ -17,7 +15,7 @@ const Footer = () => (
             <Wrapper>
                 <Segment>
                     <HeaderContainer>
-                        <Icon src={mailIcon} alt="ikona maila" />
+                    <StyledMailIcon />
                         <Header>
                             E-mail
                         </Header>
@@ -29,7 +27,7 @@ const Footer = () => (
                 </Segment>
                 <Segment>
                     <HeaderContainer>
-                        <Icon src={phoneIcon} alt="ikona telefonu" />
+                    <StyledPhoneIcon />
                         <Header>
                             Telefon
                         </Header>

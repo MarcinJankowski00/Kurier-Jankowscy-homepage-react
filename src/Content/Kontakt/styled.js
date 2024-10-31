@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { ReactComponent as PhoneIcon } from "../../icons/phone.svg"
+import { ReactComponent as LocalizationIcon } from "../../icons/location.svg"
+import { ReactComponent as ClockIcon } from "../../icons/clock.svg"
+import { ReactComponent as MailIcon } from "../../icons/email.svg"
 
 export const Wrapper = styled.div`
     display: grid;
@@ -29,9 +33,24 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Icon = styled.img`
+export const StyledMailIcon = styled(MailIcon)`
     width: 30px;
-    margin-right: 1px;
+    fill: ${({ theme }) => theme.color.font};
+`;
+
+export const StyledClockIcon = styled(ClockIcon)`
+    width: 30px;
+    fill: ${({ theme }) => theme.color.font};
+`;
+
+export const StyledLocalizationIcon = styled(LocalizationIcon)`
+    width: 29px;
+    fill: ${({ theme }) => theme.color.font};
+`;
+
+export const StyledPhoneIcon = styled(PhoneIcon)`
+    width: 30px;
+    fill: ${({ theme }) => theme.color.font};
 `;
 
 export const Header = styled.h3`

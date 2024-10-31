@@ -1,8 +1,19 @@
-import { Wrapper, Container, InfoWrapper, Header, Link, Icon, List, Item, Segment, ImageWrapper, Image } from "./styled";
-import localizationIcon from "./images/localization.png";
-import phoneIcon from "./images/phone.png";
-import mailIcon from "./images/mail.png";
-import clockIcon from "./images/clock.png";
+import {
+    Wrapper,
+    Container,
+    InfoWrapper,
+    Header,
+    Link,
+    StyledLocalizationIcon,
+    StyledClockIcon,
+    StyledMailIcon,
+    StyledPhoneIcon,
+    List,
+    Item,
+    Segment,
+    ImageWrapper,
+    Image
+} from "./styled";
 import office from "./images/office.jpg"
 import { DecorativeShape } from "../../decorativeShape";
 
@@ -11,9 +22,9 @@ const Kontakt = () => (
         <InfoWrapper>
             <Segment>
                 <Container>
-                    <Icon src={localizationIcon} alt="ikona lokalizacji" />
+                    <StyledLocalizationIcon />
                     <Header>
-                        ADRES
+                        Adres
                     </Header>
                 </Container>
                 <List>
@@ -23,9 +34,9 @@ const Kontakt = () => (
             </Segment>
             <Segment>
                 <Container>
-                    <Icon src={clockIcon} alt="ikona zagara" />
+                    <StyledClockIcon />
                     <Header>
-                        GODZINY PRACY
+                        Godziny pracy
                     </Header>
                 </Container>
                 <List>
@@ -38,9 +49,9 @@ const Kontakt = () => (
             </Segment>
             <Segment>
                 <Container>
-                    <Icon src={mailIcon} alt="ikona maila" />
+                    <StyledMailIcon />
                     <Header>
-                        E-MAIL
+                        E-mail
                     </Header>
                 </Container>
                 <List>
@@ -50,9 +61,9 @@ const Kontakt = () => (
             </Segment>
             <Segment>
                 <Container>
-                    <Icon src={phoneIcon} alt="ikona telefonu" />
+                    <StyledPhoneIcon />
                     <Header>
-                        TELEFON
+                        Telefon
                     </Header>
                 </Container>
                 <List>

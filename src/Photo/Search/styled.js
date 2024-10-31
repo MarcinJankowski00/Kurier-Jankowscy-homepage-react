@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ReactComponent as LoopIcon } from "./icons/loop.svg"
+import { ReactComponent as MagnifierIcon } from "./icons/magnifier.svg"
 
 export const Form = styled.div`
     justify-self: end;
@@ -77,7 +79,7 @@ export const Select = styled.select`
 export const Switch = styled.div`
     display: flex;
     align-items: center;
-    padding: 36px 2%;
+    padding: 36px 1%;
     margin-bottom: 18px;
     border: 1px solid;
     background-color: ${({ theme }) => theme.color.teal};
@@ -93,11 +95,10 @@ export const Switch = styled.div`
     }
 `;
 
-export const Switchicon = styled.img`
-    display: block;
-    width: 18px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        width: 15px;
+export const StyledLoopIcon = styled(LoopIcon)`
+    width: 22px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+        width: 18px;
     }
 `;
 
@@ -130,7 +131,7 @@ export const Button = styled.button`
     border: 1px solid ${({ theme }) => theme.color.teal};
     background-color: ${({ theme }) => theme.color.teal};
     color: ${({ theme }) => theme.color.white};
-    padding: 8px 24px;
+    padding: 12px 24px;
     transition: 0.5s;
     cursor: pointer;
     &:hover {
@@ -146,6 +147,11 @@ export const Text = styled.p`
     margin: 0;
 `;
 
-export const Magnifiericon = styled.img`
-    width: 30px;
+export const StyledMagnifierIcon = styled(MagnifierIcon)`
+    width: 20px;
+    margin-right: 10px;
+    fill: ${({ theme }) => theme.color.white};
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+        width: 15px;
+    }
 `;

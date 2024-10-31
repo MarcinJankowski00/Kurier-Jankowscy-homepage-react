@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.cd9747ce.js",
+    "main.js": "/static/js/main.a3259a76.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -36,18 +36,24 @@
     "static/media/vehicles.jpg": "/static/media/vehicles.b51f0d741be4557f8083.jpg",
     "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
-    "static/media/magnifiericon.png": "/static/media/magnifiericon.5c4495de0eeb8ca6dd51.png",
+    "static/media/phone.svg": "/static/media/phone.c83919e04772513e91ece3a9e5b59f44.svg",
     "index.html": "/index.html",
+    "static/media/location.svg": "/static/media/location.d40c8bf9f703d5b5006b3826cf82e760.svg",
     "static/media/ttIcon.svg": "/static/media/ttIcon.c5662c81b142b45296dcca73640318a5.svg",
+    "static/media/email.svg": "/static/media/email.5c1c5ef320c92b1a3e2c5a16d7f854a0.svg",
     "static/media/igIcon.svg": "/static/media/igIcon.a356a1ae04f338f26a23c64c854b2a62.svg",
+    "static/media/person.svg": "/static/media/person.ee76bb83ca32cf487462e510aa9ed05f.svg",
+    "static/media/clock.svg": "/static/media/clock.fac47c906558fa79e07bfd331f9e24ee.svg",
+    "static/media/magnifier.svg": "/static/media/magnifier.c6caa829588db0b730a692eb589f4467.svg",
     "static/media/fbIcon.svg": "/static/media/fbIcon.da23756ff708a7cb21eac264b1faa0a7.svg",
+    "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.cd9747ce.js.map": "/static/js/main.cd9747ce.js.map",
+    "main.a3259a76.js.map": "/static/js/main.a3259a76.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.cd9747ce.js"
+    "static/js/main.a3259a76.js"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.a3259a76.js",
+    "main.js": "/static/js/main.d0cb4da1.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/background.jpg": "/static/media/background.9f3bca4e862daa4879ef.jpg",
@@ -10,7 +10,6 @@
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/turino1.jpg": "/static/media/turino1.553a3dfec255c34363e2.jpg",
-    "static/media/volkswagen1.jpg": "/static/media/volkswagen1.a243747f2f22cd9cc449.jpg",
     "static/media/solaris2.jpg": "/static/media/solaris2.6655c3455ff8e459347b.jpg",
     "static/media/backToSchool.png": "/static/media/backToSchool.a03c6749bed0c5848117.png",
     "static/media/manLions1.jpg": "/static/media/manLions1.2a61256cacaf6ba2d744.jpg",
@@ -24,10 +23,8 @@
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
     "static/media/office.jpg": "/static/media/office.ef1a202e07e7b13eb21e.jpg",
-    "static/media/volkswagen2.jpg": "/static/media/volkswagen2.da9d1a66f2ef7ef3ed2b.jpg",
     "static/media/turino2.jpg": "/static/media/turino2.9444822ce483e8d23614.jpg",
     "static/media/newMan2.jpg": "/static/media/newMan2.5fdfe779a2477eb2d23a.jpg",
-    "static/media/volkswagen3.jpg": "/static/media/volkswagen3.b6acde9d0897a77a88b3.jpg",
     "static/media/opel3.jpg": "/static/media/opel3.d38c60e5c6c7cbb4d4f3.jpg",
     "static/media/opel4.jpg": "/static/media/opel4.4b4a127f8ea71ae9edad.jpg",
     "static/media/man5.jpg": "/static/media/man5.ecc170f8e4b68a187996.jpg",
@@ -49,11 +46,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.a3259a76.js.map": "/static/js/main.a3259a76.js.map",
+    "main.d0cb4da1.js.map": "/static/js/main.d0cb4da1.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.a3259a76.js"
+    "static/js/main.d0cb4da1.js"
   ]
 }

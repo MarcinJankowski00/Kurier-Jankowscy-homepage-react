@@ -4,9 +4,6 @@ import renault3 from './photos/renault3.jpg';
 import opel2 from './photos/opel2.jpg';
 import opel3 from './photos/opel3.jpg';
 import opel4 from './photos/opel4.jpg';
-import volkswagen1 from './photos/volkswagen1.jpg';
-import volkswagen2 from './photos/volkswagen2.jpg';
-import volkswagen3 from './photos/volkswagen3.jpg';
 import sprinter1 from './photos/sprinter1.jpg';
 import sprinter2 from './photos/sprinter2.jpg';
 import setra1 from './photos/setra1.jpg';
@@ -24,67 +21,58 @@ import newMan2 from './photos/newMan2.jpg';
 
 export const data = [
     {
-        id: "renault-trafic",
-        name: "Renault Trafic",
-        seats: "8+1",
-        content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
+        id: "man-lions-coach-59",
+        name: "Man Lions Coach",
+        seats: "59+2",
+        content: ["59+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
-                original: renault1,
+                original: man4,
             },
             {
-                original: renault2,
-            },
-            {
-                original: renault3,
+                original: man5,
             },
         ]
     },
     {
-        id: "opel-vivaro",
-        name: "Opel Vivaro",
-        seats: "8+1",
-        content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
+        id: "man-lions-coach-571",
+        name: "Man Lions Coach",
+        seats: "57+2",
+        content: ["57+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
-                original: opel2,
+                original: newMan1,
             },
             {
-                original: opel3,
-            },
-            {
-                original: opel4,
+                original: newMan2,
             },
         ]
     },
     {
-        id: "volkswagen-caravelle",
-        name: "Volkswagen Caravelle",
-        seats: "8+1",
-        content: ["8+1 miejsca", "klimatyzacja", "DVD"],
+        id: "man-lions-coach-57",
+        name: "Man Lions Coach",
+        seats: "57+2",
+        content: ["57+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
-                original: volkswagen1,
+                original: manLions1,
             },
             {
-                original: volkswagen2,
+                original: manLions2,
             },
-            {
-                original: volkswagen3,
-            },
-        ] 
+        ]
     },
     {
-        id: "mercedes-sprinter",
-        name: "Mercedes Sprinter",
-        seats: "19+2",
-        content: ["19+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        id: "solaris-vacanza",
+        name: "Solaris Vacanza",
+        seats: "50+2",
+        content: ["50+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "lodówka", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
-                original: sprinter1,
+                original: solaris1,
             },
             {
-                original: sprinter2,
+                original: solaris2,
             },
         ]
     },
@@ -117,58 +105,50 @@ export const data = [
         ]
     },
     {
-        id: "solaris-vacanza",
-        name: "Solaris Vacanza",
-        seats: "50+2",
-        content: ["50+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "lodówka", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        id: "mercedes-sprinter",
+        name: "Mercedes Sprinter",
+        seats: "19+2",
+        content: ["19+2 miejsca", "klimatyzacja", "DVD", "mikrofon", "regulowane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
         images: [
             {
-                original: solaris1,
+                original: sprinter1,
             },
             {
-                original: solaris2,
+                original: sprinter2,
             },
         ]
     },
     {
-        id: "man-lions-coach-57",
-        name: "Man Lions Coach",
-        seats: "57+2",
-        content: ["57+2 miejsca", "klimatyzacja",  "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        id: "opel-vivaro",
+        name: "Opel Vivaro",
+        seats: "8+1",
+        content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
             {
-                original: manLions1,
+                original: opel2,
             },
             {
-                original: manLions2,
+                original: opel3,
+            },
+            {
+                original: opel4,
             },
         ]
     },
     {
-        id: "man-lions-coach-59",
-        name: "Man Lions Coach",
-        seats: "59+2",
-        content: ["59+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
+        id: "renault-trafic",
+        name: "Renault Trafic",
+        seats: "8+1",
+        content: ["8+1 miejsca", "klimatyzacja", "nawigacja"],
         images: [
             {
-                original: man4,
+                original: renault1,
             },
             {
-                original: man5,
-            },
-        ]
-    },
-    {
-        id: "man-lions-coach-591",
-        name: "Man Lions Coach",
-        seats: "59+2",
-        content: ["59+2 miejsca", "klimatyzacja", "DVD/dwa monitory", "mikrofon", "WC", "coffe bar", "lodówka", "regulowane skórzane fotele", "ogrzewanie postojowe", "indywidualne nawiewy", "indywidualne oświetlenie"],
-        images: [
-            {
-                original: newMan1,
+                original: renault2,
             },
             {
-                original: newMan2,
+                original: renault3,
             },
         ]
     },

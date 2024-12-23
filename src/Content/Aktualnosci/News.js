@@ -1,9 +1,17 @@
 import logo from "./images/logo.png";
+import swieta from "./images/swieta.png";
 import autobus from "./images/autobus.jpg";
 import litwa from "./images/litwa.png";
 import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'zyczenia-swiateczne',
+        title: 'Życzenia bożonarodzeniowe',
+        firstSentence: 'Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom...',
+        date: '23-12-2024',
+        photo: swieta,
+    },
     {
         id: 'nowy-autobus',
         title: 'Nowy autobus na trasie Mońki - Białystok!',
@@ -37,13 +45,6 @@ export const news = [
         title: 'Zmiana rozkładu w dniu 16.08.2024',
         firstSentence: 'Informujemy, że dnia 16.08.2024 (piątek), autobusy na linii...',
         date: '12-08-2024',
-        photo: logo,
-    },
-    {
-        id: 'zmiana-rozkładu-w-dniu-02-05-2024',
-        title: 'Zmiana rozkładu w dniu 02.05.2024',
-        firstSentence: 'Informujemy, że dnia 02.05.2024 (czwartek), autobusy na linii...',
-        date: '25-04-2024',
         photo: logo,
     },
 ];

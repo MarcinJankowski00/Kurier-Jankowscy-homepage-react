@@ -7,6 +7,35 @@ const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
 
+    if (id === 'zyczenia-swiateczne')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Logo" />
+                                <Container>
+                                    <Bigger>Drodzy Pasażerowie,</Bigger><br />
+                                    Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom oraz Współpracownikom zdrowia, szczęścia i spełnienia marzeń. Niech ten czas będzie pełen spokoju, radości i rodzinnego ciepła. 🎄✨<br />
+                                    <br />
+                                    Przypominamy również o skróconym rozkładzie jazdy w dniach 24 i 31 grudnia 2024 roku:<br />
+                                    <br />
+                                    Wyjazdy z Moniek: 05:15, 07:25, 10:05, 12:20, 14:40<br />
+                                    Wyjazdy z Białegostoku: 06:20, 08:35, 11:15, 13:35, 15:45<br />
+                                    <br />
+                                    <b>W dniu 24.12.2024 biuro będzie nieczynne.</b><br />
+                                    <br />
+                                    <b> Wesołych Świąt i Szczęśliwego Nowego Roku!</b>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'nowy-autobus')
         return (
             <>
@@ -166,29 +195,6 @@ const MessagePage = () => {
                                     <Bigger>Drodzy Pasażerowie,</Bigger><br />
                                     Informujemy, że <b>dnia 16.08.2024 (piątek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
                                     <br />
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'zmiana-rozkładu-w-dniu-02-05-2024')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Logo" />
-                                <Container>
-                                    <Bigger>Drodzy Pasażerowie,</Bigger><br />
-                                    Informujemy, że <b>dnia 02.05.2024 (czwartek)</b>, autobusy na linii <b>Mońki – Białystok</b>
-                                    będą kursowały wg. <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
-                                    <br />
-                                    Pozdrawiamy i życzymy udanej majówki🌼
                                 </Container>
                             </Content>
                         </>

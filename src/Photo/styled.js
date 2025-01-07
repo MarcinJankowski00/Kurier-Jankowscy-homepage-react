@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "./background.png";
+import background from "./background.jpg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 

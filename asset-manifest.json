@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.95762842.js",
+    "main.js": "/static/js/main.ff3e827f.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
-    "static/media/background.png": "/static/media/background.a7cdb105636418850d03.png",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
+    "static/media/background.jpg": "/static/media/background.1e4536df4cf0e16abfe8.jpg",
     "static/media/litwa.png": "/static/media/litwa.c713c619358db76bb68f.png",
     "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
@@ -32,7 +32,7 @@
     "static/media/renault3.jpg": "/static/media/renault3.efd0d649b0a38de12ef9.jpg",
     "static/media/bus.jpg": "/static/media/bus.f26f95c9afe1ba95d4d9.jpg",
     "static/media/vehicles.jpg": "/static/media/vehicles.b51f0d741be4557f8083.jpg",
-    "static/media/kurierlogo.png": "/static/media/kurierlogo.376082ea5bc139d64c5a.png",
+    "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
     "static/media/phone.svg": "/static/media/phone.c83919e04772513e91ece3a9e5b59f44.svg",
     "index.html": "/index.html",
@@ -47,11 +47,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.95762842.js.map": "/static/js/main.95762842.js.map",
+    "main.ff3e827f.js.map": "/static/js/main.ff3e827f.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.95762842.js"
+    "static/js/main.ff3e827f.js"
   ]
 }

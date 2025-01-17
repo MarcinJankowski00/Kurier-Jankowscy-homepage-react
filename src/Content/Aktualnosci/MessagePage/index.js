@@ -6,7 +6,59 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'wyjazd-na-jarmark')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
+                                <Container>
+                                    <b>Zapraszamy na wycieczkę Wilno – Jarmark Kaziukowy</b>
 
+                                    <p>📅 8 marca 2025 r. (sobota)</p>
+
+                                    <b>Kaziuki</b>– kultowy wileński jarmark organizowany od setek lat w dniu św. Kazimierza. Urokliwe uliczki starówki wypełniają stragany z:
+                                    <ul>
+                                        <li>rękodziełem ludowym</li>
+                                        <li>regionalnymi przysmakami</li>
+                                        <li>tradycyjnymi palmami wileńskimi</li>
+                                    </ul>
+
+                                    <b>Program wyjazdu:</b>
+                                    <ul>
+                                        <li><b>5:00</b> – Wyjazd do Wilna</li>
+                                        <li><b>11:00</b> (czasu litewskiego) – Zwiedzanie: Ostra Brama, Kaplica Ostrobramska, Cerkiew Św. Trójcy, Kościół Św. Piotra i Pawła, cmentarz na Rossie</li>
+                                        <li>Pobyt na Jarmarku Kaziukowym – 2 godziny czasu wolnego</li>
+                                        <li><b>14:30</b> – Przejazd do Trok: zwiedzanie Zamku Książąt Litewskich (z zewnątrz), spacer dzielnicą karaimską. Możliwość zamówienia obiadu karaimskiego (za dodatkową opłatą).</li>
+                                        <li><b>17:00</b> – Wyjazd w drogę powrotną</li>
+                                        <li><b>21:30</b> – Planowany powrót</li>
+                                    </ul>
+
+                                    <div>
+                                        <b>W cenie 210 zł/os.:</b>
+                                        <ul>
+                                            <li>Transport autokarem</li>
+                                            <li>Ubezpieczenie kraj/zagranica</li>
+                                            <li>Usługi pilota i przewodnika</li>
+                                        </ul>
+                                    </div>
+                                    <p>Dodatkowo: obiad w Trokach ok. 10 EUR (2 kibiny i rosół).</p>
+                                    <div>
+                                        <b>Kontakt i rezerwacje:</b>
+                                        <p>Tel: <Link href="tel:+48515073556">+48 515 073 556</Link></p>
+                                        <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
+                                    </div>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'zyczenia-swiateczne')
         return (
             <>
@@ -173,28 +225,6 @@ const MessagePage = () => {
                                     🚍 Serdecznie zapraszamy do naszego biura przy ulicy Dworcowej 6 w Mońkach od poniedziałku do piątku w godzinach 8:00-16:00.<br />
                                     <br />
                                     📖 Życzymy Wam radosnego powrotu do szkoły oraz wielu inspirujących doświadczeń w nowym roku szkolnym!
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-
-    if (id === 'zmiana-rozkładu-w-dniu-16-08-2024')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Logo" />
-                                <Container>
-                                    <Bigger>Drodzy Pasażerowie,</Bigger><br />
-                                    Informujemy, że <b>dnia 16.08.2024 (piątek)</b>, autobusy na linii <b>Mońki – Białystok</b> będą kursowały wg <b>rozkładu sobotniego</b>. Wyszukiwarka połączeń została zaktualizowana, o tę zmianę.<br />
-                                    <br />
                                 </Container>
                             </Content>
                         </>

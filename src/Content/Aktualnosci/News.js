@@ -3,8 +3,16 @@ import swieta from "./images/swieta.png";
 import autobus from "./images/autobus.jpg";
 import litwa from "./images/litwa.png";
 import backToSchool from "./images/backToSchool.png"
+import jarmark from "./images/jarmark.png"
 
 export const news = [
+    {
+        id: 'wyjazd-na-jarmark',
+        title: 'Wyjazd na Jarmark Kaziukowy',
+        firstSentence: 'Zapraszamy na wycieczkę Wilno – Jarmark Kaziukowy...',
+        date: '17-01-2025',
+        photo: jarmark,
+    },
     {
         id: 'zyczenia-swiateczne',
         title: 'Życzenia bożonarodzeniowe',
@@ -39,12 +47,5 @@ export const news = [
         firstSentence: 'Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok...',
         date: '30-08-2024',
         photo: backToSchool,
-    },
-    {
-        id: 'zmiana-rozkładu-w-dniu-16-08-2024',
-        title: 'Zmiana rozkładu w dniu 16.08.2024',
-        firstSentence: 'Informujemy, że dnia 16.08.2024 (piątek), autobusy na linii...',
-        date: '12-08-2024',
-        photo: logo,
     },
 ];

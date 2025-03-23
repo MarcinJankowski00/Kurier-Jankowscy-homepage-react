@@ -22,7 +22,7 @@ const MessagePage = () => {
                                     <p>🗓 25-27 kwietnia 2025 (3 dni)</p>
                                     <p><b>Kowno</b> – ruiny zamku, Starówka, Bazylika Św. Pawła i Piotra, Ratusz „Biały Łabędź”, Dom Perkuna, Aleja Wolności</p>
                                     <p><b>Kiejdany</b> – miasto związane z Radziwiłłami, zabytkowe Stare Miasto, krypta Radziwiłłów</p>
-                                    <p><b>Szawale</b> – słynna Góra Krzyży</p>
+                                    <p><b>Szawle</b> – słynna Góra Krzyży</p>
                                     <p><b>Wilno</b> – Ostra Brama, Cerkiew Św. Trójcy, Kościół Św. Anny, Cmentarz na Rossie, Mauzoleum „Matka i Serce Syna”</p>
 
                                     <b>🚌 Program wyjazdu:</b>

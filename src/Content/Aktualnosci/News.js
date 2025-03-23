@@ -2,10 +2,17 @@ import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
 import autobus from "./images/autobus.jpg";
 import litwa from "./images/litwa.png";
-import backToSchool from "./images/backToSchool.png"
+import litwa2 from "./images/litwa2.png";
 import jarmark from "./images/jarmark.png"
 
 export const news = [
+    {
+        id: 'wyjazd-na-litwe-2',
+        title: 'Zapraszamy na wycieczkę na Litwę',
+        firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szawle – Wilno...',
+        date: '23-03-2025',
+        photo: litwa2,
+    },
     {
         id: 'wyjazd-na-jarmark',
         title: 'Wyjazd na Jarmark Kaziukowy',
@@ -40,12 +47,5 @@ export const news = [
         firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szydłowo – Szawle – Wilno...',
         date: '02-09-2024',
         photo: litwa,
-    },
-    {
-        id: 'przypomnienie-nowy-rok-szkolny',
-        title: 'Zbliża się nowy rok szkolny – czas na zakup biletów miesięcznych!',
-        firstSentence: 'Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok...',
-        date: '30-08-2024',
-        photo: backToSchool,
     },
 ];

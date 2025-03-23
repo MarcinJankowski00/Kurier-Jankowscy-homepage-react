@@ -6,6 +6,54 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'wyjazd-na-litwe-2')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
+                                <Container>
+                                    <b>Zapraszamy na wycieczkę Kowno – Kiedany – Szawle – Wilno</b>
+
+                                    <p>🗓 25-27 kwietnia 2025 (3 dni)</p>
+                                    <p><b>Kowno</b> – ruiny zamku, Starówka, Bazylika Św. Pawła i Piotra, Ratusz „Biały Łabędź”, Dom Perkuna, Aleja Wolności</p>
+                                    <p><b>Kiejdany</b> – miasto związane z Radziwiłłami, zabytkowe Stare Miasto, krypta Radziwiłłów</p>
+                                    <p><b>Szawale</b> – słynna Góra Krzyży</p>
+                                    <p><b>Wilno</b> – Ostra Brama, Cerkiew Św. Trójcy, Kościół Św. Anny, Cmentarz na Rossie, Mauzoleum „Matka i Serce Syna”</p>
+
+                                    <b>🚌 Program wyjazdu:</b>
+                                    <p><b>I dzień</b> – Kowno: zwiedzanie, czas wolny, obiadokolacja, nocleg</p>
+                                    <p><b>II dzień</b> – Kiejdany, Szawle (Góra Krzyży), obiadokolacja, nocleg</p>
+                                    <p><b>III dzień</b> – Wilno: zwiedzanie z przewodnikiem, powrót w godzinach wieczornych</p>
+                                    <br />
+                                    <div>
+                                        <p>💰 <b>Cena</b>: 870 zł/os. + 10 EUR (bilety w Kiejdanach)</p>
+                                        <p>Cena zawiera:</p>
+                                        <ul>
+                                            <li>Transport autokarem 🚌</li>
+                                            <li>Ubezpieczenie kraj/zagranica</li>
+                                            <li>2 noclegi 🛌</li>
+                                            <li>2 śniadania i2 obiadokolacje 🍽️</li>
+                                            <li>Usługi przewodników</li>
+                                        </ul>
+                                    </div>
+                                    <p>❗️Zaliczka 200 zł – płatna do 8.04.2025</p>
+                                    <div>
+                                        <b>📞 Kontakt i rezerwacje:</b>
+                                        <p>Tel: <Link href="tel:+48857162191">+48 857 162 191</Link></p>
+                                        <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
+                                    </div>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'wyjazd-na-jarmark')
         return (
             <>
@@ -202,29 +250,6 @@ const MessagePage = () => {
                                         <p>Tel: <Link href="tel:+48857162191">+48 857 162 191</Link></p>
                                         <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
                                     </div>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'przypomnienie-nowy-rok-szkolny')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Grafika back to school" />
-                                <Container>
-                                    🏫 Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok szkolny rozpoczyna się już 2 września! To idealny moment, aby zadbać o zakup biletów miesięcznych!<br />
-                                    <br />
-                                    🚍 Serdecznie zapraszamy do naszego biura przy ulicy Dworcowej 6 w Mońkach od poniedziałku do piątku w godzinach 8:00-16:00.<br />
-                                    <br />
-                                    📖 Życzymy Wam radosnego powrotu do szkoły oraz wielu inspirujących doświadczeń w nowym roku szkolnym!
                                 </Container>
                             </Content>
                         </>

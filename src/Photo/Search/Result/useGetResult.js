@@ -25,10 +25,11 @@ const isBozeCialo = (myDate) => {
     ];
     const dates = bozeCialo.map(item => {
         const [day, month, year] = item.split('-');
-        return new Date(`${year}-${month}-${day}`);
+        const formattedDate = new Date(`${year}-${month}-${day}`);
+        return formattedDate.toISOString().split('T')[0];
     });
-
-    return dates.some(data => data.getTime() === myDate.getTime());
+    const formattedMyDate= myDate.toISOString().split('T')[0];
+    return dates.some(data => data === formattedMyDate);
 };
 
 const isFridayAfterBozeCialo = (myDate) => {
@@ -50,10 +51,11 @@ const isFridayAfterBozeCialo = (myDate) => {
     ];
     const dates = fridays.map(item => {
         const [day, month, year] = item.split('-');
-        return new Date(`${year}-${month}-${day}`);
+        const formattedDate = new Date(`${year}-${month}-${day}`);
+        return formattedDate.toISOString().split('T')[0];
     });
-
-    return dates.some(data => data.getTime() === myDate.getTime());
+    const formattedMyDate= myDate.toISOString().split('T')[0];
+    return dates.some(data => data === formattedMyDate);
 };
 
 const isEster = (myDate) => {
@@ -83,10 +85,12 @@ const isEster = (myDate) => {
     ];
     const dates = ester.map(item => {
         const [day, month, year] = item.split('-');
-        return new Date(`${year}-${month}-${day}`);
+        const formattedDate = new Date(`${year}-${month}-${day}`);
+        return formattedDate.toISOString().split('T')[0];
     });
 
-    return dates.some(data => data.getTime() === myDate.getTime());
+    const formattedMyDate= myDate.toISOString().split('T')[0];
+    return dates.some(data => data === formattedMyDate);
 };
 
 const isSaturdayBeforeEster = (myDate) => {
@@ -105,10 +109,12 @@ const isSaturdayBeforeEster = (myDate) => {
     ];
     const dates = saturdayBeforeEster.map(item => {
         const [day, month, year] = item.split('-');
-        return new Date(`${year}-${month}-${day}`);
+        const formattedDate = new Date(`${year}-${month}-${day}`);
+        return formattedDate.toISOString().split('T')[0];
     });
 
-    return dates.some(data => data.getTime() === myDate.getTime());
+    const formattedMyDate= myDate.toISOString().split('T')[0];
+    return dates.some(data => data === formattedMyDate);
 };
 
 const deleteElements = (tab1, tab2) => {

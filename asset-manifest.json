@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.e42a3c1c.js",
+    "main.js": "/static/js/main.f22285da.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
@@ -48,11 +48,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.e42a3c1c.js.map": "/static/js/main.e42a3c1c.js.map",
+    "main.f22285da.js.map": "/static/js/main.f22285da.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.e42a3c1c.js"
+    "static/js/main.f22285da.js"
   ]
 }

@@ -1,11 +1,17 @@
 import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
 import autobus from "./images/autobus.jpg";
-import litwa from "./images/litwa.png";
 import litwa2 from "./images/litwa2.png";
 import jarmark from "./images/jarmark.png"
 
 export const news = [
+    {
+        id: 'informacja-utrudnienia',
+        title: 'Informacja - nieczynny przystanek na ul. Goniądzkiej',
+        firstSentence: 'Drodzy Pasażerowie! Informujemy, że w dniach 9 -10 lipca 2025 r. w związku...',
+        date: '08-07-2025',
+        photo: logo,
+    },
     {
         id: 'wyjazd-na-litwe-2',
         title: 'Zapraszamy na wycieczkę na Litwę',
@@ -40,12 +46,5 @@ export const news = [
         firstSentence: 'Przypominamy, że legitymacje szkolne tracą ważność 30 września...',
         date: '27-09-2024',
         photo: logo,
-    },
-    {
-        id: 'wyjazd-na-litwe',
-        title: 'Zapraszamy na wycieczkę na Litwę',
-        firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szydłowo – Szawle – Wilno...',
-        date: '02-09-2024',
-        photo: litwa,
     },
 ];

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { keyframes } from 'styled-components';
-import { ReactComponent as PersonIcon } from "./person.svg"
+import { ReactComponent as PersonIcon } from "../../icons/person.svg"
 
 const fadeIn = keyframes`
   from {

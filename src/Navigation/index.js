@@ -2,11 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper } from "./styled";
 import logo from "../kurierlogo.png";
 import { toAboutUs, toContact, toFleat, toOffer, toSchedule, toStart } from "../routes.js";
+import Modal from "../Modal/index.js";
+import AuthForm from "../AuthForm/index.js";
+import { useAuth } from "../context/AuthContext.js";
 
 const Navigation = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuRef = useRef(null); // Referencja do listy nawigacyjnej
-    const hamburgerRef = useRef(null); // Referencja do ikony hamburgera
+    const { isLoggedIn } = useAuth();
+    const menuRef = useRef(null);
+    const hamburgerRef = useRef(null);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -25,13 +30,20 @@ const Navigation = () => {
 
     const handleClickOutside = (event) => {
         if (
-            menuRef.current && 
+            menuRef.current &&
             !menuRef.current.contains(event.target) &&
-            hamburgerRef.current && 
+            hamburgerRef.current &&
             !hamburgerRef.current.contains(event.target)
         ) {
             setIsMenuOpen(false);
         }
+    };
+
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
     };
 
     useEffect(() => {
@@ -72,8 +84,14 @@ const Navigation = () => {
                     <Item last={true}>
                         <Link to={toContact()} onClick={closeMenuOnLinkClick}>Kontakt</Link>
                     </Item>
+                    <Item>
+                        <button onClick={openModal}>{isLoggedIn ? "Moje konto" : "Zaloguj"} </button>
+                    </Item>
                 </List>
             </Wrapper >
+            <Modal isModalOpen={isModalOpen} onClose={closeModal}>
+                <AuthForm isModalOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+            </Modal>
         </Nav>
     );
 };

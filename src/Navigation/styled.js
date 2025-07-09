@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { keyframes, css } from 'styled-components';
+import { ReactComponent as PersonIcon } from "../icons/person.svg"
 
 const fadeIn = keyframes`
   from {
@@ -70,7 +71,7 @@ export const Img = styled.img`
 export const List = styled.ul`
     display: grid;
     grid-gap: 60px;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     list-style: none;
     padding-left: 0;
     margin-right: 20px;
@@ -168,4 +169,9 @@ export const HamburgerIcon = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
         font-size: 24px;
     }
+`;
+
+export const StyledPersonIcon = styled(PersonIcon)`
+    width: 20px;
+    fill: ${({ theme }) => theme.color.font};
 `;

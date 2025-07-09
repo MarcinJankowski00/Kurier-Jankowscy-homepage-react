@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper } from "./styled";
+import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper, LogButton } from "./styled";
 import logo from "../kurierlogo.png";
 import { toAboutUs, toContact, toFleat, toOffer, toSchedule, toStart } from "../routes.js";
 import Modal from "../Modal/index.js";
@@ -84,10 +84,10 @@ const Navigation = () => {
                     <Item last={true}>
                         <Link to={toContact()} onClick={closeMenuOnLinkClick}>Kontakt</Link>
                     </Item>
-                    <Item>
-                        <button onClick={openModal}>{isLoggedIn ? "Moje konto" : "Zaloguj"} </button>
-                    </Item>
                 </List>
+                <div>
+                    <LogButton onClick={openModal}>{isLoggedIn ? "Moje konto" : "Zaloguj"} </LogButton>
+                </div>
             </Wrapper >
             <Modal isModalOpen={isModalOpen} onClose={closeModal}>
                 <AuthForm isModalOpen={isModalOpen} onClose={() => setModalOpen(false)} />

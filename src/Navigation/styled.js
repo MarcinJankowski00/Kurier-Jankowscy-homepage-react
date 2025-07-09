@@ -30,7 +30,8 @@ export const Nav = styled.div`
 
 export const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
@@ -108,7 +109,6 @@ export const Link = styled(NavLink)`
     position: relative;
     color: ${({ theme }) => theme.color.font};
     text-decoration: none;
-    padding-bottom: 5px;
     transition: color 0.3s;
     
     &:focus {
@@ -174,4 +174,21 @@ export const HamburgerIcon = styled.div`
 export const StyledPersonIcon = styled(PersonIcon)`
     width: 20px;
     fill: ${({ theme }) => theme.color.font};
+`;
+
+export const LogButton = styled.button`
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid ${({ theme }) => theme.color.font};
+    background-color:${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.font};
+    padding: 10px 18px;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(125%);
+    }
+    &:active {
+        filter: brightness(135%);
+    }
 `;

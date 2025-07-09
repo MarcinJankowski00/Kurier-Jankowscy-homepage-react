@@ -24,14 +24,17 @@ export const Input = styled.input`
 
 export const SubmitButton = styled.button`
   padding: 0.75rem;
-  background: #007bff;
-  color: white;
+  background: ${({ theme }) => theme.color.font};
+  color: ${({ theme }) => theme.color.white};
   border: none;
+  border-radius: 5px;
+  transition: 0.5s;
   cursor: pointer;
-  font-weight: bold;
-
   &:hover {
-    background: #005fcc;
+     filter: brightness(125%);
+  }
+  &:active {
+      filter: brightness(135%);
   }
 `;
 

@@ -7,7 +7,7 @@ export const theme = {
         gallery: "#eee",
         navigation: "#fff",
         background: "#f6f6f6",
-        search: "#ffffffc7",
+        search: "#f6f6f6",
         sectionShadow: "#eaeaea",
         section: "#fff",
         font: "#1d4368",

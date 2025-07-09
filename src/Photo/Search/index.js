@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Label, DateDiv, StyledMagnifierIcon, Span, StyledLoopIcon, Input } from "./styled";
 import Modal from "./Modal";
 import Result from "./Result";
-import { busStops } from 'C:/dev/kurier/src/BusStops.js';
+import { busStops } from "../../BusStops.js";
 import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
 
 

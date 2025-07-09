@@ -1,7 +1,7 @@
 import FileDownloadButton from "../../FileDownloadButton";
 import { Content, Wrapper, TableContainer, Table, Cell, Text, Row, } from "./styled";
-import { busStops } from 'C:/dev/kurier/src/BusStops.js';
-import rozkladJazdy from 'C:/dev/kurier/src/RozkładJazdy.pdf';
+import { busStops } from "../../BusStops.js";
+import rozkladJazdy from "../../RozkładJazdy.pdf";
 
 const Rozklad = () => {
     const reverseBusStops = [...busStops];

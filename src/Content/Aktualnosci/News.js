@@ -28,7 +28,7 @@ export const news = [
     },
     {
         id: 'zyczenia-swiateczne',
-        title: 'Życzenia bożonarodzeniowe',
+        title: 'Życzenia świąteczne',
         firstSentence: 'Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom...',
         date: '23-12-2024',
         photo: swieta,

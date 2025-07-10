@@ -26,8 +26,10 @@ export const Heading = styled.div`
 
 export const ListContainer = styled.div`
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const List = styled.ul`
@@ -65,13 +67,28 @@ export const Span = styled.span`
     color: ${({ theme }) => theme.color.lessImportant};
 `;
 
-export const DepartureTime = styled.span`
+export const Text = styled.span`
     display: none;
     filter: brightness(130%);
     ${({ show }) => show && css`
         display: inline;
     `}
 `;
+
+export const Price = styled.div`
+    display: none;
+    filter: brightness(130%);
+    margin: 15px auto 10px auto;
+    max-width: 500px;
+    ${({ show }) => show && css`
+        display: grid;
+        grid-gap: 8px;
+    `}
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 16px;
+    }
+`;
+
 export const Empty = styled.div`
     display: none;
     text-align: center;
@@ -105,6 +122,7 @@ export const NextDayButton = styled.button`
     margin-top: 10px;
     border-radius: 5px;
     padding: 5px 16px;
+    align-self: center;
     transition: 0.5s;
     &:hover{
         filter: brightness(120%);
@@ -117,3 +135,16 @@ export const NextDayButton = styled.button`
     }
 `;
 
+export const Label = styled.label`
+    
+`;
+
+export const Select = styled.select`
+    width: 150px;
+    padding: 2px 4px;
+    margin-left: 10px;
+    border-radius: 5px;
+     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        width: 120px;
+    }
+`;

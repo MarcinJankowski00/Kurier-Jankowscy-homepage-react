@@ -1,7 +1,10 @@
-import React from 'react';
-import { List, Item, Container, Heading, Span, ListContainer, DepartureTime, ShowButton, Empty, NextDayButton } from "./styled";
-import { useState } from 'react';
+import { List, Item, Container, Heading, Span, ListContainer, Text, ShowButton, Empty, NextDayButton, Price, Label, Select } from "./styled";
+import { useState, useEffect } from 'react';
 import getResult from './useGetResult';
+import { busStops } from '../../../BusStops';
+import { priceMatrix } from '../../../Prices';
+import { reliefs } from '../../../Reliefs';
+import GenericDropdown from "../../../GenericDropdown";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -19,6 +22,15 @@ const calculateTimeDifference = (startHour, endHour) => {
     const timeDifference = endTotalMinutes - startTotalMinutes;
 
     return timeDifference;
+};
+
+const getTicketPrice = (startStop, endStop, relief, typeOfTicket) => {
+    const startStopObject = busStops.find((station) => station.name === startStop);
+    const endStopObject = busStops.find((station) => station.name === endStop);
+    const startIndex = startStopObject.id - 1;
+    const endIndex = endStopObject.id - 1;
+    if (startIndex === -1 || endIndex === -1) return null; // przystanek nie istnieje
+    return (priceMatrix[typeOfTicket][startIndex][endIndex] * (1 - relief)).toFixed(2);
 };
 
 const getActualHour = () => {
@@ -79,10 +91,27 @@ const isPast = (myHour, formattedDate) => {
 
 const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => {
     const [isShowed, setIsShowed] = useState(false);
+    const [relief, setRelief] = useState(0);
+    const [selectedRelief, setSelectedRelief] = useState(reliefs["else"][0]);
+    const [typeOfTicket, setTypeOfTicket] = useState("normal");
+    const [selectedTypeOfTicket, setSelectedTypeOfTicket] = useState({ name: "Jednorazowy", value:"normal" });
     const result = getResult(departureDate, startStop, endStop);
     const startStopObject = result.startStopTab;
     const endStopObject = result.endStopTab;
-    
+
+    useEffect(() => {
+        if (selectedRelief?.value !== undefined) {
+            setRelief(Number(selectedRelief.value));
+        }
+    }, [selectedRelief])
+
+    useEffect(() => {
+        if (selectedTypeOfTicket?.value !== undefined) {
+            setTypeOfTicket(String(selectedTypeOfTicket.value));
+            setSelectedRelief(reliefs["else"][0]);
+        }
+    }, [selectedTypeOfTicket])
+
     if (result === 'brak') {
         return (
             <Heading empty>
@@ -119,9 +148,9 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                 <b>{startStop} - {endStop}</b><br />
                 <Span>{formattedDate}</Span>
                 <br />
-                <DepartureTime show={(minutesToDeparture !== -1) && !(isDateNotActual(formattedDate))}>
+                <Text show={(minutesToDeparture !== -1) && !(isDateNotActual(formattedDate))}>
                     <br />Najbliższy odjazd za <b>{minutesToDeparture}min</b>
-                </DepartureTime>
+                </Text>
                 <Span><br />Czas przejazdu: {differenceInMinutes}min</Span><br />
                 <ShowButton
                     isdateactual={isDateNotActual(formattedDate)}
@@ -132,18 +161,39 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
             <ListContainer>
                 <List>
                     {startStopObject.map((item) => {
-                            return (
-                                <Item key={item} past={isPast(item, formattedDate)} show={isShowed}>
-                                    {item}{" "}-{" "}
-                                    {endStopObject[startStopObject.indexOf(item)]}{" "}
-                                </Item>
-                            )
-                        })
+                        return (
+                            <Item key={item} past={isPast(item, formattedDate)} show={isShowed}>
+                                {item}{" "}-{" "}
+                                {endStopObject[startStopObject.indexOf(item)]}{" "}
+                            </Item>
+                        )
+                    })
                     }
                 </List>
                 <Empty show={(!isShowed) && (minutesToDeparture === -1) && !(isDateNotActual(formattedDate))}>
                     ...Brak kursów
                 </Empty>
+                <Price show={true}>
+                    <span>Cena biletu: <b>{getTicketPrice(startStop, endStop, relief, typeOfTicket)} zł</b></span>
+                    <Label htmlFor="reliefSelect">
+                        <GenericDropdown
+                            items={reliefs[typeOfTicket]}
+                            selected={selectedRelief}
+                            onSelect={setSelectedRelief}
+                            getLabel={(item) => item.name}
+                            getRightContent={(item) => `(${item.value * 100}%)`}
+                            getTooltip={(item) => item.description}
+                        />
+                    </Label>
+                    <Label htmlFor="typeOfTicketSelect">
+                        <GenericDropdown
+                            items={[{ name: "Jednorazowy", value:"normal" }, { name: "Miesięczny", value:"monthly" }]}
+                            selected={selectedTypeOfTicket}
+                            onSelect={setSelectedTypeOfTicket}
+                            getLabel={(item) => item.name}
+                        />
+                    </Label>
+                </Price>
                 <NextDayButton onClick={onNextDayButtonClick}>
                     Następny dzień
                 </NextDayButton>

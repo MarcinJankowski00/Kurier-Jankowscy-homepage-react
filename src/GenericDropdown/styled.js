@@ -7,23 +7,29 @@ export const PortalDropdownListStyled = styled.ul`
   border: 1px solid #ccc;
   border-radius: 8px;
   list-style: none;
-  max-height: 250px;
+  max-height: 180px;
   overflow-y: auto;
   padding: 0;
   margin: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 280px;
-  width: 100%;
-      @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        max-width: 200px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    max-width: 200px;
+  }
 `;
 
 export const DropdownWrapper = styled.div`
-  width: 200px;
+  width: 100%;
+  min-width: 190px;
   position: relative;
   font-size: 18px;
-  
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    max-width: 190px;
+
+  }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+    min-width: 0;
+  }
 `;
 
 export const DropdownHeader = styled.div`
@@ -37,6 +43,9 @@ export const DropdownHeader = styled.div`
   align-items: center;
   white-space: nowrap;
   text-overflow: ellipsis;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    font-size: 14px;
+  }
 `;
 
 export const Selected = styled.span`
@@ -59,7 +68,6 @@ export const DropdownList = styled.ul`
   border: 1px solid grey;
   border-radius: 8px;
   background: white;
-  max-height: 250px;
   overflow-y: auto;
 `;
 
@@ -88,4 +96,5 @@ export const DropdownItem = styled.li`
 export const Span = styled.span`
     display: flex;
     text-align: start;
+    max-width: 200px;
 `;

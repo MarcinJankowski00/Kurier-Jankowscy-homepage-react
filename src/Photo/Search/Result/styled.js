@@ -39,8 +39,11 @@ export const List = styled.ul`
     padding-right: 15px;
     padding-bottom: 0;
     margin-bottom: 0;
+    max-height: 310px;
+    overflow-y: auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 17px;
+        font-size: 15px;
+        max-height: 25vh;
     }
     
 `;
@@ -121,8 +124,9 @@ export const NextDayButton = styled.button`
     color: ${({ theme }) => theme.color.fontOnButton};
     margin-top: 10px;
     border-radius: 5px;
-    padding: 5px 16px;
+    padding: 10px;
     align-self: center;
+    width: 190px;
     transition: 0.5s;
     &:hover{
         filter: brightness(120%);
@@ -133,18 +137,14 @@ export const NextDayButton = styled.button`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         font-size: 16px;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+        width: 143px;
+    }
 `;
 
 export const Label = styled.label`
-    
-`;
-
-export const Select = styled.select`
-    width: 150px;
-    padding: 2px 4px;
-    margin-left: 10px;
-    border-radius: 5px;
-     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        width: 120px;
+    font-size: 15px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 12px;
     }
 `;

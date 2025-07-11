@@ -1,4 +1,4 @@
-import { List, Item, Container, Heading, Span, ListContainer, Text, ShowButton, Empty, NextDayButton, Price, Label, Select } from "./styled";
+import { List, Item, Container, Heading, Span, ListContainer, Text, ShowButton, Empty, NextDayButton, Price, Label } from "./styled";
 import { useState, useEffect } from 'react';
 import getResult from './useGetResult';
 import { busStops } from '../../../BusStops';
@@ -24,13 +24,14 @@ const calculateTimeDifference = (startHour, endHour) => {
     return timeDifference;
 };
 
-const getTicketPrice = (startStop, endStop, relief, typeOfTicket) => {
+const getTicketPrice = (startStop, endStop, relief, typeOfTicket, direction) => {
     const startStopObject = busStops.find((station) => station.name === startStop);
     const endStopObject = busStops.find((station) => station.name === endStop);
     const startIndex = startStopObject.id - 1;
     const endIndex = endStopObject.id - 1;
+    const multiplier = (direction === 'round-trip') ? 2 : 1;
     if (startIndex === -1 || endIndex === -1) return null; // przystanek nie istnieje
-    return (priceMatrix[typeOfTicket][startIndex][endIndex] * (1 - relief)).toFixed(2);
+    return (priceMatrix[typeOfTicket][startIndex][endIndex] * (1 - relief)*multiplier).toFixed(2);
 };
 
 const getActualHour = () => {
@@ -94,10 +95,15 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
     const [relief, setRelief] = useState(0);
     const [selectedRelief, setSelectedRelief] = useState(reliefs["else"][0]);
     const [typeOfTicket, setTypeOfTicket] = useState("normal");
-    const [selectedTypeOfTicket, setSelectedTypeOfTicket] = useState({ name: "Jednorazowy", value:"normal" });
+    const [selectedTypeOfTicket, setSelectedTypeOfTicket] = useState({ name: "Jednorazowy", value: "normal" });
+    const [direction, setDirection] = useState('one-way');
     const result = getResult(departureDate, startStop, endStop);
     const startStopObject = result.startStopTab;
     const endStopObject = result.endStopTab;
+
+    const handleChange = (e) => {
+        setDirection(e.target.value);
+    };
 
     useEffect(() => {
         if (selectedRelief?.value !== undefined) {
@@ -174,7 +180,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                     ...Brak kursów
                 </Empty>
                 <Price show={true}>
-                    <span>Cena biletu: <b>{getTicketPrice(startStop, endStop, relief, typeOfTicket)} zł</b></span>
+                    <span>Cena biletu: <b>{getTicketPrice(startStop, endStop, relief, typeOfTicket, direction)} zł</b></span>
                     <Label htmlFor="reliefSelect">
                         <GenericDropdown
                             items={reliefs[typeOfTicket]}
@@ -187,12 +193,36 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                     </Label>
                     <Label htmlFor="typeOfTicketSelect">
                         <GenericDropdown
-                            items={[{ name: "Jednorazowy", value:"normal" }, { name: "Miesięczny", value:"monthly" }]}
+                            items={[{ name: "Jednorazowy", value: "normal" }, { name: "Miesięczny", value: "monthly" }]}
                             selected={selectedTypeOfTicket}
                             onSelect={setSelectedTypeOfTicket}
                             getLabel={(item) => item.name}
                         />
                     </Label>
+                    {typeOfTicket === "monthly" ?
+                        <Label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="direction"
+                                    value="one-way"
+                                    checked={direction === 'one-way'}
+                                    onChange={handleChange}
+                                />
+                                TAM
+                            </label>
+                            <label style={{ marginLeft: '1rem' }}>
+                                <input
+                                    type="radio"
+                                    name="direction"
+                                    value="round-trip"
+                                    checked={direction === 'round-trip'}
+                                    onChange={handleChange}
+                                />
+                                TAM/POWRÓT
+                            </label>
+                        </ Label> : ""
+                    }
                 </Price>
                 <NextDayButton onClick={onNextDayButtonClick}>
                     Następny dzień

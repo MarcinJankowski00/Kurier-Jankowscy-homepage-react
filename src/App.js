@@ -9,10 +9,13 @@ import Aktualnosci from './Content/Aktualnosci';
 import Oferta from './Content/Oferta';
 import Rozklad from './Content/Rozklad';
 import Flota from './Content/Flota';
+import MyData from './Content/MyData';
+import MyTickets from './Content/MyTickets';
+import BuyTicket from './Content/BuyTicket';
 import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
 import { HashRouter, Redirect, Route, Switch, } from 'react-router-dom/cjs/react-router-dom.min';
-import { toAboutUs, toContact, toFleat, toMessage, toOffer, toSchedule, toStart, toVechicle } from './routes';
+import { toAboutUs, toBuyTicket, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toSchedule, toStart, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
@@ -64,6 +67,24 @@ function App() {
               content={<Kontakt />}
             />
             <Map />
+          </Route>
+          <Route path={toBuyTicket()}>
+            <Section
+              title="Kup bilet"
+              content={<BuyTicket />}
+            />
+          </Route>
+          <Route path={toMyTickets()}>
+            <Section
+              title="Moje bilety"
+              content={<MyTickets />}
+            />
+          </Route>
+          <Route path={toMyData()}>
+            <Section
+              title="Moje dane"
+              content={<MyData />}
+            />
           </Route>
           <Route path={toVechicle()}>
             <VechiclePage />

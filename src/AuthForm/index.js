@@ -3,7 +3,7 @@ import { Container, Form, Input, Message, SubmitButton, Title, ToggleButton } fr
 import { useAuth } from "../context/AuthContext";
 
 const AuthForm = ({ isModalOpen, onClose }) => {
-  const { isLoggedIn, userEmail, login, logout } = useAuth();
+  const {  login } = useAuth();
 
   const [isRegister, setIsRegister] = useState(false);
   const [email, setEmail] = useState("");
@@ -50,48 +50,36 @@ const AuthForm = ({ isModalOpen, onClose }) => {
     }
   }, [isModalOpen]);
 
-  if (!isLoggedIn) {
-    return (
-      <Container>
-        <Title>{isRegister ? "Rejestracja" : "Logowanie"}</Title>
-        <Form onSubmit={handleSubmit}>
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <Input
-            type="password"
-            placeholder="Hasło"
-            value={password}
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <SubmitButton type="submit">
-            {isRegister ? "Zarejestruj się" : "Zaloguj się"}
-          </SubmitButton>
-        </Form>
-        <Message>{message}</Message>
-        <ToggleButton onClick={() => setIsRegister(!isRegister)}>
-          {isRegister
-            ? "Masz konto? Zaloguj się"
-            : "Nie masz konta? Zarejestruj się"}
-        </ToggleButton>
-      </Container>
-    );
-  } else {
-    return (
-      <Container>
-        <p>✅ Zalogowano jako {userEmail}</p>
-        <SubmitButton onClick={() => logout()}>
-          Wyloguj się
+  return (
+    <Container>
+      <Title>{isRegister ? "Rejestracja" : "Logowanie"}</Title>
+      <Form onSubmit={handleSubmit}>
+        <Input
+          type="email"
+          placeholder="Email"
+          value={email}
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Hasło"
+          value={password}
+          required
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <SubmitButton type="submit">
+          {isRegister ? "Zarejestruj się" : "Zaloguj się"}
         </SubmitButton>
-        <Message>{message}</Message>
-      </Container>
-    );
-  }
+      </Form>
+      <Message>{message}</Message>
+      <ToggleButton onClick={() => setIsRegister(!isRegister)}>
+        {isRegister
+          ? "Masz konto? Zaloguj się"
+          : "Nie masz konta? Zarejestruj się"}
+      </ToggleButton>
+    </Container>
+  );
 };
 
 export default AuthForm;

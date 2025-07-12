@@ -34,11 +34,6 @@ export const Wrapper = styled.div`
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 `;
 
 export const LogoWrapper = styled.div`
@@ -69,9 +64,14 @@ export const Img = styled.img`
         }
 `;
 
+export const DropdownWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
 export const List = styled.ul`
     display: grid;
-    grid-gap: 60px;
+    grid-gap: 40px;
     grid-template-columns: auto auto auto auto auto auto;
     list-style: none;
     padding-left: 0;
@@ -93,6 +93,57 @@ export const List = styled.ul`
     }
 `;
 
+export const AccountList = styled.ul`
+    list-style: none;
+    font-size: 20px;
+    position: absolute;
+    width: 190px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${({ theme }) => theme.color.gallery};
+    padding: 10px 8px;
+    margin: 0;
+    box-shadow: 1px 17px 40px -12px rgba(66, 68, 90, 1);
+    display: ${({ isMenuOpen }) => isMenuOpen ? "block" : "none"};
+     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
+        top: 41px;
+        right: -1px;
+        left: auto;
+        animation: ${({ isMenuOpen }) => isMenuOpen ? fadeIn : fadeOut} 0.3s forwards;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        top: 42px;
+    }
+`;
+
+export const LogList = styled.ul`
+    list-style: none;
+    font-size: 20px;
+    position: absolute;
+    width: 190px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${({ theme }) => theme.color.gallery};
+    padding: 10px 8px;
+    margin: 0;
+    box-shadow: 1px 17px 40px -12px rgba(66, 68, 90, 1);
+    display: none;
+     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
+        display: ${({ isMenuOpen }) => isMenuOpen ? "block" : "none"};
+        top: 41px;
+        right: -1px;
+        left: auto;
+        animation: ${({ isMenuOpen }) => isMenuOpen ? fadeIn : fadeOut} 0.3s forwards;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        top: 42px;
+    }
+`;
+
 export const Item = styled.li`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
         padding: 16px 30px;
@@ -103,6 +154,16 @@ export const Item = styled.li`
             padding-bottom: 8px;
         `}
     }
+`;
+
+export const AccountListItem = styled.li`
+    padding: 16px 30px;
+    text-align: center;
+    border-bottom: 1px solid ${({ theme }) => theme.color.font};
+    ${({ last }) => last && css`
+        border-bottom: none;
+        padding-bottom: 8px;
+    `}
 `;
 
 export const Link = styled(NavLink)`
@@ -157,12 +218,71 @@ export const Link = styled(NavLink)`
     }
 `;
 
+export const AccountListLink = styled(NavLink)`
+    position: relative;
+    color: ${({ theme }) => theme.color.font};
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        filter: brightness(120%);
+        color: ${({ theme }) => theme.color.font};
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: ${({ theme }) => theme.color.font};
+        width: 0;
+        transition: 0.3s ease;
+    }
+
+    &:hover::after {
+        filter: brightness(120%);
+        width: 0;
+    }
+
+    &.active {
+        color: ${({ theme }) => theme.color.font};
+        font-weight: bolder;
+        &::after {
+            width: 0;
+        }
+    }
+`;
+
 export const HamburgerIcon = styled.div`
     display: none;
     cursor: pointer;
     font-size: 2rem;
     margin-right: 20px;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
+        display: block;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        font-size: 24px;
+    }
+`;
+export const AccountIcon = styled.div`
+    cursor: pointer;
+    font-size: 2rem;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
+        font-size: 24px;
+    }
+`;
+
+export const LogIcon = styled.div`
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
         display: block;
     }
@@ -190,5 +310,8 @@ export const LogButton = styled.button`
     }
     &:active {
         filter: brightness(135%);
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
+        display: none;
     }
 `;

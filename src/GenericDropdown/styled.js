@@ -23,6 +23,7 @@ export const DropdownWrapper = styled.div`
   min-width: 190px;
   position: relative;
   font-size: 18px;
+  max-width: 255px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     max-width: 190px;
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container, Form, Input, Message, SubmitButton, Title, ToggleButton } from "./styled";
 import { useAuth } from "../context/AuthContext";
 
@@ -9,6 +9,11 @@ const AuthForm = ({ isModalOpen, onClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const emailRef = useRef(null);
+
+  const handleFocus = () => {
+    emailRef.current?.focus();
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,6 +35,7 @@ const AuthForm = ({ isModalOpen, onClose }) => {
         if (isRegister) {
           setMessage("✅ Konto zostało utworzone. Możesz się teraz zalogować.");
           setIsRegister(false);
+          handleFocus();
         } else {
           login(data.token, email);
           setMessage(`✅ Zalogowano jako ${email}`);
@@ -58,6 +64,7 @@ const AuthForm = ({ isModalOpen, onClose }) => {
         <Input
           type="email"
           placeholder="Email"
+          ref={emailRef}
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}

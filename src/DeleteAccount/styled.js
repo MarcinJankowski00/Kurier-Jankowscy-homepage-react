@@ -14,7 +14,7 @@ export const Title = styled.h2`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
 `;
 
 export const SubmitButton = styled.button`

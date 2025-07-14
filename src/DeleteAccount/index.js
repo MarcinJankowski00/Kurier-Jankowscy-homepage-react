@@ -43,14 +43,19 @@ const DeleteAccount = ({ isModalOpen, onClose }) => {
             {isLoggedIn ?
                 <>
                     <Form onSubmit={handleSubmit}>
-                        Czy napewno chcesz usunąć konto: {userEmail}
+                        <div>
+                            Czy napewno chcesz usunąć konto?<br />
+                            <br />
+                            <b>{userEmail}</b><br />
+                            <br />
+                            Twoje dane zostaną wykasowane wraz z historią zakupów.<br />
+                        </div>
                         <SubmitButton type="submit">
                             Usuń konto
                         </SubmitButton>
                     </Form>
-                </> : ""
+                </> : <Message>{message}</Message>
             }
-            <Message>{message}</Message>
         </Container>
     );
 };

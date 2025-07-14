@@ -29,9 +29,8 @@ const getTicketPrice = (startStop, endStop, relief, typeOfTicket, direction) => 
     const endStopObject = busStops.find((station) => station.name === endStop);
     const startIndex = startStopObject.id - 1;
     const endIndex = endStopObject.id - 1;
-    const multiplier = (direction === 'round-trip') ? 2 : 1;
-    if (startIndex === -1 || endIndex === -1) return null; // przystanek nie istnieje
-    return (priceMatrix[typeOfTicket][startIndex][endIndex] * (1 - relief)*multiplier).toFixed(2);
+    if (startIndex === -1 || endIndex === -1) return null;
+    return (priceMatrix[direction === 'one-way'? typeOfTicket : "monthlyRoundTrip"][startIndex][endIndex] * (1 - relief)).toFixed(2);
 };
 
 const getActualHour = () => {
@@ -103,7 +102,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
 
     const handleChange = (e) => {
         setDirection(e.target.value);
-    };
+    }
 
     useEffect(() => {
         if (selectedRelief?.value !== undefined) {
@@ -115,6 +114,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
         if (selectedTypeOfTicket?.value !== undefined) {
             setTypeOfTicket(String(selectedTypeOfTicket.value));
             setSelectedRelief(reliefs["else"][0]);
+            setDirection("one-way")
         }
     }, [selectedTypeOfTicket])
 

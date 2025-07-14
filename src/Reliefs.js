@@ -34,10 +34,22 @@ export const reliefs = {
             description: "Dzieci i młodzież dotknięta inwalidztwem lub niepełnosprawna, przy przejazdach z miejsca zamieszkania lub miejsca pobytu do przedszkola, szkoły, ośrodka lub placówki o charakterze oświatowym albo szkoły wyższe (dziecko lub młodzież dotknięta inwalidztwem do 24 roku życia oraz studentów do ukończenia 26 roku życia)",
         },
         {
+            id: 30,
+            name: "Os.niesamodz.",
+            value: 0.49,
+            description: "Osoby niezdolne do samodzielnej egzystencji.",
+        },
+        {
             id: 4,
             name: "Student",
             value: 0.51,
             description: "Studenci do ukończenia 26 roku życia; osoby które ukończyły studia pierwszego stopnia do dnia 31 października roku, w którym ukończyły te studia.",
+        },
+        {
+            id: 29,
+            name: "Doktorant",
+            value: 0.51,
+            description: "Doktorant",
         },
         {
             id: 5,
@@ -152,8 +164,14 @@ export const reliefs = {
         {
             id: 22,
             name: "Kombatant",
-            value: 0.37,
+            value: 0.51,
             description: "Kombatantom i innym osobom uprawnionym – emerytom, rencistom i inwalidom oraz osobom pobierającym uposażenie w stanie spoczynku lub uposażenie rodzinne, wdowom, wdowcom – emerytom i rencistom oraz osobom pobierającym uposażenie w stanie spoczynku lub uposażenie rodzinne pozostałym po kombatantach i innych osobach uprawnionych.",
+        },
+        {
+            id: 28,
+            name: "Osoba Represjonowana",
+            value: 0.51,
+            description: "Osoba Represjonowana.",
         },
         {
             id: 23,
@@ -175,7 +193,7 @@ export const reliefs = {
         },
         {
             id: 26,
-            name: "Żołnierz Żand. Woj.-służ.",
+            name: "Żołnierz ŻW-służ.",
             value: 0.78,
             description: "Żołnierze Żandarmerii Wojskowej oraz wojskowych organów porządkowych wykonujący czynności służbowe w środkach transportu zbiorowego.",
         },

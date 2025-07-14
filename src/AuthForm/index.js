@@ -29,6 +29,7 @@ const AuthForm = ({ isModalOpen, onClose }) => {
       if (res.ok) {
         if (isRegister) {
           setMessage("✅ Konto zostało utworzone. Możesz się teraz zalogować.");
+          setIsRegister(false);
         } else {
           login(data.token, email);
           setMessage(`✅ Zalogowano jako ${email}`);

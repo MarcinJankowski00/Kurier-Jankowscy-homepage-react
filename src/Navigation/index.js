@@ -5,9 +5,11 @@ import { toAboutUs, toBuyTicket, toContact, toFleat, toMyData, toMyTickets, toOf
 import Modal from "../Modal/index.js";
 import AuthForm from "../AuthForm/index.js";
 import { useAuth } from "../context/AuthContext.js";
+import DeleteAccount from "../DeleteAccount/index.js";
 
 const Navigation = () => {
     const [isModalOpen, setModalOpen] = useState(false);
+    const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
     const { isLoggedIn, logout } = useAuth();
@@ -66,6 +68,13 @@ const Navigation = () => {
     };
     const closeModal = () => {
         setModalOpen(false);
+    };
+
+    const openDeleteModal = () => {
+        setDeleteModalOpen(true);
+    };
+    const closeDeleteModal = () => {
+        setDeleteModalOpen(false);
     };
 
     useEffect(() => {
@@ -135,7 +144,7 @@ const Navigation = () => {
                                     <AccountListLink to={toMyData()} onClick={closeAccountMenuOnLinkClick}>Moje dane</AccountListLink>
                                 </AccountListItem>
                                 <AccountListItem>
-                                    <AccountListLink to={toAboutUs()} onClick={closeAccountMenuOnLinkClick}>Usuń konto</AccountListLink>
+                                    <AccountListLink to={"/"} onClick={openDeleteModal}>Usuń konto</AccountListLink>
                                 </AccountListItem>
                                 <AccountListItem last={true}>
                                     <AccountListLink
@@ -187,6 +196,9 @@ const Navigation = () => {
             </Wrapper>
             <Modal isModalOpen={isModalOpen} onClose={closeModal}>
                 <AuthForm isModalOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+            </Modal>
+            <Modal isModalOpen={isDeleteModalOpen} onClose={closeDeleteModal}>
+                <DeleteAccount isModalOpen={isDeleteModalOpen} onClose={() => setDeleteModalOpen(false)} />
             </Modal>
         </Nav>
     );

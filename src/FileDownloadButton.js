@@ -31,9 +31,7 @@ const DownloadButton = styled.button`
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
             width: 100%;
-        }
-        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
-            font-size: 15px;
+            font-size: 17px;
         }
     `}    
 `;

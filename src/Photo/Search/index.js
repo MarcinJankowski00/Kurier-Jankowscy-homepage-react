@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Form, Container, Header, Element, Text, Select, Button, Wrapper, Switch, Div, Label, DateDiv, StyledMagnifierIcon, Span, StyledLoopIcon, Input } from "./styled";
+import { useState, useEffect } from 'react';
+import { Form, Container, Header, Element, Text, Button, Wrapper, Switch, Div, Label, DateDiv, StyledMagnifierIcon, Span, StyledLoopIcon, Input } from "./styled";
 import Modal from "../../Modal";
 import Result from "./Result";
-import { busStops } from "../../BusStops";
+import { busStops } from "../../BusStops.js";
 import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
-
-
+import GenericDropdown from '../../GenericDropdown/index.js';
 
 const Search = () => {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -61,47 +60,27 @@ const Search = () => {
                 <Element>
                     <Wrapper>
                         <Div>
-                            <Label >
-                                <label htmlFor="startStationSelect">
-                                    <Span>
-                                        Z
-                                    </Span>
-                                    <Select
-                                        id="startStationSelect"
-                                        value={startStop}
-                                        onChange={({ target }) => setStartStop(target.value)}
-                                    >
-                                        {busStops.map((station) => (
-                                            <option
-                                                key={station.id}
-                                                value={station.name}
-                                            >
-                                                {station.name}
-                                            </option>
-                                        ))}
-                                    </Select>
-                                </label>
+                            <Label htmlFor="startStationSelect">
+                                <Span>
+                                    Z
+                                </Span>
+                                <GenericDropdown
+                                    items={busStops}
+                                    selected={startStop}
+                                    onSelect={setStartStop}
+                                    getLabel={(item) => item.name}
+                                />
                             </Label>
-                            <Label >
-                                <label htmlFor="startStationSelect">
-                                    <Span>
-                                        Do
-                                    </Span>
-                                    <Select
-                                        id="endStationSelect"
-                                        value={endStop}
-                                        onChange={({ target }) => setEndStop(target.value)}
-                                    >
-                                        {busStops.map((station) => (
-                                            <option
-                                                key={station.id}
-                                                value={station.name}
-                                            >
-                                                {station.name}
-                                            </option>
-                                        ))}
-                                    </Select>
-                                </label>
+                            <Label htmlFor="startStationSelect">
+                                <Span>
+                                    Do
+                                </Span>
+                                <GenericDropdown
+                                    items={busStops}
+                                    selected={endStop}
+                                    onSelect={setEndStop}
+                                    getLabel={(item) => item.name}
+                                />
                             </Label>
                         </Div>
                         <Switch onClick={switchStops}><StyledLoopIcon /></Switch>
@@ -123,8 +102,8 @@ const Search = () => {
             </Container>
             <Modal isModalOpen={isModalOpen} onClose={closeModal}>
                 <Result
-                    startStop={startStop}
-                    endStop={endStop}
+                    startStop={startStop.name}
+                    endStop={endStop.name}
                     departureDate={departureDate}
                     onNextDayButtonClick={handleDepartureDateChange}
                 />

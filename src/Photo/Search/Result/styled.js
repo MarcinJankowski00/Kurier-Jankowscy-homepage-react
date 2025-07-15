@@ -26,8 +26,10 @@ export const Heading = styled.div`
 
 export const ListContainer = styled.div`
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const List = styled.ul`
@@ -37,8 +39,11 @@ export const List = styled.ul`
     padding-right: 15px;
     padding-bottom: 0;
     margin-bottom: 0;
+    max-height: 310px;
+    overflow-y: auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 17px;
+        font-size: 15px;
+        max-height: 25vh;
     }
     
 `;
@@ -65,13 +70,28 @@ export const Span = styled.span`
     color: ${({ theme }) => theme.color.lessImportant};
 `;
 
-export const DepartureTime = styled.span`
+export const Text = styled.span`
     display: none;
     filter: brightness(130%);
     ${({ show }) => show && css`
         display: inline;
     `}
 `;
+
+export const Price = styled.div`
+    display: none;
+    filter: brightness(130%);
+    margin: 15px auto 10px auto;
+    max-width: 500px;
+    ${({ show }) => show && css`
+        display: grid;
+        grid-gap: 8px;
+    `}
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 16px;
+    }
+`;
+
 export const Empty = styled.div`
     display: none;
     text-align: center;
@@ -104,7 +124,9 @@ export const NextDayButton = styled.button`
     color: ${({ theme }) => theme.color.fontOnButton};
     margin-top: 10px;
     border-radius: 5px;
-    padding: 5px 16px;
+    padding: 10px;
+    align-self: center;
+    width: 190px;
     transition: 0.5s;
     &:hover{
         filter: brightness(120%);
@@ -115,5 +137,14 @@ export const NextDayButton = styled.button`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         font-size: 16px;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+        width: 143px;
+    }
 `;
 
+export const Label = styled.label`
+    font-size: 15px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 12px;
+    }
+`;

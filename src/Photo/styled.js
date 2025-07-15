@@ -45,7 +45,7 @@ export const Content = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         display: flex;
         flex-direction: column-reverse;
-        align-items: normal;
+        align-items: center;
         justify-content: center;
         min-height: auto;
     }
@@ -95,9 +95,7 @@ export const Button = styled(Link)`
         color: ${({ theme }) => theme.color.white};;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            width: 100%;
-        }
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
-            font-size: 15px;
-        }
+        width: 100%;
+        font-size: 17px;
+    }
 `;

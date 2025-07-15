@@ -5,8 +5,7 @@ import { ReactComponent as MagnifierIcon } from "./icons/magnifier.svg"
 export const Form = styled.div`
     justify-self: end;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-        grid-column-start: 1;
-        grid-row-start: 1;
+        width: 100%;
     }
 `;
 
@@ -14,15 +13,17 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.color.search};
     color: ${({ theme }) => theme.color.teal};
     backdrop-filter: blur(15px);
-    min-width: 430px;
+    min-width: 400px;
     padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 0px 13px 0px ${({ theme }) => theme.color.silver};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         margin-bottom: 20px;
         margin-top: 0px;
-        max-width: 1000px;
-        min-width: 0;
+        max-width: 340px;
+        min-width: 0px;
+        width: 100%;
+        justify-self: center;
     }
 `;
 
@@ -52,8 +53,10 @@ export const Div = styled.div`
     width: 100%;
 `;
 
-export const Label = styled.div`
+export const Label = styled.label`
     margin-bottom: 18px;
+    display: flex;
+    align-items: center;
 `;
 
 export const Span = styled.span`
@@ -97,13 +100,13 @@ export const Switch = styled.div`
 
 export const StyledLoopIcon = styled(LoopIcon)`
     width: 22px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
         width: 18px;
     }
 `;
 
 export const DateDiv = styled.div`
-    max-width: 90%;
+    max-width: 85%;
     margin-bottom: 18px;
 `;
 
@@ -118,8 +121,8 @@ export const Input = styled.input`
     font-size: 17px;
     cursor: pointer;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            font-size: 15px;
-        }
+        font-size: 12px;
+    }
 `;
 
 export const Button = styled.button`
@@ -134,11 +137,15 @@ export const Button = styled.button`
     padding: 12px 24px;
     transition: 0.5s;
     cursor: pointer;
+    font-size: 18px;
     &:hover {
         filter: brightness(125%);
     }
     &:active {
         filter: brightness(135%);
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
+        font-size: 14px;
     }
 `;
 
@@ -148,10 +155,11 @@ export const Text = styled.p`
 `;
 
 export const StyledMagnifierIcon = styled(MagnifierIcon)`
-    width: 20px;
+    width: 16px;
     margin-right: 10px;
     fill: ${({ theme }) => theme.color.white};
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax22}px) {
-        width: 15px;
+        width: 12px;
+        margin-right: 8px;
     }
 `;

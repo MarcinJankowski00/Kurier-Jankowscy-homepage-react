@@ -5,9 +5,7 @@ import {
   Label,
   Input,
   Container,
-  Title,
   SubmitButton,
-  Message,
   FieldGroup,
 } from "./styled";
 
@@ -22,7 +20,6 @@ const MyData = () => {
     city: "",
     contactNumber: "",
   });
-  const [message, setMessage] = useState("");
 
   const fieldLabels = {
     name: "Imię",
@@ -72,18 +69,17 @@ const MyData = () => {
 
       if (res.ok) {
         setUserData(data.user);
-        setMessage("✅ Dane zostały zaktualizowane");
+        alert("✅ Dane zostały zaktualizowane");
       } else {
-        setMessage(data.error || "❌ Błąd aktualizacji");
+        alert(data.error || "❌ Błąd aktualizacji");
       }
     } catch (err) {
-      setMessage("❌ Błąd sieci");
+      alert("❌ Błąd sieci");
     }
   };
 
   return (
     <Container>
-      <Title>Dane użytkownika</Title>
       <Form onSubmit={handleSubmit}>
         {Object.keys(fieldLabels).map((field) => (
           <FieldGroup key={field}>
@@ -99,7 +95,6 @@ const MyData = () => {
           </FieldGroup>
         ))}
         <SubmitButton type="submit">Zapisz zmiany</SubmitButton>
-        <Message>{message}</Message>
       </Form>
     </Container>
   );

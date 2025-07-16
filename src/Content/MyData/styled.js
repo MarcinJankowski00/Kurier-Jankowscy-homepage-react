@@ -1,19 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 2rem auto;
   padding: 2rem;
-  background: #f5f5f5;
-  border-radius: 12px;
+  background-color: #f8f9fa;
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-`;
-
-export const Title = styled.h2`
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `;
 
 export const Form = styled.form`
@@ -27,6 +23,7 @@ export const FieldGroup = styled.div`
 
 export const Label = styled.label`
   font-weight: bold;
+  font-size: 1.1rem;
   margin-bottom: 0.3rem;
   display: block;
   color: #222;
@@ -46,23 +43,22 @@ export const Input = styled.input`
 `;
 
 export const SubmitButton = styled.button`
-  padding: 0.8rem;
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
   margin-top: 1rem;
-
+  border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.color.teal};
+  background-color: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
+  padding: 12px 24px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 18px;
   &:hover {
-    background-color: #0056b3;
+    filter: brightness(125%);
+  }
+  &:active {
+    filter: brightness(135%);
   }
 `;
 
-export const Message = styled.p`
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-`;
+

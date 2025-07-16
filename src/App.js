@@ -1,4 +1,3 @@
-import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Section from './Section';
@@ -21,8 +20,7 @@ import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
 
 function App() {
-
-
+  
   return (
     <HashRouter>
       <main>
@@ -70,7 +68,7 @@ function App() {
           </Route>
           <Route path={toBuyTicket()}>
             <Section
-              title="Kup bilet"
+              title="Kup bilet miesięczny"
               content={<BuyTicket />}
             />
           </Route>

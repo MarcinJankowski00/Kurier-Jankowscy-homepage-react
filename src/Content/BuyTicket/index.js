@@ -13,6 +13,14 @@ const BuyTicket = () => {
     const [relief, setRelief] = useState(0);
     const [selectedRelief, setSelectedRelief] = useState(reliefs["else"][0]);
     const { userData, buyTicket } = useAuth();
+    const today = new Date();
+    const nextMonth = today.getMonth() === 11 ? 0 : today.getMonth() + 1;
+    const year = today.getMonth() === 11 ? today.getFullYear() + 1 : today.getFullYear();
+    const month = nextMonth + 1;
+    const formatMonthYear = (month, year) => {
+        const date = new Date(year, month - 1);
+        return date.toLocaleString("pl-PL", { month: "long", year: "numeric" });
+    };
 
     const handleBuyTicket = async () => {
         const ticketData = {
@@ -21,6 +29,8 @@ const BuyTicket = () => {
             endStop: endStop.name,
             type: direction === "one-way" ? "monthly" : "monthlyRoundTrip",
             relief: selectedRelief,
+            month: month,
+            year: year,
             price: getTicketPrice(startStop, endStop, relief, direction),
         };
 
@@ -121,7 +131,9 @@ const BuyTicket = () => {
                     TAM/POWRÓT
                 </label>
             </ Label>
+            <span>Ważny: {formatMonthYear(month, year)}</span>
             <Price>
+                {relief !== 0 ? `Ulga: - ${relief*100}%` : ""}<br />
                 Cena: {getTicketPrice(startStop, endStop, relief, direction)} zł
             </Price>
             <SubmitButton onClick={handleBuyTicket}>Kup bilet</SubmitButton>

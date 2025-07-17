@@ -10,6 +10,12 @@ import {
 const MyTickets = () => {
   const { userTicketsData } = useAuth();
 
+  const formatMonthYear = (month, year) => {
+    const date = new Date(year, month - 1);
+    return date.toLocaleString("pl-PL", { month: "long", year: "numeric" });
+  };
+
+
   if (!userTicketsData || userTicketsData.tickets.length === 0) {
     return (
       <Container>
@@ -40,6 +46,9 @@ const MyTickets = () => {
             </TicketField>
             <TicketField>
               <strong>Data zakupu:</strong> {new Date(ticket.purchaseDate).toLocaleString("pl-PL")}
+            </TicketField>
+            <TicketField>
+              <strong>Ważny:</strong> {formatMonthYear(ticket.month, ticket.year)}
             </TicketField>
           </TicketCard>
         ))}

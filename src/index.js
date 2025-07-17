@@ -7,15 +7,18 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from './GlobalStyle';
 import { theme } from './theme';
 import { AuthProvider } from "./context/AuthContext";
+import { DataProvider } from "./context/DataContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <AuthProvider>
-        <GlobalStyle />
-        <App />
-      </AuthProvider>
+      <DataProvider>
+        <AuthProvider>
+          <GlobalStyle />
+          <App />
+        </AuthProvider>
+      </DataProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

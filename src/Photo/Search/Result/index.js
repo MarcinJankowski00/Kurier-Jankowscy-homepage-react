@@ -1,10 +1,8 @@
 import { List, Item, Container, Heading, Span, ListContainer, Text, ShowButton, Empty, NextDayButton, Price, Label } from "./styled";
 import { useState, useEffect } from 'react';
-import getResult from './useGetResult';
-import { busStops } from '../../../BusStops';
-import { priceMatrix } from '../../../Prices';
-import { reliefs } from '../../../Reliefs';
+import GetResult from './useGetResult';
 import GenericDropdown from "../../../GenericDropdown";
+import { useData } from "../../../context/DataContext";
 
 
 const calculateTimeDifference = (startHour, endHour) => {
@@ -22,15 +20,6 @@ const calculateTimeDifference = (startHour, endHour) => {
     const timeDifference = endTotalMinutes - startTotalMinutes;
 
     return timeDifference;
-};
-
-const getTicketPrice = (startStop, endStop, relief, typeOfTicket, direction) => {
-    const startStopObject = busStops.find((station) => station.name === startStop);
-    const endStopObject = busStops.find((station) => station.name === endStop);
-    const startIndex = startStopObject.id - 1;
-    const endIndex = endStopObject.id - 1;
-    if (startIndex === -1 || endIndex === -1) return null;
-    return (priceMatrix[direction === 'one-way'? typeOfTicket : "monthlyRoundTrip"][startIndex][endIndex] * (1 - relief)).toFixed(2);
 };
 
 const getActualHour = () => {
@@ -90,15 +79,34 @@ const isPast = (myHour, formattedDate) => {
 };
 
 const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => {
+    const { stops, prices, reliefs } = useData();
     const [isShowed, setIsShowed] = useState(false);
     const [relief, setRelief] = useState(0);
-    const [selectedRelief, setSelectedRelief] = useState(reliefs["else"][0]);
     const [typeOfTicket, setTypeOfTicket] = useState("normal");
     const [selectedTypeOfTicket, setSelectedTypeOfTicket] = useState({ name: "Jednorazowy", value: "normal" });
     const [direction, setDirection] = useState('one-way');
-    const result = getResult(departureDate, startStop, endStop);
+    const filteredReliefs = reliefs.filter(r => r.type === typeOfTicket);
+    const [selectedRelief, setSelectedRelief] = useState(filteredReliefs[0]);
+    const result = GetResult(departureDate, startStop, endStop);
     const startStopObject = result.startStopTab;
     const endStopObject = result.endStopTab;
+
+    const getTicketPrice = (startStop, endStop, relief, typeOfTicket, direction) => {
+        const startStopObject = stops.find((station) => station.name === startStop);
+        const endStopObject = stops.find((station) => station.name === endStop);
+        const startIndex = startStopObject.id - 1;
+        const endIndex = endStopObject.id - 1;
+        if (startIndex === -1 || endIndex === -1) return null;
+        if (typeOfTicket === "normal") {
+            const type = "normal";
+            const monthlyRelief = prices.find(r => r.type === type);
+            return (monthlyRelief.value[startIndex][endIndex] * (1 - relief)).toFixed(2);
+        } else {
+            const type = direction === 'one-way' ? "monthly" : "monthlyRoundTrip";
+            const monthlyRelief = prices.find(r => r.type === type);
+            return (monthlyRelief.value[startIndex][endIndex] * (1 - relief)).toFixed(2);
+        }
+    };
 
     const handleChange = (e) => {
         setDirection(e.target.value);
@@ -113,7 +121,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
     useEffect(() => {
         if (selectedTypeOfTicket?.value !== undefined) {
             setTypeOfTicket(String(selectedTypeOfTicket.value));
-            setSelectedRelief(reliefs["else"][0]);
+            setSelectedRelief(filteredReliefs[0]);
             setDirection("one-way")
         }
     }, [selectedTypeOfTicket])
@@ -183,7 +191,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                     <span>Cena biletu: <b>{getTicketPrice(startStop, endStop, relief, typeOfTicket, direction)} zł</b></span>
                     <Label htmlFor="reliefSelect">
                         <GenericDropdown
-                            items={reliefs[typeOfTicket]}
+                            items={filteredReliefs}
                             selected={selectedRelief}
                             onSelect={setSelectedRelief}
                             getLabel={(item) => item.name}

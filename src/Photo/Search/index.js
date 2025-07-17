@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { Form, Container, Header, Element, Text, Button, Wrapper, Switch, Div, Label, DateDiv, StyledMagnifierIcon, Span, StyledLoopIcon, Input } from "./styled";
 import Modal from "../../Modal";
 import Result from "./Result";
-import { busStops } from "../../BusStops.js";
 import { getInitialEndStop, getInitialStartStop } from './getInitialStops';
 import GenericDropdown from '../../GenericDropdown/index.js';
+import { useData } from '../../context/DataContext.js';
 
 const Search = () => {
+    const { stops } = useData();
     const [isModalOpen, setModalOpen] = useState(false);
     const [startStop, setStartStop] = useState(getInitialStartStop);
     const [endStop, setEndStop] = useState(getInitialEndStop);
@@ -65,7 +66,7 @@ const Search = () => {
                                     Z
                                 </Span>
                                 <GenericDropdown
-                                    items={busStops}
+                                    items={stops}
                                     selected={startStop}
                                     onSelect={setStartStop}
                                     getLabel={(item) => item.name}
@@ -76,7 +77,7 @@ const Search = () => {
                                     Do
                                 </Span>
                                 <GenericDropdown
-                                    items={busStops}
+                                    items={stops}
                                     selected={endStop}
                                     onSelect={setEndStop}
                                     getLabel={(item) => item.name}

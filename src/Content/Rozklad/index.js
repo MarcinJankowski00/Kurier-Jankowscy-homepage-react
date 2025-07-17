@@ -1,10 +1,11 @@
 import FileDownloadButton from "../../FileDownloadButton";
 import { Content, Wrapper, TableContainer, Table, Cell, Text, Row, } from "./styled";
-import { busStops } from "../../BusStops";
 import rozkladJazdy from "../../RozkładJazdy.pdf";
+import { useData } from "../../context/DataContext";
 
 const Rozklad = () => {
-    const reverseBusStops = [...busStops];
+    const { stops } = useData();
+    const reverseBusStops = [...stops];
     reverseBusStops.reverse()
     return (
         <Content>
@@ -36,7 +37,7 @@ const Rozklad = () => {
                         </Row>
                     </thead>
                     <tbody>
-                        {busStops.map((item) => {
+                        {stops.map((item) => {
                             if (item.id === 20) {
                                 return undefined;
                             } else {

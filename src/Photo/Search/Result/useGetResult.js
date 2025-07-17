@@ -1,4 +1,4 @@
-import { busStops } from "../../../BusStops";
+import { useData } from "../../../context/DataContext";
 
 const variant5 = [0, 1, 2, 4, 6, 8, 10, 11, 12, 13];
 // Sylwester, Wigilia lub Wielka Sobota w niedzielę xd
@@ -121,9 +121,10 @@ const deleteElements = (tab1, tab2) => {
     return tab1.filter((_, index) => !tab2.includes(index));
 }
 
-const getResult = (departureDateStr, startStop, endStop) => {
-    const startStopObject = busStops.find((station) => station.name === startStop);
-    const endStopObject = busStops.find((station) => station.name === endStop);
+const GetResult = (departureDateStr, startStop, endStop) => {
+    const { stops } = useData();
+    const startStopObject = stops.find((station) => station.name === startStop);
+    const endStopObject = stops.find((station) => station.name === endStop);
     const departureDate = new Date(departureDateStr);
     let direction = "";
 
@@ -204,4 +205,4 @@ const getResult = (departureDateStr, startStop, endStop) => {
     };
 }
 
-export default getResult;
+export default GetResult;

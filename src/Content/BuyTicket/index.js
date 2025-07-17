@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { Label, Span, Wrapper, Price, SubmitButton } from "./styled";
 import GenericDropdown from "../../GenericDropdown";
-import { priceMatrix } from "../../Prices";
-import { reliefs } from "../../Reliefs";
-import { busStops } from "../../BusStops";
 import { useAuth } from "../../context/AuthContext";
+import { useData } from "../../context/DataContext";
 
 const BuyTicket = () => {
-    const [startStop, setStartStop] = useState(busStops[0]);
-    const [endStop, setEndStop] = useState(busStops[24]);
+    const { stops, prices, reliefs } = useData();
+    const { userData, buyTicket } = useAuth();
+    const monthlyReliefs = reliefs.filter(r => r.type === "monthly");
+    const [startStop, setStartStop] = useState(stops[0]);
+    const [endStop, setEndStop] = useState(stops[24]);
     const [direction, setDirection] = useState('one-way');
     const [relief, setRelief] = useState(0);
-    const [selectedRelief, setSelectedRelief] = useState(reliefs["else"][0]);
-    const { userData, buyTicket } = useAuth();
+    const [selectedRelief, setSelectedRelief] = useState(monthlyReliefs[0]);
     const today = new Date();
     const nextMonth = today.getMonth() === 11 ? 0 : today.getMonth() + 1;
     const year = today.getMonth() === 11 ? today.getFullYear() + 1 : today.getFullYear();
@@ -59,13 +59,14 @@ const BuyTicket = () => {
     };
 
     const getTicketPrice = (startStop, endStop, relief, direction) => {
-        const startStopObject = busStops.find((station) => station.name === startStop.name);
-        const endStopObject = busStops.find((station) => station.name === endStop.name);
-        console.log(startStopObject);
+        const startStopObject = stops.find((station) => station.name === startStop.name);
+        const endStopObject = stops.find((station) => station.name === endStop.name);
         const startIndex = startStopObject.id - 1;
         const endIndex = endStopObject.id - 1;
         if (startIndex === -1 || endIndex === -1) return null;
-        return (priceMatrix[direction === 'one-way' ? "monthly" : "monthlyRoundTrip"][startIndex][endIndex] * (1 - relief)).toFixed(2);
+        const typeOfTicket = direction === 'one-way' ? "monthly" : "monthlyRoundTrip";
+        const monthlyRelief = prices.find(r => r.type === typeOfTicket);
+        return (monthlyRelief.value[startIndex][endIndex] * (1 - relief)).toFixed(2);
     };
 
     const handleChange = (e) => {
@@ -84,7 +85,7 @@ const BuyTicket = () => {
                     Z
                 </Span>
                 <GenericDropdown
-                    items={busStops}
+                    items={stops}
                     selected={startStop}
                     onSelect={setStartStop}
                     getLabel={(item) => item.name}
@@ -95,14 +96,14 @@ const BuyTicket = () => {
                     Do
                 </Span>
                 <GenericDropdown
-                    items={busStops}
+                    items={stops}
                     selected={endStop}
                     onSelect={setEndStop}
                     getLabel={(item) => item.name}
                 />
             </Label>
             <GenericDropdown
-                items={reliefs["monthly"]}
+                items={monthlyReliefs}
                 selected={selectedRelief}
                 onSelect={setSelectedRelief}
                 getLabel={(item) => item.name}

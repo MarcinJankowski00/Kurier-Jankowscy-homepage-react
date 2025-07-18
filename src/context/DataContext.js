@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import Loader from "../Loader";
 
 const DataContext = createContext();
 
@@ -24,15 +25,21 @@ export const DataProvider = ({ children }) => {
       } catch (err) {
         console.error("❌ Błąd ładowania danych:", err);
       } finally {
-        setLoading(false);
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+        return () => {
+          clearTimeout(timer);
+        };
+
       }
     };
 
     fetchData();
   }, []);
 
-if (loading) {
-    return <div style={{ padding: "2rem" }}>⏳ Ładowanie danych globalnych...</div>;
+  if (loading) {
+    return <Loader />;
   }
 
   return (

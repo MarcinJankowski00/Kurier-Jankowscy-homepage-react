@@ -12,6 +12,7 @@ const rotate = keyframes`
 
 export const StyledSpinner = styled(Spinner)`
     animation: ${rotate} 1s linear infinite;
+    width: 120px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
         width: 100px;
     }

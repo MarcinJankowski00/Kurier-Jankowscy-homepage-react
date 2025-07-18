@@ -11,7 +11,6 @@ import Flota from './Content/Flota';
 import MyData from './Content/MyData';
 import MyTickets from './Content/MyTickets';
 import BuyTicket from './Content/BuyTicket';
-import Loader from './Loader';
 import CookiesInfo from './CookiesInfo';
 import { HashRouter, Redirect, Route, Switch, } from 'react-router-dom/cjs/react-router-dom.min';
 import { toAboutUs, toBuyTicket, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toSchedule, toStart, toVechicle } from './routes';
@@ -25,7 +24,6 @@ function App() {
     <HashRouter>
       <main>
         <CookiesInfo />
-        <Loader />
         <Navigation />
         <Switch>
           <Route exact path={toStart()}>

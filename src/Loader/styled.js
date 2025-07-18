@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -6,15 +6,6 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
 
-  }
-`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 `;
 
@@ -26,20 +17,17 @@ export const Div = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.color.loader};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 999;
-  
-  ${({ hidden }) => hidden && css`
-        animation: ${fadeOut} 1.25s ease-in-out;
-    `}
-
+  animation: ${fadeIn} 1.25s ease-in-out;
 `;
 
 export const Img = styled.img`
-    animation: ${fadeIn} 1.25s ease-in-out;
-    width: 600px;
+    
+    width: 650px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax2}px) {
-            width: 270px;
-        }
+      width: 270px;
+    }
 `;

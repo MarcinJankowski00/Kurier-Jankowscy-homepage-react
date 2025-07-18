@@ -167,6 +167,7 @@ export const AccountListItem = styled.li`
 `;
 
 export const Link = styled(NavLink)`
+    padding-bottom: 4px;
     position: relative;
     color: ${({ theme }) => theme.color.font};
     text-decoration: none;

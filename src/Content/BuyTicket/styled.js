@@ -1,61 +1,57 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+`;
+
+export const StepHeader = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 24px;
 `;
 
-export const Label = styled.label`
+export const StepIndicator = styled.div`
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid ${props => (props.active ? '#007BFF' : '#ccc')};
+  font-weight: ${props => (props.active ? 'bold' : 'normal')};
+  color: ${props => (props.active ? '#007BFF' : '#888')};
+`;
+
+export const StepTitle = styled.h2`
+  margin-bottom: 16px;
+  text-align: center;
+`;
+
+export const StepContent = styled.div`
+  min-height: 300px;
+  padding: 16px;
+  background: #f8f8f8;
+  border-radius: 8px;
+`;
+
+export const NavButtons = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 1rem;
-  color: #333;
-
-  input[type="radio"] {
-    margin-right: 0.5rem;
-  }
-
-  & > label {
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
+  justify-content: space-between;
+  margin-top: 24px;
 `;
 
-export const Span = styled.span`
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-`;
-
-export const Price = styled.div`
-  font-size: 1.25rem;
+export const NavButton = styled.button`
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
-  color: #007bff;
-  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 `;
 
-export const SubmitButton = styled.button`
-  cursor: pointer;
-  margin-top: 1rem;
-  border-radius: 5px;
-  border: 1px solid ${({ theme }) => theme.color.teal};
-  background-color: ${({ theme }) => theme.color.teal};
-  color: ${({ theme }) => theme.color.white};
-  padding: 12px 24px;
-  transition: 0.5s;
-  cursor: pointer;
-  font-size: 18px;
-  &:hover {
-    filter: brightness(125%);
-  }
-  &:active {
-    filter: brightness(135%);
-  }
-`;

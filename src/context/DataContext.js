@@ -9,6 +9,9 @@ export const DataProvider = ({ children }) => {
   const [reliefs, setReliefs] = useState([]);
   const [prices, setPrices] = useState([]);
   const [loading, setLoading] = useState(true);
+  const sortById = (array) => {
+    return [...array].sort((a, b) => a.id - b.id);
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +22,7 @@ export const DataProvider = ({ children }) => {
           axios.get("http://localhost:5000/api/data/prices"),
         ]);
 
-        setStops(stopsRes.data);
+        setStops(sortById(stopsRes.data));
         setReliefs(reliefsRes.data);
         setPrices(pricesRes.data);
       } catch (err) {

@@ -13,6 +13,7 @@ import TicketConfig from './steps/TicketConfig';
 import DataOfPassenger from './steps/DataOfPassenger';
 import Summary from './steps/Summary';
 import Payment from './steps/Payment';
+import { TicketPurchaseProvider } from "../../context/TicketPurchaseContext";
 
 const steps = [
   { title: 'Wybór biletu', component: TicketConfig },
@@ -38,30 +39,32 @@ const TicketPurchaseFlow = () => {
   };
 
   return (
-    <Wrapper>
-      <StepHeader>
-        {steps.map((step, index) => (
-          <StepIndicator key={index} active={index === currentStep}>
-            {index + 1}. {step.title}
-          </StepIndicator>
-        ))}
-      </StepHeader>
+    <TicketPurchaseProvider>
+      <Wrapper>
+        <StepHeader>
+          {steps.map((step, index) => (
+            <StepIndicator key={index} active={index === currentStep}>
+              {index + 1}. {step.title}
+            </StepIndicator>
+          ))}
+        </StepHeader>
 
-      <StepTitle>{steps[currentStep].title}</StepTitle>
+        <StepTitle>{steps[currentStep].title}</StepTitle>
 
-      <StepContent>
-        <StepComponent />
-      </StepContent>
+        <StepContent>
+          <StepComponent />
+        </StepContent>
 
-      <NavButtons>
-        <NavButton onClick={goBack} disabled={currentStep === 0}>
-          ⬅ Wstecz
-        </NavButton>
-        <NavButton onClick={goNext} disabled={currentStep === steps.length - 1}>
-          Dalej ➡
-        </NavButton>
-      </NavButtons>
-    </Wrapper>
+        <NavButtons>
+          <NavButton onClick={goBack} disabled={currentStep === 0}>
+            ⬅ Wstecz
+          </NavButton>
+          <NavButton onClick={goNext} disabled={currentStep === steps.length - 1}>
+            Dalej ➡
+          </NavButton>
+        </NavButtons>
+      </Wrapper>
+    </TicketPurchaseProvider>
   );
 };
 

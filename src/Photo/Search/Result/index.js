@@ -1,5 +1,5 @@
 import { List, Item, Container, Heading, Span, ListContainer, Text, ShowButton, Empty, NextDayButton, Price, Label } from "./styled";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import GetResult from './useGetResult';
 import GenericDropdown from "../../../GenericDropdown";
 import { useData } from "../../../context/DataContext";
@@ -85,8 +85,18 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
     const [typeOfTicket, setTypeOfTicket] = useState("normal");
     const [selectedTypeOfTicket, setSelectedTypeOfTicket] = useState({ name: "Jednorazowy", value: "normal" });
     const [direction, setDirection] = useState('one-way');
-    const filteredReliefs = reliefs.filter(r => r.type === typeOfTicket);
-    const [selectedRelief, setSelectedRelief] = useState(filteredReliefs[0]);
+    const resultReliefs = useMemo(() => {
+        const filteredReliefs = reliefs.filter(r => r.type === typeOfTicket);
+        const sorted = filteredReliefs
+            .filter(obj => obj.value !== 0)
+            .sort((a, b) => a.name.localeCompare(b.name));
+
+        return [
+            filteredReliefs.find(obj => obj.value === 0),
+            ...sorted
+        ];
+    }, [reliefs, typeOfTicket]);
+    const [selectedRelief, setSelectedRelief] = useState(resultReliefs[0]);
     const result = GetResult(departureDate, startStop, endStop);
     const startStopObject = result.startStopTab;
     const endStopObject = result.endStopTab;
@@ -121,10 +131,10 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
     useEffect(() => {
         if (selectedTypeOfTicket?.value !== undefined) {
             setTypeOfTicket(String(selectedTypeOfTicket.value));
-            setSelectedRelief(filteredReliefs[0]);
+            setSelectedRelief(resultReliefs[0]);
             setDirection("one-way")
         }
-    }, [selectedTypeOfTicket])
+    }, [selectedTypeOfTicket, resultReliefs])
 
     if (result === 'brak') {
         return (
@@ -191,7 +201,7 @@ const Result = ({ startStop, endStop, departureDate, onNextDayButtonClick }) => 
                     <span>Cena biletu: <b>{getTicketPrice(startStop, endStop, relief, typeOfTicket, direction)} zł</b></span>
                     <Label htmlFor="reliefSelect">
                         <GenericDropdown
-                            items={filteredReliefs}
+                            items={resultReliefs}
                             selected={selectedRelief}
                             onSelect={setSelectedRelief}
                             getLabel={(item) => item.name}

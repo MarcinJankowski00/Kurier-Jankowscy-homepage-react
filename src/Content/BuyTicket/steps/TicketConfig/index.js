@@ -7,7 +7,18 @@ import { useAuth } from "../../../../context/AuthContext";
 const TicketConfig = () => {
     const { stops, prices, reliefs } = useData();
     const { userData, buyTicket } = useAuth();
-    const monthlyReliefs = reliefs.filter(r => r.type === "monthly");
+
+    const filteredReliefs = reliefs.filter(r => r.type === "monthly");
+    const sorted = filteredReliefs
+        .filter(obj => obj.value !== 0)
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+    const monthlyReliefs =
+        [
+            filteredReliefs.find(obj => obj.value === 0),
+            ...sorted
+        ];
+
     const [startStop, setStartStop] = useState(stops[0]);
     const [endStop, setEndStop] = useState(stops[24]);
     const [direction, setDirection] = useState('one-way');
@@ -135,7 +146,7 @@ const TicketConfig = () => {
             </ Label>
             <span>Ważny: {formatMonthYear(month, year)}</span>
             <Price>
-                {relief !== 0 ? `Ulga: - ${relief*100}%` : ""}<br />
+                {relief !== 0 ? `Ulga: - ${relief * 100}%` : ""}<br />
                 Cena: {getTicketPrice(startStop, endStop, relief, direction)} zł
             </Price>
             <SubmitButton onClick={handleBuyTicket}>Kup bilet</SubmitButton>

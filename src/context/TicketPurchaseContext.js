@@ -1,33 +1,62 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { useData } from "./DataContext";
+import { useAuth } from "./AuthContext";
+import Spinner from "../Spinner";
 
 const TicketPurchaseContext = createContext();
 
 export const TicketPurchaseProvider = ({ children }) => {
-  const [ticketData, setTicketData] = useState({
-    startStop: null,
-    endStop: null,
-    type: "monthly",
-    relief: null,
-    passenger: null,
-    price: null,
-    month: null,
-    year: null,
-    // dodaj inne potrzebne pola
-  });
+    const { stops, reliefs } = useData();
+    const { userEmail, userData } = useAuth();
 
-  const updateTicketData = (partialData) => {
-    setTicketData((prev) => ({ ...prev, ...partialData }));
-  };
+    const today = new Date();
+    const nextMonth = today.getMonth() === 11 ? 0 : today.getMonth() + 1;
+    const year = today.getMonth() === 11 ? today.getFullYear() + 1 : today.getFullYear();
+    const month = nextMonth + 1;
+    
+    const [ticketData, setTicketData] = useState({
+        startStop: stops[0],
+        endStop: stops[24],
+        type: "monthly",
+        relief: reliefs.find(obj => obj.value === 0),
+        direction: "one-way",
+        passenger: null,
+        month: month,
+        year: year,
+        email: '',
+        name: '',
+        surname: '',
+        invoice: "none",
+    });
 
-  const resetTicketData = () => {
-    setTicketData({});
-  };
+    useEffect(() => {
+        if (userData) {
+            setTicketData(prev => ({
+                ...prev,
+                email: userEmail || '',
+                name: userData.name || '',
+                surname: userData.surname || '',
+            }));
+        }
+    }, [userData, userEmail]);
 
-  return (
-    <TicketPurchaseContext.Provider value={{ ticketData, updateTicketData, resetTicketData }}>
-      {children}
-    </TicketPurchaseContext.Provider>
-  );
+    if (!userData) {
+        return <Spinner />;
+    }
+
+    const updateTicketData = (partialData) => {
+        setTicketData((prev) => ({ ...prev, ...partialData }));
+    };
+
+    const resetTicketData = () => {
+        setTicketData({});
+    };
+
+    return (
+        <TicketPurchaseContext.Provider value={{ ticketData, updateTicketData, resetTicketData }}>
+            {children}
+        </TicketPurchaseContext.Provider>
+    );
 };
 
 export const useTicketPurchase = () => useContext(TicketPurchaseContext);

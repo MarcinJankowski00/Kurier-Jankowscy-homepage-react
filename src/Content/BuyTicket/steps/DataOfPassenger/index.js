@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FormWrapper,
   Section,
@@ -9,12 +9,20 @@ import {
   RadioLabel,
   ExtraFields,
 } from './styled';
+import { useTicketPurchase } from "../../../../context/TicketPurchaseContext";
 
 const DataOfPassenger = () => {
-  const [invoiceType, setInvoiceType] = useState('none');
+  const { ticketData, updateTicketData } = useTicketPurchase();
+
+  const invoiceType = ticketData.invoice || "none";
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    updateTicketData({ [name]: value });
+  };
 
   const handleInvoiceChange = (e) => {
-    setInvoiceType(e.target.value);
+    updateTicketData({ invoice: e.target.value });
   };
 
   return (
@@ -22,17 +30,32 @@ const DataOfPassenger = () => {
       <Section>
         <Title>Podaj dane podróżującego</Title>
         <Label>Imię
-          <Input type="text" name="travelerFirstName" />
+          <Input
+            type="text"
+            name="name"
+            value={ticketData.name || ""}
+            onChange={handleInputChange}
+          />
         </Label>
         <Label>Nazwisko
-          <Input type="text" name="travelerLastName" />
+          <Input
+            type="text"
+            name="surname"
+            value={ticketData.surname || ""}
+            onChange={handleInputChange}
+          />
         </Label>
       </Section>
 
       <Section>
         <Title>Dane do wysyłki biletu</Title>
         <Label>Adres email (wyślemy na niego bilet)
-          <Input type="email" name="email" />
+          <Input
+            type="email"
+            name="email"
+            value={ticketData.email || ""}
+            onChange={handleInputChange}
+          />
         </Label>
       </Section>
 
@@ -80,25 +103,60 @@ const DataOfPassenger = () => {
         {invoiceType === 'private' && (
           <ExtraFields>
             <Label>Imię
-              <Input type="text" name="privateFirstName" />
+              <Input
+                type="text"
+                name="privateFirstName"
+                value={ticketData.privateFirstName || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Nazwisko
-              <Input type="text" name="privateLastName" />
+              <Input
+                type="text"
+                name="privateLastName"
+                value={ticketData.privateLastName || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Ulica
-              <Input type="text" name="privateStreet" />
+              <Input
+                type="text"
+                name="privateStreet"
+                value={ticketData.privateStreet || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Numer domu
-              <Input type="text" name="privateHouseNumber" />
+              <Input
+                type="text"
+                name="privateHouseNumber"
+                value={ticketData.privateHouseNumber || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Miejscowość
-              <Input type="text" name="privateCity" />
+              <Input
+                type="text"
+                name="privateCity"
+                value={ticketData.privateCity || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Kod pocztowy
-              <Input type="text" name="privatePostalCode" />
+              <Input
+                type="text"
+                name="privatePostalCode"
+                value={ticketData.privatePostalCode || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Email
-              <Input type="email" name="privateEmail" />
+              <Input
+                type="email"
+                name="privateEmail"
+                value={ticketData.privateEmail || ""}
+                onChange={handleInputChange}
+              />
             </Label>
           </ExtraFields>
         )}
@@ -106,25 +164,60 @@ const DataOfPassenger = () => {
         {invoiceType === 'company' && (
           <ExtraFields>
             <Label>Nazwa firmy lub imię i nazwisko
-              <Input type="text" name="companyName" />
+              <Input
+                type="text"
+                name="companyName"
+                value={ticketData.companyName || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>NIP
-              <Input type="text" name="nip" />
+              <Input
+                type="text"
+                name="nip"
+                value={ticketData.nip || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Ulica
-              <Input type="text" name="companyStreet" />
+              <Input
+                type="text"
+                name="companyStreet"
+                value={ticketData.companyStreet || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Numer domu
-              <Input type="text" name="companyHouseNumber" />
+              <Input
+                type="text"
+                name="companyHouseNumber"
+                value={ticketData.companyHouseNumber || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Miejscowość
-              <Input type="text" name="companyCity" />
+              <Input
+                type="text"
+                name="companyCity"
+                value={ticketData.companyCity || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Kod pocztowy
-              <Input type="text" name="companyPostalCode" />
+              <Input
+                type="text"
+                name="companyPostalCode"
+                value={ticketData.companyPostalCode || ""}
+                onChange={handleInputChange}
+              />
             </Label>
             <Label>Email
-              <Input type="email" name="companyEmail" />
+              <Input
+                type="email"
+                name="companyEmail"
+                value={ticketData.companyEmail || ""}
+                onChange={handleInputChange}
+              />
             </Label>
           </ExtraFields>
         )}

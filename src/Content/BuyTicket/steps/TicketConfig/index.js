@@ -3,11 +3,12 @@ import { Label, Span, Wrapper, Price, SubmitButton } from "./styled";
 import GenericDropdown from "../../../../GenericDropdown";
 import { useData } from "../../../../context/DataContext";
 import { useAuth } from "../../../../context/AuthContext";
+import { useTicketPurchase } from "../../../../context/TicketPurchaseContext";
 
 const TicketConfig = () => {
     const { stops, prices, reliefs } = useData();
     const { userData, buyTicket } = useAuth();
-
+    const { ticketData, updateTicketData } = useTicketPurchase();
     const filteredReliefs = reliefs.filter(r => r.type === "monthly");
     const sorted = filteredReliefs
         .filter(obj => obj.value !== 0)
@@ -19,15 +20,13 @@ const TicketConfig = () => {
             ...sorted
         ];
 
-    const [startStop, setStartStop] = useState(stops[0]);
-    const [endStop, setEndStop] = useState(stops[24]);
-    const [direction, setDirection] = useState('one-way');
-    const [relief, setRelief] = useState(0);
-    const [selectedRelief, setSelectedRelief] = useState(monthlyReliefs[0]);
-    const today = new Date();
-    const nextMonth = today.getMonth() === 11 ? 0 : today.getMonth() + 1;
-    const year = today.getMonth() === 11 ? today.getFullYear() + 1 : today.getFullYear();
-    const month = nextMonth + 1;
+    const [startStop, setStartStop] = useState(ticketData.startStop);
+    const [endStop, setEndStop] = useState(ticketData.endStop);
+    const [direction, setDirection] = useState(ticketData.direction);
+    const [relief, setRelief] = useState(ticketData.relief.value);
+    const [selectedRelief, setSelectedRelief] = useState(ticketData.relief);
+    const year = ticketData.year;
+    const month = ticketData.month;
     const formatMonthYear = (month, year) => {
         const date = new Date(year, month - 1);
         return date.toLocaleString("pl-PL", { month: "long", year: "numeric" });
@@ -83,6 +82,7 @@ const TicketConfig = () => {
 
     const handleChange = (e) => {
         setDirection(e.target.value);
+        updateTicketData({direction: e.target.value})
     }
     useEffect(() => {
         if (selectedRelief?.value !== undefined) {
@@ -99,7 +99,10 @@ const TicketConfig = () => {
                 <GenericDropdown
                     items={stops}
                     selected={startStop}
-                    onSelect={setStartStop}
+                    onSelect={(item) => {
+                        setStartStop(item);
+                        updateTicketData({ startStop: item });
+                    }}
                     getLabel={(item) => item.name}
                 />
             </Label>
@@ -110,14 +113,20 @@ const TicketConfig = () => {
                 <GenericDropdown
                     items={stops}
                     selected={endStop}
-                    onSelect={setEndStop}
+                    onSelect={(item) => {
+                        setEndStop(item);
+                        updateTicketData({ endStop: item });
+                    }}
                     getLabel={(item) => item.name}
                 />
             </Label>
             <GenericDropdown
                 items={monthlyReliefs}
                 selected={selectedRelief}
-                onSelect={setSelectedRelief}
+                onSelect={(item) => {
+                    setSelectedRelief(item);
+                    updateTicketData({ relief: item });
+                }}
                 getLabel={(item) => item.name}
                 getRightContent={(item) => `(${item.value * 100}%)`}
                 getTooltip={(item) => item.description}

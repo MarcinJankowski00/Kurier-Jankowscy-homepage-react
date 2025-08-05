@@ -13,7 +13,7 @@ export const TicketPurchaseProvider = ({ children }) => {
     const nextMonth = today.getMonth() === 11 ? 0 : today.getMonth() + 1;
     const year = today.getMonth() === 11 ? today.getFullYear() + 1 : today.getFullYear();
     const month = nextMonth + 1;
-    
+
     const [ticketData, setTicketData] = useState({
         startStop: stops[0],
         endStop: stops[24],
@@ -36,6 +36,19 @@ export const TicketPurchaseProvider = ({ children }) => {
                 email: userEmail || '',
                 name: userData.name || '',
                 surname: userData.surname || '',
+                street: userData.street || '',
+                houseNumber: userData.houseNumber || '',
+                zipCode: userData.zipCode || '',
+                city: userData.city || '',
+                contactNumber: userData.contactNumber || '',
+                invoiceType: userData.invoiceType || 'none',
+                companyName: userData.companyName || '',
+                nip: userData.nip || '',
+                companyStreet: userData.companyStreet || '',
+                companyHouseNumber: userData.companyHouseNumber || '',
+                companyCity: userData.companyCity || '',
+                companyPostalCode: userData.companyPostalCode || '',
+                companyEmail: userData.companyEmail || '',
             }));
         }
     }, [userData, userEmail]);

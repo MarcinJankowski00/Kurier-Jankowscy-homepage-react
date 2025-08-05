@@ -15,7 +15,7 @@ const DataOfPassenger = () => {
   const { ticketData, updateTicketData } = useTicketPurchase();
 
   const invoiceType = ticketData.invoice || "none";
-
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     updateTicketData({ [name]: value });
@@ -106,7 +106,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privateFirstName"
-                value={ticketData.privateFirstName || ""}
+                value={ticketData.name || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -114,7 +114,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privateLastName"
-                value={ticketData.privateLastName || ""}
+                value={ticketData.surname || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -122,7 +122,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privateStreet"
-                value={ticketData.privateStreet || ""}
+                value={ticketData.street || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -130,7 +130,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privateHouseNumber"
-                value={ticketData.privateHouseNumber || ""}
+                value={ticketData.houseNumber || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -138,7 +138,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privateCity"
-                value={ticketData.privateCity || ""}
+                value={ticketData.city || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -146,7 +146,7 @@ const DataOfPassenger = () => {
               <Input
                 type="text"
                 name="privatePostalCode"
-                value={ticketData.privatePostalCode || ""}
+                value={ticketData.zipCode || ""}
                 onChange={handleInputChange}
               />
             </Label>
@@ -154,7 +154,7 @@ const DataOfPassenger = () => {
               <Input
                 type="email"
                 name="privateEmail"
-                value={ticketData.privateEmail || ""}
+                value={ticketData.email || ""}
                 onChange={handleInputChange}
               />
             </Label>

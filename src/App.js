@@ -17,9 +17,10 @@ import { toAboutUs, toBuyTicket, toContact, toFleat, toMessage, toMyData, toMyTi
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
+import { TicketPurchaseProvider } from './context/TicketPurchaseContext';
 
 function App() {
-  
+
   return (
     <HashRouter>
       <main>
@@ -64,11 +65,14 @@ function App() {
             />
             <Map />
           </Route>
+
           <Route path={toBuyTicket()}>
-            <Section
-              title="Kup bilet miesięczny"
-              content={<BuyTicket />}
-            />
+            <TicketPurchaseProvider>
+              <Section
+                title="Kup bilet miesięczny"
+                content={<BuyTicket />}
+              />
+            </TicketPurchaseProvider>
           </Route>
           <Route path={toMyTickets()}>
             <Section

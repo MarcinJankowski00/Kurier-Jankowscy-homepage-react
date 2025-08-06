@@ -14,7 +14,7 @@ import { useTicketPurchase } from "../../../../context/TicketPurchaseContext";
 const DataOfPassenger = () => {
   const { ticketData, updateTicketData } = useTicketPurchase();
 
-  const invoiceType = ticketData.invoice || "none";
+  const invoiceType = ticketData.invoiceType || "none";
  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +22,7 @@ const DataOfPassenger = () => {
   };
 
   const handleInvoiceChange = (e) => {
-    updateTicketData({ invoice: e.target.value });
+    updateTicketData({ invoiceType: e.target.value });
   };
 
   return (

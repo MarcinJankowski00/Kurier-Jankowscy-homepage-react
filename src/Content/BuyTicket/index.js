@@ -87,8 +87,12 @@ const TicketPurchaseFlow = () => {
         }
       }
       if (ticketData.invoiceType === "private") {
-        if (!ticketData.nip || ticketData.nip.length < 2) {
-          errors.push("❌ Nip jest wymagany.");
+        console.log(ticketData.invoiceName)
+        if (!ticketData.invoiceName || ticketData.invoiceName.length < 2) {
+          errors.push("❌ Imię do faktury jest wymagane.");
+        }
+        if (!ticketData.invoiceSurname || ticketData.invoiceSurname.length < 2) {
+          errors.push("❌ Nazwisko do faktury jest wymagane.");
         }
         if (!ticketData.street || ticketData.street.length < 2 ||
           !ticketData.houseNumber || ticketData.houseNumber.length < 2 ||
@@ -97,11 +101,8 @@ const TicketPurchaseFlow = () => {
         ) {
           errors.push("❌ Adres jest wymagany.");
         }
-        if (!ticketData.email || ticketData.email.length < 2) {
-          errors.push("❌ Email jest wymagany.");
-        }
-        if (!nipRegex.test(ticketData.nip)) {
-          errors.push("❌ NIP musi mieć dokładnie 10 cyfr.");
+        if (!ticketData.invoiceEmail || ticketData.invoiceEmail.length < 2) {
+          errors.push("❌ Email do faktury jest wymagany.");
         }
         if (!zipCodeRegex.test(ticketData.zipCode)) {
           errors.push("❌ Kod pocztowy powinien mieć format XX-XXX.");
@@ -112,11 +113,38 @@ const TicketPurchaseFlow = () => {
     return errors;
   };
 
+  const handleSubmit = async () => {
+    const payload = ticketData;
+    try {
+      const res = await fetch("http://localhost:5000/api/tickets/preview", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ Dane zostały wysłane");
+      } else {
+        alert(data.error || "❌ Błąd wysyłki");
+      }
+    } catch (err) {
+      alert("❌ Błąd sieci");
+    }
+  };
+
   const goNext = () => {
     const errors = validateForm();
     if (errors.length > 0) {
       alert(errors.join("\n"));
       return;
+    }
+    if (currentStep === 1) {
+      handleSubmit();
     }
     if (currentStep < steps.length - 1) {
       setCurrentStep(prev => prev + 1);

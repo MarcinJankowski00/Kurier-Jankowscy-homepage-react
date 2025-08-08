@@ -105,23 +105,23 @@ const DataOfPassenger = () => {
             <Label>Imię
               <Input
                 type="text"
-                name="privateFirstName"
-                value={ticketData.name || ""}
+                name="invoiceName"
+                value={ticketData.invoiceName || ""}
                 onChange={handleInputChange}
               />
             </Label>
             <Label>Nazwisko
               <Input
                 type="text"
-                name="privateLastName"
-                value={ticketData.surname || ""}
+                name="invoiceSurname"
+                value={ticketData.invoiceSurname || ""}
                 onChange={handleInputChange}
               />
             </Label>
             <Label>Ulica
               <Input
                 type="text"
-                name="privateStreet"
+                name="street"
                 value={ticketData.street || ""}
                 onChange={handleInputChange}
               />
@@ -129,7 +129,7 @@ const DataOfPassenger = () => {
             <Label>Numer domu
               <Input
                 type="text"
-                name="privateHouseNumber"
+                name="houseNumber"
                 value={ticketData.houseNumber || ""}
                 onChange={handleInputChange}
               />
@@ -137,7 +137,7 @@ const DataOfPassenger = () => {
             <Label>Miejscowość
               <Input
                 type="text"
-                name="privateCity"
+                name="city"
                 value={ticketData.city || ""}
                 onChange={handleInputChange}
               />
@@ -145,7 +145,7 @@ const DataOfPassenger = () => {
             <Label>Kod pocztowy
               <Input
                 type="text"
-                name="privatePostalCode"
+                name="zipCode"
                 value={ticketData.zipCode || ""}
                 onChange={handleInputChange}
               />
@@ -153,8 +153,8 @@ const DataOfPassenger = () => {
             <Label>Email
               <Input
                 type="email"
-                name="privateEmail"
-                value={ticketData.email || ""}
+                name="invoiceEmail"
+                value={ticketData.invoiceEmail || ""}
                 onChange={handleInputChange}
               />
             </Label>

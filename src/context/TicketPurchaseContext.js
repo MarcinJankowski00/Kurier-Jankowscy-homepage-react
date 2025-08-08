@@ -34,8 +34,11 @@ export const TicketPurchaseProvider = ({ children }) => {
             setTicketData(prev => ({
                 ...prev,
                 email: userEmail || '',
+                invoiceEmail: userEmail || '',
                 name: userData.name || '',
                 surname: userData.surname || '',
+                invoiceName: userData.name || '',
+                invoiceSurname: userData.surname || '',
                 street: userData.street || '',
                 houseNumber: userData.houseNumber || '',
                 zipCode: userData.zipCode || '',

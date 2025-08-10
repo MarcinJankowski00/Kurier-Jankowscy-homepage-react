@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.2221d885.js",
+    "main.js": "/static/js/main.6d0b6312.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/jarmark.png": "/static/media/jarmark.15121e3c2ac66a7095cd.png",
+    "static/media/litwa.png": "/static/media/litwa.76eade3b5676c576096e.png",
     "static/media/background.jpg": "/static/media/background.1e4536df4cf0e16abfe8.jpg",
     "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
@@ -47,11 +48,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.2221d885.js.map": "/static/js/main.2221d885.js.map",
+    "main.6d0b6312.js.map": "/static/js/main.6d0b6312.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.2221d885.js"
+    "static/js/main.6d0b6312.js"
   ]
 }

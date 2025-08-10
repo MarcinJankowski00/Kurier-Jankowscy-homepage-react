@@ -2,9 +2,17 @@ import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
 import autobus from "./images/autobus.jpg";
 import litwa2 from "./images/litwa2.png";
+import litwa from "./images/litwa.png";
 import jarmark from "./images/jarmark.png"
 
 export const news = [
+    {
+        id: 'wyjazd-na-litwe',
+        title: 'Zapraszamy na wycieczkę na Litwę',
+        firstSentence: 'KOWNO – KIEJDANY – WILNO – 2 dni pełne wrażeń...',
+        date: '10-08-2025',
+        photo: litwa,
+    },
     {
         id: 'informacja-utrudnienia',
         title: 'Informacja - nieczynny przystanek na ul. Goniądzkiej',
@@ -39,12 +47,5 @@ export const news = [
         firstSentence: 'Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie...',
         date: '27-10-2024',
         photo: autobus,
-    },
-    {
-        id: 'przypomnienie-bilety',
-        title: 'Biuro czynne w sobotę – legitymacje i bilety',
-        firstSentence: 'Przypominamy, że legitymacje szkolne tracą ważność 30 września...',
-        date: '27-09-2024',
-        photo: logo,
     },
 ];

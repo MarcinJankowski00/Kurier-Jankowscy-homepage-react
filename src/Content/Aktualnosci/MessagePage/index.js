@@ -6,6 +6,62 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'wyjazd-na-litwe')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
+                                <Container>
+                                    <b>KOWNO – KIEJDANY – WILNO – 2 dni pełne wrażeń</b>
+
+                                    <p>📅 26–27 sierpnia 2025</p>
+                                    <p><b>Cena:</b> 580 zł / osoba</p>
+
+                                    <b>I DZIEŃ</b>
+                                    <p>🔹 Wyjazd z Knyszyna i Białegostoku rano</p>
+                                    <p>🔹 Kowno – ruiny zamku, Starówka, Bazylika św. Pawła i Piotra, „Biały Łabędź” (Ratusz), Dom Perkuna, Aleja Wolności, kościół św. Michała Archanioła</p>
+                                    <p>🔹 Kiejdany – malownicze miasto nad Niewiażą, historia Radziwiłłów, gotyckie, renesansowe i barokowe budowle, pomnik Radziwiłłów</p>
+                                    <p>🔹 Przyjazd do Wilna, obiadokolacja, nocleg w pokojach 2–3 osobowych z łazienkami</p>
+
+                                    <b>II Dzień</b>
+                                    <p>🔹 Śniadanie, wykwaterowanie</p>
+                                    <p>🔹 Wilno z przewodnikiem: Ostra Brama, cerkiew św. Trójcy, Rynek, kościół św. Jana, Sanktuarium „Jezu Ufam Tobie”, kościół św. Ducha, kościół św. Anny, pomnik Mickiewicza, kościół św. Piotra i Pawła, cmentarz na Rossie, Mauzoleum „Matka i Serce Syna” i inne atrakcje</p>
+                                    <p>🔹 Troki – czas wolny ok. 1,5 godziny</p>
+                                    <p>🔹 Powrót wieczorem</p>
+
+                                    <div>
+                                        <p><b>Cena obejmuje:</b></p>
+                                        <ul>
+                                            <li> transport autokarem</li>
+                                            <li> opłaty drogowe i parkingi</li>
+                                            <li> ubezpieczenie krajowe i zagraniczne</li>
+                                            <li> przewodnicy w Kownie i Wilnie</li>
+                                            <li> 1 obiadokolacja</li>
+                                            <li> 1 nocleg</li>
+                                            <li> 1 śniadanie</li>
+                                        </ul>
+                                    </div>
+
+                                    <p><b>Uwaga:</b> Kolejność zwiedzania może ulec zmianie.</p>
+                                    <p>Dla chętnych – msza święta w Kownie i Wilnie.</p>
+
+                                    <div>
+                                        <b>📞 Zapisy i informacje:</b>
+                                        <p>Tel: <a href="tel:+48515073556">515 073 556</a>, <a href="tel:+48506110923">506 110 923</a></p>
+                                        <p>💵 <b>Zaliczka:</b> 200 zł do 17.08.2025</p>
+                                    </div>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'informacja-utrudnienia')
         return (
             <>

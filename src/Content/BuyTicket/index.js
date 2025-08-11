@@ -25,7 +25,7 @@ const steps = [
 const TicketPurchaseFlow = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const StepComponent = steps[currentStep].component;
-  const { ticketData } = useTicketPurchase();
+  const { ticketData, updateTicketData } = useTicketPurchase();
   const validateForm = () => {
     const errors = [];
 
@@ -34,7 +34,10 @@ const TicketPurchaseFlow = () => {
     const zipCodeRegex = /^$|^\d{2}-\d{3}$/;
     const nipRegex = /^$|^\d{10}$/;
     if (ticketData.startStop.id === 20 && ticketData.endStop.id > 20) {
-      errors.push("❌ Nie ma takiego połączenia");
+      errors.push("❌ Nie ma takiego połączenia. Autobusy z przystanku \"Fasty Kombinat\" odjeżdżają tylko w kierunku Moniek.");
+    }
+    if (ticketData.startStop.id === ticketData.endStop.id) {
+      errors.push("❌ Przystanki muszą być różne.");
     }
     if (currentStep === 1) {
       if (!ticketData.name || ticketData.name.length < 2) {
@@ -128,7 +131,7 @@ const TicketPurchaseFlow = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("✅ Dane zostały wysłane");
+        updateTicketData(data);
       } else {
         alert(data.error || "❌ Błąd wysyłki");
       }

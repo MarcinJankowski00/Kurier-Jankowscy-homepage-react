@@ -14,11 +14,13 @@ const TicketConfig = () => {
         .filter(obj => obj.value !== 0)
         .sort((a, b) => a.name.localeCompare(b.name));
 
-    const monthlyReliefs =
-        [
-            filteredReliefs.find(obj => obj.value === 0),
-            ...sorted
-        ];
+    const monthlyReliefs = [
+        filteredReliefs.find(obj => obj.value === 0),
+        ...sorted
+    ];
+    function removeById(array, id) {
+        return array.filter(item => item.id !== id);
+    }
 
     const [startStop, setStartStop] = useState(ticketData.startStop);
     const [endStop, setEndStop] = useState(ticketData.endStop);
@@ -82,7 +84,7 @@ const TicketConfig = () => {
 
     const handleChange = (e) => {
         setDirection(e.target.value);
-        updateTicketData({direction: e.target.value})
+        updateTicketData({ direction: e.target.value })
     }
     useEffect(() => {
         if (selectedRelief?.value !== undefined) {
@@ -97,7 +99,7 @@ const TicketConfig = () => {
                     Z
                 </Span>
                 <GenericDropdown
-                    items={stops}
+                    items={removeById(stops, 24)}
                     selected={startStop}
                     onSelect={(item) => {
                         setStartStop(item);

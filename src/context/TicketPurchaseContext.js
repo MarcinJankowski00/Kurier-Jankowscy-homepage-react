@@ -15,6 +15,7 @@ export const TicketPurchaseProvider = ({ children }) => {
     const month = nextMonth + 1;
 
     const [ticketData, setTicketData] = useState({
+        userId: userData._id,
         startStop: stops[0],
         endStop: stops[24],
         type: "monthly",

@@ -9,15 +9,8 @@ import {
 } from "./styled";
 import { useTicketPurchase } from "../../../../context/TicketPurchaseContext";
 
-const PAYMENT_METHODS = [
-    { id: "card", label: "Karta płatnicza" },
-    { id: "blik", label: "BLIK" },
-    { id: "p24", label: "Przelewy24" },
-];
-
 const Payment = () => {
     const { ticketData } = useTicketPurchase(); // <- poprawka: wywołanie hooka
-    const [selectedMethod, setSelectedMethod] = useState(PAYMENT_METHODS[0].id);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -36,7 +29,6 @@ const Payment = () => {
                 },
                 body: JSON.stringify({
                     ticketData,
-                    method: selectedMethod,
                 }),
             });
 
@@ -60,22 +52,6 @@ const Payment = () => {
 
     return (
         <Container>
-            <Title>Wybierz metodę płatności</Title>
-
-            <MethodsList>
-                {PAYMENT_METHODS.map((method) => (
-                    <MethodItem
-                        key={method.id}
-                        selected={selectedMethod === method.id}
-                        onClick={() => setSelectedMethod(method.id)}
-                    >
-                        {method.label}
-                    </MethodItem>
-                ))}
-            </MethodsList>
-
-            {error && <ErrorMessage>{error}</ErrorMessage>}
-
             <PayButton onClick={handlePay} disabled={loading}>
                 {loading
                     ? "Przekierowywanie..."

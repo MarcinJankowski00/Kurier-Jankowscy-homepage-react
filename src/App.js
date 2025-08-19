@@ -12,17 +12,19 @@ import MyData from './Content/MyData';
 import MyTickets from './Content/MyTickets';
 import BuyTicket from './Content/BuyTicket';
 import CookiesInfo from './CookiesInfo';
-import { HashRouter, Redirect, Route, Switch, } from 'react-router-dom/cjs/react-router-dom.min';
-import { toAboutUs, toBuyTicket, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toSchedule, toStart, toVechicle } from './routes';
+import { BrowserRouter, Redirect, Route, Switch, } from 'react-router-dom/cjs/react-router-dom.min';
+import { toAboutUs, toBuyTicket, toCancel, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toSchedule, toStart, toSuccess, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
 import { TicketPurchaseProvider } from './context/TicketPurchaseContext';
+import PaymentSuccess from './Content/BuyTicket/steps/PaymentSuccess';
+import PaymentCancel from './Content/BuyTicket/steps/PaymentCancel';
 
 function App() {
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <main>
         <CookiesInfo />
         <Navigation />
@@ -74,6 +76,16 @@ function App() {
               />
             </TicketPurchaseProvider>
           </Route>
+          <Route path={toSuccess()}>
+            <Section
+              title="Dziękujemy!"
+              content={<PaymentSuccess />}
+            /></Route>
+          <Route path={toCancel()}>
+            <Section
+              title="Nie powiodło się"
+              content={<PaymentCancel />}
+            /></Route>
           <Route path={toMyTickets()}>
             <Section
               title="Moje bilety"
@@ -97,8 +109,8 @@ function App() {
           </Route>
         </Switch>
         <Footer />
-      </main>
-    </HashRouter>
+      </main >
+    </BrowserRouter >
   );
 }
 

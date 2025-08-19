@@ -15,7 +15,6 @@ export const TicketPurchaseProvider = ({ children }) => {
     const month = nextMonth + 1;
 
     const [ticketData, setTicketData] = useState({
-        userId: userData._id,
         startStop: stops[0],
         endStop: stops[24],
         type: "monthly",
@@ -34,6 +33,7 @@ export const TicketPurchaseProvider = ({ children }) => {
         if (userData) {
             setTicketData(prev => ({
                 ...prev,
+                userId: userData._id,
                 email: userEmail || '',
                 invoiceEmail: userEmail || '',
                 name: userData.name || '',
@@ -58,6 +58,7 @@ export const TicketPurchaseProvider = ({ children }) => {
     }, [userData, userEmail]);
 
     if (!userData) {
+        console.log("ładuje ticketa");
         return <Spinner />;
     }
 

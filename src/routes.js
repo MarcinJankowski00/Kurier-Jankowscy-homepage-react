@@ -7,6 +7,8 @@ export const toContact = () => "/kontakt";
 export const toMyTickets = () => "/moje-bilety";
 export const toBuyTicket = () => "/kup-bilet";
 export const toMyData = () => "/moje-dane";
+export const toSuccess = () => "/success";
+export const toCancel= () => "/cancel";
 
 export const toMessage = ({ id } = { id: ":id" }) => `/${id}`;
 export const toVechicle = ({ id } = { id: ":id" }) => `/flota/${id}`;

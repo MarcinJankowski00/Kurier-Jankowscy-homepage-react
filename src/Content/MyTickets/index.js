@@ -1,4 +1,5 @@
 import { useAuth } from "../../context/AuthContext";
+import { useData } from "../../context/DataContext";
 import {
   Container,
   TicketList,
@@ -9,12 +10,17 @@ import {
 
 const MyTickets = () => {
   const { userTicketsData } = useAuth();
-
+  const { reliefs } = useData();
+  console.log(userTicketsData);
   const formatMonthYear = (month, year) => {
     const date = new Date(year, month - 1);
     return date.toLocaleString("pl-PL", { month: "long", year: "numeric" });
   };
 
+  const findRelief = (reliefId) => {
+    const result = reliefs.find((s) => s._id === reliefId);
+    return result;
+  };
 
   if (!userTicketsData || userTicketsData.tickets.length === 0) {
     return (
@@ -39,10 +45,10 @@ const MyTickets = () => {
               <strong>Kierunek:</strong> {ticket.type === "monthly" ? "TAM" : "TAM/POWRÓT"}
             </TicketField>
             <TicketField>
-              <strong>Ulga:</strong> {ticket.relief.value * 100}%
+              <strong>Ulga:</strong> {findRelief(ticket.relief).value * 100}%
             </TicketField>
             <TicketField>
-              <strong>Cena:</strong> {ticket.price} zł
+              <strong>Cena:</strong> {ticket.finalPrice} zł
             </TicketField>
             <TicketField>
               <strong>Data zakupu:</strong> {new Date(ticket.purchaseDate).toLocaleString("pl-PL")}

@@ -10,13 +10,18 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+  }  
 `;
 
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 1rem;
+
   color: #333;
 
   input[type="radio"] {
@@ -27,6 +32,18 @@ export const Label = styled.label`
     font-weight: 500;
     margin-top: 0.5rem;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
+    gap: 0.5rem;
+    color: #333;
+
+    input[type="radio"] {
+      margin-right: 0.4rem;
+    }
+
+    & > label {
+      margin-top: 0.4rem;
+    }
+  } 
 `;
 
 export const Span = styled.span`
@@ -39,4 +56,8 @@ export const Price = styled.div`
   font-weight: bold;
   color: #007bff;
   margin-top: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax21}px) {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
 `;

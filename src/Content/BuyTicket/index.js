@@ -12,14 +12,12 @@ import {
 import TicketConfig from './steps/TicketConfig';
 import DataOfPassenger from './steps/DataOfPassenger';
 import Summary from './steps/Summary';
-import Payment from './steps/Payment';
 import { useTicketPurchase } from "../../context/TicketPurchaseContext";
 
 const steps = [
   { title: 'Wybór biletu', component: TicketConfig },
   { title: 'Dane podróżującego', component: DataOfPassenger },
-  { title: 'Podsumowanie', component: Summary },
-  { title: 'Płatność', component: Payment },
+  { title: 'Podsumowanie i płatność', component: Summary },
 ];
 
 const TicketPurchaseFlow = () => {

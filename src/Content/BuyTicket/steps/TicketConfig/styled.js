@@ -40,22 +40,3 @@ export const Price = styled.div`
   color: #007bff;
   margin-top: 1rem;
 `;
-
-export const SubmitButton = styled.button`
-  cursor: pointer;
-  margin-top: 1rem;
-  border-radius: 5px;
-  border: 1px solid ${({ theme }) => theme.color.teal};
-  background-color: ${({ theme }) => theme.color.teal};
-  color: ${({ theme }) => theme.color.white};
-  padding: 12px 24px;
-  transition: 0.5s;
-  cursor: pointer;
-  font-size: 18px;
-  &:hover {
-    filter: brightness(125%);
-  }
-  &:active {
-    filter: brightness(135%);
-  }
-`;

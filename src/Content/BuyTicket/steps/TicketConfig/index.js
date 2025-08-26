@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { Label, Span, Wrapper, Price, SubmitButton } from "./styled";
+import { Label, Span, Wrapper, Price } from "./styled";
 import GenericDropdown from "../../../../GenericDropdown";
 import { useData } from "../../../../context/DataContext";
-import { useAuth } from "../../../../context/AuthContext";
 import { useTicketPurchase } from "../../../../context/TicketPurchaseContext";
 
 const TicketConfig = () => {
     const { stops, prices, reliefs } = useData();
-    const { userData, buyTicket } = useAuth();
     const { ticketData, updateTicketData } = useTicketPurchase();
     const filteredReliefs = reliefs.filter(r => r.type === "monthly");
     const sorted = filteredReliefs
@@ -32,43 +30,6 @@ const TicketConfig = () => {
     const formatMonthYear = (month, year) => {
         const date = new Date(year, month - 1);
         return date.toLocaleString("pl-PL", { month: "long", year: "numeric" });
-    };
-
-    const handleBuyTicket = async () => {
-        const switchedStops = startStop.id > endStop.id ? true : false;
-        const ticketData = {
-            userId: userData._id,
-            startStop: switchedStops ? endStop.name : startStop.name,
-            endStop: switchedStops ? startStop.name : endStop.name,
-            type: direction === "one-way" ? "monthly" : "monthlyRoundTrip",
-            relief: selectedRelief,
-            month: month,
-            year: year,
-            price: getTicketPrice(startStop, endStop, relief, direction),
-        };
-
-        try {
-            const res = await fetch("http://localhost:5000/api/tickets/buy", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                },
-                body: JSON.stringify(ticketData),
-            });
-
-            const data = await res.json();
-
-            if (res.ok) {
-                alert("✅ Bilet zakupiony!");
-                buyTicket(localStorage.getItem("token"))
-            } else {
-                alert("❌ Błąd: " + data.message);
-            }
-        } catch (err) {
-            console.error(err);
-            alert("❌ Błąd sieci");
-        }
     };
 
     const getTicketPrice = (startStop, endStop, relief, direction) => {
@@ -160,7 +121,6 @@ const TicketConfig = () => {
                 {relief !== 0 ? `Ulga: - ${relief * 100}%` : ""}<br />
                 Cena: {getTicketPrice(startStop, endStop, relief, direction)} zł
             </Price>
-            <SubmitButton onClick={handleBuyTicket}>Kup bilet</SubmitButton>
         </Wrapper>)
 }
 

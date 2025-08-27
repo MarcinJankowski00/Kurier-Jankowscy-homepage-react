@@ -6,6 +6,29 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'przypomnienie-nowy-rok-szkolny')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} />
+                                <Container>
+                                    🏫 Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok szkolny rozpoczyna się już 1 września! To idealny moment, aby zadbać o zakup biletów miesięcznych!<br />
+                                    <br />
+                                    🚍 Serdecznie zapraszamy do naszego biura przy ulicy Dworcowej 6 w Mońkach od poniedziałku do piątku w godzinach 8:00-16:00.<br />
+                                    <br />
+                                    📖 Życzymy Wam radosnego powrotu do szkoły oraz wielu inspirujących doświadczeń w nowym roku szkolnym!
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'wyjazd-na-litwe')
         return (
             <>
@@ -243,29 +266,6 @@ const MessagePage = () => {
                                         <li>Ciche i płynne działanie – zapewniające jeszcze bardziej przyjemną podróż.</li>
                                     </ul>
                                     <p>Zapraszamy do wypróbowania naszego nowego autobusu!</p>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'przypomnienie-bilety')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Logo" />
-                                <Container>
-                                    📚Przypominamy, że legitymacje szkolne tracą ważność 30 września. Zachęcamy do przedłużenia ważności dokumentów.<br />
-                                    <br />
-                                    🍂Zapraszamy również do zakupu biletów na trasie Białystok - Mońki na miesiąc październik.<br />
-                                    <br />
-                                    🗓 Specjalnie dla Was otwieramy Biuro Turystyczne w Mońkach, ul. Dworcowa 6, w dniu 28 września (sobota). Biuro będzie czynne w godzinach 8:00 - 12:00.
                                 </Container>
                             </Content>
                         </>

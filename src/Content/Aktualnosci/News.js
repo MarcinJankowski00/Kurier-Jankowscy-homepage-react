@@ -1,11 +1,18 @@
 import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
-import autobus from "./images/autobus.jpg";
 import litwa2 from "./images/litwa2.png";
 import litwa from "./images/litwa.png";
 import jarmark from "./images/jarmark.png"
+import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'przypomnienie-nowy-rok-szkolny',
+        title: 'Zbliża się nowy rok szkolny – czas na zakup biletów miesięcznych!',
+        firstSentence: 'Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok...',
+        date: '27-08-2025',
+        photo: backToSchool,
+    },
     {
         id: 'wyjazd-na-litwe',
         title: 'Zapraszamy na wycieczkę na Litwę',
@@ -40,12 +47,5 @@ export const news = [
         firstSentence: 'Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom...',
         date: '23-12-2024',
         photo: swieta,
-    },
-    {
-        id: 'nowy-autobus',
-        title: 'Nowy autobus na trasie Mońki - Białystok!',
-        firstSentence: 'Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie...',
-        date: '27-10-2024',
-        photo: autobus,
     },
 ];

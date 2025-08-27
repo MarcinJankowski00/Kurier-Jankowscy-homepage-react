@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.6d0b6312.js",
+    "main.js": "/static/js/main.027e6ab6.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
@@ -20,8 +20,8 @@
     "static/media/newMan1.jpg": "/static/media/newMan1.65ed62ab6ab6bf6d05f0.jpg",
     "static/media/man4.jpg": "/static/media/man4.47b1bcbebd71215c8029.jpg",
     "static/media/renault1.jpg": "/static/media/renault1.55b334993bf5ead030e2.jpg",
-    "static/media/autobus.jpg": "/static/media/autobus.c3231d40d2c817cdc99b.jpg",
     "static/media/opel2.jpg": "/static/media/opel2.a327fcf4ed2ec492b660.jpg",
+    "static/media/backToSchool.png": "/static/media/backToSchool.b6ee0719feddab8d1f00.png",
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
     "static/media/office.jpg": "/static/media/office.ef1a202e07e7b13eb21e.jpg",
@@ -48,11 +48,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.6d0b6312.js.map": "/static/js/main.6d0b6312.js.map",
+    "main.027e6ab6.js.map": "/static/js/main.027e6ab6.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.6d0b6312.js"
+    "static/js/main.027e6ab6.js"
   ]
 }

@@ -1,50 +1,64 @@
 import { useState, useEffect, useRef } from "react";
 import { Container, Form, Input, Message, SubmitButton, Title, ToggleButton } from "./styled";
 import { useAuth } from "../context/AuthContext";
+import { useHistory } from "react-router-dom";
 
 const AuthForm = ({ isModalOpen, onClose }) => {
-  const {  login } = useAuth();
-
-  const [isRegister, setIsRegister] = useState(false);
+  const { login } = useAuth();
+  const history = useHistory();
+  const [mode, setMode] = useState("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const emailRef = useRef(null);
 
-  const handleFocus = () => {
+  useEffect(() => {
     emailRef.current?.focus();
-  };
+  }, [mode]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url = isRegister
-      ? "http://localhost:5000/api/auth/register"
-      : "http://localhost:5000/api/auth/login";
+    let url = "";
+    let body = {};
+
+    if (mode === "register") {
+      url = "http://localhost:5000/api/auth/register";
+      body = { email, password };
+    } else if (mode === "login") {
+      url = "http://localhost:5000/api/auth/login";
+      body = { email, password };
+    } else if (mode === "forgot") {
+      url = "http://localhost:5000/api/auth/forgot-password";
+      body = { email };
+    }
 
     try {
       const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify(body),
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        if (isRegister) {
+        if (mode === "register") {
           setMessage("✅ Konto zostało utworzone. Możesz się teraz zalogować.");
-          setIsRegister(false);
-          handleFocus();
-        } else {
+          setMode("login");
+        } else if (mode === "login") {
           login(data.token, email);
           setMessage(`✅ Zalogowano jako ${email}`);
           onClose && onClose();
+          history.push("/");
+        } else if (mode === "forgot") {
+          setMessage("📧 Jeśli podany adres istnieje, wysłaliśmy link resetu hasła.");
+          setMode("login");
         }
         setEmail("");
         setPassword("");
       } else {
-        setMessage(data.message || "❌ Błąd logowania/rejestracji");
+        setMessage(data.message || data.error || "❌ Coś poszło nie tak");
       }
     } catch (err) {
       setMessage("❌ Błąd sieci");
@@ -59,7 +73,14 @@ const AuthForm = ({ isModalOpen, onClose }) => {
 
   return (
     <Container>
-      <Title>{isRegister ? "Rejestracja" : "Logowanie"}</Title>
+      <Title>
+        {mode === "register"
+          ? "Rejestracja"
+          : mode === "forgot"
+            ? "Reset hasła"
+            : "Logowanie"}
+      </Title>
+
       <Form onSubmit={handleSubmit}>
         <Input
           type="email"
@@ -69,26 +90,55 @@ const AuthForm = ({ isModalOpen, onClose }) => {
           required
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Input
-          type="password"
-          placeholder="Hasło"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
+
+        {mode !== "forgot" && (
+          <Input
+            type="password"
+            placeholder="Hasło"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        )}
+
         <SubmitButton type="submit">
-          {isRegister ? "Zarejestruj się" : "Zaloguj się"}
+          {mode === "register"
+            ? "Zarejestruj się"
+            : mode === "forgot"
+              ? "Wyślij link"
+              : "Zaloguj się"}
         </SubmitButton>
       </Form>
+
       <Message>{message}</Message>
-      <ToggleButton onClick={() => setIsRegister(!isRegister)}>
-        {isRegister
-          ? "Masz konto? Zaloguj się"
-          : "Nie masz konta? Zarejestruj się"}
-      </ToggleButton>
+
+      {mode === "login" && (
+        <>
+          <ToggleButton onClick={() => setMode("register")}>
+            Nie masz konta? Zarejestruj się
+          </ToggleButton>
+          <ToggleButton onClick={() => setMode("forgot")}>
+            Zapomniałeś hasła?
+          </ToggleButton>
+        </>
+      )}
+
+      {mode === "register" && (
+        <ToggleButton onClick={() => setMode("login")}>
+          Masz konto? Zaloguj się
+        </ToggleButton>
+      )}
+
+      {mode === "forgot" && (
+        <ToggleButton onClick={() => setMode("login")}>
+          Wróć do logowania
+        </ToggleButton>
+      )}
     </Container>
   );
 };
 
 export default AuthForm;
+
+
 

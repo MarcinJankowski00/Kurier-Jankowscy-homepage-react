@@ -10,6 +10,8 @@ export const toMyData = () => "/moje-dane";
 export const toSuccess = () => "/success";
 export const toCancel= () => "/cancel";
 export const toResetPassword= () => "/reset-password";
+export const toChangePassword= () => "/change-password";
+export const toActivatePage= () =>"/activate";
 
 export const toMessage = ({ id } = { id: ":id" }) => `/${id}`;
 export const toVechicle = ({ id } = { id: ":id" }) => `/flota/${id}`;

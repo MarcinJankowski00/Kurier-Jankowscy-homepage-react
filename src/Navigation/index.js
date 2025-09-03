@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper, LogButton, AccountIcon, AccountList, AccountListItem, AccountListLink, DropdownWrapper, LogIcon, LogList } from "./styled";
+import { List, Item, Link, Nav, Img, Wrapper, Logo, HamburgerIcon, LogoWrapper, LogButton, AccountIcon, AccountList, AccountListItem, AccountListLink, DropdownWrapper, LogIcon, LogList, StyledPersonIcon } from "./styled";
 import logo from "../kurierlogo.png";
 import { toAboutUs, toBuyTicket, toContact, toFleat, toMyData, toMyTickets, toOffer, toSchedule, toStart } from "../routes.js";
 import Modal from "../Modal/index.js";
@@ -131,7 +131,7 @@ const Navigation = () => {
                     {isLoggedIn ?
                         <>
                             <AccountIcon onClick={toggleAccountMenu} ref={accountRef}>
-                                ☰
+                                <StyledPersonIcon />
                             </AccountIcon>
                             <AccountList isMenuOpen={isAccountMenuOpen} ref={accountMenuRef}>
                                 <AccountListItem>

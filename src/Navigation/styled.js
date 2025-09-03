@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { keyframes, css } from 'styled-components';
-import { ReactComponent as PersonIcon } from "../icons/person.svg"
+import { ReactComponent as PersonIcon } from "../icons/personProfile.svg"
 
 const fadeIn = keyframes`
   from {
@@ -57,10 +57,10 @@ export const Img = styled.img`
     visibility: visible;
     width: 280px;
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax1}px) {
-            width: 250px;
+            width: 220px;
         }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
-            width: 210px;
+            width: 180px;
         }
 `;
 
@@ -275,6 +275,14 @@ export const HamburgerIcon = styled.div`
 export const AccountIcon = styled.div`
     cursor: pointer;
     font-size: 2rem;
+    display: flex;
+    padding: 6px;
+    border: 1px solid ${({ theme }) => theme.color.white};
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover {
+        border: 1px solid ${({ theme }) => theme.color.font};
+    }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax3}px) {
         font-size: 24px;
     }
@@ -293,8 +301,8 @@ export const LogIcon = styled.div`
 `;
 
 export const StyledPersonIcon = styled(PersonIcon)`
-    width: 20px;
-    fill: ${({ theme }) => theme.color.font};
+    width: 25px;
+    stroke: ${({ theme }) => theme.color.font};
 `;
 
 export const LogButton = styled.button`

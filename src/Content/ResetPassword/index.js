@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Container, Form, Input, Message, SubmitButton } from "./styled";
 
-const ResetPassword = () => {
+const PasswordForm = ({ mode = "reset" }) => {
+  // mode: "reset" | "change"
+  const [current, setCurrent] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [message, setMessage] = useState("");
 
-  // Pobranie tokena i emaila z query string
+  // reset -> pobierz token z URL
   const query = new URLSearchParams(window.location.search);
   const token = query.get("token");
-  const email = query.get("email");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,20 +20,35 @@ const ResetPassword = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/reset-password", {
+      let url = "";
+      let body = {};
+      let headers = { "Content-Type": "application/json" };
+
+      if (mode === "reset") {
+        url = "http://localhost:5000/api/auth/reset-password";
+        body = { token, newPassword: password };
+      } else if (mode === "change") {
+        const authToken = localStorage.getItem("token");
+        url = "http://localhost:5000/api/auth/change-password";
+        body = { currentPassword: current, newPassword: password };
+        headers.Authorization = `Bearer ${authToken}`;
+      }
+
+      const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, token, newPassword: password }),
+        headers,
+        body: JSON.stringify(body),
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        setMessage("✅ Hasło zostało zmienione. Możesz się teraz zalogować.");
+        setMessage("✅ Hasło zostało zmienione.");
+        setCurrent("");
         setPassword("");
         setConfirm("");
       } else {
-        setMessage(data.error || "❌ Błąd przy resetowaniu hasła");
+        setMessage(data.error || "❌ Błąd przy zmianie hasła");
       }
     } catch (err) {
       setMessage("❌ Błąd sieci");
@@ -42,6 +58,15 @@ const ResetPassword = () => {
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
+        {mode === "change" && (
+          <Input
+            type="password"
+            placeholder="Obecne hasło"
+            value={current}
+            required
+            onChange={(e) => setCurrent(e.target.value)}
+          />
+        )}
         <Input
           type="password"
           placeholder="Nowe hasło"
@@ -51,16 +76,19 @@ const ResetPassword = () => {
         />
         <Input
           type="password"
-          placeholder="Powtórz hasło"
+          placeholder="Powtórz nowe hasło"
           value={confirm}
           required
           onChange={(e) => setConfirm(e.target.value)}
         />
-        <SubmitButton type="submit">Zmień hasło</SubmitButton>
+        <SubmitButton type="submit">
+          {mode === "reset" ? "Ustaw hasło" : "Zmień hasło"}
+        </SubmitButton>
       </Form>
       <Message>{message}</Message>
     </Container>
   );
 };
 
-export default ResetPassword;
+export default PasswordForm;
+

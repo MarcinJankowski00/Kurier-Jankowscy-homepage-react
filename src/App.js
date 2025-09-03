@@ -13,7 +13,7 @@ import MyTickets from './Content/MyTickets';
 import BuyTicket from './Content/BuyTicket';
 import CookiesInfo from './CookiesInfo';
 import { BrowserRouter, Redirect, Route, Switch, } from 'react-router-dom/cjs/react-router-dom.min';
-import { toAboutUs, toBuyTicket, toCancel, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toResetPassword, toSchedule, toStart, toSuccess, toVechicle } from './routes';
+import { toAboutUs, toActivatePage, toBuyTicket, toCancel, toChangePassword, toContact, toFleat, toMessage, toMyData, toMyTickets, toOffer, toResetPassword, toSchedule, toStart, toSuccess, toVechicle } from './routes';
 import MessagePage from './Content/Aktualnosci/MessagePage';
 import VechiclePage from './Content/Flota/VechiclePage';
 import Kontakt from './Content/Kontakt';
@@ -21,6 +21,7 @@ import { TicketPurchaseProvider } from './context/TicketPurchaseContext';
 import PaymentSuccess from './Content/BuyTicket/steps/PaymentSuccess';
 import PaymentCancel from './Content/BuyTicket/steps/PaymentCancel';
 import ResetPassword from './Content/ResetPassword';
+import ActivatePage from './Content/ActivatePage';
 
 function App() {
 
@@ -71,7 +72,13 @@ function App() {
           <Route path={toResetPassword()}>
             <Section
               title="Zresetuj hasło"
-              content={<ResetPassword />}
+              content={<ResetPassword mode="reset" />}
+            />
+          </Route>
+          <Route path={toChangePassword()}>
+            <Section
+              title="Zmień hasło"
+              content={<ResetPassword mode="change" />}
             />
           </Route>
           <Route path={toBuyTicket()}>
@@ -102,6 +109,12 @@ function App() {
             <Section
               title="Moje dane"
               content={<MyData />}
+            />
+          </Route>
+          <Route path={toActivatePage()} >
+            <Section
+              title="aktywacja"
+              content={<ActivatePage />}
             />
           </Route>
           <Route path={toVechicle()}>

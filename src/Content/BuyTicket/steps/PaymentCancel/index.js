@@ -1,7 +1,7 @@
 export default function PaymentCancel() {
   return (
     <div>
-      <h1>❌ Płatność anulowana</h1>
+      <h3>❌ Płatność anulowana</h3>
       <p>Nie pobrano żadnych środków. Spróbuj ponownie, jeśli chcesz.</p>
     </div>
   );

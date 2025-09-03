@@ -46,22 +46,8 @@ export default function PaymentSuccess() {
   if (status === "paid" && ticket) {
     return (
       <div>
-        <h1>✅ Płatność przyjęta</h1>
-        <p>Twój bilet został aktywowany:</p>
-        <ul>
-          <li>
-            <strong>Trasa:</strong> {ticket.startStop} → {ticket.endStop}
-          </li>
-          <li>
-            <strong>Typ:</strong> {ticket.type}
-          </li>
-          <li>
-            <strong>Miesiąc:</strong> {ticket.month}/{ticket.year}
-          </li>
-          <li>
-            <strong>Cena:</strong> {ticket.finalPrice} zł
-          </li>
-        </ul>
+        <h3>✅ Płatność przyjęta</h3>
+        <p>Twój bilet został aktywowany</p>
       </div>
     );
   }

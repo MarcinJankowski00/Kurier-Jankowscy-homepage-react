@@ -8,6 +8,7 @@ import {
   SubmitButton,
   FieldGroup,
 } from "./styled";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const MyData = () => {
   const { userData, setUserData } = useAuth();
@@ -215,6 +216,9 @@ const MyData = () => {
 
         <SubmitButton type="submit">Zapisz zmiany</SubmitButton>
       </Form>
+      <Link to="/change-password">
+        <SubmitButton type="button">Zmień hasło</SubmitButton>
+      </Link>
     </Container>
   );
 };

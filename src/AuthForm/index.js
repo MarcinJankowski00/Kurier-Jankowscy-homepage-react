@@ -1,7 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, Form, Input, Message, SubmitButton, Title, ToggleButton } from "./styled";
+import { Container, Form, Input, Message, PasswordRequirements, RequirementItem, SubmitButton, Title, ToggleButton } from "./styled";
 import { useAuth } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
+
+const passwordRules = [
+  { test: (pw) => pw.length >= 8, label: "Minimum 8 znaków" },
+  { test: (pw) => /[A-Z]/.test(pw), label: "Jedna wielka litera" },
+  { test: (pw) => /[a-z]/.test(pw), label: "Jedna mała litera" },
+  { test: (pw) => /\d/.test(pw), label: "Jedna cyfra" },
+];
 
 const AuthForm = ({ isModalOpen, onClose }) => {
   const { login } = useAuth();
@@ -18,6 +25,14 @@ const AuthForm = ({ isModalOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (mode === "register") {
+      const isValid = passwordRules.every((rule) => rule.test(password));
+      if (!isValid) {
+        setMessage("❌ Hasło nie spełnia wymagań bezpieczeństwa");
+        return;
+      }
+    }
 
     let url = "";
     let body = {};
@@ -100,6 +115,17 @@ const AuthForm = ({ isModalOpen, onClose }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         )}
+        {mode === "register" && password && (
+          <PasswordRequirements>
+            {passwordRules.map((rule, i) => {
+              return (
+                <RequirementItem key={i} met={rule.test(password)}>
+                  {rule.label}
+                </RequirementItem>
+              );
+            })}
+          </PasswordRequirements>
+        )}
 
         <SubmitButton type="submit">
           {mode === "register"
@@ -139,6 +165,7 @@ const AuthForm = ({ isModalOpen, onClose }) => {
 };
 
 export default AuthForm;
+
 
 
 

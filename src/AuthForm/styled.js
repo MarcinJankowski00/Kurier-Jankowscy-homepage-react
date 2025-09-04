@@ -51,3 +51,25 @@ export const Message = styled.p`
   margin-top: 1rem;
   color: #333;
 `;
+
+export const PasswordRequirements = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 16px 0;
+  font-size: 0.9rem;
+`;
+
+export const RequirementItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  color: ${(props) => (props.met ? "green" : "red")};
+
+  &::before {
+    content: "${(props) => (props.met ? "✅" : "❌")}";
+    display: inline-block;
+    width: 24px;
+    margin-right: 8px;
+    text-align: center;
+  }
+`;

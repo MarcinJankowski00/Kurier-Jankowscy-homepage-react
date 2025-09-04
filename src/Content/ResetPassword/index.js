@@ -1,7 +1,14 @@
 import { useState } from "react";
-import { Container, Form, Input, Message, SubmitButton } from "./styled";
+import { Container, Form, Input, Message, PasswordRequirements, RequirementItem, SubmitButton } from "./styled";
 
 const PasswordForm = ({ mode = "reset" }) => {
+  const passwordRules = [
+    { test: (pw) => pw.length >= 8, label: "Minimum 8 znaków" },
+    { test: (pw) => /[A-Z]/.test(pw), label: "Jedna wielka litera" },
+    { test: (pw) => /[a-z]/.test(pw), label: "Jedna mała litera" },
+    { test: (pw) => /\d/.test(pw), label: "Jedna cyfra" },
+  ];
+
   // mode: "reset" | "change"
   const [current, setCurrent] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +23,12 @@ const PasswordForm = ({ mode = "reset" }) => {
     e.preventDefault();
     if (password !== confirm) {
       setMessage("❌ Hasła się różnią!");
+      return;
+    }
+
+    const isValid = passwordRules.every((rule) => rule.test(password));
+    if (!isValid) {
+      setMessage("❌ Hasło nie spełnia wymagań bezpieczeństwa");
       return;
     }
 
@@ -74,6 +87,17 @@ const PasswordForm = ({ mode = "reset" }) => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
+        {password && (
+          <PasswordRequirements>
+            {passwordRules.map((rule, i) => {
+              return (
+                <RequirementItem key={i} met={rule.test(password)}>
+                  {rule.label}
+                </RequirementItem>
+              );
+            })}
+          </PasswordRequirements>
+        )}
         <Input
           type="password"
           placeholder="Powtórz nowe hasło"

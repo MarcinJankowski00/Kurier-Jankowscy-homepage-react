@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.027e6ab6.js",
+    "main.js": "/static/js/main.39d8d7c0.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
     "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
     "static/media/jarmark.png": "/static/media/jarmark.15121e3c2ac66a7095cd.png",
     "static/media/litwa.png": "/static/media/litwa.76eade3b5676c576096e.png",
-    "static/media/background.jpg": "/static/media/background.1e4536df4cf0e16abfe8.jpg",
     "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/litwa2.png": "/static/media/litwa2.66a800b6f96c10e59115.png",
@@ -21,6 +20,7 @@
     "static/media/man4.jpg": "/static/media/man4.47b1bcbebd71215c8029.jpg",
     "static/media/renault1.jpg": "/static/media/renault1.55b334993bf5ead030e2.jpg",
     "static/media/opel2.jpg": "/static/media/opel2.a327fcf4ed2ec492b660.jpg",
+    "static/media/background.jpg": "/static/media/background.f5df26d862fb5a588493.jpg",
     "static/media/backToSchool.png": "/static/media/backToSchool.b6ee0719feddab8d1f00.png",
     "static/media/setra2.jpg": "/static/media/setra2.a6e2e725f40210ac0827.jpg",
     "static/media/renault2.jpg": "/static/media/renault2.5c186ad75b710bb5f270.jpg",
@@ -33,7 +33,7 @@
     "static/media/renault3.jpg": "/static/media/renault3.efd0d649b0a38de12ef9.jpg",
     "static/media/bus.jpg": "/static/media/bus.f26f95c9afe1ba95d4d9.jpg",
     "static/media/vehicles.jpg": "/static/media/vehicles.b51f0d741be4557f8083.jpg",
-    "static/media/kurierlogo.png": "/static/media/kurierlogo.2eb6685e4d478f822c27.png",
+    "static/media/kurierlogo.png": "/static/media/kurierlogo.376082ea5bc139d64c5a.png",
     "static/media/logo.png": "/static/media/logo.4daafe56f03193363f74.png",
     "static/media/phone.svg": "/static/media/phone.c83919e04772513e91ece3a9e5b59f44.svg",
     "index.html": "/index.html",
@@ -48,11 +48,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.027e6ab6.js.map": "/static/js/main.027e6ab6.js.map",
+    "main.39d8d7c0.js.map": "/static/js/main.39d8d7c0.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.027e6ab6.js"
+    "static/js/main.39d8d7c0.js"
   ]
 }

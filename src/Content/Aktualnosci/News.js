@@ -7,6 +7,13 @@ import backToSchool from "./images/backToSchool.png"
 
 export const news = [
     {
+        id: 'zyczenia-swiateczne',
+        title: 'Życzenia Świąteczne',
+        firstSentence: 'Z okazji Świąt Bożego Narodzenia oraz nadchodzącego Nowego Roku...',
+        date: '24-12-2025',
+        photo: swieta,
+    },
+    {
         id: 'przypomnienie-nowy-rok-szkolny',
         title: 'Zbliża się nowy rok szkolny – czas na zakup biletów miesięcznych!',
         firstSentence: 'Przypominamy dzieciom, młodzieży i ich rodzicom, że nowy rok...',
@@ -40,12 +47,5 @@ export const news = [
         firstSentence: 'Zapraszamy na wycieczkę Wilno – Jarmark Kaziukowy...',
         date: '17-01-2025',
         photo: jarmark,
-    },
-    {
-        id: 'zyczenia-swiateczne',
-        title: 'Życzenia świąteczne',
-        firstSentence: 'Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom...',
-        date: '23-12-2024',
-        photo: swieta,
     },
 ];

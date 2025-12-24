@@ -227,45 +227,14 @@ const MessagePage = () => {
                                 <Photo src={informationObject.photo} alt="Logo" />
                                 <Container>
                                     <Bigger>Drodzy Pasażerowie,</Bigger><br />
-                                    Z okazji Świąt Bożego Narodzenia oraz Nowego Roku życzymy naszym Klientom oraz Współpracownikom zdrowia, szczęścia i spełnienia marzeń. Niech ten czas będzie pełen spokoju, radości i rodzinnego ciepła. 🎄✨<br />
+                                    Z okazji Świąt Bożego Narodzenia oraz nadchodzącego Nowego Roku życzymy naszym Klientom i Współpracownikom chwil wytchnienia, dobrej energii i powodów do uśmiechu. Niech święta przyniosą spokój, a Nowy Rok nowe możliwości i spełnione plany. 🎄✨<br />
                                     <br />
-                                    Przypominamy również o skróconym rozkładzie jazdy w dniach 24 i 31 grudnia 2024 roku:<br />
+                                    Przypominamy również o skróconym rozkładzie jazdy w dniach 24 i 31 grudnia 2025 roku:<br />
                                     <br />
                                     Wyjazdy z Moniek: 05:15, 07:25, 10:05, 12:20, 14:40<br />
                                     Wyjazdy z Białegostoku: 06:20, 08:35, 11:15, 13:35, 15:45<br />
                                     <br />
-                                    <b>W dniu 24.12.2024 biuro będzie nieczynne.</b><br />
-                                    <br />
                                     <b> Wesołych Świąt i Szczęśliwego Nowego Roku!</b>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'nowy-autobus')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Autobus" />
-                                <Container>
-                                    <Bigger>Drodzy Pasażerowie,</Bigger>
-                                    <p>Z radością informujemy, że od teraz na trasie Mońki - Białystok będzie kursował nasz nowy, nowoczesny autobus Iveco Crossway!</p>
-                                    <p>Nowy pojazd to ulepszona wersja obecnie używanych autobusów, oferująca większy komfort i udogodnienia dla naszych pasażerów.</p>
-                                    <Bigger>Co nowego?</Bigger>
-                                    <ul>
-                                        <li>System ADAS – Zaawansowany system, który analizuje sytuację na drodze i dba o bezpieczeństwo. Funkcje, takie jak awaryjne hamowanie, monitorowanie martwego pola i rozpoznawanie znaków, wspierają kierowcę w czasie rzeczywistym. </li>
-                                        <li>Gniazdka USB - dzięki czemu możesz naładować swój telefon lub inne urządzenia mobilne w trakcie podróży.</li>
-                                        <li>Większy komfort podróży – nowoczesne, ergonomiczne siedzenia i wydajna klimatyzacja.</li>
-                                        <li>Ciche i płynne działanie – zapewniające jeszcze bardziej przyjemną podróż.</li>
-                                    </ul>
-                                    <p>Zapraszamy do wypróbowania naszego nowego autobusu!</p>
                                 </Container>
                             </Content>
                         </>

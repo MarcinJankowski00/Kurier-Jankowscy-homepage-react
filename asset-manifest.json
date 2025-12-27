@@ -1,17 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.95768011.css",
-    "main.js": "/static/js/main.39d8d7c0.js",
+    "main.js": "/static/js/main.029acc52.js",
     "static/js/787.6969a1fe.chunk.js": "/static/js/787.6969a1fe.chunk.js",
     "static/media/swieta.png": "/static/media/swieta.24e1c26ca3ebe6c028e5.png",
-    "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.95d64503588dd3302f1a.pdf",
-    "static/media/jarmark.png": "/static/media/jarmark.15121e3c2ac66a7095cd.png",
     "static/media/litwa.png": "/static/media/litwa.76eade3b5676c576096e.png",
     "static/media/sprinter2.jpg": "/static/media/sprinter2.511a1207d7884a9f057c.jpg",
     "static/media/manLions2.jpg": "/static/media/manLions2.b02b9a0701b2059d8bb7.jpg",
     "static/media/litwa2.png": "/static/media/litwa2.66a800b6f96c10e59115.png",
     "static/media/setra1.jpg": "/static/media/setra1.d1ea7ea623e97993b740.jpg",
     "static/media/turino1.jpg": "/static/media/turino1.553a3dfec255c34363e2.jpg",
+    "static/media/RozkładJazdy.pdf": "/static/media/RozkładJazdy.655307a2927ac43f216d.pdf",
     "static/media/solaris2.jpg": "/static/media/solaris2.6655c3455ff8e459347b.jpg",
     "static/media/manLions1.jpg": "/static/media/manLions1.2a61256cacaf6ba2d744.jpg",
     "static/media/solaris1.jpg": "/static/media/solaris1.270a9e1186ea2da33dfa.jpg",
@@ -48,11 +47,11 @@
     "static/media/loop.svg": "/static/media/loop.2f0bb0a1e585267b613d5a99738346dc.svg",
     "static/media/spinner.svg": "/static/media/spinner.61b25ae15c90618549fac9ddebf748aa.svg",
     "main.95768011.css.map": "/static/css/main.95768011.css.map",
-    "main.39d8d7c0.js.map": "/static/js/main.39d8d7c0.js.map",
+    "main.029acc52.js.map": "/static/js/main.029acc52.js.map",
     "787.6969a1fe.chunk.js.map": "/static/js/787.6969a1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95768011.css",
-    "static/js/main.39d8d7c0.js"
+    "static/js/main.029acc52.js"
   ]
 }

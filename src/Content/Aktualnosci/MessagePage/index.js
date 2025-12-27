@@ -6,6 +6,57 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'nowy-rozklad-jazdy')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
+                                <Container>
+                                    <b>Drodzy Pasażerowie</b>
+
+                                    <p>Informujemy, iż od <b>01.01.2026</b> nieznacznie zmienia się rozkład jazdy na linii <b>Mońki-Białystok</b>.</p>
+
+                                    <p>Nowe rozkłady dostępne u kierowców, w biurze mieszczącym się w Mońkach przy ul.Dworcowej 6, oraz na naszym Facebooku i stronie internetowej.</p>
+ 
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
+    if (id === 'zyczenia-swiateczne')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Logo" />
+                                <Container>
+                                    <Bigger>Drodzy Pasażerowie,</Bigger><br />
+                                    Z okazji Świąt Bożego Narodzenia oraz nadchodzącego Nowego Roku życzymy naszym Klientom i Współpracownikom chwil wytchnienia, dobrej energii i powodów do uśmiechu. Niech święta przyniosą spokój, a Nowy Rok nowe możliwości i spełnione plany. 🎄✨<br />
+                                    <br />
+                                    Przypominamy również o skróconym rozkładzie jazdy w dniach 24 i 31 grudnia 2025 roku:<br />
+                                    <br />
+                                    Wyjazdy z Moniek: 05:15, 07:25, 10:05, 12:20, 14:40<br />
+                                    Wyjazdy z Białegostoku: 06:20, 08:35, 11:15, 13:35, 15:45<br />
+                                    <br />
+                                    <b> Wesołych Świąt i Szczęśliwego Nowego Roku!</b>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'przypomnienie-nowy-rok-szkolny')
         return (
             <>
@@ -155,86 +206,6 @@ const MessagePage = () => {
                                         <p>Tel: <Link href="tel:+48857162191">+48 857 162 191</Link></p>
                                         <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
                                     </div>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'wyjazd-na-jarmark')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
-                                <Container>
-                                    <b>Zapraszamy na wycieczkę Wilno – Jarmark Kaziukowy</b>
-
-                                    <p>📅 8 marca 2025 r. (sobota)</p>
-
-                                    <b>Kaziuki</b>– kultowy wileński jarmark organizowany od setek lat w dniu św. Kazimierza. Urokliwe uliczki starówki wypełniają stragany z:
-                                    <ul>
-                                        <li>rękodziełem ludowym</li>
-                                        <li>regionalnymi przysmakami</li>
-                                        <li>tradycyjnymi palmami wileńskimi</li>
-                                    </ul>
-
-                                    <b>Program wyjazdu:</b>
-                                    <ul>
-                                        <li><b>5:00</b> – Wyjazd do Wilna</li>
-                                        <li><b>11:00</b> (czasu litewskiego) – Zwiedzanie: Ostra Brama, Kaplica Ostrobramska, Cerkiew Św. Trójcy, Kościół Św. Piotra i Pawła, cmentarz na Rossie</li>
-                                        <li>Pobyt na Jarmarku Kaziukowym – 2 godziny czasu wolnego</li>
-                                        <li><b>14:30</b> – Przejazd do Trok: zwiedzanie Zamku Książąt Litewskich (z zewnątrz), spacer dzielnicą karaimską. Możliwość zamówienia obiadu karaimskiego (za dodatkową opłatą).</li>
-                                        <li><b>17:00</b> – Wyjazd w drogę powrotną</li>
-                                        <li><b>21:30</b> – Planowany powrót</li>
-                                    </ul>
-
-                                    <div>
-                                        <b>W cenie 210 zł/os.:</b>
-                                        <ul>
-                                            <li>Transport autokarem</li>
-                                            <li>Ubezpieczenie kraj/zagranica</li>
-                                            <li>Usługi pilota i przewodnika</li>
-                                        </ul>
-                                    </div>
-                                    <p>Dodatkowo: obiad w Trokach ok. 10 EUR (2 kibiny i rosół).</p>
-                                    <div>
-                                        <b>Kontakt i rezerwacje:</b>
-                                        <p>Tel: <Link href="tel:+48515073556">+48 515 073 556</Link></p>
-                                        <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
-                                    </div>
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'zyczenia-swiateczne')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Logo" />
-                                <Container>
-                                    <Bigger>Drodzy Pasażerowie,</Bigger><br />
-                                    Z okazji Świąt Bożego Narodzenia oraz nadchodzącego Nowego Roku życzymy naszym Klientom i Współpracownikom chwil wytchnienia, dobrej energii i powodów do uśmiechu. Niech święta przyniosą spokój, a Nowy Rok nowe możliwości i spełnione plany. 🎄✨<br />
-                                    <br />
-                                    Przypominamy również o skróconym rozkładzie jazdy w dniach 24 i 31 grudnia 2025 roku:<br />
-                                    <br />
-                                    Wyjazdy z Moniek: 05:15, 07:25, 10:05, 12:20, 14:40<br />
-                                    Wyjazdy z Białegostoku: 06:20, 08:35, 11:15, 13:35, 15:45<br />
-                                    <br />
-                                    <b> Wesołych Świąt i Szczęśliwego Nowego Roku!</b>
                                 </Container>
                             </Content>
                         </>

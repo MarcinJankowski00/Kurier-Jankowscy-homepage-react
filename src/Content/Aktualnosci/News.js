@@ -2,10 +2,16 @@ import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
 import litwa2 from "./images/litwa2.png";
 import litwa from "./images/litwa.png";
-import jarmark from "./images/jarmark.png"
 import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'nowy-rozklad-jazdy',
+        title: 'Nowy rozkład jazdy',
+        firstSentence: 'Drodzy Pasażerowie Informujemy, iż od 01.01.2026 nieznacznie...',
+        date: '28-12-2025',
+        photo: logo,
+    },
     {
         id: 'zyczenia-swiateczne',
         title: 'Życzenia Świąteczne',
@@ -40,12 +46,5 @@ export const news = [
         firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szawle – Wilno...',
         date: '23-03-2025',
         photo: litwa2,
-    },
-    {
-        id: 'wyjazd-na-jarmark',
-        title: 'Wyjazd na Jarmark Kaziukowy',
-        firstSentence: 'Zapraszamy na wycieczkę Wilno – Jarmark Kaziukowy...',
-        date: '17-01-2025',
-        photo: jarmark,
     },
 ];

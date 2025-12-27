@@ -44,7 +44,7 @@ const Photo = () => {
                                 Sprawdź rozkład jazdy
                             </Button>
                             <FileDownloadButton
-                                filename="Rozkład jazdy.pdf"
+                                filename="Rozkład jazdy - od 01.01.2026.pdf"
                                 src={rozkladJazdy}
                                 variant="photo"
                                 label="Pobierz rozkład jazdy"

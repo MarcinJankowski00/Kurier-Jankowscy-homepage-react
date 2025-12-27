@@ -1,4 +1,5 @@
 import { busStops } from "../../../BusStops";
+import { oldBusStops } from "../../../BusStops";
 
 const variant5 = [0, 1, 2, 4, 6, 8, 10, 11, 12, 13];
 // Sylwester, Wigilia lub Wielka Sobota w niedzielę xd
@@ -28,7 +29,7 @@ const isBozeCialo = (myDate) => {
         const formattedDate = new Date(`${year}-${month}-${day}`);
         return formattedDate.toISOString().split('T')[0];
     });
-    const formattedMyDate= myDate.toISOString().split('T')[0];
+    const formattedMyDate = myDate.toISOString().split('T')[0];
     return dates.some(data => data === formattedMyDate);
 };
 
@@ -54,7 +55,7 @@ const isFridayAfterBozeCialo = (myDate) => {
         const formattedDate = new Date(`${year}-${month}-${day}`);
         return formattedDate.toISOString().split('T')[0];
     });
-    const formattedMyDate= myDate.toISOString().split('T')[0];
+    const formattedMyDate = myDate.toISOString().split('T')[0];
     return dates.some(data => data === formattedMyDate);
 };
 
@@ -89,7 +90,7 @@ const isEster = (myDate) => {
         return formattedDate.toISOString().split('T')[0];
     });
 
-    const formattedMyDate= myDate.toISOString().split('T')[0];
+    const formattedMyDate = myDate.toISOString().split('T')[0];
     return dates.some(data => data === formattedMyDate);
 };
 
@@ -113,7 +114,7 @@ const isSaturdayBeforeEster = (myDate) => {
         return formattedDate.toISOString().split('T')[0];
     });
 
-    const formattedMyDate= myDate.toISOString().split('T')[0];
+    const formattedMyDate = myDate.toISOString().split('T')[0];
     return dates.some(data => data === formattedMyDate);
 };
 
@@ -122,8 +123,10 @@ const deleteElements = (tab1, tab2) => {
 }
 
 const getResult = (departureDateStr, startStop, endStop) => {
-    const startStopObject = busStops.find((station) => station.name === startStop);
-    const endStopObject = busStops.find((station) => station.name === endStop);
+    const cutoffDate = new Date("2026-01-01");
+    const departure = departureDateStr;
+    const startStopObject = departure >= cutoffDate ? busStops.find((station) => station.name === startStop) : oldBusStops.find((station) => station.name === startStop);
+    const endStopObject = departure >= cutoffDate ? busStops.find((station) => station.name === endStop) : oldBusStops.find((station) => station.name === endStop);
     const departureDate = new Date(departureDateStr);
     let direction = "";
 

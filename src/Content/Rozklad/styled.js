@@ -3,6 +3,11 @@ import styled, { css } from "styled-components";
 export const Content = styled.div`
     text-align: center;
 `;
+
+export const Strong = styled.strong`
+    color: red;
+`;
+
 export const Wrapper = styled.div`
     margin-bottom: 20px;
 `;

@@ -6,7 +6,6 @@ import { priceMatrix } from '../../../Prices';
 import { reliefs } from '../../../Reliefs';
 import GenericDropdown from "../../../GenericDropdown";
 
-
 const calculateTimeDifference = (startHour, endHour) => {
     const [startHourStr, startMinStr] = startHour.split(":");
     const [endHourStr, endMinStr] = endHour.split(":");

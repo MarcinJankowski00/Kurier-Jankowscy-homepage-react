@@ -1,5 +1,5 @@
 import FileDownloadButton from "../../FileDownloadButton";
-import { Content, Wrapper, TableContainer, Table, Cell, Text, Row, } from "./styled";
+import { Content, Wrapper, TableContainer, Table, Cell, Text, Row, Strong } from "./styled";
 import { busStops } from "../../BusStops.js";
 import rozkladJazdy from "../../RozkładJazdy.pdf";
 
@@ -10,7 +10,7 @@ const Rozklad = () => {
         <Content>
             <Wrapper>
                 Godziny odjazdu do <strong>BIAŁEGOSTOKU</strong><br />
-                Rozkład jazdy ważny od <strong>01.12.2023</strong>
+                <Strong color="red">Rozkład jazdy ważny od 01.01.2026</Strong>
             </Wrapper>
             <TableContainer>
                 <Table>
@@ -75,7 +75,7 @@ const Rozklad = () => {
             </Text>
             <Wrapper>
                 Godziny odjazdu do <b>MONIEK</b><br />
-                Rozkład jazdy ważny od <strong>01.12.2023</strong>
+                <Strong color="red">Rozkład jazdy ważny od 01.01.2026</Strong>
             </Wrapper>
             <TableContainer>
                 <Table>
@@ -139,7 +139,7 @@ const Rozklad = () => {
                 z - nie kursuje w piątek po dniu Bożego Ciała<br />
             </Text>
             <FileDownloadButton
-                filename="Rozkład Jazdy.pdf"
+                filename="Rozkład jazdy - od 01.01.2026.pdf"
                 src={rozkladJazdy}
                 variant="schedule"
                 label="Pobierz rozkład jazdy"

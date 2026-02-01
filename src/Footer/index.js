@@ -52,7 +52,7 @@ const Footer = () => (
             </Wrapper>
             <Contact>
                 <Cookies>
-                    <Link href="/PolitykaCookies.pdf">Politka Cookies</Link>
+                    <Link href="/PolitykaCookies.pdf">Polityka Cookies</Link>
                 </Cookies>
             </Contact>
         </Container>

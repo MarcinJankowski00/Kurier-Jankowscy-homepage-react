@@ -6,6 +6,76 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const MessagePage = () => {
     const { id } = useParams();
     const informationObject = news.find((information) => information.id === id);
+    if (id === 'wilno-jarmark-kaziukowy')
+        return (
+            <>
+                <Section
+                    title={informationObject.title}
+                    content={
+                        <>
+                            <Date>{informationObject.date}</Date>
+                            <Content>
+                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
+                                <Container>
+                                    <b>Zapraszamy na wyjątkowy wyjazd do Wilna na Jarmark Kaziukowy</b>
+                                    <p>📅 7 marca 2026 r.</p>
+                                    <p>
+                                        Kaziuki to słynny wileński jarmark organizowany od kilkuset lat z okazji dnia
+                                        św. Kazimierza 🌸 W tym czasie starówka Wilna wypełnia się kolorowymi straganami
+                                        z rękodziełem ludowym, regionalnymi przysmakami oraz tradycyjnymi palmami
+                                        wileńskimi uplecionymi z ziół, suszonych kwiatów i zbóż.
+                                    </p>
+                                    <b>🚌 Program wyjazdu:</b>
+                                    <p>• Wyjazd o godz. <b>5:00</b> (Mońki / Knyszyn / Białystok)</p>
+                                    <p>• Przejazd do Wilna</p>
+                                    <p>
+                                        • Ok. <b>11:00</b> (czas litewski) – krótkie zwiedzanie:
+                                    </p>
+                                    <p>
+                                        – Ostra Brama i Kaplica Ostrobramska<br />
+                                        – Kościół Św. Piotra i Pawła<br />
+                                        – Cmentarz na Rossie
+                                    </p>
+                                    <p>• Czas wolny na Jarmarku Kaziukowym</p>
+                                    <p>• Przejazd do Trok – krótki spacer</p>
+                                    <p>
+                                        – możliwość zamówienia tradycyjnego obiadu karaimskiego
+                                        (dodatkowo płatne)
+                                    </p>
+                                    <p>• Wyjazd w drogę powrotną</p>
+                                    <p>• Powrót ok. <b>22:00</b></p>
+                                    <br />
+                                    <div>
+                                        <p>💰 <b>Cena</b>: 230 zł / osoba</p>
+                                        <p>Cena zawiera:</p>
+                                        <ul>
+                                            <li>Transport autokarem 🚌</li>
+                                            <li>Opłaty drogowe i parkingowe</li>
+                                            <li>Ubezpieczenie (kraj + zagranica)</li>
+                                            <li>Usługę pilota</li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        ℹ️ Kolejność zwiedzania może ulec zmianie.<br />
+                                        Orientacyjna cena obiadu w Trokach: <b>10 EUR</b>
+                                        (2 kibiny + rosół).
+                                    </p>
+                                    <div>
+                                        <b>📞 Zapisy i informacje:</b>
+                                        <p>
+                                            Tel: <Link href="tel:+48515073556">515 073 556</Link>
+                                        </p>
+                                        <p>
+                                            Biuro: ul. Dworcowa 6, Mońki
+                                        </p>
+                                    </div>
+                                </Container>
+                            </Content>
+                        </>
+                    }
+                />
+            </>
+        );
     if (id === 'nowy-rozklad-jazdy')
         return (
             <>
@@ -22,7 +92,7 @@ const MessagePage = () => {
                                     <p>Informujemy, iż od <b>01.01.2026</b> nieznacznie zmienia się rozkład jazdy na linii <b>Mońki-Białystok</b>.</p>
 
                                     <p>Nowe rozkłady dostępne u kierowców, w biurze mieszczącym się w Mońkach przy ul.Dworcowej 6, oraz na naszym Facebooku i stronie internetowej.</p>
- 
+
                                 </Container>
                             </Content>
                         </>
@@ -158,54 +228,6 @@ const MessagePage = () => {
                                     👉 <b>Knyszyn - Rynek</b><br />
                                     <br />
                                     Dziękujemy za wyrozumiałość i przepraszamy za niedogodności.
-                                </Container>
-                            </Content>
-                        </>
-                    }
-                />
-            </>
-        );
-    if (id === 'wyjazd-na-litwe-2')
-        return (
-            <>
-                <Section
-                    title={informationObject.title}
-                    content={
-                        <>
-                            <Date>{informationObject.date}</Date>
-                            <Content>
-                                <Photo src={informationObject.photo} alt="Plakat ogłoszeniowy" />
-                                <Container>
-                                    <b>Zapraszamy na wycieczkę Kowno – Kiedany – Szawle – Wilno</b>
-
-                                    <p>🗓 25-27 kwietnia 2025 (3 dni)</p>
-                                    <p><b>Kowno</b> – ruiny zamku, Starówka, Bazylika Św. Pawła i Piotra, Ratusz „Biały Łabędź”, Dom Perkuna, Aleja Wolności</p>
-                                    <p><b>Kiejdany</b> – miasto związane z Radziwiłłami, zabytkowe Stare Miasto, krypta Radziwiłłów</p>
-                                    <p><b>Szawle</b> – słynna Góra Krzyży</p>
-                                    <p><b>Wilno</b> – Ostra Brama, Cerkiew Św. Trójcy, Kościół Św. Anny, Cmentarz na Rossie, Mauzoleum „Matka i Serce Syna”</p>
-
-                                    <b>🚌 Program wyjazdu:</b>
-                                    <p><b>I dzień</b> – Kowno: zwiedzanie, czas wolny, obiadokolacja, nocleg</p>
-                                    <p><b>II dzień</b> – Kiejdany, Szawle (Góra Krzyży), obiadokolacja, nocleg</p>
-                                    <p><b>III dzień</b> – Wilno: zwiedzanie z przewodnikiem, powrót w godzinach wieczornych</p>
-                                    <br />
-                                    <div>
-                                        <p>💰 <b>Cena</b>: 870 zł/os. + 10 EUR (bilety w Kiejdanach)</p>
-                                        <p>Cena zawiera:</p>
-                                        <ul>
-                                            <li>Transport autokarem 🚌</li>
-                                            <li>Ubezpieczenie kraj/zagranica</li>
-                                            <li>2 noclegi 🛌</li>
-                                            <li>2 śniadania i2 obiadokolacje 🍽️</li>
-                                            <li>Usługi przewodników</li>
-                                        </ul>
-                                    </div>
-                                    <p>❗️Zaliczka 200 zł – płatna do 8.04.2025</p>
-                                    <div>
-                                        <b>📞 Kontakt i rezerwacje:</b>
-                                        <p>Tel: <Link href="tel:+48857162191">+48 857 162 191</Link></p>
-                                        <p>Email: <Link href="mailto:biuro@kurierjankowski.pl">biuro@kurierjankowski.pl</Link></p>
-                                    </div>
                                 </Container>
                             </Content>
                         </>

@@ -1,10 +1,17 @@
 import logo from "./images/logo.png";
 import swieta from "./images/swieta.png";
-import litwa2 from "./images/litwa2.png";
+import jarmark from "./images/jarmark.jpg";
 import litwa from "./images/litwa.png";
 import backToSchool from "./images/backToSchool.png"
 
 export const news = [
+    {
+        id: 'wilno-jarmark-kaziukowy',
+        title: 'Zapraszamy na wyjazd do Wilna',
+        firstSentence: 'Zapraszamy na wyjątkowy wyjazd do Wilna na Jarmark Kaziukowy...',
+        date: '09-02-2026',
+        photo: jarmark,
+    },
     {
         id: 'nowy-rozklad-jazdy',
         title: 'Nowy rozkład jazdy',
@@ -39,12 +46,5 @@ export const news = [
         firstSentence: 'Drodzy Pasażerowie! Informujemy, że w dniach 9 -10 lipca 2025 r. w związku...',
         date: '08-07-2025',
         photo: logo,
-    },
-    {
-        id: 'wyjazd-na-litwe-2',
-        title: 'Zapraszamy na wycieczkę na Litwę',
-        firstSentence: 'Zapraszamy na wycieczkę Kowno – Kiedany – Szawle – Wilno...',
-        date: '23-03-2025',
-        photo: litwa2,
     },
 ];
